@@ -7,7 +7,5 @@
 
 # emphasizes readability 
 
-# like JavaScript, Python allows you to use simple functions and variables in 
-
-# addition to object-oriented programming 
+# like JavaScript, Python allows you to use simple functions and variables in addition to object-oriented programming 
 ```
