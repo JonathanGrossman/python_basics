@@ -19,5 +19,20 @@
 # you can find modules and packages using Python’s Package Index
 
 # PIP is the recommended Python package manager, useful for installing, upgrading, and removing packages (and more)
+
+# Zen of Python (import this); some of the guiding principles
+
+      Beautiful is better than ugly.
+      Explicit is better than implicit.
+      Simple is better than complex.
+      Complex is better than complicated.
+      Flat is better than nested.
+      Sparse is better than dense.
+      Readability counts.
+      Errors should never pass silently.
+      Unless explicitly silenced.
+      If the implementation is hard to explain, it's a bad idea.
+      Namespaces are one honking great idea -- let's do more of those!
+
 ```
 
