@@ -1,5 +1,6 @@
 ## What is Python
 
+
 ```
 # an interpreted, object-oriented, high-level programming language used for many purposes, such as web development, game development, machine learning  and artificial intelligence, data science and visualization, web scraping, and more
 
