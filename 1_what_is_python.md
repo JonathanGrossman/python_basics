@@ -51,7 +51,7 @@ Two popular Python gaming packages ar named PyGame and PyArcade. You can build f
 
 ## Internet of Things and Robotics
 
-Write software that controls hardware. Python one of the most popular languages for writing software for the Raspberry Pi and other microcontrollers. Build robots, weather stations, and home automation hardware that run on Python software. For instance, build a miniature car that follows a line drawn on the floor. Build a weather station that monitors your garden. Build a motion-activated security camera that emails you when it detects movement.
+Write software that controls hardware. Python is one of the most popular languages for writing software for the Raspberry Pi and other microcontrollers. Build robots, weather stations, and home automation hardware that run on Python software. For instance, build a miniature car that follows a line drawn on the floor. Build a weather station that monitors your garden. Build a motion-activated security camera that emails you when it detects movement.
 
 Three of the most popular ways to write Python for IoT and robotics is using the Raspberry Pi, Circuit Python, and MicroPython. The internet has enough documentation and guides to get you started. Beware, however, that merging hardware and software is very addicting! 
 
