@@ -6,7 +6,7 @@ Python is not limited to web applications, robots, games, and data science. You 
 
 In addition to its versatility, one reason Python is so popular is because it is easy to learn and oftentimes feels like a spoken language. Its syntax is very easy to read and write. Here is an example. If we want to find out whether a Python list named ```theList``` contains a value of ```79```, and if so, print ```True```, we can simply write the following:
 
-```
+```python
     theList = [59, 69, 79]
 
     if 79 in theList:
