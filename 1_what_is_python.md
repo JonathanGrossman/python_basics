@@ -6,23 +6,25 @@ Python is a very versatile, popular, and powerful progamming language. Among man
 
 Build Python web applications that users interact with online. For instance, many people use Python to build blogs, content management systems, and virtual classrooms. With Python web frameworks like Flask and Django, and with the countless libraries and packages to support Python web development, building a web application using Python is possible for beginners and experts alike. 
 
-In simple terms, you will write your server in Python code. Then, for a frontend, you have several options. For instance, you can write it using Flask's or Django's built-in frontend templating engines. Or you can build your frontend in a separate application (like vanilla JavaScript, React, Angular, or Vue) that communicates with your server like a microservice. 
+In simple terms, you write your server in Python code. Then, for a frontend, you have several options. For instance, you can write it using Flask's or Django's built-in frontend templating engines. Or you can build your frontend in a separate application (like vanilla JavaScript, React, Angular, or Vue) that communicates with your server like a microservice. 
 
 For a database, you can choose between SQL, no-SQL, and third-party services that work like databases (like Google Docs, Google Sheets, and other services). Flask and Django ship with built-in SQL capabilities. Though helpful third-party libraries exist for interacting with no-SQL options, like MongoDB and Google Firebase.
 
-Regardless, you can build Python web applications. By building your web application using Python, your web application may more easily interact with other Python projects, like machine learning and robotics.
+By building your web application using Python, your web application may more easily interact with other Python projects, like machine learning and robotics.
 
 ### Social Media (Bots and Streaming)
 
-Build Python applications that interact with users on social media. For instance, build a Twitter bot that tweets, retweets, likes messages, and follows users based on a pre-set schedule. This can be a great way to automate some of the ways you engage with your audience. It is not just Twitter you can automate. You can write Python bots for Instagram, Facebook, Discord, Telegram, and more. A real project I built is a weather station that Tweets the humidity and temperature readings from a Raspberry Pi and also provide the weather information on-demand from Telegram.
+Build Python applications that interact with users on social media. For instance, build a Twitter bot that tweets, retweets, likes messages, and follows users based on a pre-set schedule. This can be a great way to automate some of the ways you engage with your audience. It is not just Twitter you can automate. You can write Python bots for Instagram, Facebook, Discord, Telegram, and more. A real project I built is a weather station that Tweets the humidity and temperature readings from a Raspberry Pi and also provides the weather information on-demand from Telegram.
 
 You also can write Python projects that livestream video. For instance, livestream to Facebook, YouTube Live, Periscope, and Twitch. By creating a Python application that assists you with livestreaming your content, you can interact with your audience in more effective ways.
 
 To make a bot or to livestream, you write a Python script and connect it to the API for the social media platform of your choice. Plenty of third-party packages and tutorials are online for making Python bots and for livestreaming. You can even connect your Python script to a web application or automate it using crontab or some other scheduler.
 
-### Computer Automation
-
 ### Game Development
+
+Build games using Python. For instance, build games that slide across the screen and serve hours of entertainment to its users. Or build educational games that engage students in exciting ways. Several Python packages are available for building games.
+
+Two popular Python gaming packages ar named PyGame and PyArcade. You can build full-featured video games using PyGame or PyArcade. They are free to use and have a lot of downloads. Plus, both PyGame and PyArcade have many helpful tutorials and documentation online to help get you started and to inspire your next great game.
 
 ### Internet of Things and Robotics
 
