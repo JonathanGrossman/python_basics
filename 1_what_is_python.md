@@ -22,11 +22,15 @@ To make a bot or to livestream, you write a Python script and connect it to the 
 
 ### Game Development
 
-Build games using Python. For instance, build games that slide across the screen and serve hours of entertainment to its users. Or build educational games that engage students in exciting ways. Several Python packages are available for building games.
+Build games using Python. For instance, build games that slide across the screen and serve hours of entertainment to its users. Build classic games like solitaire, pong, and tic-tac-toe. Or build educational games that engage students in exciting ways. Teach students how to read, calculate math, or write programs! Several Python packages are available for building games.
 
 Two popular Python gaming packages ar named PyGame and PyArcade. You can build full-featured video games using PyGame or PyArcade. They are free to use and have a lot of downloads. Plus, both PyGame and PyArcade have many helpful tutorials and documentation online to help get you started and to inspire your next great game.
 
 ### Internet of Things and Robotics
+
+Write software that controls hardware. Python one of the most popular languages for writing software for the Raspberry Pi and other microcontrollers. Build robots, weather stations, and home automation hardware that run on Python software. For instance, build a miniature car that follows a line drawn on the floor. Build a weather station that monitors your garden. Build a motion-activated security camera that emails you when it detects movement.
+
+Three of the most popular ways to write Python for IoT and robotics is using the Raspberry Pi, Circuit Python, and MicroPython. The internet has enough documentation and guides to get you started. Beware, however, that merging hardware and software is very addicting! 
 
 ### Machine Learning and Data Science
 
