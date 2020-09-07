@@ -17,7 +17,7 @@ In addition to its versatility, one reason Python is so popular is because it is
 Learn Python. Before you know it, you can build real-world solutions that people rely upon in their daily liveas. To help jumpstart your imagination, here is some dicussion of what you can build with Python.
 
 
-### Web Applications
+## Web Applications
 
 Build Python web applications that users interact with online. For instance, many people use Python to build blogs, content management systems, and virtual classrooms. With Python web frameworks like Flask and Django, and with the countless libraries and packages to support Python web development, building a web application using Python is possible for beginners and experts alike. 
 
@@ -27,7 +27,7 @@ For a database, you can choose between SQL, no-SQL, and third-party services tha
 
 By building your web application using Python, your web application may more easily interact with other Python projects, like machine learning and robotics.
 
-### Social Media (Bots and Streaming)
+## Social Media (Bots and Streaming)
 
 Build Python applications that interact with users on social media. For instance, build a Twitter bot that tweets, retweets, likes messages, and follows users based on a pre-set schedule. This can be a great way to automate some of the ways you engage with your audience. It is not just Twitter you can automate. You can write Python bots for Instagram, Facebook, Discord, Telegram, and more. A real project I built is a weather station that Tweets the humidity and temperature readings from a Raspberry Pi and also provides the weather information on-demand from Telegram.
 
@@ -35,19 +35,19 @@ You also can write Python projects that livestream video. For instance, livestre
 
 To make a bot or to livestream, you write a Python script and connect it to the API for the social media platform of your choice. Plenty of third-party packages and tutorials are online for making Python bots and for livestreaming. You can even connect your Python script to a web application or automate it using crontab or some other scheduler.
 
-### Game Development
+## Game Development
 
 Build games using Python. For instance, build games that slide across the screen and serve hours of entertainment to its users. Build classic games like solitaire, pong, and tic-tac-toe. Or build educational games that engage students in exciting ways. Teach students how to read, calculate math, or write programs! Several Python packages are available for building games.
 
 Two popular Python gaming packages ar named PyGame and PyArcade. You can build full-featured video games using PyGame or PyArcade. They are free to use and have a lot of downloads. Plus, both PyGame and PyArcade have many helpful tutorials and documentation online to help get you started and to inspire your next great game.
 
-### Internet of Things and Robotics
+## Internet of Things and Robotics
 
 Write software that controls hardware. Python one of the most popular languages for writing software for the Raspberry Pi and other microcontrollers. Build robots, weather stations, and home automation hardware that run on Python software. For instance, build a miniature car that follows a line drawn on the floor. Build a weather station that monitors your garden. Build a motion-activated security camera that emails you when it detects movement.
 
 Three of the most popular ways to write Python for IoT and robotics is using the Raspberry Pi, Circuit Python, and MicroPython. The internet has enough documentation and guides to get you started. Beware, however, that merging hardware and software is very addicting! 
 
-### Data Science
+## Data Science
 
 Build data science Python projects. Data science covers a broad range of topics. Examples include machine learning, natural language processing, image recognition, deep learning, and data visualization. Many python packages exist for helping you build your Python data science projects. For instance, Pandas, NumPy, SciPy, Matplotlib, Seaborn, and Datashader help you analyze data. Other packages, such as Scikit-Learn, StatsModels, Keras, TensorFlow, and others, help you with machine learning. The OpenCV package is popular for working with images.
 
