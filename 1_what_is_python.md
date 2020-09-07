@@ -16,7 +16,9 @@ Regardless, you can build Python web applications. By building your web applicat
 
 Build Python applications that interact with users on social media. For instance, build a Twitter bot that tweets, retweets, likes messages, and follows users based on a pre-set schedule. This can be a great way to automate some of the ways you engage with your audience. It is not just Twitter you can automate. You can write Python bots for Instagram, Facebook, Discord, Telegram, and more. A real project I built is a weather station that Tweets the humidity and temperature readings from a Raspberry Pi and also provide the weather information on-demand from Telegram.
 
-To make a bot, you write a Python script and connect it to the API for the social media platform of your choice. Plenty of third-party packages and tutorials are online for making Python bots. You can even connect your Python bot to a web application or automate it using crontab or some other scheduler.
+You also can write Python projects that livestream video. For instance, livestream to Facebook, YouTube Live, Periscope, and Twitch. By creating a Python application that assists you with livestreaming your content, you can interact with your audience in more effective ways.
+
+To make a bot or to livestream, you write a Python script and connect it to the API for the social media platform of your choice. Plenty of third-party packages and tutorials are online for making Python bots and for livestreaming. You can even connect your Python script to a web application or automate it using crontab or some other scheduler.
 
 ### Computer Automation
 
