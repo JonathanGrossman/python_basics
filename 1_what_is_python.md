@@ -6,13 +6,11 @@ Python is not limited to web applications, robots, games, and data science. You 
 
 In addition to its versatility, one reason Python is so popular is because it is easy to learn and oftentimes feels like a spoken language. Its syntax is very easy to read and write. Here is an example. If we want to find out whether a Python list named ```theList``` contains a value of ```79```, and if so, print ```True```, we can simply write the following:
 
-```python
-    
+```python 
 theList = [59, 69, 79]
 
 if 79 in theList:
     print(True)
-
 ```
 
 Learn Python. Before you know it, you can build real-world solutions that people rely upon in their daily liveas. To help jumpstart your imagination, here is some dicussion of what you can build with Python.
@@ -64,7 +62,7 @@ Build data science Python projects. Data science covers a broad range of topics.
 Regardless of your data science project, you should strongly consider writing it in Python.
 
 
-
+# &nbsp;
 # Guiding Principles
 
 In a Python file or in your Python interpreter, run ```import this```. It should show the following in your terminal:
