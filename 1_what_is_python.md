@@ -61,8 +61,6 @@ Build data science Python projects. Data science covers a broad range of topics.
 
 Regardless of your data science project, you should strongly consider writing it in Python.
 
-
-# &nbsp;
 # Guiding Principles
 
 In a Python file or in your Python interpreter, run ```import this```. It should show the following in your terminal:
