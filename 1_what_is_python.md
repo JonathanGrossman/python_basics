@@ -1,6 +1,21 @@
 # What is Python
 
-Python is a very versatile, popular, and powerful progamming language. Among many other things, people build Python projects such as web applications, robots, games, and machine learning solutions. Getting started learning Python is easy. With the right focus and documentation, you can learn the basics of Python online or at a Python bootcamp. Before you know it, you can build real-world solutions that you and others rely upon in your daily life. To help jumpstart your imagination, here is some dicussion of what you can build with Python.
+Python is a versatile, popular, and powerful progamming language.  Among many other things, people build Python projects such as web applications, robots, games, and machine learning solutions. Getting started learning Python is easy. With the right focus and documentation, you can learn the basics of Python online or at a Python bootcamp. 
+
+Python is not limited to web applications, robots, games, and data science. You can also build graphical user interfaces, applications that convert filenames and sizes, and projects that work with audio, video and text files. Originally known for rapid prototyping and connecting other applications, Python is maturing from its original reputation into a go-to solution in general. On a technical level, Python is an interpreted, object-oriented, high-level programming language.
+
+In addition to its versatility, one reason Python is so popular is because it is easy to learn and oftentimes feels like a spoken language. Its syntax is very easy to read and write. Here is an example. If we want to find out whether a Python list named ```theList``` contains a value of ```79```, and if so, print ```True```, we can simply write the following:
+
+```
+theList = [59, 69, 79]
+
+if 79 in theList:
+    print(True)
+
+```
+
+Learn Python. Before you know it, you can build real-world solutions that people rely upon in their daily liveas. To help jumpstart your imagination, here is some dicussion of what you can build with Python.
+
 
 ### Web Applications
 
@@ -32,57 +47,40 @@ Write software that controls hardware. Python one of the most popular languages 
 
 Three of the most popular ways to write Python for IoT and robotics is using the Raspberry Pi, Circuit Python, and MicroPython. The internet has enough documentation and guides to get you started. Beware, however, that merging hardware and software is very addicting! 
 
-### Machine Learning and Data Science
+### Data Science
 
+Build data science Python projects. Data science covers a broad range of topics. Examples include machine learning, natural language processing, image recognition, deep learning, and data visualization. Many python packages exist for helping you build your Python data science projects. For instance, Pandas, NumPy, SciPy, Matplotlib, Seaborn, and Datashader help you analyze data. Other packages, such as Scikit-Learn, StatsModels, Keras, TensorFlow, and others, help you with machine learning. The OpenCV package is popular for working with images.
 
+Regardless of your data science project, you should strongly consider writing it in Python.
 
+# Guiding Principles
 
-Python is a popular choice for building games, robots, and chatbots. With Python, you can also build graphical user interfaces, applications that convert filenames and sizes, and projects that work with audio, video and text files. One of the newer and more popular areas for writing Python code is machine learning, image processing and data analysis. Although Python has has a reputation for rapid application development and for connecting applications, it is also becoming a go-to solution in general. 
-
-
-Python is easy to learn and has a syntax that is very easy to read and write. Here is an example. If we want to find out whether a Python list named ```theList``` contains a value of ```79```, and if so, print ```True```, we can simply write the following:
-
-```
-theList = [59, 69, 79]
-
-if 79 in theList:
-    print(True)
+In a Python file or in your Python interpreter, run ```import this```. It should show the following in your terminal:
 
 ```
+The Zen of Python, by Tim Peters
 
-
-```
-# an interpreted, object-oriented, high-level programming language used for many purposes, such as web development, game development, machine learning  and artificial intelligence, data science and visualization, web scraping, and more
-
-# has built-in data structures and dynamic typing
-
-# emphasizes readability 
-
-# like JavaScript, Python allows you to use simple functions and variables in addition to object-oriented programming 
-
-# Python allows developers to import code into a project in the form of modules and packages
-
-# modules and packages are pre-written code (by you or others) that you can incorporate into your project
-
-# using modules and packages saves you time and resources by providing functionality that you don’t have to write the code for
-
-# you can find modules and packages using Python’s Package Index
-
-# PIP is the recommended Python package manager, useful for installing, upgrading, and removing packages (and more)
-
-# Zen of Python (import this); some of the guiding principles
-
-      Beautiful is better than ugly.
-      Explicit is better than implicit.
-      Simple is better than complex.
-      Complex is better than complicated.
-      Flat is better than nested.
-      Sparse is better than dense.
-      Readability counts.
-      Errors should never pass silently.
-      Unless explicitly silenced.
-      If the implementation is hard to explain, it's a bad idea.
-      Namespaces are one honking great idea -- let's do more of those!
-
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
 ```
 
+These are the guiding principles for Python development. As the guidelines make clear, Python programmingn emphasizes readability, encourages simplicity, and allows for object-oriented programming. 
+
+Python has built-in data structures and dynamic typing. As mentioned above, Python makes it easy to import code into a project in the form of modules and packages. Modules and packages are pre-written code (by you or others) that you can incorporate into your project. Using modules and packages saves you time and resources by providing functionality that you do not have to write the code for. You can find modules and packages using Python’s Package Index. You can manage packages for your projects using pip -- the recommended Python package manager. With pip, you can, among other things, instal, upgrade, and remove packages.
