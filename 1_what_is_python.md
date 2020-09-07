@@ -1,10 +1,16 @@
-## What is Python
+# What is Python
 
-Python is a very versatile, popular, and powerful progamming language. Using Python, poeple build projects that range from web applications to machine learning solutions, and many things in between. Getting started learning Python is easy. With the right focus and documentation, you can learn the basics of Python fairly easily. From there, it might not be too long before you are building real-world solutions that you and others rely upon in your daily life. To help jumpstart your imagination, here is some dicussion of popular Python project categories.
+Python is a very versatile, popular, and powerful progamming language. Among many other things, people build Python projects such as web applications, robots, games, and machine learning solutions. Getting started learning Python is easy. With the right focus and documentation, you can learn the basics of Python online or at a Python bootcamp. Before you know it, you can build real-world solutions that you and others rely upon in your daily life. To help jumpstart your imagination, here is some dicussion of what you can build with Python.
 
 ### Web Applications
 
-People build web applications that users interact with online. For instance, many people use Python to build blogs, content management systems, and virtual classrooms. With Python frameworks like Flask and Django, and with the countless libraries and packages to support Python web development, building a web application using Python is possible for beginners and experts alike.
+Build Python web applications that users interact with online. For instance, many people use Python to build blogs, content management systems, and virtual classrooms. With Python web frameworks like Flask and Django, and with the countless libraries and packages to support Python web development, building a web application using Python is possible for beginners and experts alike. 
+
+In simple terms, you will write your server in Python code. Then, for a frontend, you have several options. For instance, you can write it using Flask's or Django's built-in frontend templating engines. Or you can build your frontend in a separate application (like vanilla JavaScript, React, Angular, or Vue) that communicates with your server like a microservice. 
+
+For a database, you can choose between SQL, no-SQL, and third-party services that work like databases (like Google Docs, Google Sheets, and other services). Flask and Django ship with built-in SQL capabilities. Though helpful third-party libraries exist for interacting with no-SQL options, like MongoDB and Google Firebase.
+
+Regardless, you can build Python web applications. By building your web application using Python, your web application may more easily interact with other Python projects, like machine learning and robotics.
 
 ### Social Media (Bots and Streaming)
 
