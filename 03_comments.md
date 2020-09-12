@@ -1,6 +1,6 @@
-# Comments
+# Comments\
 
-### coments are code that the computer does not run.
+### comments are code that the computer does not run.
 
 ### why do developers user them?
 
