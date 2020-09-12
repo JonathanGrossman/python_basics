@@ -12,18 +12,50 @@ Writing comments may seems tedious at first. But once you realize the value of t
 
 ## How do you turn code into a comment?    
 
-Highlight the text and press
-
-> Command + / (Mac)  
-> Control + / (Windows)  
-
-## Example of a comment (the comment is denoted by #):  
+Two main ways exist for commenting out your code. One easy is to put a `#` at the beginning of the line you want to turn into a comment. If your code spans multiple lines, you'll need a `#` at the beginning of each line that you want to be a comment. 
 
 ```python
-# x is an integer (this is a comment)
-x = 3
+# this is a comment
+# this is another comment
 ```
 
-### Notes: 
-> don’t overuse comments  
-> keep comments short  
+```python
+this is not a comment and will result in an error
+```
+
+Another way to comment out your code is to highlight the lines of code that you want to be a comment, and press key commands. For Mac users, the key commands are `Command + /`. For Windows users, the key commands are `Control + /`. After pressing the key commands, a `#` should appear at the beginning of each line you highlighted.
+
+For example, if you are on a Mac, highlight the line of code that you want to turn into a comment, and then press:
+
+> Command + / (Mac)  
+
+If you are on Windowns, highlight the line of code that you want to turn into a comment, and then press:
+
+> Control + / (Windows)  
+
+## Examples of comments:  
+
+```python
+# examples of comments
+
+# x is an integer
+x = 3
+
+
+# returns a greeting
+def get_greeting():
+  return "Welcome to my page"
+  
+  
+# returns a list of objects
+def get_objects():
+  # define list of objects
+  list_of_objects = [ {. . .},  {. . .}, {. . .}, . . .]
+  
+  return list_of_objects
+```
+
+## Notes: 
+> don’t overuse comments
+> keep comments short
+> keep comments up-to-date with your code
