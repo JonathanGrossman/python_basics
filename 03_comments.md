@@ -20,7 +20,7 @@ Writing comments may seems tedious at first. But once you realize the value of t
 
 ## How do you turn code into a comment?    
 
-Two main ways exist for commenting out your code. One easy is to put a `#` at the beginning of the line you want to turn into a comment. If your code spans multiple lines, you'll need a `#` at the beginning of each line that you want to be a comment. 
+Two main ways exist for commenting out your code. One way is to put a `#` at the beginning of the line you want to turn into a comment. If your code spans multiple lines, you'll need a `#` at the beginning of each line that you want to be a comment. 
 
 ```python
 # this is a comment
