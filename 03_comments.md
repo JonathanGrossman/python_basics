@@ -8,14 +8,12 @@
 
 Comments help explain to people who read the code what the code does and why it’s important.  
 
-
 Comments are important when reading code that other people wrote and when reading code you wrote a long time ago. 
-
 
 Writing comments in pseudocode can help you plan before writing the actual code. 
 
 
-### How do you turn code into a comment?  
+### How do you turn code into a comment?    
 
 
 #### Highlight the text and press  
