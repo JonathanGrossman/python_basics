@@ -10,10 +10,10 @@ writing comments in pseudocode can help you plan before writing the actual code
 
 ### How do you turn code into a comment?
 
-Highlight the text and press
+#### Highlight the text and press
 
-Command + / (Mac)
-Control + / (Windows)
+> Command + / (Mac)
+> Control + / (Windows)
 
 ### Example of a comment (the comment is denoted by #):
 
