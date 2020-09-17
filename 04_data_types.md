@@ -12,12 +12,15 @@ Let's look at each data type in more detail. By the way, this section is just an
 
 Python's numeric data type is split into three subtypes: integer, float, and complex. Integers and floats are the most common. It's likely you may never even use the complex number, which is used for advanced math calculations.  
 
-We write numbers by just typing the number -- no quotes or apostrophes or other symbols required.  
+You write numbers by just typing the number -- no quotes or apostrophes or other symbols required.  
 
 Integers are whole numbers, meaning no decimal places. Integers can be positive or negative.  
 ```python
 # example of a positive integer
-w = 100  
+v = 100  
+
+# example of a negative integer
+w = -101  
 ```
 
 Floats are numbers with decimals or scientific numbers containing an `e`. Floats can be positive or negative.
