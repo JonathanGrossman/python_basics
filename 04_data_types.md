@@ -69,14 +69,14 @@ A list is a collection of data that is ordered, changeable, and indexed by posit
 
 ```python
 # example of a list
-x = \["this", "is", "a", "list", "of", "strings"]\  
+x = \["this", "is", "a", "list", "of", "strings"]
 ```
 
 A tuple is a collection of data that is ordered, unchangeable, and indexed by position. You declare that something is a tuple by wrapping it in parenthesis and separating the values using commas.
 
 ```python
 # example of a tuple
-tuple: x = ("this", "is", "a", "tuple", "of", "strings")  
+y = ("this", "is", "a", "tuple", "of", "strings")  
 ```
 
 ## Mapping
