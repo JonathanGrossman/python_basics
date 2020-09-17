@@ -220,7 +220,7 @@ h = set(("Python"))
 print(h, type(h))  
 >>> {'y', 't', 'o', 'P', 'h', 'n'} <class 'set'>
 
-i = bool(100) # True; x = bool(0) => False  
+i = bool(100)
 print(i, type(i))  
 >>> True <class 'bool'>
 
