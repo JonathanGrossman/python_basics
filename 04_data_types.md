@@ -65,14 +65,14 @@ x = False
 
 The sequence data types splits into two main subtypes: list and tuple. Lists and tuples are used to group data together.
 
-A list is a collection of data that is ordered and changeable. You declare that something is a list by wrapping it in square brackets and separating the values using commas.
+A list is a collection of data that is ordered, changeable, and indexed by position. You declare that something is a list by wrapping it in square brackets and separating the values using commas.
 
 ```python
 # an example of a list
 x = \["this", "is", "a", "list", "of", "strings"]  
 ```
 
-A tuple is a collection of data that is ordered and unchangeable. You declare that something is a tuple by wrapping it in parenthesis and separating the values using commas.
+A tuple is a collection of data that is ordered, unchangeable, and indexed by position. You declare that something is a tuple by wrapping it in parenthesis and separating the values using commas.
 
 ```python
 # an example of a tuple
@@ -80,11 +80,30 @@ tuple: x = ("this", "is", "a", "tuple", "of", "strings")
 ```
 
 ## Mapping
-dict: x = {"name" : "ITC", "success" : True}  
+
+The mapping data type is known as a dictionary. Dictionaries contain key-value pairs that are unordered, changeable, and indexed by key. You declare that something is a dictionary by wrapping it in curly braces and separating the key-value pairs using commas.
+
+```python
+# an example of a tuple
+x = {
+     "name" : "Python", 
+     "success" : True
+    }  
+```
 
 ## Set
-set: x = {"Israel", "Tech", "Challenge"}  
-frozenset: x = frozenset({"Israel", "Tech", "Challenge"})  
+
+A set is a collection of data that is unordered and unindexed. Each item in the set must be unique, meaning that the same value cannot appear twice in a single set. You declare that something is a set by wrapping it in curly braces and separating the values using commas. Note that a set resembles a dictionary in the sense that both are wrapped with curly braces. They differ, however, in that a dictionary is filled with key-value pairs, whereas a set is filled with values.
+
+A frozenset is the same as a set, except that a frozenset is unchangeable.
+
+```python
+# an example of a set
+x = {"This", "is", "a", "set"}  
+
+# an example of a frozenset
+frozenset: x = frozenset({"This", "is", "a", "frozenset"})
+```
 
 ## Binary
 bytes: x = b"Hello"  
