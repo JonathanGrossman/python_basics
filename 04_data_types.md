@@ -16,19 +16,24 @@ We write numbers by just typing the number -- no quotes or apostrophes or other 
 
 Integers are whole numbers, meaning no decimal places. Integers can be positive or negative.  
 ```python
+# example of a positive integer
 w = 100  
 ```
 
 Floats are numbers with decimals or scientific numbers containing an `e`. Floats can be positive or negative.
 
 ```python
+# example of a decimal float
 x = 100.1  
+
+# example of a scientific float
 y = 37e8
 ```
 
 Complex numbers have a real part and an imaginary part. The real part is an actual number. The imaginary part is represented by the letter `j`. Remember, you probably won't use complex numbers unless you're doing certain kinds of advanced math in Python. They're included here for the sake of completeness and also so that if you see them in the wild, you know what they are.
 
 ```python
+# example of a complex number
 z = 10j  
  ```
  
@@ -37,7 +42,10 @@ z = 10j
 A string is text. Examples of strings include a letter, word, phrase, and sentence. To declare data as a string, you need to put it in quotation marks. Single or double quotations marks work.
 
 ```python
-x = "Double quotation marks work."  
+# example of a string using double quotes
+x = "Double quotation marks work."
+
+# example of a string using single quotes
 y = 'Single quotation marks also work.'  
 ```
 
@@ -46,15 +54,30 @@ y = 'Single quotation marks also work.'
 Booleans can have one of two values, True or False. Developers use Booleans to control the flow of their application and to compare values. Most values are inherently `True`. Some values, however, are inherently `False`. For instance, empty values (i.e., other data types that have no value, like "", {}, ()), the number `0`, and `None` are inherently `False`.
 
 ```python
-x = True 
+# example of a variable set equal to a Boolean
+x = False
 
-7 > 3 # returns True
+# example of an expression that returns True
+7 > 3
 ```
 
 ## Sequence
-list: x = \["Israel", "Tech", "Challenge"]  
-tuple: x = ("Israel", "Tech", "Challenge")  
-range: x = range(100)  
+
+The sequence data types splits into two main subtypes: list and tuple. Lists and tuples are used to group data together.
+
+A list is a collection of data that is ordered and changeable. You declare that something is a list by wrapping it in square brackets and separating the values using commas.
+
+```python
+# an example of a list
+x = \["this", "is", "a", "list", "of", "strings"]  
+```
+
+A tuple is a collection of data that is ordered and unchangeable. You declare that something is a tuple by wrapping it in parenthesis and separating the values using commas.
+
+```python
+# an example of a tuple
+tuple: x = ("this", "is", "a", "tuple", "of", "strings")  
+```
 
 ## Mapping
 dict: x = {"name" : "ITC", "success" : True}  
@@ -81,7 +104,7 @@ b = float(100.1)
 c = str("Israel Tech Challenge")  
 d = list(("Israel Tech Challenge"))  
 e = tuple(("Israel Tech Challenge"))  
-f = range(100)  
+f = (100)  
 g = dict(name="ITC", success=True)  
 h = set(("Israel Tech Challenge"))  
 i = bool(100) # True; x = bool(0) => False  
