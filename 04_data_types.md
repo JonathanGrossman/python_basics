@@ -20,16 +20,17 @@ w = 100
 ```
 
 Floats are numbers with decimals or scientific numbers containing an `e`. Floats can be positive or negative.
+
 ```python
 x = 100.1  
 y = 37e8
 ```
 
 Complex numbers have a real part and an imaginary part. The real part is an actual number. The imaginary part is represented by the letter `j`. Remember, you probably won't use complex numbers unless you're doing certain kinds of advanced math in Python. They're included here for the sake of completeness and also so that if you see them in the wild, you know what they are.
+
 ```python
 z = 10j  
  ```
- 
  
 ## String
 
@@ -41,7 +42,14 @@ y = 'Single quotation marks also work.'
 ```
 
 ## Boolean
-bool: x = True  
+
+Booleans can have one of two values, True or False. Developers use Booleans to control the flow of their application and to compare values. Most values are inherently `True`. Some values, however, are inherently `False`. For instance, empty values (i.e., other data types that have no value, like "", {}, ()), the number `0`, and `None` are inherently `False`.
+
+```python
+x = True 
+
+7 > 3 # returns True
+```
 
 ## Sequence
 list: x = \["Israel", "Tech", "Challenge"]  
