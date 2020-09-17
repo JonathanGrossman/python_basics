@@ -1,10 +1,10 @@
 # Data Types
 
-Like many other programming languages, Python categorizes data into several different data types. For instance, numbers, string, Boolean, sequence, mapping, set, binary, and None are Python data types. Essentially, data types are categories for data. 
+Like many other programming languages, Python categorizes the information in your code by its data type. The Python data types include numbers, string, Boolean, sequence, mapping, set, binary, and None.  
 
-Each piece of data falls into one of the Python categroeis, and the category that the data is in determines what kind of operations you can do with that data. For instance, text is iterable but numbers are not. Because text is iterable, you can loop through it to access each letter in the text. You can't do that with numbers.
+The data type determines what kind of operations you can do with that data. For instance, a string is iterable but numbers are not. Because a string is iterable, you can loop through it to access each character in the string (e.g., each letter in a word). You can't do that with numbers.
 
-When writing Python code, you don't have to explicitly declare what type a variable represents. Rather, the Python intepreter will check the type of a variable when the interpreter runs.
+When writing Python code, you oftentimes will use variables to represent the information in your code. Unlike some other programming languages, when defining a variable in Python, you don't have to explicitly declare what data type the variable represents. Rather, the Python intepreter will check the type of each variable in your code when the interpreter runs.
 
 Let's look at each data type in more detail. By the way, this section is just an introduction to each data type. Later sections go into more detail for each data type.
 
