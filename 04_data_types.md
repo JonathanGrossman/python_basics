@@ -106,16 +106,20 @@ frozenset: x = frozenset({"This", "is", "a", "frozenset"})
 ```
 
 ## Binary
+
+Python's binary data types are not so commonly used by the everyday Python developer. They are, however, nice to know of in case you encounter them. The binary types are bytes, bytearray, and memoryview. A byte represents a Python object as an immutable sequence of small integers between 0 and 256. A bytearray is the same as a byte except that it is mutable. A memoryview is used to access the internal byte-oriented data of a Python object.
+
+```python
 bytes: x = b"Hello"  
 bytearray: x = bytearray(5)  
 memoryview: x = memoryview(bytes(5))  
+```
 
+# Using type() to debug
 
-If you want to determine what type a value is, you can use type()  
-For instance, before adding a number to a variable, you may want to make sure the variable is also a number  
-For instance, before trying to loop through a variable, you may want to confirm it is iterable  
-
-## Examples of data types  
+Sometimes it is helpful to know what type a value is when debugging or trying to understand your application's behavior. For instance, before adding a number to a variable, you may want to make sure the variable is also a number. For instance, before trying to loop through a variable, you may want to confirm it is iterable. You can use Python's built-in `type()` method to find out a value's data type. 
+ 
+## Examples of using type()  
 
 ```python
 a = int(100)  
