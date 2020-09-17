@@ -1,6 +1,6 @@
 # Data Types
 
-Like many other programming languages, Python categorizes data into several different data types. For instance, numbers, text, Boolean, sequence, mapping, set, and binary are Python data types. Essentially, data types are categories for data. 
+Like many other programming languages, Python categorizes data into several different data types. For instance, numbers, string, Boolean, sequence, mapping, set, and binary are Python data types. Essentially, data types are categories for data. 
 
 Each piece of data falls into one of the Python categroeis, and the category that the data is in determines what kind of operations you can do with that data. For instance, text is iterable but numbers are not. Because text is iterable, you can loop through it to access each letter in the text. You can't do that with numbers.
 
@@ -31,8 +31,14 @@ z = 10j
  ```
  
  
-## Text
-str: x = "Israel Tech Challenge"  
+## String
+
+A string is text. Examples of strings include a letter, word, phrase, and sentence. To declare data as a string, you need to put it in quotation marks. Single or double quotations marks work.
+
+```python
+x = "Double quotation marks work."  
+y = 'Single quotation marks also work.'  
+```
 
 ## Boolean
 bool: x = True  
