@@ -49,24 +49,24 @@ j = bytes(100)
 ```
 
 ```python
-# print(a, type(a))  
-# print(b, type(b))  
-# print(c, type(c))  
-# print(d, type(d))  
-# print(e, type(e))  
-# print(f, type(f))  
-# print(g, type(g))  
-# print(h, type(h))  
-# print(i, type(i))  
-# print(j, type(j))  
+print(a, type(a))  
+print(b, type(b))  
+print(c, type(c))  
+print(d, type(d))  
+print(e, type(e))  
+print(f, type(f))  
+print(g, type(g))  
+print(h, type(h))  
+print(i, type(i))  
+print(j, type(j))  
 ```
 
 ## Examples of variables
 
 You must assign a variable a value before you can use the variable  
 ```python
-# j = 10  
-# print(j)
+j = 10  
+print(j)
 ```
 
 
@@ -78,8 +78,8 @@ print(j)
 
 You can set variables equal to any data type  
 ```python
-# g = "this is a letter"   
-# print(g)  
+g = "this is a letter"   
+print(g)  
 ```
 
 You can assign a variable to a variable  
