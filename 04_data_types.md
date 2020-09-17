@@ -1,33 +1,37 @@
 # Data Types
 
-Like many other programming languages, Python categorizes data into several different data types. For instance, numbers, text, Boolean, sequence, mapping, set, and binary are Python data types. Essentially, data types are categories for data. Each piece of data falls into one of the Python categroeis, and the category that the data is in determines what kind of operations you can do with that data. 
+Like many other programming languages, Python categorizes data into several different data types. For instance, numbers, text, Boolean, sequence, mapping, set, and binary are Python data types. Essentially, data types are categories for data. 
+
+Each piece of data falls into one of the Python categroeis, and the category that the data is in determines what kind of operations you can do with that data. For instance, text is iterable but numbers are not. Because text is iterable, you can loop through it to access each letter in the text. You can't do that with numbers.
 
 When writing Python code, you don't have to explicitly declare what type a variable represents. Rather, the Python intepreter will check the type of a variable when the interpreter runs.
 
-## Numeric  
+Let's look at some examples.
+
+## Numeric
 int: x = 100  
 float: y = 100.1  
 complex: z = 10j  
  
-## Text  
+## Text
 str: x = "Israel Tech Challenge"  
 
-## Boolean  
+## Boolean
 bool: x = True  
 
-## Sequence  
-list: x = ["Israel", "Tech", "Challenge"]  
+## Sequence
+list: x = \["Israel", "Tech", "Challenge"]  
 tuple: x = ("Israel", "Tech", "Challenge")  
 range: x = range(100)  
 
-## Mapping  
+## Mapping
 dict: x = {"name" : "ITC", "success" : True}  
 
-## Set  
+## Set
 set: x = {"Israel", "Tech", "Challenge"}  
 frozenset: x = frozenset({"Israel", "Tech", "Challenge"})  
 
-## Binary  
+## Binary
 bytes: x = b"Hello"  
 bytearray: x = bytearray(5)  
 memoryview: x = memoryview(bytes(5))  
