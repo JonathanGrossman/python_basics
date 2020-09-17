@@ -1,6 +1,6 @@
 # Variables
 
-In Python, you use variables to store data in your computer's memory. By storing data in memory, your application can access that data while running your application. For instance, if you have a number in your Python code, but you don't save it to a variable, the Python interpreter will not remember that number as it continues reading the remainder of your. If, however, you save that number to a variable (e.g., `x = 10`), Python stores `x` in memory and assigns it a value of `10`. With the value stored in memory, you can use it later in your code.
+In Python, you use variables to store data in your computer's memory. By storing data in memory, your application can access that data while running your application. If you have a number, for instance, in your Python code, but you don't save it to a variable, the Python interpreter will not remember that number as it continues reading the remainder of your. If, however, you save that number to a variable (e.g., `x = 10`), Python stores `x` in memory and assigns it a value of `10`. With the value stored in memory, you can use it later in your code.
 
 ```python
 # example of storing a value in a variable and using it later
@@ -10,7 +10,7 @@ print(10 + y)
 >>> 30
 ```
 
-You can store almost anything as a variable. For instance, you can store numbers, strings, dictionaries, lists, tuples, functions, and more. When storing data in memory, the syntax requires the variable on the left, followed by an equals sign, followed by the value to the right of the equals sign:
+You can store almost anything as a variable. You can store numbers, strings, dictionaries, lists, tuples, functions, and more. When storing data in memory, the syntax requires the variable on the left, followed by an equals sign, followed by the value to the right of the equals sign:
 
 ```python
 # example of variable where g is the variable and the string is the value
