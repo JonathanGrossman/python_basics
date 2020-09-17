@@ -63,7 +63,7 @@ x = False
 
 ## Sequence
 
-The sequence data types splits into two main subtypes: list and tuple. Lists and tuples are used to group data together.
+The sequence data types splits into three main subtypes: list, tuple, and range. Lists and tuples are used to group data together. Range is used to return a sequence of numbers.
 
 A list is a collection of data that is ordered, changeable, and indexed by position. You declare that something is a list by wrapping it in square brackets and separating the values using commas.
 
@@ -76,7 +76,22 @@ A tuple is a collection of data that is ordered, unchangeable, and indexed by po
 
 ```python
 # example of a tuple
-y = ("this", "is", "a", "tuple", "of", "strings")  
+y = ("this", "is", "a", "tuple", "of", "strings") 
+```
+
+Python's range is used to return a sequence of numbers. It is a method that accepts one or more arguments. If you include only one number in the range declaration, by default, it starts from zero and counts by one until the number you declare inside the the range method. You can, however, declare a starting point other than zero and a count interval other than zero.
+
+If you include two numbers in the range declaration, the range starts at the first number and ends at the second number, counting by one. If you include three numbers in the range declaration, the range starts at the first number, ends at the second number, and counts counting by increments equal to the third number.
+
+```python
+# example of range seequence from 0 to 50 counting by 1
+range(0, 50)
+
+# example of range seequence from 5 to 25 counting by 1
+range(5, 25)
+
+# example of range seequence from 10 to 50 counting by 2
+range(10, 50, 2)
 ```
 
 ## Mapping
@@ -126,84 +141,46 @@ Sometimes it is helpful to know what type a value is when debugging or trying to
  
 ## Examples of using type()  
 
-```python
+```python  
 a = int(100)  
-b = float(100.1)  
-c = str("Israel Tech Challenge")  
-d = list(("Israel Tech Challenge"))  
-e = tuple(("Israel Tech Challenge"))  
-f = (100)  
-g = dict(name="ITC", success=True)  
-h = set(("Israel Tech Challenge"))  
-i = bool(100) # True; x = bool(0) => False  
-j = bytes(100)  
-```
-
-```python
 print(a, type(a))  
+>>> 100 <class 'int'>
+
+b = float(100.1)  
 print(b, type(b))  
+>>> 100.1 <class 'float'
+
+c = str("Python") 
 print(c, type(c))  
+>>> Python <class 'str'>
+
+d = list(("Python")) 
 print(d, type(d))  
+>>> 'P', 'y', 't', 'h', 'o', 'n'] <class 'list'>
+
+e = tuple(("Python"))
 print(e, type(e))  
+>>> ('P', 'y', 't', 'h', 'o', 'n') <class 'tuple'>
+
+f = range(100) 
 print(f, type(f))  
+>>> range(0, 100) <class 'range'>
+
+g = dict(name="Python", success=True) 
 print(g, type(g))  
+>>> {'name': 'Python', 'success': True} <class 'dict'>
+
+h = set(("Python"))  
 print(h, type(h))  
+>>> {'y', 't', 'o', 'P', 'h', 'n'} <class 'set'>
+
+i = bool(100) # True; x = bool(0) => False  
 print(i, type(i))  
+>>> True <class 'bool'>
+
+j = bytes(100) 
 print(j, type(j))  
-```
-
-## Examples of variables
-
-You must assign a variable a value before you can use the variable  
-```python
-j = 10  
-print(j)
-```
-
-
-You can change the value of a variable (hence the meaning of “variable”)  
-```python
-j = 20    
-print(j)  
-```
-
-You can set variables equal to any data type  
-```python
-g = "this is a letter"   
-print(g)  
-```
-
-You can assign a variable to a variable  
-```python
-j = g    
-print(j)
-```
-
-
-You can set multiple variables in one expression  
-```python
-a, b, c = 1, 2, 3    
-print(a)  
-print(b)  
-print(c)  
-```
-
-If a variable is assigned a value, you can use it
-```python
-k = 12  
-print(k + 1)  
-print(k)  
-```
-
-If you have not assigned a value to a variable, you can't use it  
-```python
-k = k + 1  
-print(k)  
-```
-
-None is a value  
-```python
-print(type(None))  
+>>> b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' <class 'bytes'>
 ```
 
 
