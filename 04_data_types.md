@@ -68,14 +68,14 @@ The sequence data types splits into two main subtypes: list and tuple. Lists and
 A list is a collection of data that is ordered, changeable, and indexed by position. You declare that something is a list by wrapping it in square brackets and separating the values using commas.
 
 ```python
-# an example of a list
-x = \["this", "is", "a", "list", "of", "strings"]  
+# example of a list
+x = \["this", "is", "a", "list", "of", "strings"]\  
 ```
 
 A tuple is a collection of data that is ordered, unchangeable, and indexed by position. You declare that something is a tuple by wrapping it in parenthesis and separating the values using commas.
 
 ```python
-# an example of a tuple
+# example of a tuple
 tuple: x = ("this", "is", "a", "tuple", "of", "strings")  
 ```
 
@@ -84,7 +84,7 @@ tuple: x = ("this", "is", "a", "tuple", "of", "strings")
 The mapping data type is known as a dictionary. Dictionaries contain key-value pairs that are unordered, changeable, and indexed by key. You declare that something is a dictionary by wrapping it in curly braces and separating the key-value pairs using commas.
 
 ```python
-# an example of a tuple
+# example of a tuple
 x = {
      "name" : "Python", 
      "success" : True
@@ -98,10 +98,10 @@ A set is a collection of data that is unordered and unindexed. Each item in the 
 A frozenset is the same as a set, except that a frozenset is unchangeable.
 
 ```python
-# an example of a set
+# example of a set
 x = {"This", "is", "a", "set"}  
 
-# an example of a frozenset
+# example of a frozenset
 frozenset: x = frozenset({"This", "is", "a", "frozenset"})
 ```
 
@@ -110,8 +110,13 @@ frozenset: x = frozenset({"This", "is", "a", "frozenset"})
 Python's binary data types are not so commonly used by the everyday Python developer. They are, however, nice to know of in case you encounter them. The binary types are bytes, bytearray, and memoryview. A byte represents a Python object as an immutable sequence of small integers between 0 and 256. A bytearray is the same as a byte except that it is mutable. A memoryview is used to access the internal byte-oriented data of a Python object.
 
 ```python
-bytes: x = b"Hello"  
+# example of byte
+bytes: x = b"Hello"
+
+# example of bytearray
 bytearray: x = bytearray(5)  
+
+# example of memoryview
 memoryview: x = memoryview(bytes(5))  
 ```
 
