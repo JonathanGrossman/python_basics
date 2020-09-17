@@ -1,12 +1,12 @@
 # Data Types
 
-Like many other programming languages, Python categorizes the information in your code by its data type. The Python data types include numbers, string, Boolean, sequence, mapping, set, binary, and None.  
+Like many other programming languages, Python categorizes the information in your code by its data type. The Python data types include numbers, string, Boolean, sequence, mapping, set, binary, and None. For instance, an example of a number is `10`. An example of a string is `"Programming with Python."`
 
-The data type determines what kind of operations you can do with that data. For instance, a string is iterable but numbers are not. Because a string is iterable, you can loop through it to access each character in the string (e.g., each letter in a word). You can't do that with numbers.
+The data type determines what kind of operations you can do with that data. For instance, a string is iterable but numbers are not. Because a string is iterable, you can loop through it to access each character in the string (e.g., each letter in a phrase). You can't do that with numbers.
 
 When writing Python code, you oftentimes will use variables to represent the information in your code. Unlike some other programming languages, when defining a variable in Python, you don't have to explicitly declare what data type the variable represents. Rather, the Python intepreter will check the type of each variable in your code when the interpreter runs.
 
-Let's look at each data type in more detail. By the way, this section is just an introduction to each data type. Later sections go into more detail for each data type.
+Let's look at each data type in more detail. By the way, this section is just an introduction to each data type. Later chapters go into more detail for each data type.
 
 ## Numeric
 
@@ -47,28 +47,54 @@ x = "Double quotation marks work."
 
 # example of a string using single quotes
 y = 'Single quotation marks also work.'  
+
+# example of a string representation of a number
+z = '12'  
 ```
 
 ## Boolean
 
-Booleans can have one of two values, True or False. Developers use Booleans to control the flow of their application and to compare values. Most values are inherently `True`. Some values, however, are inherently `False`. For instance, empty values (i.e., other data types that have no value, like "", {}, ()), the number `0`, and `None` are inherently `False`.
+Booleans can have one of two values, `True` or `False`. Notice that both Boolean values start with a capital letter or else Python won't recognize it as a Boolean. Developers use Booleans to control the flow of their application and to compare values. Most values are inherently `True`. For instance, if `True` then do something. If `False`, do something else.
+
+Not only can you set variables equal to `True` or `False`, you can evaluate whether a value is `True` or `False`. Most values are `True`. For instance, numbers other than `0`, strings that have text in them, and other data types that have non-empty values. Some values, however, are inherently `False`. For instance, empty values (i.e., other data types that have no value, like `""`, `{}`, `()`, the number `0`, and `None` are inherently `False`.
 
 ```python
 # example of a variable set equal to a Boolean
 x = False
 
-# example of an expression that returns True
+# example of a values that evaluates to True
+7
+"Python is fun"
+["Python," "programming", "basics"]
+("Python," "programming", "basics")
+{
+    "first": "Python," 
+    "second": programming", 
+    "third": basics"
+}
+
+# example of a values that evaluates to False
+0
+""
+[]
+()
+{}
+
+# example of an expression that evaluates to True
 7 > 3
+
+# example of an expression that evaluates to False
+7 < 3
 ```
 
 ## Sequence
 
-The sequence data types splits into three main subtypes: list, tuple, and range. Lists and tuples are used to group data together. Range is used to return a sequence of numbers.
+The sequence data type splits into three main subtypes: list, tuple, and range. Lists and tuples are used to group data together. Range is used to return a sequence of numbers. 
 
 A list is a collection of data that is ordered, changeable, and indexed by position. You declare that something is a list by wrapping it in square brackets and separating the values using commas.
 
 ```python
-# example of a list
+# example of a list (ignore the \)
 x = \["this", "is", "a", "list", "of", "strings"]
 ```
 
@@ -83,6 +109,8 @@ Python's range is used to return a sequence of numbers. It is a method that acce
 
 If you include two numbers in the range declaration, the range starts at the first number and ends at the second number, counting by one. If you include three numbers in the range declaration, the range starts at the first number, ends at the second number, and counts counting by increments equal to the third number.
 
+Use range with a loop to access each number in the range.
+
 ```python
 # example of range seequence from 0 to 50 counting by 1
 range(0, 50)
@@ -92,6 +120,17 @@ range(5, 25)
 
 # example of range seequence from 10 to 50 counting by 2
 range(10, 50, 2)
+
+# example of range with a loop
+r = range(5)
+for number in r:
+    print(number)
+    
+>>> 0
+>>> 1
+>>> 2
+>>> 3
+>>> 4
 ```
 
 ## Mapping
@@ -117,32 +156,34 @@ A frozenset is the same as a set, except that a frozenset is unchangeable.
 x = {"This", "is", "a", "set"}  
 
 # example of a frozenset
-frozenset: x = frozenset({"This", "is", "a", "frozenset"})
+y = frozenset({"This", "is", "a", "frozenset"})
 ```
 
 ## Binary
 
-Python's binary data types are not so commonly used by the everyday Python developer. They are, however, nice to know of in case you encounter them. The binary types are bytes, bytearray, and memoryview. A byte represents a Python object as an immutable sequence of small integers between 0 and 256. A bytearray is the same as a byte except that it is mutable. A memoryview is used to access the internal byte-oriented data of a Python object.
+Python's binary data types are not so commonly used by the everyday beginning Python developer. They are, however, nice to know of in case you encounter them. The binary types are bytes, bytearray, and memoryview. A byte represents a Python object as an immutable sequence of small integers between 0 and 256. A bytearray is the same as a byte except that it is mutable. A memoryview is used to access the internal byte-oriented data of a Python object.
 
 ```python
 # example of byte
-bytes: x = b"Hello"
+x = b"Hello"
 
 # example of bytearray
-bytearray: x = bytearray(5)  
+y = bytearray(5)  
 
 # example of memoryview
-memoryview: x = memoryview(bytes(5))
+z = memoryview(bytes(5))
 ```
 
 ## None
 
-The `None` type in Python represents an empty value. Sometimes you'll want a variable to exist but you won't want it to have a value. For those situations, you can use Python's `None`. If you have experience with JavaScript, `None` is equivalent to null.
+The `None` type in Python represents an empty value. Sometimes you'll want a variable to exist but you won't want it to have a value. For those situations, you can use Python's `None`. If you have experience with JavaScript, `None` is equivalent to `null`.
 
 
 # Using type() to debug
 
-Sometimes it is helpful to know what type a value is when debugging or trying to understand your application's behavior. For instance, before adding a number to a variable, you may want to make sure the variable is also a number. For instance, before trying to loop through a variable, you may want to confirm it is iterable. You can use Python's built-in `type()` method to find out a value's data type. 
+You can use Python's built-in `type()` method to find out a value's data type. To prevent errors, you may want to validate incoming data before trying certain operations on it.  For instance, before adding a number to a variable, you may want to make sure the variable is also a number. Another example. Before trying to loop through a variable, you may want to confirm it is iterable.
+
+In addition to preventing errors, using `type()` can help you find errors. When debugging or trying to understand your application's behavior, you may need to check what data type something is. Printing the type can help (`print(type(my_data))`). See below for more examples.
  
 ## Examples of using type()  
 
@@ -153,7 +194,7 @@ print(a, type(a))
 
 b = float(100.1)  
 print(b, type(b))  
->>> 100.1 <class 'float'
+>>> 100.1 <class 'float'>
 
 c = str("Python") 
 print(c, type(c))  
