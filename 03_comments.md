@@ -18,7 +18,9 @@ When considering developers as our audience (our future self included), we write
 
 By leaving short but meaningful comments in your code, you can explain to people who read the code what the code does and why it’s important. Comments can explain the flow of your script and the purpose behind the code. This decreases the amount of time it takes someone to understand your code and also makes sure they understand it all. Plus, the process of making and updating comments makes you think more about your code, which leads to more efficient scripts. For instance, before you write the code itself, writing comments in pseudocode requires that you plan before writing the actual code.  
 
-Writing comments may seems tedious at first. But once you realize the value of them and how they save you time and frustration, you will begin to incorporate them into your routine. You will write a sophisticated block of code and then not look at it for weeks or months. In the process of maintaining your project or adding to it, you later will come across this complex code and not know what it means at first. If you wrote effective comments when you wrote the code, it should be much easier for you to figure out what the code does and how to work with it. Remember that when you update your code you also need to update your comments.
+Writing comments may seem tedious at first. But once you realize the value of them and how they save you future time and frustration, you will begin to incorporate them into your routine. 
+
+Here's the scenario. You will write a sophisticated block of code and then not look at it for weeks or months. In the process of maintaining your project or adding to it, you later will come across this complex code and not know what it means at first. If you wrote effective comments when you wrote the code, it should be much easier for you to figure out what the code does and how to work with it. Remember that when you update your code you also need to update your comments.
 
 ## How do you turn code into a comment?    
 
@@ -37,11 +39,11 @@ Another way to comment out your code is to highlight the lines of code that you 
 
 For example, if you are on a Mac, highlight the line of code that you want to turn into a comment, and then press:
 
-> Command + / (Mac)  
+> Command + /  
 
 If you are on Windowns, highlight the line of code that you want to turn into a comment, and then press:
 
-> Control + / (Windows)  
+> Control + /.  
 
 ## Examples of comments:  
 
