@@ -52,7 +52,7 @@ print(j)
 
 You can change the value of a variable (hence the meaning of “variable”)  
 ```python
-# example of changing a variables value
+# example of changing a variable's value
 j = 10 
 print(j)
 >>> 10
@@ -64,7 +64,7 @@ print(j)
 
 You can set variables equal to any data type  
 ```python
-# example of setting a variable to any data type
+# example of setting a variable to a string
 g = "this is a letter"   
 print(g) 
 >>> "this is a letter" 
