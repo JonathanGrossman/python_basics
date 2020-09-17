@@ -9,9 +9,25 @@ When writing Python code, you don't have to explicitly declare what type a varia
 Let's look at some examples.
 
 ## Numeric
-int: x = 100  
-float: y = 100.1  
-complex: z = 10j  
+
+Python's numeric data type is split into three subtypes: integer, float, and complex. Integers and floats are the most common. It's likely you may never even use the complex number, which is used for advanced math calculations.
+
+Integers are whole numbers, meaning no decimal places. Integers can be positive or negative
+```python
+w = 100  
+```
+
+Floats are numbers with decimals or scientific numbers containing an `e`. Floats can be positive or negative.
+```python
+x = 100.1  
+y = 37e8
+```
+
+Complex numbers have a real part and an imaginary part. The real part is an actual number. The imaginary part is represented by the letter `j`. Remember, you probably won't use complex numbers unless you're doing certain kinds of advanced math in Python. They're included here for the sake of completeness and also so that if you see them in the wild, you know what they are.
+```python
+z = 10j  
+ ```
+ 
  
 ## Text
 str: x = "Israel Tech Challenge"  
