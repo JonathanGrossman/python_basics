@@ -56,7 +56,7 @@ z = '12'
 
 Booleans can have one of two values, `True` or `False`. Notice that both Boolean values start with a capital letter or else Python won't recognize it as a Boolean. Developers use Booleans to control the flow of their application and to compare values. Most values are inherently `True`. For instance, if `True` then do something. If `False`, do something else.
 
-Not only can you set variables equal to `True` or `False`, you can evaluate whether a value is `True` or `False`. Most values are `True`. For instance, numbers other than `0`, strings that have text in them, and other data types that have non-empty values. Some values, however, are inherently `False`. For instance, empty values (i.e., other data types that have no value, like `""`, `{}`, `()`, the number `0`, and `None` are inherently `False`.
+Not only can you set variables equal to `True` or `False`, you can evaluate whether a value is `True` or `False`. Most values are `True`. For instance, numbers other than `0`, strings that have text in them, and other data types that have non-empty values. Some values, however, are inherently `False`. For instance, empty values (i.e., other data types that have no value, like `""`, `()`, and `{}`), the number `0`, and `None` are inherently `False`.
 
 ```python
 # example of a variable set equal to a Boolean
