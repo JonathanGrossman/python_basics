@@ -20,11 +20,11 @@ Your Python code will will no doubt contain operators and expressions. This chap
 - arithmetic operators   
 - comparison operators  
 - logical operators  
-- and identity operators  
+- identity operators  
 
 ## Arithmetic Operators
 
-One category of operator is arithmetic. Arithematic operators allow for performing algebra with values and variables. Using arithematic operators, you can add, subtract, divide, multiply, and perform other algebraic operations. 
+One category of operator is arithmetic. Arithmetic operators allow for performing algebra with values and variables. Using arithmetic operators, you can add, subtract, divide, multiply, and perform other algebraic operations. 
 
 ```python
 # examples of numbers
@@ -39,9 +39,9 @@ print(x + y)
 
 ## List of Operations
 
-In Python, you can work with numbers similar to how you would on a calculator. One thing that makes math with Python easier is that you don't have to learn special "Python math". Arithemtic operators are very similar to regular algebra. 
+In Python, you can work with numbers similar to how you would on a calculator. One thing that makes math with Python easier is that you don't have to learn special "Python math". Arithmetic operators are very similar to regular algebra. 
 
-Here are examples of the common basic arithematic operators in Python.
+Here are examples of the common basic arithmetic operators in Python.
 
 Add ( `+` )
 ```python
@@ -94,11 +94,11 @@ print(4 ** 8)
 >>> 65536
 ```
 
-Here are a few notes. 
+For expressions that have more than one arithematic operator, the order of operations in Python are the same as in algebra.    
 
-- For expressions that have more than one arithematic operator, the order of operations in Python are the same as in algebra  
-- The result of division (`/`) is a float regardless of whether operands are both integers  
-- The result of floor division (`//`) is rounded down. If positive this means the decimal is truncated. If negative, this means the absolute value of the number is rounded up resulting in a more negative number → `- 2.7` is rounded to `3`)  
+The result of division (`/`) is a float regardless of whether operands are both integers.  
+
+The result of floor division (`//`) is rounded down. If positive this means the decimal is truncated. If negative, this means the absolute value of the number is rounded up resulting in a more negative number → `- 2.7` is rounded to `3`).  
 
 Python has syntax shortcuts you can use to make your code more efficient. For instance, you can use `+=` or `-+` or `*=` as shorthand in expressions. Writing `x += 10` is the same as writing `x = x + 10`. Get used to seeing this shorthand in other people's code becuase it is common for developers to use this shorthand.
 
