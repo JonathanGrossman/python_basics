@@ -205,7 +205,7 @@ print(b <= c + 4)
 >>> True
 ```
 
-Be careful when comparing floats because the stored value of the float might be more precise than you realize. A good practice for comparing floats is to check whether they are close in value. See this [Real Python article] for more information (https://realpython.com/python-operators-expressions/#equality-comparison-on-floating-point-values).
+Be careful when comparing floats because the stored value of the float might be more precise than you realize. A good practice for comparing floats is to check whether they are close in value. See this [Real Python article](https://realpython.com/python-operators-expressions/#equality-comparison-on-floating-point-values) for more information.
 
 ## Logical Operators
 
