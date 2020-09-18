@@ -1,13 +1,34 @@
 # Operators and Expressions
 
-Operators and expressions are critical for allowing your application to “make decisions” as it runs. Operators are symbols that perform some sort of function. Operands are the values on which the operator performs its function (the value can be a literal value or a variable). An expression is a sequence of operators and operands
-# operators and expressions are used with conditionals and Booleans to write decision-making code
+Operators and expressions are critical for allowing your application to “make decisions” as it runs. **Operators** are symbols that perform some sort of function. **Operands** are the values on which the operator performs its function (the value can be a literal value or a variable). An **expression** is a sequence of operators and operands. Operators and expressions are used with conditionals and Booleans to write decision-making code.
 
-# arithmetic operators allow for performing arithmetic operations, like adding, subtrating, dividing, multiplying, and more, on literal values and variables
-# order of operations are like in algebra
-# see Arithmetic Operators here for a list of operators
-In operators_and_experessions.py, see
+Arithmetic operators allow for performing arithmetic operations, like adding, subtrating, dividing and multiplying, on literal values and variables. Order of operations are like in algebra.
+
+```python
+# variable definitions
+a = 9
+b = 7
+c = 3 
+
 # examples of arithmetic operators
+# print(a + b - c) # this is an expression where a, b, and c are operands and +, - are the operators
+# print(+a)
+# print(-b)
+# print(c - b)
+# print(a * b)
+# print(a / c)
+# print(b % c)
+# print(b ** c)
+
+>>> 3
+>>> 9
+>>> -7
+>>> -4
+>>> 63
+>>> 3.0
+>>> 1
+>>> 343
+```
 
 # the result of division (/) is a float regardless of whether operands are both integers
 # the result of floor division (//) is rounded down (if positive this means the decimal is truncated; if negative, this means the absolute value of the number is rounded up resulting in a more negative number → - 2.7 is rounded to 3)
