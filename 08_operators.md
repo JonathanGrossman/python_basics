@@ -2,12 +2,29 @@
 
 Operators and expressions are critical for allowing your application to “make decisions” as it runs. **Operators** are symbols that perform some sort of function. **Operands** are the values on which the operator performs its function (the value can be a literal value or a variable). An **expression** is a sequence of operators and operands. Operators and expressions are used with conditionals and Booleans to write decision-making code.
 
-Your Python code will will no doubt contain operators and expressions. This chapter discusses in detail arithmetic operators, comparison operators, logical operators, and identity operators.
+
+```python
+# variable definitions
+a = 9
+b = 7
+c = 3 
+
+# a + b - c is an expression where a, b, and c are operands and + and - are the operators
+print(a + b - c) 
+
+>>> 3
+```
+
+Your Python code will will no doubt contain operators and expressions. This chapter discusses in detail 
+
+- arithmetic operators   
+- comparison operators  
+- logical operators  
+- and identity operators  
 
 ## Arithmetic Operators
 
-One type of operator that we discussed somewhat in the numbers chapter are arithmetic operators. Algebra operators allow for performing arithmetic operations on literal values and variables. You can add, subtract, divide, multiply, and perform other algebraic operations. Order of operations are like in algebra. 
-For instance, adding an int to a float returns a float. See below for a list of other operations. 
+One category of operator is arithmetic. Arithematic operators allow for performing algebra with values and variables. Using arithematic operators, you can add, subtract, divide, multiply, and perform other algebraic operations. 
 
 ```python
 # examples of numbers
@@ -22,9 +39,9 @@ print(x + y)
 
 ## List of Operations
 
-In Python, you can work with numbers similar to how you would on a calculator. One thing that makes math with Python easier is that you don't have to learn special "Python math" because Python follows the same order of operations as algebra. 
+In Python, you can work with numbers similar to how you would on a calculator. One thing that makes math with Python easier is that you don't have to learn special "Python math". Arithemtic operators are very similar to regular algebra. 
 
-Here are examples of the common basic math operations in Python.
+Here are examples of the common basic arithematic operators in Python.
 
 Add ( `+` )
 ```python
@@ -77,7 +94,11 @@ print(4 ** 8)
 >>> 65536
 ```
 
-The result of division (`/`) is a float regardless of whether operands are both integers. The result of floor division (`//`) is rounded down. If positive this means the decimal is truncated. If negative, this means the absolute value of the number is rounded up resulting in a more negative number → `- 2.7` is rounded to `3`).
+Here are a few notes. 
+
+- For expressions that have more than one arithematic operator, the order of operations in Python are the same as in algebra  
+- The result of division (`/`) is a float regardless of whether operands are both integers  
+- The result of floor division (`//`) is rounded down. If positive this means the decimal is truncated. If negative, this means the absolute value of the number is rounded up resulting in a more negative number → `- 2.7` is rounded to `3`)  
 
 Python has syntax shortcuts you can use to make your code more efficient. For instance, you can use `+=` or `-+` or `*=` as shorthand in expressions. Writing `x += 10` is the same as writing `x = x + 10`. Get used to seeing this shorthand in other people's code becuase it is common for developers to use this shorthand.
 
@@ -88,34 +109,6 @@ starting_number += 10
 print(starting_number)
 
 >>> 11
-```
-
-A few more examples of arithmetic operators.
-
-```python
-# variable definitions
-a = 9
-b = 7
-c = 3 
-
-# examples of arithmetic operators
-print(a + b - c) # this is an expression where a, b, and c are operands and +, - are the operators
-print(+a)
-print(-b)
-print(c - b)
-print(a * b)
-print(a / c)
-print(b % c)
-print(b ** c)
-
->>> 3
->>> 9
->>> -7
->>> -4
->>> 63
->>> 3.0
->>> 1
->>> 343
 ```
 
 ## Comparison Operators
