@@ -1,6 +1,8 @@
 # Numbers  
 
-Numbers can be integers or floats. An integer is a whole number and is called `int`. A float has one or more decimal places and is called a `float`. To demonstrated the difference, consider this. Two Python objects can have the same value but be of a different type. The number `10` is and int, but the number `10.0` is a float. Integers generally take less space in the memory than floats
+Many Python applications use numbers. It's one of the most commonly used data types and an inevitability that you'll work with numbers in your Python applications. The level of complexity with which you work with numbers will vary. On one end of the spectrum, you may be doing simple algebra. Like addition and subtraction. On the other end of the spectrum, you may be doing statistics, calculus, or other more advanced math. For basic math, Python has built-in functionality discussed below. For more advanced math, you should consider finding a Python library suitable for your specific needs.
+
+In Python, numbers fall into two categories. Numbers can be integers or floats. An integer is a whole number and is called `int`. A float has one or more decimal places and is called a `float`. To demonstrate the difference, consider this. Two Python objects can have the same value but be of a different type. The number `10` is and int, but the number `10.0` is a float. Integers generally take less space in the memory than floats.
 
 ```python
 # examples of numbers
@@ -12,7 +14,7 @@ y = 7.9  # float
 ```
 
 You can convert one number type to the other. This means you can turn an int into a float. Doing so adds one decimal place by default.
-You also can turn a float into an int. Doing so removes all decimal places and rounds down.
+You also can turn a float into an int. Doing so removes all decimal places and rounds down. One way to convert from one number type to the other is to cast using the Python built-in methods `int()` and `float()`. Each method accepts one argument as seen below.
 
 ```python
 # examples of numbers
@@ -47,35 +49,37 @@ print(x + y)
 
 ## List of Operations
 
-- Add ( + )
+In Python, you can work with numbers similar to how you would on a calculator. One thing that makes math with Python easier is that you don't have to learn special "Python math" because Python follows the same order of operations as algebra. Here are examples of the common basic math operations in Python.
+
+Add ( + )
 ```python
 print(4 + 8)
 
 >>> 12
 ```
 
-- Subtract( - )
+Subtract ( - )
 ```python
 print(9 - 5)
 
 >>> 4
 ```
 
-- Multiply ( * )
+Multiply ( * )
 ```python
 print(9 * 5)
 
 >>> 45
 ```
 
-- Divide ( / )
+Divide ( / )
 ```python
 print(9 / 5)
 
 >>> 1.8
 ```
 
-- Modulo ( % ) 
+Modulo ( % ) 
 ```python
 # returns remainder
 print(9 % 5)
@@ -83,7 +87,7 @@ print(9 % 5)
 >>> 4
 ```
 
-- Integer division
+Integer division
 ```python
 # returns int and rounds down
 print(4 // 8) 
@@ -91,24 +95,45 @@ print(4 // 8)
 >>> 0
 ```
 
-- Raise to Power Of ( ** )
+Raise to Power Of ( ** )
 ```python
 print(4 ** 8)
 
 >>> 65536
 ```
 
-# Python follows the same order of operations as algebra
+Python has syntax shortcuts you can use to make your code more efficient. For instance, you can use `+=` or `-+` or `*=` as shorthand in expressions. Writing `x += 10` is the same as writing `x = x + 10`. Get used to seeing this shorthand in other people's code becuase it is common for developers to use this shorthand.
 
-# you can use some shorthand, like +=, -=, and *=, to make your code more efficient
+```python
+# example using += as shorthand
+starting_number = 1
+starting_number += 10
+print(starting_number)
 
-In numbers.py, see
-# examples of math in Python
-# you can use += or -+ or *= as shorthand
+>>> 11
+```
 
-# Python has libraries that make math easier; although those are outside the scope of this course, be aware that they exist (e.g., numpy, scipy, pandas, and matplotlib)
+The Python ecosystem has libraries that make more advanced math easier. Although those Python libraries are outside the scope of this course, you should know that they exist. Those libraries include numpy, scipy, pandas, and matplotlib.
+
+# Errors With Numbers
+
+Adding a number to other data types results in an error. For instance, adding an integer to a string results in an error. 
+
+You should practice reading error messages very carefully. At first it can seem daunting if you're new to programming. However, oftentimes the answer is in the error message. 
+
+Look at the following example. It says `TypeError: unsupported operand type(s) for +: 'int' and 'str'`. It's saying you can't add an integer to a string. It's `TypeError`, which here means that you're improperly trying to combine two different types in an incompatible way.  
+
+Practice reading error messages! If you can become fluent in `error messages`, you will be much better off for it.  
+
+```python
+# example of an int
+x = 3    
 
 # adding a number to other data types results in an error
-# practice reading error messages!
-In numbers.py, see
-# adding a number to other data types results in an error
+print(x + "hello")
+
+>>> Traceback (most recent call last):
+>>>   File "numbers.py", line 21, in <module>
+>>>     print(x + "hello")
+>>> TypeError: unsupported operand type(s) for +: 'int' and 'str'
+```
