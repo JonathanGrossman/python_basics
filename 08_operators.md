@@ -146,16 +146,66 @@ print(starting_number)
 
 ## Comparison Operators
 
-comparison operators check whether an expression is True or False
-used to direct program flow, discussed more later
-see Comparison Operators here for a list of operators
+Comparison operators check whether an expression is True or False. Comparison operators are used to direct the flow of your Python application.
 
-In operators_and_experessions.py, see
-examples of comparison operators
+```python
+# variable definitions
+a = 9
+b = 7
+c = 3
+```
 
-be careful when comparing floats because the stored value of the float might be more precise than you realize
-best practice for comparing floats is to check whether they are close in value
-see Equality Comparison on Floating-Point Values here for more information
+Equal To ( `==` )
+```python
+print(a == c)
+
+>>> False
+```
+
+
+Not Equal To ( `!=` )
+```python
+print(c != b)
+
+>>> True
+```
+
+
+Greater Than ( `>` )
+```python
+print(c > b)
+
+>>> False
+```
+
+Less Than ( `<` )
+```python
+print(c < b)
+
+>>> True
+```
+
+Greater Than or Equal To ( `>=` )
+```python
+print(c >= b)
+
+>>> False
+```
+
+Less Than or Equal To ( `<=` )
+```python
+print(c <= b)
+
+>>> True
+```
+Complex Expression
+```python
+print(b <= c + 4)
+
+>>> True
+```
+
+Be careful when comparing floats because the stored value of the float might be more precise than you realize. A good practice for comparing floats is to check whether they are close in value. See this [Real Python article] for more information (https://realpython.com/python-operators-expressions/#equality-comparison-on-floating-point-values).
 
 ## Logical Operators
 
