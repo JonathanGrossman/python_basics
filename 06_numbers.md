@@ -13,8 +13,7 @@ y = 7.9  # float
 >>> print(type(y)) # <class 'float'>
 ```
 
-You can convert one number type to the other. This means you can turn an int into a float. Doing so adds one decimal place by default.
-You also can turn a float into an int. Doing so removes all decimal places and rounds down. One way to convert from one number type to the other is to cast using the Python built-in methods `int()` and `float()`. Each method accepts one argument as seen below.
+You can convert one number type to the other. This means you can turn an int into a float. Doing so adds one decimal place by default. You also can turn a float into an int. Doing so removes all decimal places and rounds down. One way to convert from one number type to the other is to cast using the Python built-in methods `int()` and `float()`. Each method accepts one argument as seen below.
 
 ```python
 # examples of numbers
@@ -34,7 +33,7 @@ print(b)
 >>> 7
 ```
 
-Another way to change an int to a float is to perform an operation using the `int` with a `float`. For instance, adding an int to a float returns a float. See below for a list of other operations. And see the operators chapter for more details about arithmetic operators.
+Another way to change an `int` to a `float` is to perform an operation using the `int` with a `float` or another `int`. For instance, adding an int to a float returns a float. See below for a list of other operations. And see the operators chapter for more details about arithmetic operators.
 
 ```python
 # examples of numbers
@@ -49,7 +48,7 @@ print(x + y)
 
 ## Arithmetic Operations
 
-In Python, you can work with numbers similar to how you would on a calculator. One thing that makes math with Python easier is that you don't have to learn special "Python math" because Python follows the same order of operations as algebra. Here are examples of the common basic math operations in Python.
+In Python, you can work with numbers similar to how you would on a calculator. Python comes with several built-in arithematic operators. Those operators allow you to do basic algebra, like add, subtract, multiply, and divide. Here are examples of the common basic math operations in Python.
 
 - Add ( `+` )  
 - Subtract (`-` )  
@@ -61,9 +60,11 @@ In Python, you can work with numbers similar to how you would on a calculator. O
 
 To learn more about arithmetic operators and other types of operators, review the operators chapter.
 
-The Python ecosystem has libraries that make more advanced math easier. Although those Python libraries are outside the scope of this course, you should know that they exist. Those libraries include numpy, scipy, pandas, and matplotlib.
+## Advanced Math
 
-# Errors With Numbers
+Advanced math is required for certain types of Python applications. Two categories of Python applications that typically require advanced math are those that incorporate data science and robotics technologies. Don't let the advanced math required deter you from learning how to work with data science and robotics technologies. The Python ecosystem has libraries that make advanced math much easier for non-experts. Although those Python libraries and technologies are outside the scope of this course, you should know that they exist. Those libraries include numpy, scipy, pandas, and matplotlib.
+
+## Errors With Numbers
 
 Adding a number to other data types results in an error. For instance, adding an integer to a string results in an error. 
 
