@@ -62,7 +62,7 @@ print(9 / 5)
 
 Modulo ( `%` ) 
 ```python
-# example of getting the from division remainder
+# example of getting the remainder from division
 print(9 % 5)
 
 >>> 4
