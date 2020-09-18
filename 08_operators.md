@@ -77,7 +77,7 @@ print(4 ** 8)
 >>> 65536
 ```
 
-The result of division (/) is a float regardless of whether operands are both integers. The result of floor division (//) is rounded down. If positive this means the decimal is truncated. If negative, this means the absolute value of the number is rounded up resulting in a more negative number → - 2.7 is rounded to 3).
+The result of division (`/`) is a float regardless of whether operands are both integers. The result of floor division (`//`) is rounded down. If positive this means the decimal is truncated. If negative, this means the absolute value of the number is rounded up resulting in a more negative number → `- 2.7` is rounded to `3`).
 
 Python has syntax shortcuts you can use to make your code more efficient. For instance, you can use `+=` or `-+` or `*=` as shorthand in expressions. Writing `x += 10` is the same as writing `x = x + 10`. Get used to seeing this shorthand in other people's code becuase it is common for developers to use this shorthand.
 
