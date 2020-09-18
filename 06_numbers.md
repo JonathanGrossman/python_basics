@@ -47,71 +47,19 @@ print(x + y)
 >>> 10.9
 ```
 
-## List of Operations
+## Arithmetic Operations
 
 In Python, you can work with numbers similar to how you would on a calculator. One thing that makes math with Python easier is that you don't have to learn special "Python math" because Python follows the same order of operations as algebra. Here are examples of the common basic math operations in Python.
 
-Add ( + )
-```python
-print(4 + 8)
+-Add ( `+` )  
+-Subtract (`-` )  
+-Multiply ( `*` )  
+-Divide ( `/` )
+-Modulo ( `%` ) 
+-Integer division ( `//`)
+-Raise to Power Of ( `**` )
 
->>> 12
-```
-
-Subtract ( - )
-```python
-print(9 - 5)
-
->>> 4
-```
-
-Multiply ( * )
-```python
-print(9 * 5)
-
->>> 45
-```
-
-Divide ( / )
-```python
-print(9 / 5)
-
->>> 1.8
-```
-
-Modulo ( % ) 
-```python
-# returns remainder
-print(9 % 5)
-
->>> 4
-```
-
-Integer division
-```python
-# returns int and rounds down
-print(4 // 8) 
-
->>> 0
-```
-
-Raise to Power Of ( ** )
-```python
-print(4 ** 8)
-
->>> 65536
-```
-
-Python has syntax shortcuts you can use to make your code more efficient. For instance, you can use `+=` or `-+` or `*=` as shorthand in expressions. Writing `x += 10` is the same as writing `x = x + 10`. Get used to seeing this shorthand in other people's code becuase it is common for developers to use this shorthand.
-
-```python
-# example using += as shorthand
-starting_number = 1
-starting_number += 10
-print(starting_number)
-
->>> 11
-```
+To learn more about arithmetic operators and other types of operators, review the operators chapter.
 
 The Python ecosystem has libraries that make more advanced math easier. Although those Python libraries are outside the scope of this course, you should know that they exist. Those libraries include numpy, scipy, pandas, and matplotlib.
 
