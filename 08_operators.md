@@ -6,11 +6,91 @@ Your Python code will will no doubt contain operators and expressions. This chap
 
 ## Arithmetic Operators
 
-One type of operator that we discussed somewhat in the numbers chapter are arithmetic operators. Algebra operators allow for performing arithmetic operations on literal values and variables. You can add, subtrat, divide, multiply, and perform other algebraic operations. Order of operations are like in algebra. 
+One type of operator that we discussed somewhat in the numbers chapter are arithmetic operators. Algebra operators allow for performing arithmetic operations on literal values and variables. You can add, subtract, divide, multiply, and perform other algebraic operations. Order of operations are like in algebra. 
+For instance, adding an int to a float returns a float. See below for a list of other operations. 
 
-A few details to refresh some of what the numbers chapter covers. The result of division (/) is a float regardless of whether operands are both integers. The result of floor division (//) is rounded down. If positive this means the decimal is truncated. If negative, this means the absolute value of the number is rounded up resulting in a more negative number → - 2.7 is rounded to 3).
+```python
+# examples of numbers
+x = 3    # int
+y = 7.9  # float
 
-A few examples to refresh some of what the numbers chapter covers.
+# adding an int to a float returns a float
+print(x + y)
+
+>>> 10.9
+```
+
+## List of Operations
+
+In Python, you can work with numbers similar to how you would on a calculator. One thing that makes math with Python easier is that you don't have to learn special "Python math" because Python follows the same order of operations as algebra. 
+
+Here are examples of the common basic math operations in Python.
+
+Add ( + )
+```python
+print(4 + 8)
+
+>>> 12
+```
+
+Subtract ( - )
+```python
+print(9 - 5)
+
+>>> 4
+```
+
+Multiply ( * )
+```python
+print(9 * 5)
+
+>>> 45
+```
+
+Divide ( / )
+```python
+print(9 / 5)
+
+>>> 1.8
+```
+
+Modulo ( % ) 
+```python
+# returns remainder
+print(9 % 5)
+
+>>> 4
+```
+
+Integer division
+```python
+# returns int and rounds down
+print(4 // 8) 
+
+>>> 0
+```
+
+Raise to Power Of ( ** )
+```python
+print(4 ** 8)
+
+>>> 65536
+```
+
+The result of division (/) is a float regardless of whether operands are both integers. The result of floor division (//) is rounded down. If positive this means the decimal is truncated. If negative, this means the absolute value of the number is rounded up resulting in a more negative number → - 2.7 is rounded to 3).
+
+Python has syntax shortcuts you can use to make your code more efficient. For instance, you can use `+=` or `-+` or `*=` as shorthand in expressions. Writing `x += 10` is the same as writing `x = x + 10`. Get used to seeing this shorthand in other people's code becuase it is common for developers to use this shorthand.
+
+```python
+# example using += as shorthand
+starting_number = 1
+starting_number += 10
+print(starting_number)
+
+>>> 11
+```
+
+A few more examples of arithmetic operators.
 
 ```python
 # variable definitions
