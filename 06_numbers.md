@@ -51,13 +51,13 @@ print(x + y)
 
 In Python, you can work with numbers similar to how you would on a calculator. One thing that makes math with Python easier is that you don't have to learn special "Python math" because Python follows the same order of operations as algebra. Here are examples of the common basic math operations in Python.
 
--Add ( `+` )  
--Subtract (`-` )  
--Multiply ( `*` )  
--Divide ( `/` )
--Modulo ( `%` ) 
--Integer division ( `//`)
--Raise to Power Of ( `**` )
+- Add ( `+` )  
+- Subtract (`-` )  
+- Multiply ( `*` )  
+- Divide ( `/` )  
+- Modulo ( `%` )  
+- Integer division ( `//`)  
+- Raise to Power Of ( `**` )  
 
 To learn more about arithmetic operators and other types of operators, review the operators chapter.
 
