@@ -24,22 +24,7 @@ Your Python code will will no doubt contain operators and expressions. This chap
 
 ## Arithmetic Operators
 
-One category of operator is arithmetic. Arithmetic operators allow for performing algebra with values and variables. Using arithmetic operators, you can add, subtract, divide, multiply, and perform other algebraic operations. 
-
-```python
-# examples of numbers
-x = 3    # int
-y = 7.9  # float
-
-# adding an int to a float returns a float
-print(x + y)
-
->>> 10.9
-```
-
-## List of Operations
-
-In Python, you can work with numbers similar to how you would on a calculator. One thing that makes math with Python easier is that you don't have to learn special "Python math". Arithmetic operators are very similar to regular algebra. 
+One category of operator is arithmetic. Arithmetic operators allow for performing algebra with values and variables. Using arithmetic operators, you can add, subtract, divide, multiply, and perform other algebraic operations. In Python, you can work with numbers similar to how you would on a calculator. One thing that makes math with Python easier is that you don't have to learn special "Python math". Arithmetic operators are very similar to regular algebra. 
 
 Here are examples of the common basic arithmetic operators in Python.
 
@@ -94,9 +79,37 @@ print(4 ** 8)
 >>> 65536
 ```
 
-For expressions that have more than one arithematic operator, the order of operations in Python are the same as in algebra.    
+For expressions that have more than one arithematic operator, the order of operations in Python are the same as in algebra. 
+
+```python
+# variable definitions
+a = 9
+b = 7
+c = 3 
+
+# examples of order of operations
+print(a + b * c)
+
+>>> 30
+
+
+print((a + b) * c)
+
+>>> 48
+```
 
 The result of division (`/`) is a float regardless of whether operands are both integers.  
+
+```python
+# examples of numbers
+x = 3    # int
+y = 7.9  # float
+
+# adding an int to a float returns a float
+print(x + y)
+
+>>> 10.9
+```
 
 The result of floor division (`//`) is rounded down. If positive this means the decimal is truncated. If negative, this means the absolute value of the number is rounded up resulting in a more negative number → `- 2.7` is rounded to `3`).  
 
