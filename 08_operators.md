@@ -26,35 +26,35 @@ In Python, you can work with numbers similar to how you would on a calculator. O
 
 Here are examples of the common basic math operations in Python.
 
-Add ( + )
+Add ( `+` )
 ```python
 print(4 + 8)
 
 >>> 12
 ```
 
-Subtract ( - )
+Subtract ( `-` )
 ```python
 print(9 - 5)
 
 >>> 4
 ```
 
-Multiply ( * )
+Multiply ( `*` )
 ```python
 print(9 * 5)
 
 >>> 45
 ```
 
-Divide ( / )
+Divide ( `/` )
 ```python
 print(9 / 5)
 
 >>> 1.8
 ```
 
-Modulo ( % ) 
+Modulo ( `%` ) 
 ```python
 # returns remainder
 print(9 % 5)
@@ -62,7 +62,7 @@ print(9 % 5)
 >>> 4
 ```
 
-Integer division
+Integer division (`//`)
 ```python
 # returns int and rounds down
 print(4 // 8) 
@@ -70,7 +70,7 @@ print(4 // 8)
 >>> 0
 ```
 
-Raise to Power Of ( ** )
+Raise to Power Of ( `**` )
 ```python
 print(4 ** 8)
 
