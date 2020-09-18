@@ -34,7 +34,7 @@ print(b)
 >>> 7
 ```
 
-Another way to change an int to a float is to perform an operation using the int with a float. For instance, adding an int to a float returns a float. See below for a list of other operations.
+Another way to change an int to a float is to perform an operation using the `int` with a `float`. For instance, adding an int to a float returns a float. See below for a list of other operations. And see the operators chapter for more details about arithmetic operators.
 
 ```python
 # examples of numbers
