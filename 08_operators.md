@@ -30,6 +30,7 @@ Here are examples of the common basic arithmetic operators in Python.
 
 Add ( `+` )
 ```python
+# example of adding
 print(4 + 8)
 
 >>> 12
@@ -37,6 +38,7 @@ print(4 + 8)
 
 Subtract ( `-` )
 ```python
+# example of subtracting
 print(9 - 5)
 
 >>> 4
@@ -44,6 +46,7 @@ print(9 - 5)
 
 Multiply ( `*` )
 ```python
+# example of multiplying
 print(9 * 5)
 
 >>> 45
@@ -51,6 +54,7 @@ print(9 * 5)
 
 Divide ( `/` )
 ```python
+# example of dividing
 print(9 / 5)
 
 >>> 1.8
@@ -58,7 +62,7 @@ print(9 / 5)
 
 Modulo ( `%` ) 
 ```python
-# returns remainder
+# example of getting the from division remainder
 print(9 % 5)
 
 >>> 4
@@ -66,14 +70,15 @@ print(9 % 5)
 
 Integer division (`//`)
 ```python
-# returns int and rounds down
-print(4 // 8) 
+# example of integer division, which returns an int and rounds down
+print(10 // 3) 
 
->>> 0
+>>> 3
 ```
 
-Raise to Power Of ( `**` )
+Exponentiation ( `**` )
 ```python
+# example of exponentiation (raising 4 to the power of 8)
 print(4 ** 8)
 
 >>> 65536
@@ -157,6 +162,7 @@ c = 3
 
 Equal To ( `==` )
 ```python
+# example of equal to
 print(a == c)
 
 >>> False
@@ -165,6 +171,7 @@ print(a == c)
 
 Not Equal To ( `!=` )
 ```python
+# example of not equal to
 print(c != b)
 
 >>> True
@@ -173,6 +180,7 @@ print(c != b)
 
 Greater Than ( `>` )
 ```python
+# example of greater than
 print(c > b)
 
 >>> False
@@ -180,6 +188,7 @@ print(c > b)
 
 Less Than ( `<` )
 ```python
+# example of less than
 print(c < b)
 
 >>> True
@@ -187,6 +196,7 @@ print(c < b)
 
 Greater Than or Equal To ( `>=` )
 ```python
+# example of greater than or equal to
 print(c >= b)
 
 >>> False
@@ -194,12 +204,16 @@ print(c >= b)
 
 Less Than or Equal To ( `<=` )
 ```python
+# example of less than or equal to
 print(c <= b)
 
 >>> True
 ```
 Complex Expression
 ```python
+
+# example of a complex expression using comparison and arithmetic operators
+# adds c + 4 and then compares left to right side of <=
 print(b <= c + 4)
 
 >>> True
