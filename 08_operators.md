@@ -79,7 +79,7 @@ print(4 ** 8)
 >>> 65536
 ```
 
-For expressions that have more than one arithematic operator, the order of operations in Python are the same as in algebra. 
+For expressions that have more than one arithmetic operator, the order of operations in Python are the same as in algebra. 
 
 ```python
 # variable definitions
@@ -112,6 +112,26 @@ print(x + y)
 ```
 
 The result of floor division (`//`) is rounded down. If positive this means the decimal is truncated. If negative, this means the absolute value of the number is rounded up resulting in a more negative number → `- 2.7` is rounded to `3`).  
+
+```python
+# examples of numbers
+x = 3    # int
+y = 7.9  # float
+z = -7.9 # float
+
+# examples of floor division
+print(y / x)
+print(y // x)
+
+>>> 2.6333333333333333
+>>> 2.0
+
+print(z / x)
+print(z // x)
+
+>>> -2.6333333333333333
+>>> -3.0
+```
 
 Python has syntax shortcuts you can use to make your code more efficient. For instance, you can use `+=` or `-+` or `*=` as shorthand in expressions. Writing `x += 10` is the same as writing `x = x + 10`. Get used to seeing this shorthand in other people's code becuase it is common for developers to use this shorthand.
 
