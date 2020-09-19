@@ -443,27 +443,40 @@ In the third `and` example above, the `pants_male and shirts` expression evaluat
 
 In the fourth `and` example above, the `pants_male and shirts and pants_female and no_inventory` expression evaluates to `0.0` because it is a mixed expression where `pants_female` is the first "falsy" operand. `pants_male` and `shirts` are both "truthy". They are `10` and `12`, respectively. `pants_female` evalutates to `False` because it equals `0.0`. Although `no_inventory` also evaluates to `False` because it equals `0`, the 'and' expression returns `pants_female` because it is the first `False` operand.
 
-use operators to avoid exceptions (prevent your program from having an error)
+You can use logical operators to avoid exceptions (to prevent your program from having an error).
 
 ```python
 # examples of logical operators for avoiding exceptions
-# print(i / c == 3.0)
-# print(i / y) == 3.0 # returns an error because diving by zero
-# print(y != 0 and (i / y == 3.0)) # returns False because y !=0, so expression returns first operand (and doesn't even read second operand)
+# print(pants_male / pants_female) == 3.0 # returns an error because diving by zero
+# print(int(pants_female) != 0 and (pants_male / pants_female == 3.0)) # returns False because y !=0, so expression returns first operand (and doesn't even read second operand)
 ```
+The first example above returns an error because the expression is dividing by `0.0`. `pants_female` equals `0.0`. Diving by zero is impossible, so the Python interpreter raises an exception.
 
+The second example returns `False` because `int(pants_female) != 0` is `False`. `pants_female` equals `0.0`, which means `int(pants_female)` equals `0` because `int()` rounds down to the nearest integer. Becaise `int(pants_female) = 0`, the expression `int(pants_female) != !0` is `False`. 
 
-use operators to set a default value
+Because of the `and` operator in the second expression, if `int(pants_female) = 0`, the Python interpreter will not return an error. Rather, it returns the Boolean value of `int(pants_female) != 0` because it is the first value in the expression that is `False`.
+
+You can use logical operators to set a default value for a variable.
 
 ```python
 # examples of logical operators for setting default values
-truthy_string = "Israel Tech Challenge"
-c = truthy_string or 'ITC'
-# print(c)
+
+truthy_string = 'We have pants!'
+c = truthy_string or 'We are out of pants in our store.'
+print(c)
+
+>>> We have pants!
+
 falsy_string = ''
-d = falsy_string or 'ITC'
-# print(d)
+d = falsy_string or 'We are out of pants in our store.'
+print(d)
+
+>>> We are out of pants in our store.
 ```
+
+Both exmples above use an `or` expression to check whether a variable has a value. If it does have a value, it prints that value because `or` expressions return the first item that is "truthy". If the variable is "falsy", the script does not print the value of the variable. It prints the last operand in the `or` expression, which here is a string saying `'We are out of pants in our store.'`. 
+
+The first example prints the value of `truthy_string` because it is "truthy". That value is `'We have pants!'`. The second example prints the value of the second operand in the `or` statement because none of the operands before it are "truthy". The value of the last operand is `'We are out of pants in our store.'`. The only operand before it, `falsy_string`, is an empty string, which is "falsy".  
 
 # Identity Operators
 
