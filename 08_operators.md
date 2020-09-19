@@ -286,7 +286,7 @@ Be careful when comparing floats because the stored value of the float might be 
 
 ## Logical Operators
 
-Logical operators check whether an expression is `True` or `False`. The logical operators are `not`, `or`, and `and`. Like comparison operators, you use logical operators with operands (of virtually any data type) to write Boolean expressions. Using Boolean expressions, you direct the flow of your Python application. You check whether a condition is `True` or `False`:
+Logical operators check whether an expression is `True` or `False`. The logical operators are `not`, `or`, and `and`. Like comparison operators, you use logical operators with operands (of virtually any data type) to write Boolean expressions. You direct the flow of your Python application by checking whether a condition is `True` or `False`:
 
 ```python
 # example of checking whether a condition is True
@@ -311,30 +311,30 @@ print(shopping_cart)
 >>> ['jeans']  
 
 ```
-In the code above, if `selected_pants` is `True` and if `inventory` is `True`, then you add to the `shopping_cart` the `selected_pants`. Here both conditions are `True` because neither are empty values. `selected_pants` is equalt to `'jeans'` (not an empty string) and `inventory` is a list containing four items (not an empty list). 
+In the code above, if `selected_pants` is `True` and if `inventory` is `True`, then you add to the `shopping_cart` the `selected_pants`. Here both conditions are `True` because neither are empty values. `selected_pants` is equal to `'jeans'` (not an empty string) and `inventory` is a list containing four items (not an empty list). 
 
-You can add an else statement to handle what happens if `selected_pants` or `inventory` is not `True`. In the example below, instead of being equal to `'jeans'`, `selected_pants` is equal to and empty string (`''`).
+You can add an `else` statement to handle what happens if `selected_pants` or `inventory` is not `True`. In the example below, instead of being equal to `'jeans'`, `selected_pants` is equal to and empty string (`''`).
 
 ```python
 # example of doing something if condition is False
 inventory = ['jeans', 'khakis', 'shorts', 'swimsuit']
 selected_pants = ''
 shopping_cart = []
-if selected_pants in inventory:
+if selected_pants and inventory:
   shopping_cart.append(selected_pants)
 else:
   print('no pants selected')
 
 print(shopping_cart)
 
->>> soccer shorts not in inventory
+>>> no pants selected
 >>> []
 
 ```
 In the code above, if `selected_pants` or `inventory` is not `True`, then the script prints a message saying that `'no pants selected'` and also prints an empty list. This is just one example of using Boolean expressions containing logical operators to direct the flow of your application. For more information, see the conditional statements chapter and examples in my other Python project lessons.
 
 
-Here are a few examples of the logical operators.
+You use logical operators with Boolean and non-Boolean values. Here are a few examples of the logical operators with Boolean expressions.
 
 ```python
 # examples of logical operators
@@ -365,21 +365,20 @@ print(pants_female < 10 and pants_male < 10) # both expressions are True, so ret
 >>> True
 ```
 
-
 When using logical operators to compare non-Boolean objects and expressions, such as numbers, strings, lists, tuples, dicts, sets, expressions, and functions
 the result of such non-Boolean comparisons is "falsy" or "truthy".
 
-Python interprets "falsy" values the same as the Boolean `False` value. You've already seen values that are falsy: `0`; `''`, `[]`, `()`, `{}`, and `None`. Python interprets everything else as "truthy". 
+Python interprets "falsy" values the same as the Boolean `False` value. You've already seen values that are falsy: `0`; `''`, `[]`, `()`, `{}`, and `None`. Python interprets everything else as "truthy" and interprets them the same as the Boolean `True` value. 
 
-When using logical operators to compare non-Boolean operands, the truthiness determines the outcome and the type of the result varies depending upon the operator. 
+When using logical operators to compare non-Boolean operands, you need to know the nuances of how each operator works, but they each work in unique ways. 
 
-For `not`, "truthy" objects and expressions are `True` and "falsy" objects and expressions are `False`. For `or` and `and`, the result is the value of one of the operands, evaluated from left to right.
+For `not`, "truthy" objects and expressions are `True` and "falsy" objects and expressions are `False`. For `or` and `and`, the result is the value of one of the operands, evaluated from left to right. 
 
 For `or`, it returns the first operand that is "truthy". If none are "truthy", the `or` expression returns the last operand. 
 
-For `and`, if all operands are "truthy", it returns the last operand. If none are "truthy", it returns the first operand. If some are "truthy" and some "falsy", it returns the first "falsy" value.
+For `and`, if all operands are "truthy", it returns the last operand. If none are "truthy", it returns the first operand. If some are "truthy" and some "falsy", it returns the first "falsy" value.  
 
-Here are examples of logical operators with non-Boolean values.
+Here are examples of logical operators with non-Boolean values.  
 
 ```python
 # define variables for examples below of logical operators with non-Boolean values
@@ -443,10 +442,6 @@ In the second `and` example above, the `pants_male and pants_female` expression 
 In the third `and` example above, the `pants_male and shirts` expression evaluates to `12` because both operands are "truthy". `pants_male` evalutates to `True`. It equals `10`. `shirts` evaluates to `True` because it equals `12`. Because both are "truthy", the `and` expression returns the last value in the expression, `12` for `shirts`. 
 
 In the fourth `and` example above, the `pants_male and shirts and pants_female and no_inventory` expression evaluates to `0.0` because it is a mixed expression where `pants_female` is the first "falsy" operand. `pants_male` and `shirts` are both "truthy". They are `10` and `12`, respectively. `pants_female` evalutates to `False` because it equals `0.0`. Although `no_inventory` also evaluates to `False` because it equals `0`, the 'and' expression returns `pants_female` because it is the first `False` operand.
-
-
-
-
 
 use operators to avoid exceptions (prevent your program from having an error)
 
