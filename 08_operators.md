@@ -465,13 +465,13 @@ truthy_string = 'We have pants!'
 c = truthy_string or 'We are out of pants in our store.'
 print(c)
 
->>> We have pants!
+>>> 'We have pants!'
 
 falsy_string = ''
 d = falsy_string or 'We are out of pants in our store.'
 print(d)
 
->>> We are out of pants in our store.
+>>> 'We are out of pants in our store.'
 ```
 
 Both exmples above use an `or` expression to check whether a variable has a value. If it does have a value, it prints that value because `or` expressions return the first item that is "truthy". If the variable is "falsy", the script does not print the value of the variable. It prints the last operand in the `or` expression, which here is a string saying `'We are out of pants in our store.'`. 
