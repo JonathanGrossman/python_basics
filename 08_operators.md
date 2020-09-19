@@ -1,19 +1,8 @@
 # Operators and Expressions
 
-Operators and expressions are critical for allowing your application to “make decisions” as it runs. **Operators** are symbols that perform some sort of function. **Operands** are the values on which the operator performs its function (the value can be a literal value or a variable). An **expression** is a sequence of operators and operands. Operators and expressions are used with conditionals and Booleans to write decision-making code.
+Operators and expressions are critical for allowing your application to “make decisions” as it runs. **Operators** are symbols that perform some sort of function. For instance, the addition symbol `+` is an arithmetic operator. **Operands** are the values on which the operator performs its function. For example, if you add two numbers together, the numbers are the operands. The numbers can be the literal number (e.g., `5`) or a variable that has a number value (e.g. `sale_price`). 
 
-
-```python
-# variable definitions
-a = 9
-b = 7
-c = 3 
-
-# a + b - c is an expression where a, b, and c are operands and + and - are the operators
-print(a + b - c) 
-
->>> 3
-```
+An **expression** is a sequence of operators and operands. For instance, `total_price = sale_price + sale_price * 0.15` is an expression.  Operators and expressions are used with conditionals and Booleans to write decision-making code.
 
 Your Python code will will no doubt contain operators and expressions. This chapter discusses in detail 
 
@@ -24,9 +13,18 @@ Your Python code will will no doubt contain operators and expressions. This chap
 
 ## Arithmetic Operators
 
-One category of operator is arithmetic. Arithmetic operators allow for performing algebra with values and variables. Using arithmetic operators, you can add, subtract, divide, multiply, and perform other algebraic operations. In Python, you can work with numbers similar to how you would on a calculator. One thing that makes math with Python easier is that you don't have to learn special "Python math". Arithmetic operators are very similar to regular algebra. 
+One category of operator is arithmetic. You use arithmetic operators with number operands to write algebraic expressions. Using arithmetic operators, you can add, subtract, divide, multiply, and perform other algebraic operations. For instance, you can multiply a `sale_price` by a tax of `.15` and add the resulting value to the `sale_price` to get the `total_price`.
 
-Here are examples of the common basic arithmetic operators in Python.
+```python
+# example of arithmetic operators
+sale_price = 100
+total_price = sale_price + sale_price * 0.15
+```
+In the example above, first `sale_price` is set to 100. Next, the code multiplies `sale_price` by `0.15`. Then the code adds the product of that operation to `sale_price` and sets the sum of the addition operation equal to `total_price`. Like in algebra, the order of operations in the expression above prioritized the multiplation before the addition. 
+
+One thing that makes math with Python easier is that you don't have to learn special "Python math". Arithmetic operators are very similar to regular algebra. In other words, you can work with algebra in Python similar to how you would on a calculator.
+
+Examples of arithmetic operators in Python are Add ( `+` ), Subtract ( `-` ), Multiply ( `*` ), Divide ( `/` ), Modulo ( `%` ), Integer division (`//`), and Exponentiation ( `**` ). See examples below for each.
 
 Add ( `+` )
 ```python
@@ -84,7 +82,7 @@ print(4 ** 8)
 >>> 65536
 ```
 
-For expressions that have more than one arithmetic operator, the order of operations in Python are the same as in algebra. 
+You can write expressions that have more than one operator. For expressions that have more than one arithmetic operator, the order of operations in Python are the same as in algebra. 
 
 ```python
 # variable definitions
@@ -103,7 +101,7 @@ print((a + b) * c)
 >>> 48
 ```
 
-The result of division (`/`) is a float regardless of whether operands are both integers.  
+The result of division (`/`) is a float regardless of whether operands are both integers, both floats, or a mixture of the two.  
 
 ```python
 # examples of numbers
@@ -151,10 +149,38 @@ print(starting_number)
 
 ## Comparison Operators
 
-Comparison operators check whether an expression is True or False. Comparison operators are used to direct the flow of your Python application.
+Comparison operators check whether an expression is `True` or `False`. You use comparison operators with operands (usually of type number, string, or Boolean) to write Boolean expressions. Using Boolean expressions, you direct the flow of your Python application. You check whether a condition is `True` or `False`:
 
 ```python
-# variable definitions
+# example of checking whether a condition is True
+if total_price > 100:
+  ...
+```
+The code above checks whether `total_price` is greater than `100`. After checking whether the expression `total_price` evaluates to `True`, you can direct your Python application to do something.
+
+```python
+# example of doing something if condition is True
+if total_price > 100:
+  shipping_cost = 0
+
+```
+In the code above, if `total_price` is greater than 100, then `shipping_cost` equals `0`. You can add an else statement to handle what happens if `total_price` is not greater than 100.
+
+```python
+# example of adding an else statement to handle False
+if total_price > 100:
+  shipping_cost = 0
+else:
+  shipping_cost = 4.99
+
+```
+In the code above, if `total_price` is equal to or less than 100, then `shipping_cost` equals `4.99`. This is just one example of using Boolean expressions containing comparison operators to direct the flow of your application. For more information, see the conditional statements chapter and examples in my other Python project lessons.
+
+
+Here are examples of the comparison operators in Python.
+
+```python
+# variable definitions for the examples below
 a = 9
 b = 7
 c = 3
@@ -211,7 +237,6 @@ print(c <= b)
 ```
 Complex Expression
 ```python
-
 # example of a complex expression using comparison and arithmetic operators
 # adds c + 4 and then compares left to right side of <=
 print(b <= c + 4)
@@ -219,7 +244,7 @@ print(b <= c + 4)
 >>> True
 ```
 
-Be careful when comparing floats because the stored value of the float might be more precise than you realize. A good practice for comparing floats is to check whether they are close in value. See this [Real Python article](https://realpython.com/python-operators-expressions/#equality-comparison-on-floating-point-values) for more information.
+Be careful when comparing floats because the stored value of the float might be more precise than you realize. Some practices for comparing floats include checking whether they are close in value or round the floats to the same decimal place before comparing them.
 
 ## Logical Operators
 
