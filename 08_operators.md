@@ -1,6 +1,6 @@
 # Operators and Expressions
 
-Operators and expressions are critical for allowing your application to “make decisions” as it runs. **Operators** are symbols that perform some sort of function. For instance, the addition symbol `+` is an arithmetic operator. **Operands** are the values on which the operator performs its function. For example, if you add two numbers together, the numbers are the operands. The numbers can be the literal number (e.g., `5`) or a variable that has a number value (e.g. `sale_price`). 
+Operators and expressions are critical for allowing your application to “make decisions” as it runs. **Operators** are symbols that perform some sort of function. For instance, the addition symbol `+` is an arithmetic operator. **Operands** are the values on which the operator performs its function. For example, if you add two numbers together, the numbers are the operands. The numbers can be the literal number (e.g., `5`) or a variable that has a number value (e.g., `sale_price`). 
 
 An **expression** is a sequence of operators and operands. For instance, `total_price = sale_price + sale_price * 0.15` is an expression.  
 
@@ -195,7 +195,7 @@ Comparison operators check whether an expression is `True` or `False`. You use c
 if total_price > 100:
   ...
 ```
-The code above checks whether `total_price` is greater than `100`. After checking whether the expression `total_price` evaluates to `True`, you can direct your Python application to do something.
+The code above checks whether `total_price` is greater than `100`. After checking whether the expression containing `total_price` evaluates to `True`, you can direct your Python application to do something.
 
 ```python
 # example of doing something if condition is True
@@ -215,8 +215,7 @@ else:
 ```
 In the code above, if `total_price` is equal to or less than 100, then `shipping_cost` equals `4.99`. This is just one example of using Boolean expressions containing comparison operators to direct the flow of your application. For more information, see the conditional statements chapter and examples in my other Python project lessons.
 
-
-Here are examples of the comparison operators in Python.
+Comparison operators include Equal To ( `==` ), Not Equal To ( `!=` ), Greater Than ( `>` ), Less Than ( `<` ), Greater Than or Equal To ( `>=` ), and Less Than or Equal To ( `<=` ).  Here are examples of each.
 
 ```python
 # variable definitions for the examples below
@@ -287,13 +286,74 @@ Be careful when comparing floats because the stored value of the float might be 
 
 ## Logical Operators
 
-logical operators are not, or, and and
-can be used to check whether an expression is True or False
-a simple yet powerful way to chain expressions to make complicated conditionals
-see Logical Operators here for a list of operators
+Logical operators check whether an expression is `True` or `False`. The logical operators are `not`, `or`, and `and`. Like comparison operators, you use logical operators with operands (of virtually any data type) to write Boolean expressions. Using Boolean expressions, you direct the flow of your Python application. You check whether a condition is `True` or `False`:
 
-In operators_and_experessions.py, see
-examples of logical operators
+```python
+# example of checking whether a condition is True
+inventory = ['jeans', 'khakis', 'shorts, `swimsuit`]
+selected_pants = 'jeans'
+shopping_cart = []
+if selected_pants and inventory:
+  ...
+```
+The code above creates a variable called `inventory`. The `inventory` variable is set equal to a list that has four items. The next line creates a variable called `selected_pants` and sets it equal to a string `jeans`. Then the next line creates a variable called `shopping_cart` and sets it equal to an empty list `[]`. The following line checks if `selected_pants` is `True` and if `inventory` is `True`. After checking whether both items in the expression evaluate to `True`, you can direct your Python application to do something.
+
+```python
+# example of doing something if condition is True
+inventory = ['jeans', 'khakis', 'shorts', 'swimsuit']
+selected_pants = 'jeans'
+shopping_cart = []
+if selected_pants and inventory:
+  shopping_cart.append(selected_pants)
+
+print(shopping_cart)
+
+>>> ['jeans']  
+
+```
+In the code above, if `selected_pants` is `True` and if `inventory` is `True`, then you add to the `shopping_cart` the `selected_pants`. Here both conditions are `True` because neither are empty values. `selected_pants` is equalt to `'jeans'` (not an empty string) and `inventory` is a list containing four items (not an empty list). 
+
+You can add an else statement to handle what happens if `selected_pants` or `inventory` is not `True`. In the example below, instead of being equal to `'jeans'`, `selected_pants` is equal to and empty string (`''`).
+
+```python
+# example of doing something if condition is False
+inventory = ['jeans', 'khakis', 'shorts', 'swimsuit']
+selected_pants = ''
+shopping_cart = []
+if selected_pants in inventory:
+  shopping_cart.append(selected_pants)
+else:
+  print('no pants selected')
+
+print(shopping_cart)
+
+>>> soccer shorts not in inventory
+>>> []
+
+```
+In the code above, if `selected_pants` or `inventory` is not `True`, then the script prints a message saying that `'no pants selected'` and also prints an empty list. This is just one example of using Boolean expressions containing logical operators to direct the flow of your application. For more information, see the conditional statements chapter and examples in my other Python project lessons.
+
+
+Here are a few examples of the logical operators.
+
+```python
+# examples of logical operators
+pants_female = 8
+pants_male = 9
+
+# not
+print(not pants_female < 10) # pants_female is less than 10, so that expression is True; meaning not that expression is False
+print(not pants_female > 10) # pants_female is not greater than 10, so that expression is False; meaning not that expression is True
+
+# or
+# print(pants_female > 10 or pants_male < 10) # at least one of the expressions is True, so returns True
+# print(pants_female > 10 or pants_male > 10) # neither expressions is True, so returns False
+
+# and
+# print(pants_female > 10 and pants_male < 10) # at least one of the expressions is False, so returns False
+# print(pants_female < 10 and pants_male < 10) # both expressions are True, so returns True
+```
+
 
 in addition to comparing Boolean values, you can use logical operators to compare non-Boolean objects and expressions, such as numbers, strings, lists, tuples, dicts, sets, expressions, and functions
 the result of such non-Boolean comparisons is “truthy” or “falsy”
@@ -301,6 +361,39 @@ falsy:
 The False Boolean value; Number with a value of zero; Empty string, list, tuple, dict, and set objects; Python’s None value
 
 truthy: everything else
+```python
+# examples of logical operators with non-Boolean values
+#additional variables
+x = 0.0
+y = 0
+# not
+# print(not x)
+# print(not i)
+# or
+# print(x or i)
+# print(x or y)
+# print(x or y or i)
+# print(x or i or y)
+# and
+# print(i and c)
+# print(x and i)
+# print(x and y and i)
+
+
+# examples of logical operators for avoiding exceptions
+# print(i / c == 3.0)
+# print(i / y) == 3.0 # returns an error because diving by zero
+# print(y != 0 and (i / y == 3.0)) # returns False because y !=0, so expression returns first operand (and doesn't even read second operand)
+
+
+# examples of logical operators for setting default values
+truthy_string = "Israel Tech Challenge"
+c = truthy_string or 'ITC'
+# print(c)
+falsy_string = ''
+d = falsy_string or 'ITC'
+# print(d)
+```
 
 when using logical operators to compare non-Boolean operands, the truthiness determines the outcome and the type of the result varies depending upon the operator
 for not, “truthy” objects and expressions are True and “falsy” objects and expressions are False
