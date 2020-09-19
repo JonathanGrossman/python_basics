@@ -345,46 +345,78 @@ pants_male = 9
 print(not pants_female < 10) # pants_female is less than 10, so that expression is True; meaning not that expression is False
 print(not pants_female > 10) # pants_female is not greater than 10, so that expression is False; meaning not that expression is True
 
+>>> False
+>>> True
+
+
 # or
 print(pants_female > 10 or pants_male < 10) # at least one of the expressions is True, so returns True
 print(pants_female > 10 or pants_male > 10) # neither expressions is True, so returns False
 
+>>> True
+>>> False
+
+
 # and
 print(pants_female > 10 and pants_male < 10) # at least one of the expressions is False, so returns False
 print(pants_female < 10 and pants_male < 10) # both expressions are True, so returns True
+
+>>> False
+>>> True
 ```
 
 
-in addition to comparing Boolean values, you can use logical operators to compare non-Boolean objects and expressions, such as numbers, strings, lists, tuples, dicts, sets, expressions, and functions
-the result of such non-Boolean comparisons is “truthy” or “falsy”
-falsy:
-The False Boolean value; Number with a value of zero; Empty string, list, tuple, dict, and set objects; Python’s None value
+When using logical operators to compare non-Boolean objects and expressions, such as numbers, strings, lists, tuples, dicts, sets, expressions, and functions
+the result of such non-Boolean comparisons is "falsy" or "truthy".
 
-truthy: everything else
+Python interprets "falsy" values the same as the Boolean `False` value. You've already seen values that are falsy: `0`; `''`, `[]`, `()`, `{}`, and `None`. Python interprets everything else as "truthy". 
+
+Here are examples of logical operators with non-Boolean values.
+
+
 ```python
 # examples of logical operators with non-Boolean values
-#additional variables
-x = 0.0
-y = 0
-# not
-# print(not x)
-# print(not i)
-# or
-# print(x or i)
-# print(x or y)
-# print(x or y or i)
-# print(x or i or y)
-# and
-# print(i and c)
-# print(x and i)
-# print(x and y and i)
+# define variables
+pants_female = 0.0
+pants_male = 10
+shirts = 12
+no_pants = 0
 
+# not
+print(not pants_female)
+print(not pants_male)
+
+>>> True
+>>> False
+
+# or
+print(pants_female or pants_male)
+print(pants_female or no_pants)
+print(pants_female or shirts or pants_male)
+print(pants_female or pants_male or shirts)
+
+>>> 10
+>>> 0
+>>> 12
+>>> 10
 
 # examples of logical operators for avoiding exceptions
 # print(i / c == 3.0)
 # print(i / y) == 3.0 # returns an error because diving by zero
 # print(y != 0 and (i / y == 3.0)) # returns False because y !=0, so expression returns first operand (and doesn't even read second operand)
+```
 
+The `not` operator returns the opposite of whatever the value's Boolean status. The `not pants_female` expression evaluates to `True` because `pants_female` evalutates to `False` (it equals `0.0`), and the opposite of `False` is `True`. The `not pants_male` expression evaluates to `False` because `pants_male` evalutates to `True` (it equals `10`), and the opposite of `True` is `False`.
+
+Reading from left to right, the `or` operator returns the first value that evaluates to `True`. If none are `True`, it returns the last value. In the first `or` example above, the `pants_female or pants_male` expression evaluates to `10` because `pants_female` evalutates to `False` (it equals `0.0`) and `pants_male` evaluates to `True` because it equals `10` and is the first `True` operation in the expression.
+
+In the second `or` example above, the `pants_female or no_pants` expression evaluates to `0` because `pants_female` evalutates to `False` (it equals `0.0`) and although `no_pants` evaluates to `False` too, the expression returns `no_pants` because it is the last operand in the expression.
+
+In the third `or` example above, the `pants_female or shirts or pants_male` expression evaluates to `12` because `pants_female` evalutates to `False` (it equals `0.0`) and `shirts` evaluates to `True` because it equals `12`. Although `pants_male` is also `True`, the expression returns `shirts` because it is the first `True` operation.
+
+In the fourth `or` example above, the `pants_female or pants_male or shirts` expression evaluates to `10` because `pants_female` evalutates to `False` (it equals `0.0`) and `pants_male` evaluates to `True` because it equals `10`. Although `shirts` is also `True`, the expression returns `pants_male` because it is the first `True` operation.
+
+```python
 
 # examples of logical operators for setting default values
 truthy_string = "Israel Tech Challenge"
