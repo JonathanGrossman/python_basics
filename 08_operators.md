@@ -381,16 +381,15 @@ For `and`, if all operands are "truthy", it returns the last operand. If none ar
 
 Here are examples of logical operators with non-Boolean values.
 
-
 ```python
-# examples of logical operators with non-Boolean values
-
-# define variables
+# define variables for examples below of logical operators with non-Boolean values
 pants_female = 0.0
 pants_male = 10
 shirts = 12
 no_inventory = 0
+```
 
+```python
 # not
 print(not pants_female)
 print(not pants_male)
