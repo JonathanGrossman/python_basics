@@ -346,12 +346,12 @@ print(not pants_female < 10) # pants_female is less than 10, so that expression 
 print(not pants_female > 10) # pants_female is not greater than 10, so that expression is False; meaning not that expression is True
 
 # or
-# print(pants_female > 10 or pants_male < 10) # at least one of the expressions is True, so returns True
-# print(pants_female > 10 or pants_male > 10) # neither expressions is True, so returns False
+print(pants_female > 10 or pants_male < 10) # at least one of the expressions is True, so returns True
+print(pants_female > 10 or pants_male > 10) # neither expressions is True, so returns False
 
 # and
-# print(pants_female > 10 and pants_male < 10) # at least one of the expressions is False, so returns False
-# print(pants_female < 10 and pants_male < 10) # both expressions are True, so returns True
+print(pants_female > 10 and pants_male < 10) # at least one of the expressions is False, so returns False
+print(pants_female < 10 and pants_male < 10) # both expressions are True, so returns True
 ```
 
 
