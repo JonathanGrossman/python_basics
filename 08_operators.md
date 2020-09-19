@@ -2,9 +2,9 @@
 
 Operators and expressions are critical for allowing your application to “make decisions” as it runs. **Operators** are symbols that perform some sort of function. For instance, the addition symbol `+` is an arithmetic operator. **Operands** are the values on which the operator performs its function. For example, if you add two numbers together, the numbers are the operands. The numbers can be the literal number (e.g., `5`) or a variable that has a number value (e.g. `sale_price`). 
 
-An **expression** is a sequence of operators and operands. For instance, `total_price = sale_price + sale_price * 0.15` is an expression.  Operators and expressions are used with conditionals and Booleans to write decision-making code.
+An **expression** is a sequence of operators and operands. For instance, `total_price = sale_price + sale_price * 0.15` is an expression.  
 
-Your Python code will will no doubt contain operators and expressions. This chapter discusses in detail 
+Your Python code will will no doubt contain operators and expressions because you will need to control the flow of your application. This chapter discusses in detail the following types of operators:
 
 - arithmetic operators   
 - comparison operators  
@@ -20,7 +20,7 @@ One category of operator is arithmetic. You use arithmetic operators with number
 sale_price = 100
 total_price = sale_price + sale_price * 0.15
 ```
-In the example above, first `sale_price` is set to 100. Next, the code multiplies `sale_price` by `0.15`. Then the code adds the product of that operation to `sale_price` and sets the sum of the addition operation equal to `total_price`. Like in algebra, the order of operations in the expression above prioritized the multiplation before the addition. 
+In the example above, first `sale_price` is set to 100. Next, the code multiplies `sale_price` by `0.15`. Then the code adds the product of that multiplication operation to `sale_price` and sets the sum of the addition operation equal to `total_price`. Like in algebra, the order of operations in the expression above prioritized the multiplication operation before the addition operation. 
 
 One thing that makes math with Python easier is that you don't have to learn special "Python math". Arithmetic operators are very similar to regular algebra. In other words, you can work with algebra in Python similar to how you would on a calculator.
 
@@ -81,8 +81,7 @@ print(4 ** 8)
 
 >>> 65536
 ```
-
-You can write expressions that have more than one operator. For expressions that have more than one arithmetic operator, the order of operations in Python are the same as in algebra. 
+A few notes to help you use the arithmetic operators. Like we saw above in the `total_price` example, you can write expressions that have more than one arithmetic operator. For expressions that have more than one arithmetic operator, the order of operations in Python are the same as in algebra. 
 
 ```python
 # variable definitions
@@ -100,37 +99,77 @@ print((a + b) * c)
 
 >>> 48
 ```
+In the code above, the first expression goes in a different order than the second. In the first, the expression multiples `b` by `c` and adds the product to `a`. In the second, becuase `a + b` is wrapped in `( )`, the expression adds `a` to `b` and then multiplies the sum by `c`. The different order of operations results in different outcomes.
 
-The result of division (`/`) is a float regardless of whether operands are both integers, both floats, or a mixture of the two.  
+When using division or integer division in Python, be aware of the nuances of how those operators work. The result of division (`/`) is a float regardless of whether operands are both integers, both floats, or a mixture of the two.  
 
 ```python
 # examples of numbers
-x = 3    # int
-y = 7.9  # float
+number_of_shirts = 10.0   # float
+number_of_pants = 10       # int
 
-# adding an int to a float returns a float
-print(x + y)
+# adding a float to an int returns a float
+print(number_of_shirts + number_of_pants)
 
->>> 10.9
+>>> 20.0
+
+total_price_shirts = 40.0   # float
+number_of_shirts = 10       # int
+
+# dividing a float by an int returns a float
+print(total_price_shirts / number_of_shirts)
+
+>>> 4.0
+```
+
+If you want the result to be an `int`, use Python's built-in `int()` function to convert the result. Beware that `int()` rounds down.
+
+```python
+# using int() to get integer sum
+number_of_shirts = 10.0   # float
+number_of_pants = 10       # int
+
+sum = int(number_of_shirts + number_of_pants)
+print(sum)
+
+>>> 20
+
+# using int() to get integer division product
+total_price_shirts = 40.0   # float
+number_of_shirts = 10       # int
+
+product = int(total_price_shirts / number_of_shirts)
+print(product)
+
+>>> 4
+
+# using int() rounds down (here, from 3.9 to 3)
+total_price_shirts = 39.0   # float
+number_of_shirts = 10       # int
+
+product = int(total_price_shirts / number_of_shirts)
+print(product)
+
+>>> 3
 ```
 
 The result of floor division (`//`) is rounded down. If positive this means the decimal is truncated. If negative, this means the absolute value of the number is rounded up resulting in a more negative number → `- 2.7` is rounded to `3`).  
 
 ```python
 # examples of numbers
-x = 3    # int
-y = 7.9  # float
-z = -7.9 # float
+total_price_shirts = 7.9    # float
+number_of_shirts = 3  # int
+price_discount = -7.9 # float
 
 # examples of floor division
-print(y / x)
-print(y // x)
+print(total_price_shirts / number_of_shirts)
+print(total_price_shirts // number_of_shirts)
 
 >>> 2.6333333333333333
 >>> 2.0
 
-print(z / x)
-print(z // x)
+print(price_discount / number_of_shirts)
+print(price_discount // number_of_shirts)
 
 >>> -2.6333333333333333
 >>> -3.0
