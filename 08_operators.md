@@ -371,16 +371,25 @@ the result of such non-Boolean comparisons is "falsy" or "truthy".
 
 Python interprets "falsy" values the same as the Boolean `False` value. You've already seen values that are falsy: `0`; `''`, `[]`, `()`, `{}`, and `None`. Python interprets everything else as "truthy". 
 
+When using logical operators to compare non-Boolean operands, the truthiness determines the outcome and the type of the result varies depending upon the operator. 
+
+For `not`, "truthy" objects and expressions are `True` and "falsy" objects and expressions are `False`. For `or` and `and`, the result is the value of one of the operands, evaluated from left to right.
+
+For `or`, it returns the first operand that is "truthy". If none are "truthy", the `or` expression returns the last operand. 
+
+For `and`, if all operands are "truthy", it returns the last operand. If none are "truthy", it returns the first operand. If some are "truthy" and some "falsy", it returns the first "falsy" value.
+
 Here are examples of logical operators with non-Boolean values.
 
 
 ```python
 # examples of logical operators with non-Boolean values
+
 # define variables
 pants_female = 0.0
 pants_male = 10
 shirts = 12
-no_pants = 0
+no_inventory = 0
 
 # not
 print(not pants_female)
@@ -388,10 +397,14 @@ print(not pants_male)
 
 >>> True
 >>> False
+```
 
+The `not` operator returns the opposite of whatever the value's Boolean status. The `not pants_female` expression evaluates to `True` because `pants_female` evalutates to `False` (it equals `0.0`), and the opposite of `False` is `True`. The `not pants_male` expression evaluates to `False` because `pants_male` evalutates to `True` (it equals `10`), and the opposite of `True` is `False`.
+
+```python
 # or
 print(pants_female or pants_male)
-print(pants_female or no_pants)
+print(pants_female or no_inventory)
 print(pants_female or shirts or pants_male)
 print(pants_female or pants_male or shirts)
 
@@ -399,25 +412,56 @@ print(pants_female or pants_male or shirts)
 >>> 0
 >>> 12
 >>> 10
+```
 
+Reading from left to right, the `or` operator returns the first "truthy" value. If none are "truthy", it returns the last value. In the first `or` example above, the `pants_female or pants_male` expression evaluates to `10` because `pants_male` is the first "truthy" value in the expression. `pants_female` evalutates to `False`. It equals `0.0`. `pants_male` evaluates to `True` because it equals `10`. 
+
+In the second `or` example above, the `pants_female or no_inventory` expression evaluates to `0` because none of the operands are "truthy", so it returns the last operand. `pants_female` evalutates to `False` (it equals `0.0`) and although `no_inventory` evaluates to `False` too, the expression returns `no_inventory` because it is the last operand in the expression.
+
+In the third `or` example above, the `pants_female or shirts or pants_male` expression evaluates to `12` because it returns the first "truthy" operand, which is `shirts`. `pants_female` evalutates to `False` (it equals `0.0`) and `shirts` evaluates to `True` because it equals `12`. Although `pants_male` is also `True`, the expression returns `shirts` because it is the first `True` operand.
+
+In the fourth `or` example above, the `pants_female or pants_male or shirts` expression evaluates to `10` because it returns the first "truthy" operand, which is `pants_male`. `pants_female` evalutates to `False` (it equals `0.0`) and `pants_male` evaluates to `True` because it equals `10`. Although `shirts` is also `True`, the expression returns `pants_male` because it is the first `True` operand.
+
+```python
+# and
+print(no_inventory and pants_female)
+print(pants_male and pants_female)
+print(pants_male and shirts)
+print(pants_male and shirts and pants_female and no_inventory)
+
+>>> 0
+>>> 0.0
+>>> 12
+>>> 0.0
+```
+
+Reading from left to right, the `and` operator returns the last operand if all operands are "truthy". It returns the first operand if none are "truthy". If some are "truthy" and some "falsy", the `and` operator returns the first "falsy" value.
+
+In the first `and` example above, the `no_inventory and pants_female` expression evaluates to `0` because both operands are "falsy". So it returns the first value. `no_inventory` evaluates to `False` because it equals `0`. `pants_female` evalutates to `False` because it equals `0.0`. The first operand is`no_inventory`, so the expression returns its value of `0`.
+
+In the second `and` example above, the `pants_male and pants_female` expression evaluates to `0.0` because `pants_male` evalutates to `True`. It equals `10` `pants_female` evalutates to `False`. It equals `0.0`. The expression returns `pants_female` because the `and` expression contains both "truthy" and "falsy" values, so it returns the first "falsy" value.
+
+In the third `and` example above, the `pants_male and shirts` expression evaluates to `12` because both operands are "truthy". `pants_male` evalutates to `True`. It equals `10`. `shirts` evaluates to `True` because it equals `12`. Because both are "truthy", the `and` expression returns the last value in the expression, `12` for `shirts`. 
+
+In the fourth `and` example above, the `pants_male and shirts and pants_female and no_inventory` expression evaluates to `0.0` because it is a mixed expression where `pants_female` is the first "falsy" operand. `pants_male` and `shirts` are both "truthy". They are `10` and `12`, respectively. `pants_female` evalutates to `False` because it equals `0.0`. Although `no_inventory` also evaluates to `False` because it equals `0`, the 'and' expression returns `pants_female` because it is the first `False` operand.
+
+
+
+
+
+use operators to avoid exceptions (prevent your program from having an error)
+
+```python
 # examples of logical operators for avoiding exceptions
 # print(i / c == 3.0)
 # print(i / y) == 3.0 # returns an error because diving by zero
 # print(y != 0 and (i / y == 3.0)) # returns False because y !=0, so expression returns first operand (and doesn't even read second operand)
 ```
 
-The `not` operator returns the opposite of whatever the value's Boolean status. The `not pants_female` expression evaluates to `True` because `pants_female` evalutates to `False` (it equals `0.0`), and the opposite of `False` is `True`. The `not pants_male` expression evaluates to `False` because `pants_male` evalutates to `True` (it equals `10`), and the opposite of `True` is `False`.
 
-Reading from left to right, the `or` operator returns the first value that evaluates to `True`. If none are `True`, it returns the last value. In the first `or` example above, the `pants_female or pants_male` expression evaluates to `10` because `pants_female` evalutates to `False` (it equals `0.0`) and `pants_male` evaluates to `True` because it equals `10` and is the first `True` operation in the expression.
-
-In the second `or` example above, the `pants_female or no_pants` expression evaluates to `0` because `pants_female` evalutates to `False` (it equals `0.0`) and although `no_pants` evaluates to `False` too, the expression returns `no_pants` because it is the last operand in the expression.
-
-In the third `or` example above, the `pants_female or shirts or pants_male` expression evaluates to `12` because `pants_female` evalutates to `False` (it equals `0.0`) and `shirts` evaluates to `True` because it equals `12`. Although `pants_male` is also `True`, the expression returns `shirts` because it is the first `True` operation.
-
-In the fourth `or` example above, the `pants_female or pants_male or shirts` expression evaluates to `10` because `pants_female` evalutates to `False` (it equals `0.0`) and `pants_male` evaluates to `True` because it equals `10`. Although `shirts` is also `True`, the expression returns `pants_male` because it is the first `True` operation.
+use operators to set a default value
 
 ```python
-
 # examples of logical operators for setting default values
 truthy_string = "Israel Tech Challenge"
 c = truthy_string or 'ITC'
@@ -426,19 +470,6 @@ falsy_string = ''
 d = falsy_string or 'ITC'
 # print(d)
 ```
-
-when using logical operators to compare non-Boolean operands, the truthiness determines the outcome and the type of the result varies depending upon the operator
-for not, “truthy” objects and expressions are True and “falsy” objects and expressions are False
-for or and and, the result is the value of one of the operands, evaluated from left to right
-For or, it returns the first operand that is “truthy” or, if none are “truthy”, returns the last operand 
-For and, if all operands are truthy, it returns the last operand; if none are truthy, it returns the first operand
-
-use operators to avoid exceptions (prevent your program from having an error)
-use operators to set a default value
-
-In operators_and_experessions.py, see
-examples of logical operators for avoiding exceptions
-examples of logical operators for setting default values
 
 # Identity Operators
 
