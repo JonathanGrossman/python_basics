@@ -225,7 +225,7 @@ print('Not part of if block')
 
 >>> q is less than s
 
->>> Not part of if block
+>>> 'Not part of if block'
 ```
 
 ## elif and else
