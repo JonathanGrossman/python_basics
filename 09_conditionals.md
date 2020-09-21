@@ -415,10 +415,11 @@ Although conditional expressions look similar to `if` statements, they act diffe
 Conditional expressions allow you to write more efficient code. Here is an `if / else` statement.
 
 ```python
-# an example of if / else
+# define variables
 q = 5
 r = 0
 
+# an example of if / else
 if r < q:
     r += q
     print(r)
@@ -432,6 +433,7 @@ else:
 Here is the `if / else` statement written as a conditional expression.
 
 ```python
+# define variables
 q = 5
 r = 0
 
@@ -446,16 +448,33 @@ Be thoughtful about when and how you use conditional expressions. Although they 
 
 ## Pass
 
-Python’s pass statement tells the interpreter to skip ahead to the next line of code
-commonly used in development when you want to put a placeholder block of code, yet you don’t want your code to break
+Python’s pass statement tells the interpreter to skip ahead to the next line of code. It is commonly used in development when you want to put a placeholder block of code, yet you don’t want your code to break. Or you may find an actual use for skipping a block of code in your app's flow. 
+
+Here is an example of an `if` expression that doesn't have a statement and an example that uses `pass`. 
 
 ```python
-# pass statement basic examples
-# error results "expected an indented block"
-# if r < q:
-   
+# define variables
+q = 5
+r = 0
 
-# no error
-# if r < q:
-#     pass
+# error results "expected an indented block"
+if r < q:
+
+print("Passed!") 
+
+>>> print("Passed!") 
+        ^
+>>> IndentationError: expected an indented block
+
+
+# no error because of pass
+if r < q:
+    pass
+
+print("Passed!") 
+
+>>> Passed!
+
 ```
+
+The example that does not have a statement for the `if` expression returns an error `IndentationError: expected an indented block`. It therefore does not print `Passed!`. The example that uses `pass` has no error. It prints `Passed!`.
