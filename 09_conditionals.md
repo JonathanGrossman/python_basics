@@ -1,6 +1,6 @@
 # Conditionals
 
-Conditional blocks are blocks of code that run only if a defined condition exists. For instance, `if pant_size = 2: print(pant_size)`. The line of code prints `pant_size` only if its value is `2`. Otherwise, the Python interpreter does nothing but move onto the next line. 
+Conditional blocks are blocks of code that run only if a defined condition exists. For instance, `if pant_size = 2: print(pant_size)`. The condition the expression is checking is whether `pant_size` equals `2`. The line of code prints `pant_size` only if its value is `2`. Otherwise, the Python interpreter does nothing but move onto the next line. 
 
 Because the Python interpreter reads your .py files from top to bottom in sequential order, you can use conditional statements to control the flow of your application. Use conditional statements to do things like skip over lines of code, repeat blocks of code, or choose between different code blocks.
 
@@ -242,10 +242,10 @@ It is also not required that an `if` expression have a corresponding `else` stat
 
 Here are some commone patterns: 
 
--`if` only 
--`if / else` 
--`if / elif / else` 
--`if / elif . . . elif /else` where `. . .` represents additional `elif` expressions. 
+- `if` only 
+- `if / else` 
+- `if / elif / else` 
+- `if / elif . . . elif /else` where `. . .` represents additional `elif` expressions
 
 Here are examples.
 
