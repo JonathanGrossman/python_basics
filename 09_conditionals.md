@@ -1,10 +1,10 @@
 # Conditionals
 
-Conditional blocks are blocks of code that run only if a defined condition exists. For instance, `if pant_size = 2: print(pant_size)`. The condition the expression is checking is whether `pant_size` equals `2`. The line of code prints `pant_size` only if its value is `2`. Otherwise, the Python interpreter does nothing but move onto the next line. 
+Conditional blocks are blocks of code that run only if a defined condition exists. A conditional block starts with a conditional expression that checks whether a condition is `True` and is followed by a statement. For instance, the conditional block is `if pant_size = 2: print(pant_size)`. The conditional expression is `if pant_size = 2:`. The condition the expression is checking is whether `pant_size` equals `2`. The statement is `print(pant_size)`. The line of code prints `pant_size` only if its value is `2`. Otherwise, the Python interpreter does nothing but move onto the next line. 
 
 Because the Python interpreter reads your .py files from top to bottom in sequential order, you can use conditional statements to control the flow of your application. Use conditional statements to do things like skip over lines of code, repeat blocks of code, or choose between different code blocks.
 
-The chapter discusses how to use `if`, `else`, and `elif` to write conditional expressions that check the truthiness of a Python object or expression. If the conditional expression is met, the Python interpreter reads and executes the corresponding block of Python code (the expression's statement). If the conditional expression is not met, the Python interpreter does not read or execute the corresponding block of Python code. The chapter also dicusses the `pass` statement.
+The chapter discusses how to use `if`, `else`, and `elif` to write conditional expressions that check the truthiness of a Python object or expression. If the conditional expression is met, the Python interpreter reads and executes the corresponding block of Python code (the expression's statement). If the conditional expression is not met, the Python interpreter does not read or execute the corresponding statement. The chapter also dicusses the `pass` statement.
 
 
 ## if
