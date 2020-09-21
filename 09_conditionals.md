@@ -229,47 +229,151 @@ print('Not part of if block')
 ```
 
 ## elif and else
-elif and else are used in combination with if and one another to control flow
-your code “makes decision” on which block or blocks to run based on truthiness of the conditions set
-you can use an if / else pattern or if / elif . . . elif /else
-like if, a condition follows elif and runs its code block only if the condition is True 
-in contrast, else has no condition and runs only if all the preceding code blocks in the if / elif / else blocks are False
 
-you must have an if statement, but the elif and else statements are optional
-you can have as many elif statements as you want but you can have only one else statement
-the if / elif / else blocks run until the interpreter reaches the first truthy block, then skips over the remaining blocks
-if no truthy blocks and no else, none of the blocks run
+Like `if` expressions, `elif` and `if` each evaluate whether a Python object or expression is truthy. `elif` and `else` statements are optional when using an `if` expression and you cannot use either of them without a preceding `if` expression. In other words, only if you use an `if` expression can you use an `elif` or `else` expression, but you don't have to use either just by using an `if`. The `if / elif / else` blocks run until the interpreter reaches the first truthy block. The interpreter then skips over the remaining corresponding blocks. If none of the conditional expressions are truthy, none of the statements run unless there is an `else` statement, in which case it runs.
+
+Think of it as though an `if` statement can have, but doesn't have to have, corresponding `elif` and `else` statements. Similar to how you saw above with multiple `if` statements, use combinations of `if`, `elif`, and `else` to control how the Python interpreter reads your code. Essentially, write your code so that it "makes decisions" on which block or blocks to run based on truthiness of the conditions set.
+
+When using `elif` statements, any `elif` expressions must come after an `if` or `elif`. If there is a corresponding `else` to the `if`, the `elif` statements must come before the `else`. So any and all `elif` blocks come after the `if` but before any `else`. 
+
+Like `if` statements, `elif` expressions have a condition and a statement. If the condition is truthy, the statement runs. You can have as many `elif` statements in a row as the memory allows. But be sure that the rest of us humans can understand your code. It is not required that you have any `elif` statements.
+
+It is also not required that an `if` expression have a corresponding `else` statement. If it does, the `else` must appear after the `if` and after any and all `elif` expressions. The `else` expression has a statement but no explicit condition. Its condition is implicit. Its statement runs if all the corresponding `if` and `elif` expressions are falsy. You can have only one `else` for each `if`. 
+
+Here are some commone patterns: 
+
+-`if` only 
+-`if / else` 
+-`if / elif / else` 
+-`if / elif . . . elif /else` where `. . .` represents additional `elif` expressions. 
+
+Here are examples.
+
+```python
+if True: 
+    pants = 12
+    shirts = 10
+    inventory = pants +  shirts
+    if inventory > 20:
+	    price = 9.99
+	    total_sale = inventory * price
+	    print(total_sale, "We have plenty more!")
+    elif inventory <= 20 and inventory > 0:
+	    price = 5.99
+	    total_sale = inventory * price
+	    print(total_sale, "Running low.")
+    else inventory == 0:
+	    price = 0
+	    total_sale = inventory * price
+	    print(total_sale, "None in inventory.")
+
+>>> 219.78 We have plenty more!
+```
+The code above prints `219.78 We have plenty more!` because the `if` condition is `True`.
+
+```python
+if True: 
+    pants = 2
+    shirts = 1
+    inventory = pants +  shirts
+    if inventory > 20:
+	    price = 9.99
+	    total_sale = inventory * price
+	    print(total_sale, "We have plenty more!")
+    elif inventory <= 20 and inventory > 0:
+	    price = 5.99
+	    total_sale = inventory * price
+	    print(total_sale, "Running low.")
+    else inventory == 0:
+	    price = 0
+	    total_sale = inventory * price
+	    print(total_sale, "None in inventory.")
+
+>>> 17.97 Running low.
+```
+The code above prints `17.97 Running low.` because the `if` condition is `False` and `elif` condition is `True`.
+
+```python
+if True: 
+    pants = 0
+    shirts = 0
+    inventory = pants +  shirts
+    if inventory > 20:
+	    price = 9.99
+	    total_sale = inventory * price
+	    print(total_sale, "We have plenty more!")
+    elif inventory <= 20 and inventory > 0:
+	    price = 5.99
+	    total_sale = inventory * price
+	    print(total_sale, "Running low.")
+    else inventory == 0:
+	    price = 0
+	    total_sale = inventory * price
+	    print(total_sale, "None in inventory.")
+
+>>> 0 None in inventory.
+```
+The code above prints `0 None in inventory.` because the `if` and `elif` conditions are `False`.
+
+```python
+if True: 
+    pants = -1
+    shirts = 0
+    inventory = pants +  shirts
+    if inventory > 20:
+	    price = 9.99
+	    total_sale = inventory * price
+	    print(total_sale, "We have plenty more!")
+    elif inventory <= 20 and inventory > 0:
+	    price = 5.99
+	    total_sale = inventory * price
+	    print(total_sale, "Running low.")
+    else inventory == 0:
+	    price = 0
+	    total_sale = inventory * price
+	    print(total_sale, "None in inventory.")
+
+>>> 0 None in inventory.
+```
+The code above has its inventory at `-1`. Like the `if` example above, you owe someone a pair of pants! Instead of printing nothing like above where none of the `if` expressions accounted for negative `inventory`, the code above prints `0 None in inventory.`. This difference occurs becuase `else` acts as a catchall, whereas the `if` conditions in the previous example have explicit conditions. The `else` expression's condition for running is implicit. That condition is whether all the conditions above it are falsy. Here they are all falsy, so it prints `0 None in inventory.`.
+
+Here are additional basic examples of `elif` and `else` blocks.
 
 ```python
 # elif and else statement basic examples
-# if q:
-#     print("yes, q")
-# else:
-#     print("no q")
+if q:
+    print("yes, q")
+else:
+    print("no q")
 
+>>> "yes, q"
 
-# if r:
-#     print("yes, r")
-# else:
-#     print("no, r")
+if r:
+    print("yes, r")
+else:
+    print("no, r")
 
+>>> "no, r"
 
-# if r:
-#     print("yes, r")
-# elif q or r:
-#     print("q or r")
-# else:
-#     print("no, q or r")
+if r:
+    print("yes, r")
+elif q or r:
+    print("q or r")
+else:
+    print("no, q or r")
 
+>>> "q or r"
 
-# if r:
-#     print("yes, r")
-# elif r == 10:
-#     print("r equals 10")
-# elif q or r:
-#     print("q or r")
-# else:
-#     print("no, q or r")
+if r:
+    print("yes, r")
+elif r == 10:
+    print("r equals 10")
+elif q or r:
+    print("q or r")
+else:
+    print("no, q or r")
+
+>>> "q or r"
 ```
 
 ## Conditional Expressions
