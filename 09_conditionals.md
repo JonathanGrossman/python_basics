@@ -1,6 +1,10 @@
-# Conditionals.
-Conditional statements allow you to control the flow of your application, which otherwise will read every line sequentially, meaning one after the next from top to bottom. Conditional statements are used to skip over lines of code, repeat blocks of code, or choose between different code blocks
-Here we cover if, else, elif, conditional expressions, and pass. Later we will discuss other ways to control application flow
+# Conditionals
+
+Conditional blocks are blocks of code that run only if a defined condition exists. For instance, `if pant_size = 2`, `print(pant_size)`.  Because the Python interpreter reads your .py files from top to bottom in sequential order, you can use conditional statements to control the flow of your application. Use conditional statement to skip over lines of code, to repeat blocks of code, or to choose between different code blocks.
+
+The chapter discusses `if`, `else`, and `elif`, conditional expressions, and `pass`. 
+
+## if
 
 if evaluates the specified object’s or expression’s truthiness
 an if expression consists of if, an expression, a colon (:), and a statement (which appears on the following line and must be indented)
@@ -49,6 +53,7 @@ t = 5
 # print('Not part of if block')
 ```
 
+## elif and else
 elif and else are used in combination with if and one another to control flow
 your code “makes decision” on which block or blocks to run based on truthiness of the conditions set
 you can use an if / else pattern or if / elif . . . elif /else
@@ -92,6 +97,8 @@ if no truthy blocks and no else, none of the blocks run
 #     print("no, q or r")
 ```
 
+## Conditional Expressions
+
 conditional expressions act like operators
 conditional expressions look similar to if statements but are different because they do not control program flow
 <when_condition_true> if <condition> else <when_condition_false>
@@ -118,6 +125,8 @@ see Conditional Expressions (Python’s Ternary Operator) here for more details
 # r += q if r < q else r
 # print(r)
 ```
+
+## Pass
 
 Python’s pass statement tells the interpreter to skip ahead to the next line of code
 commonly used in development when you want to put a placeholder block of code, yet you don’t want your code to break
