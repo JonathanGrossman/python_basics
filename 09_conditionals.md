@@ -383,32 +383,66 @@ else:
 
 ## Conditional Expressions
 
-conditional expressions act like operators
-conditional expressions look similar to if statements but are different because they do not control program flow
-<when_condition_true> if <condition> else <when_condition_false>
-conditional expressions are read in a non-intuitive order
-	Reads condition
-If condition true, runs code preceding if
-If condition false, runs code following else
+Conditional expressions look like `if` expressions but act like operators. Here is what a conditional expression looks like.
 
-see Conditional Expressions (Python’s Ternary Operator) here for more details
+```python
+# define a variable
+inventory_exists = True
+
+# example conditional expression
+print(True) if inventory_exists else print(False)
+```
+To understand how Python interprets this line, you have to find the `if`. The first step is Python checks the `if` condition. Here if `inventory_exists` equals `True`. If that condition exists, Python executes the line to the left of the `if`. Here the line prints `True`. If the condition does not exist, Python executes the line to the right of the `else`. Here the line prints `False`.
+
+This is a boilerplate representation of how the condition expression works.
+
+```python
+<when_condition_true> if <condition> else <when_condition_false>
+```
+Here are a few examples.
 
 ```python
 # conditional expressions basic examples
-# print("q > r") if q > r else print("q is not greater than r")
-# print("r > q") if r > q else print("r is not greater than q")
+print("q > r") if q > r else print("q is not greater than r")
+print("r > q") if r > q else print("r is not greater than q")
 
-# conditional expressions can simplify your code; see comparison below
-# if r < q:
-#     r += q
-#     print(r)
-# else:
-#     r
-#     print(r)
-
-# r += q if r < q else r
-# print(r)
+>>> q > r
+>>> r is not greater than q
 ```
+
+Although conditional expressions look similar to `if` statements, they act differently. They do not control program flow like `if`, `elif`, and `else`. Rather, they help Python decide which part of the line to run, but otherwise Python continues onto execute the next line.
+
+Conditional expressions allow you to write more efficient code. Here is an `if / else` statement.
+
+```python
+# an example of if / else
+q = 5
+r = 0
+
+if r < q:
+    r += q
+    print(r)
+else:
+    r
+    print(r)
+
+>>> 5
+```
+
+Here is the `if / else` statement written as a conditional expression.
+
+```python
+q = 5
+r = 0
+
+# same as above but written as a conditional expression
+r += q if r < q else r
+print(r)
+
+>>> 5
+```
+
+Be thoughtful about when and how you use conditional expressions. Although they make your code more efficient in terms of number of lines, they can be difficult to understand sometimes.
 
 ## Pass
 
