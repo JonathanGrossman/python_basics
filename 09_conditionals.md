@@ -38,7 +38,7 @@ if True:
 >>> SyntaxError: unexpected EOF while parsing
 ```
 
-Indentation matters! If the `if` expression's statement appears on the following line but is not indented, the Python interpreter has an Indentation error `IndentationError: expected an indented block`. Indentation matters because that is how the Python interpreter knows which lines of code make up a block of code that belong together. Lines are considered in the same block of code when they have the same indentation. Here the error means that the `if` and `print` statements are in the same block of code when they really shouldn't be. If the `print` statement immediately follows the `if` statement, then the `print` statement should be indented.
+Indentation matters! If the `if` expression's statement appears on the following line but is not indented, the Python interpreter has an Indentation error `IndentationError: expected an indented block`. 
 
 ```python
 # example of indentation error
@@ -46,13 +46,15 @@ if True:
 print(True)
     
 >>> IndentationError: expected an indented block
-
-
 ```
-So far this discussion has used statements that are only one line. A one-line block of code. Here is an example of an intended block of code consisting of more than one line.
+
+Indentation matters because that is how the Python interpreter knows which lines of code make up a block of code that belong together. Lines are considered in the same block of code when they have the same indentation. Here the error means that the `if` and `print` statements are in the same block of code when they really shouldn't be. If the `print` statement immediately follows the `if` statement, then the `print` statement should be indented.
+
+
+So far this discussion has used statements that are only one line. A one-line block of code. Here is an example of an indented block of code consisting of more than one line.
 
 ```python
-# example of statement on line following if expression
+# example of multi-line statement block of code
 if True: 
     pants = 12
     shirts = 10
@@ -69,10 +71,12 @@ You can nest blocks of code. The example below has two blocks of code.
 ```python
 # example of statement on line following if expression
 if True: 
+    # first block of code
     pants = 12
     shirts = 10
     inventory = pants + shirts
     if inventory > 20:
+            # second block of code
 	    price = 9.99
 	    total_sale = inventory * price
 	    print(total_sale)
@@ -85,6 +89,7 @@ The first block is four lines. The first three lines in the statement define `pa
 You can use multiple `if` statements in a single block of code. When `if` statements appear in the same block, the Python interpreter runs the statement for the first one whose condition is met. Subsequent `if` statements in the same block are not read. The examples below each have three `if` statements. The top one checks if `inventory` is greater than 20. The next checks if `inventory` is less than or equal to `20`. The last checks if `inventory` equals `0`. Reading from top to bottom, the Python interpreter will run the corresponding statement for the first `if` statement that is `True`. If none are `True`, none are run.
 
 ```python
+# example of multiple if statements
 if True: 
     pants = 12
     shirts = 10
