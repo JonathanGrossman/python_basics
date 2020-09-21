@@ -286,7 +286,7 @@ Be careful when comparing floats because the stored value of the float might be 
 
 ## Logical Operators
 
-Logical operators check whether an expression is `True` or `False`. The logical operators are `not`, `or`, and `and`. Like comparison operators, you use logical operators with operands (of virtually any data type) to write Boolean expressions. You direct the flow of your Python application by checking whether a condition is `True` or `False`:
+Logical operators check whether an expression or object is `True` or `False`. The logical operators are `not`, `or`, and `and`. Like comparison operators, you use logical operators with operands (of virtually any data type) to write Boolean expressions. You direct the flow of your Python application by checking whether a condition is `True` or `False`:
 
 ```python
 # example of checking whether a condition is True
@@ -480,11 +480,58 @@ The first example prints the value of `truthy_string` because it is "truthy". Th
 
 # Identity Operators
 
-the identity operators are is and is not 
-in contrast to other operators, which compare the operand data value, identity operators evaluate whether two or more operands are the same Python object stored in memory
+Identity operators evaluate whether two or more operands are the same Python object stored in memory. The identity operators are `is` and `is not`.  In contrast  to the other operators that compare operand data values, `is` and `is not` tell you whether two objects are located in the same part of the memory. 
 
-In operators_and_experessions.py, see
-examples of identity operators
+Each variable has a unique memory location and an `id` for that location. Use Python's built-in `id()` function to get the `id` of an item stored in memory. See examples below.
+
+Two Python objects may have the same value but not be the same Python object.  If two operands are stored in the same memory location, `is` returns `True` and `is not` returns `False`. If two operands are not stored in the same memory location, `is` returns `False` and `is not` returns `True`.
+
+Here are some examples of the `is` and `is not` identity operators and also Python's built-in `id()` method. 
+
+```python
+# examples of identity operators
+
+# define variables
+pant_sizes = [2, 3, 4]
+shirt_sizes = [2, 3, 4]
+
+# print memory ids of variables
+print(id(pant_sizes))
+print(id(shirt_sizes))
+
+>>> 4511904224
+>>> 4511906784
+
+# print a few expressions using ==, is, and is not
+print(pant_sizes == shirt_sizes) # True because values are same
+print(pant_sizes is shirt_sizes) # False because not same object stored in memory
+print(pant_sizes is not shirt_sizes) # True because not same object stored in memory
+
+>>> True
+>>> False
+>>> True
+```
+
+In the code above, the first two print statements (using `id()`) show that `pant-sizes` and `shirt_sizes` have a different memory `id` because they are stored in different memory locations. 
+
+The third print statement compares the two variables using `==`, which compares values. This print statement returns `True` because the two lists are the same `[2, 3, 4]`. The fourth and fifth print statements compare the two variables using `is` and `is not`, which compare memory location. The fourth returns `False` and the fifth returns `True` because each variable is assigned its own memory location. 
+
+```python
+# set one variable equal to another
+pant_sizes_copy = pant_sizes
+
+# print the memory ids
+print(id(pant_sizes))
+print(id(pant_sizes_copy))
+
+# compare whether in the same memory location
+print(pant_sizes is pant_sizes_copy) # True because same object stored in memory
+
+>>> 4470514144
+>>> 4470514144
+>>> True
+```
+In the code above, the first line sets `pant_sizes_copy` equal to `pant_sizes`. The first and second print statements print the `id` of `pant_sizes` and `pant_sizes_copy`. They have the same memory `id`. Sure enough, the third print statement uses `is` to compare the identity of the two variables and returns `True`!
 
 
 
