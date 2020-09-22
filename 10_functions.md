@@ -1,14 +1,37 @@
 # Functions
 
-what: block of code that performs one or more tasks; this block of code can accept one or more inputs and return one or more outputs
-what: in the code, a function needs a definition, which is the step-by-step “blueprint” for performing the tasks
-what: in the code, after defining a function, for it to perform the tasks within the function, we need to call the function
-note: defining a function in your code but not calling it is analogous to planning how to build a home but not actually ever building the home
+A function is a block of code that performs one or more tasks. A function can accept one or more inputs and return one or more outputs. Here is a function.
 
-self-defined functions: ones that we write the “blueprint” for in our own code
-built-in functions: functions that come with whatever third-party software or packages that we are using in our applications
-methods: functions that belong to classes/objects; we will discuss classes and objects later; for now, just know that methods are functions that belong to a specific block of code
-note: the point is that functions come in a variety of contexts but that they all have in common that they perform tasks; the differences between them are more subtle and will be revealed as we continue . . .
+```python
+# example of a function definition
+def this_is_a_function():
+    print("This is a function!")
+```
+
+The example above is a function definition. The code defines what the function does. It is a step-by-step "blueprint" for what happens when you call the function. Notice that nothing happens in the terminal if you run your file with just the code above. It doesn't print `This is a function!`.
+
+Defining a function doesn't cause the Python interpreter to execute the code it. To execute the code, you need to call the function. Call a function by typing its name followed by `()`.
+
+```python
+# example of a function definition
+def this_is_a_function():
+    print("This is a function!")
+
+# example of calling a function
+this_is_a_function()
+
+>>> This is a function!
+```
+
+In the code above, `this_is_a_function()` results in the terminal printing `This is a function!`. Defining a function in your code but not calling it is analogous to creating blueprint for building a home but not ever building the home. Therefore, remember to call your functions.
+
+## Function Categories
+
+One thing that confuses beginners is terminology surrounding functions. Three of the main ways you'll work with functions are ones that you define yourself, ones that come with third-party software or packages (e.g., Python), and functions that belong to classes and objects. If you don't know what classes and object are, think of them as blocks of code that can have functions in them.
+
+Despite categorizing functions, the categories have a few important things in commone that a begginger should know. They perform one or more defined tasks, can accept one or more inputs, can return one or more outputs, and must be called for the function to perform the tasks. The differences between the function categories are subtle and will be revealed as you continue.
+
+## Why Write Functions
 
 why: avoid repetition -- allows developers a powerful way to write reusable code
 DRY: Don’t Repeat Yourself
