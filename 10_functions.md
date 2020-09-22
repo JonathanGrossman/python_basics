@@ -1,6 +1,8 @@
 # Functions
 
-A function is a block of code that performs one or more tasks. A function can accept one or more inputs and return one or more outputs. Here is a function.
+A function is a block of code that performs one or more tasks. Functions make your code easier to read, edit, and debug. Functions also allow you to write a block of code and then reuse it. The results in cleaner code and stays consistent with the programming principle of "don't repeat yourself." Once you define a function, you can call it multiple times. Functions also let you generalize or "abstract away" your code that you can use it in other applications
+
+Here is a function.
 
 ```python
 # example of a function definition
@@ -8,9 +10,9 @@ def this_is_a_function():
     print("This is a function!")
 ```
 
-The example above is a function definition. The code defines what the function does. It is a step-by-step "blueprint" for what happens when you call the function. Notice that nothing happens in the terminal if you run your file with just the code above. It doesn't print `This is a function!`.
+Commonly referred to as a function, the example above is really a function definition. The code defines what the function does. It is a step-by-step "blueprint" for what happens when you call the function. Notice that nothing happens in the terminal if you run your file with just the code above. It doesn't print `This is a function!`.
 
-Defining a function doesn't cause the Python interpreter to execute the code it. To execute the code, you need to call the function. Call a function by typing its name followed by `()`.
+Defining a function doesn't cause the Python interpreter to execute the code it. To execute the code, you need to call the function. Call a function somewhere below the function definition by typing the funnction name followed by parenthesis.
 
 ```python
 # example of a function definition
@@ -25,17 +27,11 @@ this_is_a_function()
 
 In the code above, `this_is_a_function()` results in the terminal printing `This is a function!`. Defining a function in your code but not calling it is analogous to creating blueprint for building a home but not ever building the home. Therefore, remember to call your functions.
 
-One thing that confuses beginners is terminology surrounding functions. You can define your own functions and call them, like the example above. You also can call functions that you import into your code from third-party software and packages. For instance, you will use many of Python's built-in functions and functions from third-party libraries, like Flask, MongoDB, and Google. Furthermore, you can create classes or objects containing functions that you can call. If you don't know what classes and object are, think of them as blocks of code that can have functions in them.
+One thing that confuses beginners is terminology surrounding functions. You can define your own functions and call them, like the example above. You also can call functions that you import into your code from third-party software and packages. Functions someone else defined in code that you are using. For instance, you will use many of Python's built-in functions and functions from third-party libraries. Furthermore, you can create classes or objects containing functions that you can call. If you don't know what classes and object are, think of them as blocks of code that can have functions in them.
 
 Regardless of where the function is defined and by whom, all functions have a few defining characteristics for beginners to focus on. They perform one or more defined tasks, can accept one or more inputs, can return one or more outputs, and must be called for the function to perform the tasks.
 
-## Why Write Functions
-
-why: avoid repetition -- allows developers a powerful way to write reusable code
-DRY: Don’t Repeat Yourself
-why: easier to maintain your code base
-why: cleaner and more organized code
-why: generalize or “abstract away” your code that you can use it in other applications
+## How to write a Python function
 
 how: the basic syntax for defining a function (the “blueprint”)
 
