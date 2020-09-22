@@ -56,6 +56,7 @@ print(“But I love long walks on the beach.”)
 >>>> I am from the mountains.
 >>>> But I love long walks on the beach.
 
+## Return
 output: all functions return at least one value
 output: the default return value is None
 output: the way to customize the return values from a function is to use return
@@ -70,6 +71,7 @@ outputs the value placed on the same line as return
 removes the function from the call stack, which means that the processor can move on to perform the next task in the call stack
 when you call the function, store the return value in the memory by setting it equal to a variable so that you can use it later 
 
+## Arguments and Parameters
 input: all functions can be defined to accept one or more inputs
 
 “parameter” refers to the input variable in the function definition
@@ -113,6 +115,8 @@ if your function has multiple parameters but not all have default values, put pa
 In functions.py, see 
 using keywords when passing in arguments
 
+## Scope
+
 scope is the block of code (environment) in which a value is accessible to other code
 your code has a global scope, which is the level of code where values are accessible to all other blocks / lines of code
 you can create additional scopes using functions, conditionals, and classes
@@ -142,6 +146,7 @@ practice reading error messages!
 In functions.py, see 
 examples using global keyword
 
+## __doc__
 at the top of each function use three sets of quotes to write a brief message about what the function does; 
 
 then use __doc__ to retrieve the message; this is good for communicating with other developers and yourself
