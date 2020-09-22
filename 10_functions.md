@@ -20,7 +20,7 @@ def this_is_a_function():
 # example of calling a function
 this_is_a_function()
 
->>> This is a function!
+>>> 'This is a function!'
 ```
 
 In the code above, `this_is_a_function()` results in the terminal printing `This is a function!`. Defining a function in your code but not calling it is analogous to creating blueprint for building a home but not ever building the home. Therefore, remember to call your functions.
