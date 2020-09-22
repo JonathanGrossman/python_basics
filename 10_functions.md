@@ -25,11 +25,9 @@ this_is_a_function()
 
 In the code above, `this_is_a_function()` results in the terminal printing `This is a function!`. Defining a function in your code but not calling it is analogous to creating blueprint for building a home but not ever building the home. Therefore, remember to call your functions.
 
-## Function Categories
+One thing that confuses beginners is terminology surrounding functions. You can define your own functions and call them, like the example above. You also can call functions that you import into your code from third-party software and packages. For instance, you will use many of Python's built-in functions and functions from third-party libraries, like Flask, MongoDB, and Google. Furthermore, you can create classes or objects containing functions that you can call. If you don't know what classes and object are, think of them as blocks of code that can have functions in them.
 
-One thing that confuses beginners is terminology surrounding functions. Three of the main ways you'll work with functions are ones that you define yourself, ones that come with third-party software or packages (e.g., Python), and functions that belong to classes and objects. If you don't know what classes and object are, think of them as blocks of code that can have functions in them.
-
-Despite categorizing functions, the categories have a few important things in commone that a begginger should know. They perform one or more defined tasks, can accept one or more inputs, can return one or more outputs, and must be called for the function to perform the tasks. The differences between the function categories are subtle and will be revealed as you continue.
+Regardless of where the function is defined and by whom, all functions have a few defining characteristics for beginners to focus on. They perform one or more defined tasks, can accept one or more inputs, can return one or more outputs, and must be called for the function to perform the tasks.
 
 ## Why Write Functions
 
