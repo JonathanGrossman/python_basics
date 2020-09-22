@@ -33,15 +33,19 @@ Regardless of where the function is defined and by whom, all functions have a fe
 
 ## How to write a Python function
 
-how: the basic syntax for defining a function (the “blueprint”)
+The basic syntax for defining a function starts with a line containing `def`, a name, and a list of parameters containing zero or more inputs. The Python interpreter understands `def` to mean that a function definition is following. The function name can be whatever you want so long as it doesn't conflict with a Python keyword. I recommend going with names that are short but also specific and desription. The parameters are values that you pass into the funciton when calling it. By passing values into the function, you can perform tasks inside your function using those input values.
 
+After the first line follows the code responsible for the tasks. You'll have things like `if / else` blocks, `for` loops, API requests, calculations, and more. It's good practice to keep your functions simple by performing only one or a small group of related tasks per function. You have the option to choose whether to include a return statement. Discussed in more detail below, the return statement is what your function outputs upon completing its tasks. By default, it outputs `None`, but you can override it.
+
+```python
 def my_custom_function(#optional inputs):
-   code to perform tasks
-   optional return
+   # code to perform tasks
+   # optional return
+```
 
-how: the basic syntax for calling a function
+In the example above, the first line consists of `def` and the function name of `my_custom_function`. The line also has a list(#optional inputs). It's followed by two comments indicating where your function code and return statement belong.
 
-		my_custom_function()
+my_custom_function()
 
 example:
 
