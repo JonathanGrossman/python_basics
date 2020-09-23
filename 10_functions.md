@@ -203,7 +203,7 @@ Failing to include arguments in a function call for a function that requires the
 
 ```python
 # define variable
-pants_female = (2, "Female Pants")
+pants_female = (2, "Female Pants"). 
 
 # example of a parameter named pants in function definition
 def get_pants(pants):
@@ -225,6 +225,7 @@ You can define a function to have more than one parameter. Unless using keywords
 # define variable
 pants_female = (2, 'Female Pants')
 shirts_female = (3, 'Female Shirts')
+
 # example of a two parameters in function definition
 def get_inventory(pants, shirts):
     print(pants)
@@ -241,7 +242,7 @@ get_inventory(pants_female, shirts_female)
 >>> 'We have 2 Female Pants and 3 Female Shirts'
 ```
 
-In the code above, you define two variables `pants_female` and `shirts_female`. You set each of them equal to a tuple, `(2, 'Female Pants')` and `(3, 'Female Shirts')`. Then you define a function named `get_inventory` that has two parameters `pants` and `shirts`. The function tasks are to print `pants` and `shirts` and to form a sentence `'We have' + ' ' + str(pants[0]) + ' ' + pants[1]  + ' ' + 'and' + ' ' + str(shirts[0]) + ' ' + shirts[1]` saved to a variable named `sentence`. The sentence is a string build using the values from the tuples. Then you print `sentence`.  
+In the code above, you define two variables `pants_female` and `shirts_female`. You set each of them equal to a tuple, `(2, 'Female Pants')` and `(3, 'Female Shirts')`. Then you define a function named `get_inventory` that has two parameters `pants` and `shirts`. The function tasks are to print `pants` and `shirts` and to form a sentence `'We have' + ' ' + str(pants[0]) + ' ' + pants[1]  + ' ' + 'and' + ' ' + str(shirts[0]) + ' ' + shirts[1]` saved to a variable named `sentence`. The sentence is a string you built using `'We have'`, `'and'`, several `' '` for spaces, and the values from the tuples. Then you print `sentence`.  
 
 Next you call `get_inventory(pants_female, shirts_female)`. The terminal prints `(2, 'Female Pants')` and then `(3, 'Female Shirts')`, which corresponds to the order from left to right of the parameters `pants` and `shirts`. It then prints `We have 2 Female Pants and 3 Female Shirts`, which also corresponds to the order from left to right of the parameters `pants` and `shirts`.
 
