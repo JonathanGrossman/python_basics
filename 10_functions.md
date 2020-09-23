@@ -219,7 +219,9 @@ get_pants()
 The code above is the same as the example before it, except here you call `get_pants()`. Notice that it is missing an argument. The Python interpreter has an error `TypeError: get_pants() missing 1 required positional argument: 'pants'`. The answer to your bug is right there in the error message. It says the function `get_pants()` has one missing argument named `pants`. At first, error messages can be confusing and easy to skip over. However, you need to practice reading error messages! Oftentimes, reading an error message can save you time and frustration, pointing you right to the problem.
 
 
-You can define a function to have more than one parameter. Unless using keywords when calling a function, order of arguments must match order of parameters because that is how python maps arguments in the function call to parameters in the function definition.
+You can define a function to have more than one parameter. Inside the `()` after the function name, in each parameter name separating them with commas `,`. Unless using keywords, more on that below, the order of arguments in your function call must match the order of parameters in the function definition. That is how python maps arguments in the function call to parameters in the function definition.
+
+Here is an example of a function with two parameters, no keywords. The example shows how the function maps the arguments to parameters.
 
 ```python
 # define variable
@@ -246,13 +248,57 @@ In the code above, you define two variables `pants_female` and `shirts_female`. 
 
 Next you call `get_inventory(pants_female, shirts_female)`. The terminal prints `(2, 'Female Pants')` and then `(3, 'Female Shirts')`, which corresponds to the order from left to right of the parameters `pants` and `shirts`. It then prints `We have 2 Female Pants and 3 Female Shirts`, which also corresponds to the order from left to right of the parameters `pants` and `shirts`.
 
+The example below is the same code as the example above, except this time the arguments in the function call are assigned to keywords that match the parameter names `get_inventory(pants=pants_female, shirts=shirts_female)`.
 
+```python
+# define variable
+pants_female = (2, 'Female Pants')
+shirts_female = (3, 'Female Shirts')
 
-unless using keywords, order of arguments matters
+# example of a two parameters in function definition
+def get_inventory(pants, shirts):
+    print(pants)
+    print(shirts)
+    sentence = 'We have' + ' ' + str(pants[0]) + ' ' + pants[1]  + ' ' + 'and' + ' ' + str(shirts[0]) + ' ' + shirts[1]
+    print(sentence)
+    return
 
-set default values for your custom parameters in your function definitions
+# example of calling function with an argument pants_female
+get_inventory(pants=pants_female, shirts=shirts_female)
 
-default values can help prevent bugs
+>>> (2, 'Female Pants')
+>>> (3, 'Female Shirts')
+>>> 'We have 2 Female Pants and 3 Female Shirts'
+```
+
+By setting in the function call `pants=pants_female` and `shirts=shirts_female`, you explicitly declare which argument belongs to which parameter. Works just like the example above.
+
+The example below swaps the order of the arguments in the function call .Change the keywords
+
+```python
+# define variable
+pants_female = (2, 'Female Pants')
+shirts_female = (3, 'Female Shirts')
+
+# example of a two parameters in function definition
+def get_inventory(pants, shirts):
+    print(pants)
+    print(shirts)
+    sentence = 'We have' + ' ' + str(pants[0]) + ' ' + pants[1]  + ' ' + 'and' + ' ' + str(shirts[0]) + ' ' + shirts[1]
+    print(sentence)
+    return
+
+# example of calling function with an argument pants_female
+get_inventory(shirts=shirts_female, pants=pants_female)
+
+>>> (2, 'Female Pants')
+>>> (3, 'Female Shirts')
+>>> 'We have 2 Female Pants and 3 Female Shirts'
+```
+
+Although you swapped the order of the arguments in the function call, the print statements are the same as the examples before it. That's because we explicitly declared using keywords which argument belongs to which parameter. So first it prints `pants` having a value of `(2, 'Female Pants')` and then `shirts` having a value of `(3, 'Female Shirts')` and finally `sentence` having a value of `'We have 2 Female Pants and 3 Female Shirts'`. 
+
+Using default values can help prevent bugs 
 
 calling a function that has a default value set for parameters allows you to call the function without inputting arguments
 
