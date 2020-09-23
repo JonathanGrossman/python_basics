@@ -183,7 +183,7 @@ The term "argument" refers to the actual value input for the parameter when you 
 
 ```python
 # define variable
-pants_female = (0, "Female Pants")
+pants_female = (2, "Female Pants")
 
 # example of a parameter named pants in function definition
 def get_pants(pants):
@@ -193,7 +193,7 @@ def get_pants(pants):
 # example of calling function with an argument pants_female
 get_pants(pants_female)
 
->>> (0, 'Female Pants')
+>>> (2, 'Female Pants')
 ```
 
 In the code above, first you define a variable named `pants_female`. Then you define the `get_pants` function. Next you call the `get_pants` function while passing into it as an argument `pants_female`. The function prints the value for `pants`. Here, the value for `pants` is `pants_female`, and the value for `pants_female` is `(0, 'Female Pants')`. Therefore, running this script causes the terminal to print `(0, 'Female Pants')`.
@@ -203,7 +203,7 @@ Failing to include arguments in a function call for a function that requires the
 
 ```python
 # define variable
-pants_female = (0, "Female Pants")
+pants_female = (2, "Female Pants")
 
 # example of a parameter named pants in function definition
 def get_pants(pants):
@@ -218,12 +218,32 @@ get_pants()
 
 The code above is the same as the example before it, except here you call `get_pants()`. Notice that it is missing an argument. The Python interpreter has an error `TypeError: get_pants() missing 1 required positional argument: 'pants'`. The answer to your bug is right there in the error message. It says the function `get_pants()` has one missing argument named `pants`. At first, error messages can be confusing and easy to skip over. However, you need to practice reading error messages! Oftentimes, reading an error message can save you time and frustration, pointing you right to the problem.
 
-unless using keywords when calling a function, order of arguments must match order of parameters; this is how python maps arguments to parameters
 
-In functions.py, see 
-receives one input and returns it
-receives two inputs (phrase and city) and returns them as a sentence
-calling function without including arguments required by function definition
+You can define a function to have more than one parameter. Unless using keywords when calling a function, order of arguments must match order of parameters because that is how python maps arguments in the function call to parameters in the function definition.
+
+```python
+# define variable
+pants_female = (2, 'Female Pants')
+shirts_female = (3, 'Female Shirts')
+# example of a two parameters in function definition
+def get_inventory(pants, shirts):
+    print(pants)
+    print(shirts)
+    sentence = 'We have' + ' ' + str(pants[0]) + ' ' + pants[1]  + ' ' + 'and' + ' ' + str(shirts[0]) + ' ' + shirts[1]
+    print(sentence)
+    return
+
+# example of calling function with an argument pants_female
+get_inventory(pants_female, shirts_female)
+
+>>> (2, 'Female Pants')
+>>> (3, 'Female Shirts')
+```
+
+In the code above, you define two variables `pants_female` and `shirts_female`. You set each of them equal to a tuple, `(2, 'Female Pants')` and `(3, 'Female Shirts')`. Then you define a function named `get_inventory` that has two parameters `pants` and `shirts`. The function tasks are to print `pants` and `shirts` and to form a sentence `'We have' + ' ' + str(pants[0]) + ' ' + pants[1]  + ' ' + 'and' + ' ' + str(shirts[0]) + ' ' + shirts[1]` saved to a variable named `sentence`. The sentence is a string build using the values from the tuples. Then you print `sentence`.  Next you call `get_inventory(pants_female, shirts_female)`. The terminal prints `(2, 'Female Pants')` and then `(3, 'Female Shirts')`, which corresponds to the order from left to right of the parameters `pants` and `shirts`. It then prints `We have 2 Female Pants and 3 Female Shirts`.
+
+
+
 unless using keywords, order of arguments matters
 
 set default values for your custom parameters in your function definitions
