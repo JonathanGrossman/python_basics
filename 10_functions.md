@@ -242,11 +242,22 @@ get_inventory(pants_female, shirts_female)
 >>> (2, 'Female Pants')
 >>> (3, 'Female Shirts')
 >>> 'We have 2 Female Pants and 3 Female Shirts'
+
+# example of swapping the order of arguments
+get_inventory(shirts_female, pants_female)
+
+(3, 'Female Shirts')
+(2, 'Female Pants')
+We have 3 Female Shirts and 2 Female Pants
 ```
 
 In the code above, you define two variables `pants_female` and `shirts_female`. You set each of them equal to a tuple, `(2, 'Female Pants')` and `(3, 'Female Shirts')`. Then you define a function named `get_inventory` that has two parameters `pants` and `shirts`. The function tasks are to print `pants` and `shirts` and to form a sentence `'We have' + ' ' + str(pants[0]) + ' ' + pants[1]  + ' ' + 'and' + ' ' + str(shirts[0]) + ' ' + shirts[1]` saved to a variable named `sentence`. The sentence is a string you built using `'We have'`, `'and'`, several `' '` for spaces, and the values from the tuples. Then you print `sentence`.  
 
 Next you call `get_inventory(pants_female, shirts_female)`. The terminal prints `(2, 'Female Pants')` and then `(3, 'Female Shirts')`, which corresponds to the order from left to right of the parameters `pants` and `shirts`. It then prints `We have 2 Female Pants and 3 Female Shirts`, which also corresponds to the order from left to right of the parameters `pants` and `shirts`.
+
+Next you swap the order of the arguments when you call `get_inventory(shirt_female, pants_female)`. The terminal prints `(3, 'Female Shirts')` and then `(2, 'Female Pants')`, which corresponds to the order from left to right of the swapped parameters `shirts` and `pants`. It then prints `We have 3 Female Shirts and 2 Female Pants`, which also corresponds to the order from left to right of the swapped parameters `shirts` and `pants`.
+
+Those examples show how the order of arguments matters when not using keywords for parameters in the function call.
 
 The example below is the same code as the example above, except this time the arguments in the function call are assigned to keywords that match the parameter names `get_inventory(pants=pants_female, shirts=shirts_female)`.
 
@@ -271,9 +282,9 @@ get_inventory(pants=pants_female, shirts=shirts_female)
 >>> 'We have 2 Female Pants and 3 Female Shirts'
 ```
 
-By setting in the function call `pants=pants_female` and `shirts=shirts_female`, you explicitly declare which argument belongs to which parameter. Works just like the example above.
+By setting in the function call `pants=pants_female` and `shirts=shirts_female`, you explicitly declare which argument belongs to which parameter.
 
-The example below swaps the order of the arguments in the function call .Change the keywords
+You can use keywords when calling a function to specify the argument values in whatever order you want. The keywords used for arguments must have a corresponding parameter with the same name. The example below swaps the order of the arguments in the function call so that `shirts` comes before `pants`. The print statements, however, print `pants` before `shirts`. So it works like how it did with no keywords when `pants` came before `shirts`. That's because you mapped the arguments to parameters using keywords.
 
 ```python
 # define variable
@@ -296,7 +307,7 @@ get_inventory(shirts=shirts_female, pants=pants_female)
 >>> 'We have 2 Female Pants and 3 Female Shirts'
 ```
 
-Although you swapped the order of the arguments in the function call, the print statements are the same as the examples before it. That's because we explicitly declared using keywords which argument belongs to which parameter. So first it prints `pants` having a value of `(2, 'Female Pants')` and then `shirts` having a value of `(3, 'Female Shirts')` and finally `sentence` having a value of `'We have 2 Female Pants and 3 Female Shirts'`. 
+In the code above, you swapped the order of `shirts=shirts_female` and `pants=pants_female` in the function call. Although you swapped the order, the print statements in the terminal are the same as the examples before it. That's because you explicitly declared using keywords which argument belongs to which parameter. So first it prints `pants` having a value of `(2, 'Female Pants')` and then `shirts` having a value of `(3, 'Female Shirts')` and finally `sentence` having a value of `'We have 2 Female Pants and 3 Female Shirts'`. 
 
 Using default values can help prevent bugs 
 
@@ -305,10 +316,6 @@ calling a function that has a default value set for parameters allows you to cal
 In functions.py, see 
 default values for custom parameters
 
-
-use keywords when calling a function to specify the argument values in whatever order you want
-using keywords can make code easier to read
-the keywords used for arguments must have a corresponding parameter with the same name
 if your function has multiple parameters but not all have default values, put parameters that have default values at the end of the list of parameters in your function definition
 
 In functions.py, see 
