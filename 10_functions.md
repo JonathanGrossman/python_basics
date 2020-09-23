@@ -163,23 +163,61 @@ print(list_of_dicts)
 Notice in the code above that the list of dictionaries starts on the line below `return`. Otherwise, it's the same code as the example above it. When you save the `return` value of `return_a_list_of_dicts()` to the variable `list_of_dicts` and then print `list_of_dicts`, the terminal prints `None`. 
 
 ## Arguments and Parameters
-input: all functions can be defined to accept one or more inputs
 
-“parameter” refers to the input variable in the function definition
+Functions can be defined to accept one or more inputs. You define a function to accept inputs by putting named variables inside the parentheses in your function definition. In `def get_pants(pants)`, `pants` is the parameter. To define a function with no parameters, define it using an empty set of parentheses in the function definition. In `def get_pants()`, the function is defined to have no parameters. 
 
-“argument” refers to the actual value input for the parameter when you call the function
+The term "parameter" refers to the input variable in the function definition. If your function definition has parameters, you need to either input values for each named variable in the function definition or define your function to have default values for those parameters.
 
-the default is no inputs, which is designated by any empty set of parentheses in the function definition
+Here is an example of a function definition for `get_pants` that accepts one parameter.
 
-the way to require a function to accept inputs is to put named variables inside the parentheses in your function definition
+```python
+# example of a parameter named pants in function definition
+def get_pants(pants):
+    print(pants)
+    return 
+```
 
-by requiring inputs by including them in your function definition, when you call the function, you will need to input values for each named variable in the function definition
+In the `get_pants` function definition, `pants` is the parameter. In the example above, `print(pants)` prints the parameter `pants`.
 
-failing to include arguments in a function call for a function that requires them results in an error
+The term "argument" refers to the actual value input for the parameter when you call the function. When calling `get_pants(pants_female)`, the argument is `pants_female` and therefore `pants` has the same value as `pants_female`. 
 
-TypeError: return_city_sentence() takes exactly 2 arguments (0 given)
+```python
+# define variable
+pants_female = (0, "Female Pants")
 
-practice reading error messages!
+# example of a parameter named pants in function definition
+def get_pants(pants):
+    print(pants)
+    return 
+
+# example of calling function with an argument pants_female
+get_pants(pants_female)
+
+>>> (0, 'Female Pants')
+```
+
+In the code above, first you define a variable named `pants_female`. Then you define the `get_pants` function. Next you call the `get_pants` function while passing into it as an argument `pants_female`. The function prints the value for `pants`. Here, the value for `pants` is `pants_female`, and the value for `pants_female` is `(0, 'Female Pants')`. Therefore, running this script causes the terminal to print `(0, 'Female Pants')`.
+
+Failing to include arguments in a function call for a function that requires them results in an error
+
+
+```python
+# define variable
+pants_female = (0, "Female Pants")
+
+# example of a parameter named pants in function definition
+def get_pants(pants):
+    print(pants)
+    return 
+
+# example of calling function with an argument pants_female
+get_pants()
+
+>>> TypeError: get_pants() missing 1 required positional argument: 'pants'
+```
+
+The code above is the same as the example before it, except here you call `get_pants()`. Notice that it is missing an argument. The Python interpreter has an error `TypeError: get_pants() missing 1 required positional argument: 'pants'`. The answer to your bug is right there in the error message. It says the function `get_pants()` has one missing argument named `pants`. At first, error messages can be confusing and easy to skip over. However, you need to practice reading error messages! Oftentimes, reading an error message can save you time and frustration, pointing you right to the problem.
+
 unless using keywords when calling a function, order of arguments must match order of parameters; this is how python maps arguments to parameters
 
 In functions.py, see 
