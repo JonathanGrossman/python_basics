@@ -73,32 +73,15 @@ my_custom_function(type_of_pants)
 >>> "Jeans"
 ```
 
-First, you define `type_of_pants` and set it equal to "Jeans". Comparing the function above to the one above it, notice the difference in the first line: `def my_custom_function()` versus `def my_custom_function(pants_today)`. The second one receives an input named `pants_today`. Now when you call that function, you need to input a value in the function call. Here, you input `type_of_pants` when calling the function. Inside of the function, the value for `pants_today` equals that of `type_of_pants`. The function prints `pants_today`.
+First, you define `type_of_pants` and set it equal to "Jeans". Comparing the function immediately above to the one above it, notice the difference in the first line: `def my_custom_function()` versus `def my_custom_function(pants_today)`. The second one receives an input named `pants_today`, whereas the first one receives no input. Now when you call the second function, you need to input a value in the function call. Here, you input `type_of_pants` when calling the function. Inside of the function, the value for `pants_today` equals that of `type_of_pants`. The function prints `pants_today`.
 
-
-
-
-
-
-my_custom_function()
-
-example:
-
-def print_my_info():
-  	print(“My name is Joe Lecturer”)
-print(“I am from the Mountains.”)
-print(“But I love long walks on the beach.”)
-
-		print_my_info()
-
->>>> My name is Joe Lecturer
->>>> I am from the mountains.
->>>> But I love long walks on the beach.
 
 ## Return
-output: all functions return at least one value
-output: the default return value is None
-output: the way to customize the return values from a function is to use return
+
+
+All functions return at least one value. The default return value is `None`. Accordingly, if you define a function that does not explicitly declare a `return` value, then the function returns `None`.
+
+To customize what a function returns, exlicitly declare it usng the keyword `return`.
 In functions.py, see 
 basic function examples
 example using return
