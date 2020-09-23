@@ -1,23 +1,23 @@
 # Functions
 
-A function is a block of code that performs one or more tasks. Functions make your code easier to read, edit, and debug. Functions also allow you to write a block of code and then reuse it. The results in cleaner code and stays consistent with the programming principle of "don't repeat yourself." Once you define a function, you can call it multiple times. Functions also let you generalize or "abstract away" your code that you can use it in other applications
+A function is a block of code that performs one or more tasks. Functions make your code easier to read, edit, and debug. Functions also allow you to write a block of code and then reuse it. This results in cleaner code and stays consistent with the programming principle of "don't repeat yourself." Once you define a function, you can call it multiple times. Functions also let you generalize or "abstract away" your code that you can use it in other applications.
 
 Here is a function.
 
 ```python
 # example of a function definition
 def this_is_a_function():
-    print("This is a function!")
+    print('This is a function!')
 ```
 
 Commonly referred to as a function, the example above is really a function definition. The code defines what the function does. It is a step-by-step "blueprint" for what happens when you call the function. Notice that nothing happens in the terminal if you run your file with just the code above. It doesn't print `This is a function!`.
 
-Defining a function doesn't cause the Python interpreter to execute the code it. To execute the code, you need to call the function. Call a function somewhere below the function definition by typing the funnction name followed by parenthesis.
+Defining a function doesn't cause the Python interpreter to execute the code it. To execute the code, you need to call the function. Call a function somewhere below the function definition by typing the funnction name followed by parenthesis. When you call a function, the Python interpreter executes the code inside the function definition. When done, the processor removes the function from the call stack (i.e., the processor's "to do" list), which means that the processor can move on to perform the next task in the call stack.
 
 ```python
 # example of a function definition
 def this_is_a_function():
-    print("This is a function!")
+    print('This is a function!')
 
 # example of calling a function
 this_is_a_function()
@@ -40,29 +40,30 @@ def my_custom_function(#optional inputs):
    . . .
 ```
 
-In the example above, the first line consists of `def` and the function name of `my_custom_function`. The line also has a list(#optional inputs). It's followed by two comments indicating where your function code and return statement belong.
+In the example above, the first line consists of `def` and the function name of `my_custom_function`. The line also has a list`(#optional inputs)`.
 
-The Python interpreter understands `def` to mean that a function definition is following. The function name can be whatever you want so long as it doesn't conflict with a Python keyword. I recommend choosing names that are short but also specific and description. I also recommend choosing names that start with verbs, like `get_users`. It'll make your code easier to understand. The parameters are optional. If, however, you define your function to accept inputs and include those inputs when you call the function, you can perform tasks inside your function using those input values. More on inputs below.
+The Python interpreter understands `def` to mean that a function definition is following. The function name can be whatever you want so long as it doesn't conflict with a Python keyword. I recommend choosing names that are short but also specific and description. I also recommend choosing names that start with verbs, like `def get_users():`. It'll make your code easier to understand, so long as the function name describes the tasks it performs. The parameters after the name are optional. To include no parameters, simply put nothing inside the `()`. If, however, you include inputs, put them in the `()` and separate them with a `,`. If you define your function to accept inputs and include those inputs when you call the function, you can perform tasks inside your function using those input values. More on inputs below.
 
-After the first line follows the code responsible for the tasks. You'll have things like `if / else` blocks, `for` loops, API requests, calculations, and more. It's good practice to keep your functions simple by performing only one or a small group of related tasks per function. You have the option to choose whether to include a return statement. Discussed in more detail below, the return statement is what your function outputs upon completing its tasks. By default, it outputs `None`, but you can override it.
+After the first line follows the code responsible for the tasks. You'll have things like `if / else` blocks, `for` loops, API requests, calculations, and more. It's good practice to keep your functions simple by performing only one or a small group of related tasks per function. You have the option to choose whether to include a `return` statement. Discussed in more detail below, the `return` statement is what your function outputs upon completing its tasks. By default, it outputs `None`, but you can override it.
 
-Here is an example of a function that receives zero inputs and has no return statement. It prints `"My custom function"`.
+Here is an example of a function that receives zero inputs and has no return statement. It prints `'My custom function'`.
 
 ```python
 # example of a function that receives zero inputs and has no return statement
 def my_custom_function():
-   print("My custom function")
+   print('My custom function')
 
 my_custom_function()
 
->>> "My custom function"
+>>> 'My custom function'
 ```
+Although the function doesn't explicitly include a `return` statement, it still performs the tasks inside it. Here, that task is `print('My custom function')`. The function also returns `None`. So it's doing two things -- performing the tasks inside and returning a value. Here, you don't save the return value in the memory. So the function returns `None` but your application does nothing with that value. More on this later.
 
-Here is an example of a function that receives one input and has no return statement. 
+Here is an example of a function that receives one input and has a return statement. 
 
 ```python
 # define variable
-type_of_pants = "Jeans"
+type_of_pants = 'Jeans'
 
 # example of a function that receives one input and has no return statement
 def my_custom_function(pants_today):
@@ -70,7 +71,7 @@ def my_custom_function(pants_today):
 
 my_custom_function(type_of_pants)
 
->>> "Jeans"
+>>> 'Jeans'
 ```
 
 First, you define `type_of_pants` and set it equal to "Jeans". Comparing the function immediately above to the one above it, notice the difference in the first line: `def my_custom_function()` versus `def my_custom_function(pants_today)`. The second one receives an input named `pants_today`, whereas the first one receives no input. Now when you call the second function, you need to input a value in the function call. Here, you input `type_of_pants` when calling the function. Inside of the function, the value for `pants_today` equals that of `type_of_pants`. The function prints `pants_today`.
@@ -78,20 +79,88 @@ First, you define `type_of_pants` and set it equal to "Jeans". Comparing the fun
 
 ## Return
 
+All functions return at least one value. As mentioned above, the default return value of a function is `None`. Accordingly, if you define a function that does not explicitly declare a `return` value, then the function returns `None`.
 
-All functions return at least one value. The default return value is `None`. Accordingly, if you define a function that does not explicitly declare a `return` value, then the function returns `None`.
+```python
+# example of a function that receives zero inputs and has no return statement
+def my_custom_function():
+   print("My custom function")
 
-To customize what a function returns, exlicitly declare it usng the keyword `return`.
-In functions.py, see 
-basic function examples
-example using return
-returns None as the default return value
+custom_value = my_custom_function()
 
-key points about using return: 
-exits the function, which means that code below it will not run, so be thoughtful about where you put your return statement
-outputs the value placed on the same line as return
-removes the function from the call stack, which means that the processor can move on to perform the next task in the call stack
-when you call the function, store the return value in the memory by setting it equal to a variable so that you can use it later 
+print(custom_value)
+
+>>> 'My custom function'
+>>> None
+```
+
+When you call the function, store the `return` value in the memory by setting it equal to a variable so that you can use it later. In the code above, you save the `return` value of my_custom_function() to `custom_value`. You know the function returns `None` because the value of `custom_value` when we print it is `None`.
+In addition to returning `None`, the function also prints `'My custom function'`.
+
+To customize what a function returns, explicitly declare it usng the keyword `return` at the end of your function. The `return` keyword exits a function, which means that any code in the same block appearing after the `return` statement will not run. Therefore, be thoughtful about where you put your `return` statement relative to the code you want to run. 
+
+```python
+def return_my_name_nothing_more():
+    return 'My Name'
+    print('did this print?')
+
+nothing_more = return_my_name_nothing_more()
+print(nothing_more)
+
+>>> 'My Name'
+```
+
+In the code above, notice that after the line `return 'My Name'` is a line `print('did this print?')`. The Python interpreter does not execute the line `print('did this print?')` because that line appears after the `return` statement in the same block of code. Saving the `return` value of `return_my_name_nothing_more()` to the variable `nothing_more` and the printing `nothing_more` results in the terminal printing only `'My Name'`. It does not print `print('did this print?')`. 
+
+`return` returns only the value placed on the same line as return. The value can span multiple lines, but it must at least start on the same line as the `return` keyword.
+
+```python
+# example of multi-line return value
+def return_a_list_of_dicts():
+    return [{
+        "pants": 'Jeans',
+        "shirt": 'Black t-shirt' 
+    }, 
+    {
+        "pants": 'Khakis',
+        "shirt": 'White t-shirt' 
+    },{
+        "pants": 'Shorts',
+        "shirt": 'Gray t-shirt' 
+    }]
+
+list_of_dicts = return_a_list_of_dicts()
+print(list_of_dicts)
+
+>>> [{'pants': 'Jeans', 'shirt': 'Black t-shirt'}, {'pants': 'Khakis', 'shirt': 'White t-shirt'}, {'pants': 'Shorts', 'shirt': 'Gray t-shirt'}]
+
+```
+
+In the code above, the `return` value for `return_a_list_of_dicts` is a list of dictionaries. That list starts on the same line as `return` and ends several lines below. Calling `return_a_list_of_dicts()`, saving it to `list_of_dicts`, and printing `list_of_dicts` like above shows that your `return` value can span multiple lines. The example below shows that the `return` value must start on the same line as `value`
+
+```python
+# example of return value not starting on same line as return
+def return_a_list_of_dicts():
+    return 
+    [{
+        "pants": 'Jeans',
+        "shirt": 'Black t-shirt' 
+    }, 
+    {
+        "pants": 'Khakis',
+        "shirt": 'White t-shirt' 
+    },{
+        "pants": 'Shorts',
+        "shirt": 'Gray t-shirt' 
+    }]
+
+list_of_dicts = return_a_list_of_dicts()
+print(list_of_dicts)
+
+>>> None
+```
+
+Notice in the code above that the list of dictionaries starts on the line below `return`. Otherwise, it's the same code as the example above it. When you save the `return` value of `return_a_list_of_dicts()` to the variable `list_of_dicts` and then print `list_of_dicts`, the terminal prints `None`. 
 
 ## Arguments and Parameters
 input: all functions can be defined to accept one or more inputs
