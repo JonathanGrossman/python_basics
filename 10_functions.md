@@ -1,5 +1,5 @@
 # Functions
-[how to write a python function](#how-to-write-a-python-function)
+
 A function is a block of code that performs one or more tasks. Functions make your code easier to read, edit, and debug. Functions also allow you to write a block of code and then reuse it. This results in cleaner code and stays consistent with the programming principle of "don't repeat yourself." Once you define a function, you can call it multiple times. Functions also let you generalize or "abstract away" your code that you can use it in other applications.
 
 Here is a function.
@@ -31,7 +31,7 @@ One thing that confuses beginners is terminology surrounding functions. You can 
 
 Regardless of where the function is defined and by whom, all functions have a few defining characteristics for beginners to focus on. They perform one or more defined tasks, can accept one or more inputs, can return one or more outputs, and must be called for the function to perform the tasks.
 
-## How to write a Python function
+## [How to write a Python function](#how-to-write-a-python-function)
 
 The syntax for defining a function starts with a line containing `def`, a name, and a list of parameters containing zero or more inputs. 
 
@@ -77,7 +77,7 @@ my_custom_function(type_of_pants)
 First, you define `type_of_pants` and set it equal to "Jeans". Comparing the function immediately above to the one above it, notice the difference in the first line: `def my_custom_function()` versus `def my_custom_function(pants_today)`. The second one receives an input named `pants_today`, whereas the first one receives no input. Now when you call the second function, you need to input a value in the function call. Here, you input `type_of_pants` when calling the function. Inside of the function, the value for `pants_today` equals that of `type_of_pants`. The function prints `pants_today`.
 
 
-## Return
+## [What is the Python return keyword](#what-is-the-python-return-keyword)
 
 All functions return at least one value. As mentioned above, the default return value of a function is `None`. Accordingly, if you define a function that does not explicitly declare a `return` value, then the function returns `None`.
 
@@ -162,7 +162,7 @@ print(list_of_dicts)
 
 Notice in the code above that the list of dictionaries starts on the line below `return`. Otherwise, it's the same code as the example above it. When you save the `return` value of `return_a_list_of_dicts()` to the variable `list_of_dicts` and then print `list_of_dicts`, the terminal prints `None`. 
 
-## Arguments and Parameters
+## [What are Python parameters and arguments](#what-are-python-parameters-and-arguments)
 
 Functions can be defined to accept one or more inputs. You define a function to accept inputs by putting named variables inside the parentheses in your function definition. In `def get_pants(pants)`, `pants` is the parameter. To define a function with no parameters, define it using an empty set of parentheses in the function definition. In `def get_pants()`, the function is defined to have no parameters. 
 
@@ -311,6 +311,8 @@ get_inventory(shirts=shirts_female, pants=pants_female)
 
 In the code above, you swapped the order of `shirts=shirts_female` and `pants=pants_female` in the function call. Although you swapped the order, the print statements in the terminal are the same as the examples before it. That's because you explicitly declared using keywords which argument belongs to which parameter. So first it prints `pants` having a value of `(2, 'Female Pants')` and then `shirts` having a value of `(3, 'Female Shirts')` and finally `sentence` having a value of `'We have 2 Female Pants and 3 Female Shirts'`. 
 
+## [What are Python default values for functions](#what-are-python-default-values-for-functions)
+
 So far you've seen examples of function definitions with paramters but without setting any default values for those parameters. Using default values can help prevent bugs. If a parameter has a default value, then calling the function without including an argument for the parameter will not cause an error. Rather, it'll just run the function with the parameter's default value.
 
 Here is an example of a function named `get_socks` that has a parameter named `socks`. The only thing the function does is `return socks`. The parameter has no default value.
@@ -413,7 +415,7 @@ print(large_socks)
 In the example above, the parameters are in the proper order having the parameters with default values appear at the end of the parameter list `def get_socks(large_socks, small_socks=(0, "No small socks"), medium_socks=(0, "No medium socks")):`. `large_socks` is at the front of the list and the other two with default values appear after. Then when you call the function and pass it only one argument `large_socks = get_socks(socks_large)`, the Python interpreter maps the argument `socks_large` to the first parameter `large_socks`. For the other two parameters, the Python interpreter uses the default values. Hence, the example prints `((0, 'No small socks'), (0, 'No medium socks'), (2, 'Large socks'))`.
 
 
-## Scope
+## [What is scope](#what-is-scope)
 
 Scope means the parts of your code that a Python object has access to. For instance, you have the global scope. A block of code is in the global scope if it is not indented. All other scopes are considered local. Local scopes are those that have some indentation. Local scopes therefore belong to things like functions, expressions, loops and classes. Although local scopes are within the global scope, you need to import global variables into local scopes to use them in the local scope.
 
@@ -530,7 +532,7 @@ One benefit of having different scopes for different parts of your code is that 
 Creating local scope and being thoughtful with your names will prevfent conflicts. Unless you make a variable available outside of its scope of origin, a variable created within a certain scope is accessible only within that block of code. Therefore its name is not going to conflict with a variable of the same name in a different scope.
 
 
-## __doc__
+## [What is a docstring](#what-is-a-docstring)
 The first line of every function is a docstring. A docstring is a string and is supposed to describe what the function does. Functions aren't the only Python objects that have docstring. So do modules, classes, and methods 
 
 The default value for a docstring is `None`. You can customize the docstring by putting at the top of the function three single quotes followed by your description followed by three more single quotes `''' . . . '''`.
