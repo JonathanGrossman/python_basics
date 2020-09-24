@@ -415,11 +415,47 @@ In the example above, the parameters are in the proper order having the paramete
 
 ## Scope
 
-scope is the block of code (environment) in which a value is accessible to other code
-your code has a global scope, which is the level of code where values are accessible to all other blocks / lines of code
-you can create additional scopes using functions, conditionals, and classes
-scope can prevent conflicts between your code because a variable created within a certain scope is accessible only within that block of code (unless you make it available somehow)
-using special syntax, access to a value within a scope can be overcome by making that value accessible to other scopes
+Scope means the parts of your code that a Python object has access to. It is a somewhat difficult concept to explain in one sentence. For instance, the scope of a variable is the parts of your code where you can access that variable. In other words, it is the blocks of code in which a value is accessible to other code.
+
+```python
+# example of variable scope
+```
+
+Your code has a global scope. The global scope is the level of code where values are accessible to all other lines of code.
+
+```python
+# example of global scope
+```
+
+If a variable's origin is the global scope, you can use that variable inside other scopes, but need to specify in the other scopes that the variable comes from the gloabl scope. For instance, inside of a function, before you are able to manipulate a global variable, you need to specify that the variable is from the global scope by using the word global before the variable within the function. To do so, use the `global` keyword with the variable name inside the new scope.
+
+```python
+# example global scope variable inside a function
+
+# example of local variable named same as global variable
+```
+
+In contrast to the global scope, you can create "local" scopes using blocks of code like functions and conditionals.
+
+```python
+# example of function scope
+
+# example of conditional scope
+```
+
+One benefit of having different scopes for different parts of your code is that it prevents conflicts between variables. Unless you make a variable available outside of its scope of origin, a variable created within a certain scope is accessible only within that block of code. Therefore its name is not going to conflict with a variable of the same name in a different scope.
+
+```python
+# example of variables with same name in same scope 
+
+# example of variables with same name in different scope 
+```
+
+A variable doesn't have to be confined to its scope of origin. Using special syntax, you can make a variable accessible to parts of your code other than the variables scope of origin.
+
+```python
+# example of making variable available outside its scope of origin 
+```
 
 In functions.py, see 
 this is the global scope
@@ -432,9 +468,9 @@ NameError: name 'coding_language' is not defined
 
 practice reading error messages!
 
-inside of a function, before you are able to manipulate a global variable, you need to specify that the variable is from the global scope by using the word global before the variable within the function
 
-to do so, use the global keyword inside the new scope
+
+
 
 or else you get an error
 
