@@ -1,5 +1,5 @@
 # Functions
-
+[how to write a python function](#how-to-write-a-python-function)
 A function is a block of code that performs one or more tasks. Functions make your code easier to read, edit, and debug. Functions also allow you to write a block of code and then reuse it. This results in cleaner code and stays consistent with the programming principle of "don't repeat yourself." Once you define a function, you can call it multiple times. Functions also let you generalize or "abstract away" your code that you can use it in other applications.
 
 Here is a function.
@@ -31,7 +31,7 @@ One thing that confuses beginners is terminology surrounding functions. You can 
 
 Regardless of where the function is defined and by whom, all functions have a few defining characteristics for beginners to focus on. They perform one or more defined tasks, can accept one or more inputs, can return one or more outputs, and must be called for the function to perform the tasks.
 
-## [how to write a python function](#how-to-write-a-python-function)
+## How to write a Python function
 
 The syntax for defining a function starts with a line containing `def`, a name, and a list of parameters containing zero or more inputs. 
 
