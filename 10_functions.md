@@ -284,7 +284,9 @@ get_inventory(pants=pants_female, shirts=shirts_female)
 
 By setting in the function call `pants=pants_female` and `shirts=shirts_female`, you explicitly declare which argument belongs to which parameter.
 
-You can use keywords when calling a function to specify the argument values in whatever order you want. The keywords used for arguments must have a corresponding parameter with the same name. The example below swaps the order of the arguments in the function call so that `shirts` comes before `pants`. The print statements, however, print `pants` before `shirts`. So it works like how it did with no keywords when `pants` came before `shirts`. That's because you mapped the arguments to parameters using keywords.
+You can use keywords when calling a function to specify the argument values in whatever order you want. The keywords used for arguments must have a corresponding parameter with the same name. 
+
+The example below swaps the order of the arguments in the function call so that `shirts` comes before `pants`. The print statements, however, print `pants` before `shirts`. So it works like how it did with no keywords when `pants` came before `shirts`. That's because you mapped the arguments to parameters using keywords.
 
 ```python
 # define variable
@@ -309,12 +311,64 @@ get_inventory(shirts=shirts_female, pants=pants_female)
 
 In the code above, you swapped the order of `shirts=shirts_female` and `pants=pants_female` in the function call. Although you swapped the order, the print statements in the terminal are the same as the examples before it. That's because you explicitly declared using keywords which argument belongs to which parameter. So first it prints `pants` having a value of `(2, 'Female Pants')` and then `shirts` having a value of `(3, 'Female Shirts')` and finally `sentence` having a value of `'We have 2 Female Pants and 3 Female Shirts'`. 
 
-Using default values can help prevent bugs 
+So far you've seen examples of function definitions with paramters but without setting any default values for those parameters. Using default values can help prevent bugs. If a parameter has a default value, then calling the function without including an argument for the parameter will not cause an error. Rather, it'll just run the function with the parameter's default value.
 
-calling a function that has a default value set for parameters allows you to call the function without inputting arguments
+Here is an example of a function named `get_socks` that has a parameter named `socks`. The only thing the function does is `return socks`. The parameter has no default value.
 
-In functions.py, see 
-default values for custom parameters
+```python
+# define variable
+socks_large = (2, "Large socks")
+
+#define functiont that gets socks
+def get_socks(socks):
+   return socks
+
+large_socks = get_socks(socks_large)
+
+print(large_socks)
+
+>>> (2, 'Large socks')
+```
+
+When you call the function and pass into an argument of `socks_large`, it returns the value of `socks_large`, which is `(2, 'Large socks')`.
+
+If you call that same funciton without passing it an argument, you get an error. The code below is the same as in the example above except `large_socks = get_socks(socks_large)` is changed to have no argument `large_socks = get_socks()`.
+
+```python
+# define variable
+socks_large = (2, "Large socks")
+
+#define functiont that gets socks
+def get_socks(socks):
+   return socks
+
+large_socks = get_socks()
+
+print(large_socks)
+
+>>> TypeError: get_socks() missing 1 required positional argument: 'socks'
+```
+
+This results in an error `TypeError: get_socks() missing 1 required positional argument: 'socks'`. This is telling you that `get_socks()` is missing one argument called `socks`.
+
+By setting a default value for `socks` in the function definition, you can avoid that error. You can call the function without inputting an argument and also without causing an error. See the example below, which is the same code as in the example above except it has a default value set for the parameter. Hence, the only change is from `def get_socks(socks)` to `def get_socks(socks=(0, "No socks")).`
+
+```python
+# define variable
+socks_large = (2, "Large socks")
+
+#define functiont that gets socks
+def get_socks(socks=(0, "No socks")):
+   return socks
+
+large_socks = get_socks()
+
+print(large_socks)
+
+>>> (0, 'No socks')
+```
+
+In the code above, you called `large_socks = get_socks()`. Although the function definition has a parameter and although you didn't pass an argument into the function call, the function ran error-free because you defined the parameter as having a default value. That's why the example prints `(0, 'No socks')`. It's the default value for `socks`.
 
 if your function has multiple parameters but not all have default values, put parameters that have default values at the end of the list of parameters in your function definition
 
