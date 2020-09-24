@@ -7,7 +7,7 @@ Because the Python interpreter reads your .py files from top to bottom in sequen
 The chapter discusses how to use `if`, `else`, and `elif` to write conditional expressions that check the truthiness of a Python object or expression. If the conditional expression is met, the Python interpreter reads and executes the corresponding block of Python code (the expression's statement). If the conditional expression is not met, the Python interpreter does not read or execute the corresponding statement. The chapter also dicusses the `pass` statement.
 
 
-## if
+## [if](#if)
 
 An `if` expression evaluates whether a Python object or expression is truthy. If the expression is truthy, the Python interpreter reads the the `if` expression's corresponding statement. If the expression is falsy, the Python interpreter does not read the corresponding statement. 
 
@@ -233,7 +233,7 @@ print('Not part of if block')
 >>> 'Not part of if block'
 ```
 
-## elif and else
+## [elif and else](#elif-and-else)
 
 Like `if` expressions, `elif` and `if` each evaluate whether a Python object or expression is truthy. `elif` and `else` statements are optional when using an `if` expression and you cannot use either of them without a preceding `if` expression. In other words, only if you use an `if` expression can you use an `elif` or `else` expression, but you don't have to use either just by using an `if`. The `if / elif / else` blocks run until the interpreter reaches the first truthy block. The interpreter then skips over the remaining corresponding blocks. If none of the conditional expressions are truthy, none of the statements run unless there is an `else` statement, in which case it runs.
 
@@ -381,7 +381,7 @@ else:
 >>> "q or r"
 ```
 
-## Conditional Expressions
+## [Conditional Expressions](#conditional-expressions)
 
 Conditional expressions look like `if` expressions but act like operators. Here is what a conditional expression looks like.
 
@@ -446,7 +446,7 @@ print(r)
 
 Be thoughtful about when and how you use conditional expressions. Although they make your code more efficient in terms of number of lines, they can be difficult to understand sometimes.
 
-## Pass
+## [Pass](#pass)
 
 Python’s pass statement tells the interpreter to skip ahead to the next line of code. It is commonly used in development when you want to put a placeholder block of code, yet you don’t want your code to break. Or you may find an actual use for skipping a block of code in your app's flow. 
 
