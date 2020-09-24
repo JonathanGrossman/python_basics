@@ -531,14 +531,52 @@ Creating local scope and being thoughtful with your names will prevfent conflict
 
 
 ## __doc__
-at the top of each function use three sets of quotes to write a brief message about what the function does; 
+The first line of every function is a docstring. A docstring is a string and is supposed to describe what the function does. Functions aren't the only Python objects that have docstring. So do modules, classes, and methods 
 
-then use __doc__ to retrieve the message; this is good for communicating with other developers and yourself
+The default value for a docstring is `None`. You can customize the docstring by putting at the top of the function three single quotes followed by your description followed by three more single quotes `''' . . . '''`.
 
+To access the messag, chain `__doc__` to the function name `get_inventory.__doc__`. 
 
+```python
+# example of the default docstring None
+def get_inventory():
+    pants_female = 'Female Pants'
+    return pants_female
 
-In functions.py, see 
-example using triple quotes and __doc__
+print(get_inventory.__doc__)
 
+>>> None
+```
 
-try on Python’s built-in functions!
+In the example above, the function does not declare a docstring. Accordingly, printing `get_inventory.__doc__` returns `None`. If you declare a docstring at the top of the function definition, for instance `'''returns pants_female'''`, printing `get_inventory.__doc__` returns the docstring `returns pants_female`.
+
+```python
+# example of overriding the default docstring
+def get_inventory():
+    '''returns pants_female'''
+    pants_female = 'Female Pants'
+    return pants_female
+
+print(get_inventory.__doc__)
+
+>>> 'returns pants_female'
+```
+This is good for communicating with other developers and yourself. You should write short but descriptive docstrings for your functions. You also should use them on functions from third-party libararies to help understand what they do.
+
+Here is an example of printing the docstring for Python's `print` method.
+
+```python
+# example of printing print.__doc__
+print(print.__doc__)
+
+>>> print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+
+>>> Prints the values to a stream, or to sys.stdout by default.
+>>> Optional keyword arguments:
+>>> file:  a file-like object (stream); defaults to the current sys.stdout.
+>>> sep:   string inserted between values, default a space.
+>>> end:   string appended after the last value, default a newline.
+>>> flush: whether to forcibly flush the stream.
+```
+
+Wow! Way more complex than `'returns pants_female'` and also too complex for this lesson. However, now you see how you can get information about a function, method, class, or module. Regardless of whether you understand it now, it's good practice to read it and try to understand it. Also, you should try playing around with it or Google search what it means. 
