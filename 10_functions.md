@@ -346,7 +346,7 @@ large_socks = get_socks()
 
 print(large_socks)
 
->>> TypeError: get_socks() missing 1 required positional argument: 'socks'
+>>> 'TypeError: get_socks() missing 1 required positional argument: 'socks''
 ```
 
 This results in an error `TypeError: get_socks() missing 1 required positional argument: 'socks'`. This is telling you that `get_socks()` is missing one argument called `socks`.
@@ -410,7 +410,7 @@ print(large_socks)
 >>> ((0, 'No small socks'), (0, 'No medium socks'), (2, 'Large socks'))
 ```
 
-In the example above, the parameters are in the proper order having the parameters with default values appear at the end of the parameter list `def get_socks(large_socks, small_socks=(0, "No small socks"), medium_socks=(0, "No medium socks")):`. `large_socks` is at the front of the list and the other two with default values appear after. Then when you call the function and pass it only one argument `large_socks = get_socks(socks_large)`, the Python interpreter maps the argument `socks_large` to the first parameter `large_socks`. For the other two parameters, the Python interpreter uses the default values.
+In the example above, the parameters are in the proper order having the parameters with default values appear at the end of the parameter list `def get_socks(large_socks, small_socks=(0, "No small socks"), medium_socks=(0, "No medium socks")):`. `large_socks` is at the front of the list and the other two with default values appear after. Then when you call the function and pass it only one argument `large_socks = get_socks(socks_large)`, the Python interpreter maps the argument `socks_large` to the first parameter `large_socks`. For the other two parameters, the Python interpreter uses the default values. Hence, the example prints `((0, 'No small socks'), (0, 'No medium socks'), (2, 'Large socks'))`.
 
 
 ## Scope
