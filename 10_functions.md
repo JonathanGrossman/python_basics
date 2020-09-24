@@ -361,19 +361,57 @@ socks_large = (2, "Large socks")
 def get_socks(socks=(0, "No socks")):
    return socks
 
-large_socks = get_socks()
+default_socks = get_socks()
+large_socks = get_socks(socks_large)
 
+print(default_socks)
 print(large_socks)
 
 >>> (0, 'No socks')
+>>> (2, 'Large socks')
 ```
 
-In the code above, you called `large_socks = get_socks()`. Although the function definition has a parameter and although you didn't pass an argument into the function call, the function ran error-free because you defined the parameter as having a default value. That's why the example prints `(0, 'No socks')`. It's the default value for `socks`.
+In the code above, you called `default_socks = get_socks()`. Although the function definition has a parameter and although you didn't pass an argument into the function call, the function ran error-free because you defined the parameter as having a default value. That's why the example prints `(0, 'No socks')`. It's the default value for `socks`.
 
-if your function has multiple parameters but not all have default values, put parameters that have default values at the end of the list of parameters in your function definition
+In the code above, you also called `large_socks = get_socks(socks_large)`. Although the function definition has a parameter with a default value, the function ran error-free and returned the value of socks_large because you called the function with an argument in the call. That argument overrides the default. That's why for the line `print(large_socks)` the example prints `(2, 'Large socks')`.
 
-In functions.py, see 
-using keywords when passing in arguments
+If your function has multiple parameters but not all have default values, put parameters that have default values at the end of the list of parameters in your function definition
+
+```python
+# define variable
+socks_large = (2, "Large socks")
+
+#define functiont that gets socks
+def get_socks(small_socks=(0, "No small socks"), medium_socks=(0, "No medium socks"), large_socks):
+   return small_socks, medium_socks, large_socks
+
+large_socks = get_socks(socks_large)
+
+print(large_socks)
+
+>>> 'SyntaxError: non-default argument follows default argument'
+```
+In the example above, the parameters that have default values come before the one that doesn't. The one that doesn't is at the end of the list of parameters. This results in an error `SyntaxError: non-default argument follows default argument`.
+
+If, however, we put at the beginning of the parameter list the parameter that does not have a default value, the function runs without error.
+
+```python
+# define variable
+socks_large = (2, "Large socks")
+
+#define functiont that gets socks
+def get_socks(large_socks, small_socks=(0, "No small socks"), medium_socks=(0, "No medium socks")):
+   return small_socks, medium_socks, large_socks
+
+large_socks = get_socks(socks_large)
+
+print(large_socks)
+
+>>> ((0, 'No small socks'), (0, 'No medium socks'), (2, 'Large socks'))
+```
+
+In the example above, the parameters are in the proper order having the parameters with default values appear at the end of the parameter list `def get_socks(large_socks, small_socks=(0, "No small socks"), medium_socks=(0, "No medium socks")):`. `large_socks` is at the front of the list and the other two with default values appear after. Then when you call the function and pass it only one argument `large_socks = get_socks(socks_large)`, the Python interpreter maps the argument `socks_large` to the first parameter `large_socks`. For the other two parameters, the Python interpreter uses the default values.
+
 
 ## Scope
 
