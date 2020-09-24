@@ -415,33 +415,74 @@ In the example above, the parameters are in the proper order having the paramete
 
 ## Scope
 
-Scope means the parts of your code that a Python object has access to. It is a somewhat difficult concept to explain in one sentence. For instance, the scope of a variable is the parts of your code where you can access that variable. In other words, it is the blocks of code in which a value is accessible to other code.
+Scope means the parts of your code that a Python object has access to. For instance, you have the global scope. A block of code is in the global scope if it is not indented. All other scopes are considered local. Local scopes are those that have some indentation. Local scopes therefore belong to things like functions, expressions, loops and classes. Although local scopes are within the global scope, you need to import global variables into local scopes to use them in the local scope.
 
 ```python
-# example of variable scope
+# example of variable in global scope
+pants_male = (2, "Male Pants")
+print(pants_male)
+
+# example of variable in local scope of a function
+def get_inventory():
+    pants_female = (3, "Female Pants")
+    print(pants_female)
+    return
+
+get_inventory()
+
+>>> (2, 'Male Pants')
+>>> (3, 'Female Pants')
 ```
 
-Your code has a global scope. The global scope is the level of code where values are accessible to all other lines of code.
+In the code above, you define the variable `pants_male` in the global scope and print it. Then, you define the variable `pants_female` in the local scope of `get_inventory()`, which has one task -- to print `pants_female`. The code prints in the terminal `(2, 'Male Pants')` followed by `(3, 'Female Pants')`.
+
+If you move `print(pants_male)` from the global scope into the `get_inventory` local scope, you need to import the `pants_male` variable into the scope of `get_inventory` or else you get an error.
 
 ```python
-# example of global scope
+# example of variable in global scope
+pants_male = "Male Pants"
+
+# example of variable in local scope of a function
+def get_inventory():
+    pants_female = 'Female Pants'
+    pants_male = pants_male + ' In Stock'
+    print(pants_male)
+    print(pants_female)
+    return
+
+get_inventory()
+
+>>> 'UnboundLocalError: local variable 'pants_male' referenced before assignment'
 ```
 
-If a variable's origin is the global scope, you can use that variable inside other scopes, but need to specify in the other scopes that the variable comes from the gloabl scope. For instance, inside of a function, before you are able to manipulate a global variable, you need to specify that the variable is from the global scope by using the word global before the variable within the function. To do so, use the `global` keyword with the variable name inside the new scope.
+In the code above, `print(pants_male)` is no longer in the global scope. It is in the local scope of `get_inventory` despite it being defined in the global scope. In the function, you set `pants_male = pants_male + ' In Stock'`. The Python interpreter, however, can't perform that operation. Instead, it returns the error `'UnboundLocalError: local variable 'pants_male' referenced before assignment'` because inside the scope of `get_inventory` the Python interpreter doesn't know what `pants_male` is. Because it doesn't know what what `pants_male` is, the interpreter can't add anything to it. You can't operate on a variable before defining it. Because we didn't import the definition of `pants_male` from the global and also didn't provide a new definition inside the local scope for `pants_male`, the local scope can't operate on `pants_male` to add `' In Stock'`.
 
-```python
-# example global scope variable inside a function
+To fix that, simply import the `pants_male` variable from the global scope into the scope for `get_inventory`. Now the local scope has access to `pants_male` in the `global` scope.
 
-# example of local variable named same as global variable
+```python 
+# example of variable in global scope
+pants_male = 'Male Pants'
+
+# example of variable in local scope of a function
+def get_inventory():
+    global pants_male
+    pants_female = 'Female Pants'
+    pants_male = pants_male + ' In Stock'
+    print(pants_male)
+    print(pants_female)
+    return
+
+get_inventory()
+
+>>> 'Male Pants In Stock'
+>>> 'Female Pants'
 ```
 
-In contrast to the global scope, you can create "local" scopes using blocks of code like functions and conditionals.
+The code above is the same as the example before it, except this example has as the first line of the `get_inventory` function the line `global pants_male`. The keyword `global` is Python's way of identifying something in the global scope. By writing `global pants_male`, you tell the interpreter to get `pants_male` from the global scope and use it inside this local scope. Now the function knows what `pants_male` is and can operate on it. The code prints `Male Pants In Stock` and `Female Pants`.
 
-```python
-# example of function scope
+## discussion of trying to print from the global scope a variable define in the local scope
 
-# example of conditional scope
-```
+## discussion about preventing conflicts
 
 One benefit of having different scopes for different parts of your code is that it prevents conflicts between variables. Unless you make a variable available outside of its scope of origin, a variable created within a certain scope is accessible only within that block of code. Therefore its name is not going to conflict with a variable of the same name in a different scope.
 
@@ -449,6 +490,10 @@ One benefit of having different scopes for different parts of your code is that 
 # example of variables with same name in same scope 
 
 # example of variables with same name in different scope 
+
+# example global scope variable inside a function
+
+# example of local variable named same as global variable
 ```
 
 A variable doesn't have to be confined to its scope of origin. Using special syntax, you can make a variable accessible to parts of your code other than the variables scope of origin.
@@ -468,17 +513,8 @@ NameError: name 'coding_language' is not defined
 
 practice reading error messages!
 
-
-
-
-
-or else you get an error
-
-UnboundLocalError: local variable 'total' referenced before assignment
-
 practice reading error messages!
-In functions.py, see 
-examples using global keyword
+
 
 ## __doc__
 at the top of each function use three sets of quotes to write a brief message about what the function does; 
