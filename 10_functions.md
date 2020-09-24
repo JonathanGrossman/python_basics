@@ -480,40 +480,54 @@ get_inventory()
 
 The code above is the same as the example before it, except this example has as the first line of the `get_inventory` function the line `global pants_male`. The keyword `global` is Python's way of identifying something in the global scope. By writing `global pants_male`, you tell the interpreter to get `pants_male` from the global scope and use it inside this local scope. Now the function knows what `pants_male` is and can operate on it. The code prints `Male Pants In Stock` and `Female Pants`.
 
-## discussion of trying to print from the global scope a variable define in the local scope
+If in the `global` scope you try to print a variable defined in the local scope, you get an error. See below where you try to print in the `global` scope the variable `pants_female` in the `global` scope.
 
-## discussion about preventing conflicts
+```python 
+# example of variable in global scope
+pants_male = 'Male Pants'
 
-One benefit of having different scopes for different parts of your code is that it prevents conflicts between variables. Unless you make a variable available outside of its scope of origin, a variable created within a certain scope is accessible only within that block of code. Therefore its name is not going to conflict with a variable of the same name in a different scope.
+# example of variable in local scope of a function
+def get_inventory():
+    global pants_male
+    pants_female = 'Female Pants'
+    pants_male = pants_male + ' In Stock'
+    print(pants_male)
+    return
 
-```python
-# example of variables with same name in same scope 
+print(pants_female)
+get_inventory()
 
-# example of variables with same name in different scope 
-
-# example global scope variable inside a function
-
-# example of local variable named same as global variable
+>>> 'NameError: name 'pants_female' is not defined'
 ```
 
-A variable doesn't have to be confined to its scope of origin. Using special syntax, you can make a variable accessible to parts of your code other than the variables scope of origin.
+The example above is the same as before it, except this example has deleted `print(pants_female)` from the function and has also added toward the bottom in the `global` scope the line `print(pants_female)`. Because `pants_female` is defined in the local scope of `get_inventory`, the Python interpreter doesn't know in the `global` scope what `pants_female` is when reading `print(pants_female)` and therefore returns an error `'NameError: name 'pants_female' is not defined'`.
+
+You can define a variable in a local scope and make it available in the `global` scope by returning the value from the function and saving it to a variable. 
 
 ```python
-# example of making variable available outside its scope of origin 
+# example of variable in global scope
+pants_male = 'Male Pants'
+
+# example of variable in local scope of a function
+def get_inventory():
+    global pants_male
+    pants_female = 'Female Pants'
+    pants_male = pants_male + ' In Stock'
+    print(pants_male)
+    return pants_female
+
+female_pants = get_inventory()
+print(female_pants)
+
+>>> Male Pants In Stock
+>>> Female Pants
 ```
 
-In functions.py, see 
-this is the global scope
-this is the destination_tel_aviv_scope
-this is the global scope
-this is what happens when you are out of scope
+The example above is the same as the one before it, except this example returns `pants_female` instead of nothing and also replaces `print(pants_female)` and `get_inventory()` at the bottom in the `global` scope with `female_pants = get_inventory()` and `print(female_pants)`. What you've done is make `pants_female` available in the `global` scope by returning it from `get_inventory`. The output in the terminal is `Male Pants In Stock` and `Female Pants`.
 
-NameError: name 'coding_language' is not defined
+One benefit of having different scopes for different parts of your code is that it prevents conflicts between variables. Conflicts occur when you have two or more variables with the same name in the same scope. So you may define `pants_male = 10` in one place and then later define `pants_male = 20`. Even if the Python intepreter is able to run error free despite multiple same names, your application may not behave as you expect. You may think, for instance, that `pants_male` should equal `10` not realizing that you accidentally overrode that value with `pants_male = 20`. 
 
-
-practice reading error messages!
-
-practice reading error messages!
+Creating local scope and being thoughtful with your names will prevfent conflicts. Unless you make a variable available outside of its scope of origin, a variable created within a certain scope is accessible only within that block of code. Therefore its name is not going to conflict with a variable of the same name in a different scope.
 
 
 ## __doc__
