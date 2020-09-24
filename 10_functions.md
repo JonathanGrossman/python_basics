@@ -31,7 +31,7 @@ One thing that confuses beginners is terminology surrounding functions. You can 
 
 Regardless of where the function is defined and by whom, all functions have a few defining characteristics for beginners to focus on. They perform one or more defined tasks, can accept one or more inputs, can return one or more outputs, and must be called for the function to perform the tasks.
 
-## How to write a Python function
+## [How to write a Python function](#how-to-write-a-python-function)
 
 The syntax for defining a function starts with a line containing `def`, a name, and a list of parameters containing zero or more inputs. 
 
