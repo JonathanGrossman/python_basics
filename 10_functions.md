@@ -213,7 +213,7 @@ def get_pants(pants):
 # example of calling function with an argument pants_female
 get_pants()
 
->>> TypeError: get_pants() missing 1 required positional argument: 'pants'
+>>> 'TypeError: get_pants() missing 1 required positional argument: 'pants''
 ```
 
 The code above is the same as the example before it, except here you call `get_pants()`. Notice that it is missing an argument. The Python interpreter has an error `TypeError: get_pants() missing 1 required positional argument: 'pants'`. The answer to your bug is right there in the error message. It says the function `get_pants()` has one missing argument named `pants`. At first, error messages can be confusing and easy to skip over. However, you need to practice reading error messages! Oftentimes, reading an error message can save you time and frustration, pointing you right to the problem.
@@ -246,9 +246,9 @@ get_inventory(pants_female, shirts_female)
 # example of swapping the order of arguments
 get_inventory(shirts_female, pants_female)
 
-(3, 'Female Shirts')
-(2, 'Female Pants')
-We have 3 Female Shirts and 2 Female Pants
+>>> (3, 'Female Shirts')
+>>> (2, 'Female Pants')
+>>> 'We have 3 Female Shirts and 2 Female Pants'
 ```
 
 In the code above, you define two variables `pants_female` and `shirts_female`. You set each of them equal to a tuple, `(2, 'Female Pants')` and `(3, 'Female Shirts')`. Then you define a function named `get_inventory` that has two parameters `pants` and `shirts`. The function tasks are to print `pants` and `shirts` and to form a sentence `'We have' + ' ' + str(pants[0]) + ' ' + pants[1]  + ' ' + 'and' + ' ' + str(shirts[0]) + ' ' + shirts[1]` saved to a variable named `sentence`. The sentence is a string you built using `'We have'`, `'and'`, several `' '` for spaces, and the values from the tuples. Then you print `sentence`.  
