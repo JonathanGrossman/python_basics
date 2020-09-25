@@ -46,7 +46,7 @@ print(len('pants', 'shirts'))
 >>> 'TypeError: len() takes exactly one argument (2 given)'
 ```
 
-The first example above prints the length of `'pants'`, which is `5`. The second example prints the data type `type()` of `len()`, which is an integer `<class 'int'>`. The third example attempts to print the length of two strings in the same `len()` call. It returns an error because `len()` takes exactly one argument but you gave it `2` `'TypeError: len() takes exactly one argument (2 given)'`.
+The first example above prints the length of `'pants'`, which is `5`. The second example prints the data type `type()` of `len()`, which is an integer `<class 'int'>`. The third example attempts to print the length of two strings in the same `len()` call. It returns an error because `len()` takes exactly one argument but you gave it 2 `'TypeError: len() takes exactly one argument (2 given)'`.
 
 Use `len()` with other code to help dictate flow. For instance, here is an example of using `len()` in an `if / elif / else` block.
 
@@ -63,16 +63,16 @@ def check_string(input):
     else:
         print('Nice.')
 
-female_pants = check_string(pants_female)
-male_pants= check_string(pants_male)
-all_pants = check_string(pants)
+check_string(pants_female)
+check_string(pants_male)
+check_string(pants)
 
 >>> 'Too long.'
 >>> 'Too short.'
 >>> 'Nice.'
 ```
 
-The example above defines three variables `pants_female`, `pants_male`, and `pants`. It then defines a function `check_string` that has one parameter `input`. The function checks the length of `input`. If greater than `15` the function prints `'Too long.'` If less than `5`, it prints `'Too short.'`. Otherwise, it prints `'Nice.'` You call the function three times, each time with one of the three variables in the order of `pants_female`, `pants_male`, and `pants`. Printing the outcome of each call results in `'Too long.'`, `'Too short.'`, and `'Nice.'`
+The example above defines three variables `pants_female`, `pants_male`, and `pants`. It then defines a function `check_string` that has one parameter `input`. The function checks the length of `input`. If greater than `15` the function prints `'Too long.'` If less than `5`, it prints `'Too short.'`. Otherwise, it prints `'Nice.'` You call the function three times, each time with one of the three variables in the order of `pants_female`, `pants_male`, and `pants`. The outcome in the terminal is `'Too long.'`, `'Too short.'`, and `'Nice.'`
 
 ## [Combine multiple strings using string concatenation](#combine-multiple-strings-using-string-concatenation)
 
