@@ -4,14 +4,55 @@ You've seen strings in previous chapters. Stings are text, like a letter, word, 
 
 Although strings are easy to think of as just text, technically a string is a sequence of bytes. Each byte represents a unicode character. Unicode is the digital standard for representing letters, numbers, and other characters in human languages.
 
-Write strings in your code by wrapping text with either double `""` or single `''` quotes. A string can have from zero to an unlimited number of characters (so long as the memory allows). Characters include letters, numbers, symbols, emojis, and more. For instance, `"Female Pants"`, `'Pants'`, `"0"`, and `u'\u2713'` are valid strings.
+Write strings in your code by wrapping text with either double `""` or single `''` quotes. A string can have from zero to an unlimited number of characters (so long as the memory allows). Characters include letters, numbers, symbols, emojis, and more. For instance, `"Female Pants"`, `'Pants'`, `"0"`, and `u'\u2713'` (represents a checkmark `✓`) are valid strings.
 
+You can do many things with strings in Python, such as 
 
-# You can access a specific character in a string using its index position
+- access a specific character in a string using index position.  
+- get the length of a string  
+- check for substring   
+- combine multiple strings using string concatenation   
+- convert other data types into strings  
+
+Read below to learn more about working with strings in Python. 
+
+## [Get the length of a string](#get-the-length-of-a-string)
+
+## [Access character in string using index position](#access-character-in-string-using-index-position)
+
+Access a specific character in a string using its index position. Every character in a string has an index position. From left to right, the first index position is `0` and the last index position is the string length minus one `len(a)-1`. 
+
+To use the index position, first save the string to a variable. Then append to the variable square brackets wrapping the index position of the character you want to access.
+
+```python
+# example of using index position with string
+pants_male = 'Male Pants'
+
+print(pants_male[1])
+
+>>> a
+```
+
+In the example above, the character with an index position of `1` in `pants_male` is `'a'`. Here is a list of the index positions for each character.
+
+```python
+Character     Index
+
+M             0
+a             1
+l             2
+e             3
+              4
+P             5
+a             6
+n             7
+t             8
+s             9
+```
 
 Common things to do with strings:
 # access a specific character in a string using index position
-# get the length of a string
+
 # check for substring
 # combine multiple strings using string concatenation
 # convert other data types into strings
