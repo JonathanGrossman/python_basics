@@ -16,15 +16,69 @@ You can do many things with strings in Python, such as
 
 Read below to learn more about working with strings in Python. 
 
+## [Get the length of a string](#get-the-length-of-a-string)
+
+A string can be empty `""` or have one or more characters. Regardless, you can get its length using Python's built-in `len()` function. By printing `len.__doc__`, you can see in the terminal the description of this function
+
+```python
+# print string message for len() built-in function
+print(len.__doc__)
+
+>>> 'Return the number of items in a container.'
+```
+
+The `len()` function returns the number of items in a container. The container is the string. The number of items is the number of characters in the string. The `len()` function accepts one argument and returns an integer.
+
+```python
+# print length of string
+print(len('pants'))
+
+>>> 5
+
+# print type for length return
+print(type(len('pants')))
+
+>>> <class 'int'>
+
+# print length with more than one input
+print(len('pants', 'shirts'))
+
+>>> 'TypeError: len() takes exactly one argument (2 given)'
+```
+
+The first example above prints the length of `'pants'`, which is `5`. The second example prints the data type `type()` of `len()`, which is an integer `<class 'int'>`. The third example attempts to print the length of two strings in the same `len()` call. It returns an error because `len()` takes exactly one argument but you gave it `2` `'TypeError: len() takes exactly one argument (2 given)'`.
+
+Use `len()` with other code to help dictate flow. For instance, here is an example of using `len()` in an `if / elif / else` block.
+
+```python
+pants_female = "We have female pants in our store."
+pants_male = "Pant"
+pants = "We have pants"
+
+def check_string(input):
+    if len(input) > 15:
+        print('Too long.')
+    elif len(input) < 5: 
+        print('Too short.')
+    else:
+        print('Nice.')
+
+female_pants = check_string(pants_female)
+male_pants= check_string(pants_male)
+all_pants = check_string(pants)
+
+>>> 'Too long.'
+>>> 'Too short.'
+>>> 'Nice.'
+```
+
+The example above defines three variables `pants_female`, `pants_male`, and `pants`. It then defines a function `check_string` that has one parameter `input`. The function checks the length of `input`. If greater than `15` the function prints `'Too long.'` If less than `5`, it prints `'Too short.'`. Otherwise, it prints `'Nice.'` You call the function three times, each time with one of the three variables in the order of `pants_female`, `pants_male`, and `pants`. Printing the outcome of each call results in `'Too long.'`, `'Too short.'`, and `'Nice.'`
+
 ## [Combine multiple strings using string concatenation](#combine-multiple-strings-using-string-concatenation)
 
 ## [Convert other data types into strings](#convert-other-data-types-into-strings)
 
 use str() to convert other data types into strings
-
-## [Get the length of a string](#get-the-length-of-a-string)
-
-get the length of a string using len()(returns a number)
 
 ## [Access character in string using index position](#access-character-in-string-using-index-position)
 
