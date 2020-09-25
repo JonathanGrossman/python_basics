@@ -533,11 +533,11 @@ Creating local scope and being thoughtful with your names will prevfent conflict
 
 
 ## [What is a docstring](#what-is-a-docstring)
-The first line of every function is a docstring. A docstring is a string and is supposed to describe what the function does. Functions aren't the only Python objects that have docstring. So do modules, classes, and methods 
+A docstring is a message describing what the function does. It's default value is `None`, but you can override the default with a custom string describing the function. You put this message as the first line of the function as a string wrapped in triple quotes. Functions aren't the only Python objects that have docstring. So do modules, classes, and methods.
 
-The default value for a docstring is `None`. You can customize the docstring by putting at the top of the function three single quotes followed by your description followed by three more single quotes `''' . . . '''`.
+The default value for a docstring is `None`. You can customize the docstring by putting at the top of the function three single quotes followed by your description followed by three more single quotes `''' This is a message.'''`.
 
-To access the messag, chain `__doc__` to the function name `get_inventory.__doc__`. 
+To access the message, chain `__doc__` to the function name For instance, for the function named `get_inventory`, get the docstring using `get_inventory.__doc__`. 
 
 ```python
 # example of the default docstring None
