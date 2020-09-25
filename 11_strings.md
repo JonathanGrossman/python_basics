@@ -1,15 +1,16 @@
 # Strings
 
-# strings are arrays of bytes that represent unicode characters
-# strings are represented by double or single quotes “ “ or ‘ ’ and can contain any type of text
-# strings in python are similar to strings in JS; for instance, you can access a specific character in a string using its index position
+You've seen strings in previous chapters. Stings are text, like a letter, word, phrase, sentence, or paragraph. For instance, you've printed them and added them to one another. Now are going to take a deeper look into how you can work with strings in Python.
 
-In strings.py, see comment:
-# access a specific character in a string using index position
+Although strings are easy to think of as just text, technically a string is a sequence of bytes. Each byte represents a unicode character. Unicode is the digital standard for representing letters, numbers, and other characters in human languages.
 
+Write strings in your code by wrapping text with either double `""` or single `''` quotes. A string can have from zero to an unlimited number of characters (so long as the memory allows). Characters include letters, numbers, symbols, emojis, and more. For instance, `"Female Pants"`, `'Pants'`, `"0"`, and `'🤙'` are valid strings.
+
+
+# You can access a specific character in a string using its index position
 
 Common things to do with strings:
-
+# access a specific character in a string using index position
 # get the length of a string
 # check for substring
 # combine multiple strings using string concatenation
