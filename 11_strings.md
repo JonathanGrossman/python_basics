@@ -1,15 +1,15 @@
 # Strings
 
-You've seen strings in previous chapters. Stings are text, like a letter, word, phrase, sentence, or paragraph. For instance, you've printed them and added them to one another. Now are going to take a deeper look into how you can work with strings in Python.
+You've seen strings in previous chapters. Stings are text. Letters, words, phrases, sentences, and paragraphs are examples of strings. You've printed them and added them to one another. Now are going to take a deeper look into how you can work with strings in Python.
 
-Although strings are easy to think of as just text, technically a string is a sequence of bytes. Each byte represents a unicode character. Unicode is the digital standard for representing letters, numbers, and other characters in human languages.
+Although strings are easy to think of as just text, technically a string is a sequence of bytes. Each byte represents a unicode character. Unicode is the standard for representing in code the letters, numbers, and other characters in human languages. It's okay to think of it as text.
 
 Write strings in your code by wrapping text with either double `""` or single `''` quotes. A string can have from zero to an unlimited number of characters (so long as the memory allows). Characters include letters, numbers, symbols, emojis, and more. For instance, `"Female Pants"`, `'Pants'`, `"0"`, and `u'\u2713'` (represents a checkmark `✓`) are valid strings.
 
 You can do many things with strings in Python, such as 
 
-- access a specific character in a string using index position.  
-- get the length of a string  
+- get the length of a string 
+- access a specific character in a string using index position.   
 - check for substring   
 - combine multiple strings using string concatenation   
 - convert other data types into strings  
@@ -20,9 +20,9 @@ Read below to learn more about working with strings in Python.
 
 ## [Access character in string using index position](#access-character-in-string-using-index-position)
 
-Access a specific character in a string using its index position. Every character in a string has an index position. From left to right, the first index position is `0` and the last index position is the string length minus one `len(a)-1`. 
+Access a specific character in a string using its index position. Every character in a string has an index position. From left to right, the first index position is `0` and the last index position is the string length minus one `len(a) - 1`. 
 
-To use the index position, first save the string to a variable. Then append to the variable square brackets wrapping the index position of the character you want to access.
+To use the index position, first save the string to a variable. Then append to the variable square brackets wrapping the index position of the character you want to access `pants_male[1]`.
 
 ```python
 # example of using index position with string
@@ -33,27 +33,68 @@ print(pants_male[1])
 >>> a
 ```
 
-In the example above, the character with an index position of `1` in `pants_male` is `'a'`. Here is a list of the index positions for each character.
+In the example above, you declare a variable named `pants_male` and set it equal to `'Male Pants'`. Then you print the character in index position `1` in the line `print(pants_male[1])`. The character with an index position of `1` in the `pants_male` value of `'Male Pants'` is `'a'`. Here is a list of the index positions for each character.
 
 ```python
 Character     Index
 
-M             0
-a             1
-l             2
-e             3
-              4
-P             5
-a             6
-n             7
-t             8
-s             9
+'M'             0
+'a'            1
+'l'             2
+'e'             3
+' '             4
+'P'             5
+'a'             6
+'n'             7
+'t'             8
+'s'             9
 ```
 
-Common things to do with strings:
-# access a specific character in a string using index position
+# [Check for substring](#check-for-substring)
 
-# check for substring
+Check whether a substring is `in` or `not in` a string. For instance, check whether a message contains the word "pants" `"pants" in message`.
+
+The `in` and `not in` operators check whether a substring exists in a string. Expressions using `in` and `not in` return Boolean values `True` or `False`.
+
+```python
+# check for a substring using "in" or "not in" (returns True or False)
+message = 'We sell pants and shirts.'
+x = 'pants' in message
+y = 'socks' not in message
+print(x, y)
+
+>>> 'True True'
+```
+
+Checking for substrings help control the flow of your application. Use them in combination with conditionals and other operators to dictate what happens next. Here is an example of using `in` in a conditional statement inside of a function. 
+
+```python
+# define variables
+item_pants = 'pants'
+item_socks = 'socks'
+
+# return message about whether item is in message
+def get_message(item):
+    company_message = 'We sell pants'
+    if item in company_message:
+        return company_message
+    else: 
+        return 'We do not sell' + ' ' + item
+        
+# get message for pants and socks 
+pants_message = get_message(item_pants)
+socks_message = get_message(item_socks)
+
+# print messages for pants and socks
+print(pants_message)
+print(socks_message)
+
+
+>>> 'We sell pants'
+>>> 'We do not sell socks'
+```
+
+
 # combine multiple strings using string concatenation
 # convert other data types into strings
 
