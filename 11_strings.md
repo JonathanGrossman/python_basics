@@ -16,6 +16,8 @@ You can do many things with strings in Python, such as
 
 Read below to learn more about working with strings in Python. 
 
+## [#Combine multiple strings using string concatenation](#combine-multiple-strings-using-string-concatenation)
+
 ## [Get the length of a string](#get-the-length-of-a-string)
 
 ## [Access character in string using index position](#access-character-in-string-using-index-position)
@@ -94,8 +96,14 @@ print(socks_message)
 >>> 'We do not sell socks'
 ```
 
+The example above defines two variables `item_pants` and `item_socks` and sets them equal to `'pants'` and `'socks'`. You then define the funtion `get_message` that has one parameter `item`. The function defines a variable `company_message` and sets it equal to `'We seel pants'`. Then you check whether `item` is in `company_message`. If `True` the function returns `company_message`. If `False` the function returns `'We do not sell' + ' ' + item`.
 
-# combine multiple strings using string concatenation
+Next you call the function twice. First, passing `item_pants` as the argument and saving the return value to `pants_message`. Second, passing `item_sockss` as the argument and saving the return value to `socks_message`. You then print `pants_message` and `socks_message`.
+
+The terminal prints `'We sell pants'` and `'We do not sell socks'`. For the first function call, item equals `pants` so the condition is `True` because `'pants'` is in the `company_message` value of `'We sell pants'`. The function returns `'We sell pants'` and therefore printing `pants_message` results in `'We sell pants'`. For the second function call, item equals `socks` so the condition is `False` because `'socks'` is not in the `company_message` value of `'We sell pants'`. The function returns `'We do not sell socks'` and therefore printing `socks_message` results in `'We do not sell socks'`.
+
+
+
 # convert other data types into strings
 
 In strings.py, see comments:
