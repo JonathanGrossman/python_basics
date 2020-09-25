@@ -16,9 +16,15 @@ You can do many things with strings in Python, such as
 
 Read below to learn more about working with strings in Python. 
 
-## [#Combine multiple strings using string concatenation](#combine-multiple-strings-using-string-concatenation)
+## [Combine multiple strings using string concatenation](#combine-multiple-strings-using-string-concatenation)
+
+## [Convert other data types into strings](#convert-other-data-types-into-strings)
+
+use str() to convert other data types into strings
 
 ## [Get the length of a string](#get-the-length-of-a-string)
+
+get the length of a string using len()(returns a number)
 
 ## [Access character in string using index position](#access-character-in-string-using-index-position)
 
@@ -102,46 +108,38 @@ Next you call the function twice. First, passing `item_pants` as the argument an
 
 The terminal prints `'We sell pants'` and `'We do not sell socks'`. For the first function call, item equals `pants` so the condition is `True` because `'pants'` is in the `company_message` value of `'We sell pants'`. The function returns `'We sell pants'` and therefore printing `pants_message` results in `'We sell pants'`. For the second function call, item equals `socks` so the condition is `False` because `'socks'` is not in the `company_message` value of `'We sell pants'`. The function returns `'We do not sell socks'` and therefore printing `socks_message` results in `'We do not sell socks'`.
 
+## [Access range of characters in string with slicing](#access-range-of-characters-in-string-with-slicing)
 
-
-# convert other data types into strings
-
-In strings.py, see comments:
-# get the length of a string using len()(returns a number)
-# check for a substring using “in” or “not in” (returns True or False)
-# combine two strings using + (called string concatenation)
-# use str() to convert other data types into strings
-
-
-# strings in Python have index positions, just like in JS
-# slicing allows you to access a range of characters in a string
-# using the starting index position and the ending position + 1 of the characters you want to access
+Slicing allows you to access a range of characters in a string. Using the starting index position and the ending position + 1 of the characters you want to access
 
 In strings.py, see comment:
-# slicing allows you to access a range of characters in a string
+slicing allows you to access a range of characters in a string
 
 
-# negative slicing allows you to access characters using the end of the string as the reference point
-# while strings have positive index positions corresponding to each element in the string, each element in the string also has a negative index position
-# the last character in the string is index position -1 and as you move left across the string, the index position decreases by 1 (e.g., . . ., -2, -3, -4, -5 . . . beginning of string)
+Negative slicing allows you to access characters using the end of the string as the reference point. While strings have positive index positions corresponding to each element in the string, each element in the string also has a negative index position. The last character in the string is index position -1 and as you move left across the string, the index position decreases by 1 (e.g., . . ., -2, -3, -4, -5 . . . beginning of string).
+
 In strings.py, see comment:
 # negative slicing allows you to access characters using the end of the string as the reference point
 
+## [Combine strings with non-strings](combine-strings-with-non-strings)
 
-# combine strings with non-strings, like variables and numbers
-# string formatting and f-strings are two ways
-# f-strings is the “old way”
+
+combine strings with non-strings, like variables and numbers. string formatting is the "old way" but still very important to know. f-strings is the "new way" and also important to know.
+
+## [String formatting](#string-formatting) 
+
 In strings.py, see comments:
-# by placing {} within your string and using the .format() method, you can fill in the {} with the arguments within the () of .format()
+by placing {} within your string and using the .format() method, you can fill in the {} with the arguments within the () of .format()
+to make your code easier to read and more precise, use index numbers (e.g., {0}) that correspond to the position of the arguments within .format()
 
-# to make your code easier to read and more precise, use index numbers (e.g., {0}) that correspond to the position of the arguments within .format()
 
+## [f-strings](#f-strings)
 
-# f-string is the “new way” to format strings; the concept is the same as for the old way; however, the syntax is new
-#simpler syntax
-# evaluated at runtime, which allows you to insert you can pass anything into f-strings, including functions, methods, expressions, numbers, variables, and objects
+f-string is the "new way" to format strings; the concept is the same as for the old way; however, the syntax is new
+simpler syntax
+evaluated at runtime, which allows you to insert you can pass anything into f-strings, including functions, methods, expressions, numbers, variables, and objects
 
 In strings.py, see comment:
-# using f-strings to format strings
+using f-strings to format strings
 
 To learn more about the nitty gritty details: https://realpython.com/python-f-strings/
