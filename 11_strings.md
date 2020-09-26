@@ -417,10 +417,32 @@ The terminal prints `'We sell pants'` and `'We do not sell socks'`. For the firs
 
 ## [Access range of characters in string with slicing](#access-range-of-characters-in-string-with-slicing)
 
-Slicing allows you to access a range of characters in a string. Using the starting index position and the ending position + 1 of the characters you want to access
+Slicing allows you to access a range of characters in a string using index positions. To slice a variable named `inventory` having a value of `'we got pants'`, you declare the starting and ending values of the range, with the ending value being not included. So choose a number one more than what you want included. You declare these at the end of the string within square brackets `[]` separated by a colon `:`. You also can specify the stepper, which is the value by which the slicing increments within in your range. The default value for the stepper is `1` (every character within the range). Declare it using a colon `:` after the ending number and then the stepper.
 
-In strings.py, see comment:
-slicing allows you to access a range of characters in a string
+```python
+# define string
+inventory = 'we got pants'
+
+# example of slicing
+print(inventory[3:6])
+
+>>> 'got'
+```
+
+The example above prints index positions `3 - 5` (`6` not included), which corresponds to `got`. No stepper declared. If, however, you declare a separator greater than `1`, then the output changes.
+
+```python
+# define string
+inventory = 'we got pants'
+
+# example of slicing with stepper
+print(inventory[3:6:2])
+
+>> 'gt`
+```
+
+The example above is the same as the one before it, except this one has a stepper of `2` when slicing `inventory[3:6:2]`. It's the same range as before, which returned `'got'`. This time, however, the output is `'gt'` because the stepper is `2`, so it skips every other character in the range of `3 - 6`.
+
 
 
 Negative slicing allows you to access characters using the end of the string as the reference point. While strings have positive index positions corresponding to each element in the string, each element in the string also has a negative index position. The last character in the string is index position -1 and as you move left across the string, the index position decreases by 1 (e.g., . . ., -2, -3, -4, -5 . . . beginning of string).
