@@ -142,9 +142,9 @@ print(message)
 
 The example above is the same as the one before it, except this one removed the `number` variable and changed the items variable to be a list having two items inside `['pants', 'shirts']`. Including the list in the string concatenation causes an error `'TypeError: can only concatenate str (not "list") to str'`. The error says that you cannot add a string to a list.
 
-## [Convert other data types into strings](#convert-other-data-types-into-strings)
+## [Convert other data types into strings using str](#convert-other-data-types-into-strings-using-str)
 
-Convert other data types into strings using Python's built-in functions. Two of those functions are `str()` and `join()`. 
+Convert other data types into strings using Python's built-in `str()` function. 
 
 The `str()` function accepts one argument -- an object of any data type.
 
@@ -200,7 +200,66 @@ print(str.__doc__)
 >>> 'errors defaults to 'strict'.'
 ```
 
-use join() to convert list
+## [Convert into a string using join](#convert-into-a-string-using-join)
+
+Convert other data types (except for numbers and Booleans) into a string using Python's built-in `join()` function. Use the `join()` method on a list, tuple, string, dictionary or set. The result is different than converting those to a string using `str()`. Using `str()`, the result that data type inside quotes. For instance, a list inside of quotes with square brackets and commas `'['pants', 'shirts', 'hats']'`. In contrast, the result of using `join()` is more like string concatenation of all the items in the object. You choose which value to separate them with. 
+
+The syntax is as follows: a string for the value you want to use as the separator, then add `.join(the_object)` to it, where `the_object` is the Python object (e.g., list, tuple, set, etc.) containing the items you want to join. Common separator values are a space `' '` or comma + space `', '`. Empty quotes as a separator `''` results in no separation between items. Here are examples using a list.
+
+```python
+# define list and space connector
+inventory_list = ['pants', 'shirts', 'hats']
+connector = ' '
+
+# turn list into string using join()
+inventory_string = connector.join(inventory_list)
+
+print(inventory_string)
+
+>>> pants shirts hats
+
+# define list and comma connector
+inventory_list = ['pants', 'shirts', 'hats']
+connector = ' '
+
+# turn list into string using join()
+inventory_string = connector.join(inventory_list)
+
+print(inventory_string)
+
+>>> pants, shirts, hats
+
+# define list and no connector
+inventory_list = ['pants', 'shirts', 'hats']
+connector = ''
+
+# turn list into string using join()
+inventory_string = connector.join(inventory_list)
+
+print(inventory_string)
+
+>>> pantsshirtshats
+```
+
+The examples above are the same as one another except for the value for `connector`. The all define `inventory_list` as equal to `['pants', 'shirts', 'hats']`, they all have a variable `connector`, and they all define the variable `inventory_string` as equal to `connector.join(inventory_list)` and print `inventory_string`.
+
+The value of `connector` in the first example is a space `' '`, in the second example is a comma and space `', '`, and in the third example is an empty string `''`. The result of printing `inventory_string` in that order are `pants shirts hats`, `pants, shirts, hats`, and `pantsshirtshats`.
+
+Print `''.join.__doc__` to get the docstring for `join()`. Notice that the syntax is different for the others functions you've printing the docstring for. For those, you did `print(str._doc__)` because they are functions of Python, not functions of a Python object (functions of objects are called a method). Instead of `print(join.__doc__)`, you need to chain join to a string because join is a method of string objects. Therefore you need to have string object that you can use to access the `join()` method.
+
+```python
+# example of printing docstring for join()
+print(''.join.__doc__)
+
+>>> 'Concatenate any number of strings.'
+
+>>> 'The string whose method is called is inserted in between each given string.'
+>>> 'The result is returned as a new string.'
+
+>>> 'Example: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs''
+```
+
+The output explains that the `join()` method concatenates any number of strings. Explore what other data types you can use this method for!
 
 ## [Convert a string into a list](#convert-a-string-into-a-list)
 
@@ -225,7 +284,7 @@ In the example above, you declare a variable named `pants_male` and set it equal
 Character     Index
 
 'M'             0
-'a'            1
+'a'             1
 'l'             2
 'e'             3
 ' '             4
