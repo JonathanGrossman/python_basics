@@ -2,7 +2,7 @@
 
 You've seen strings in previous chapters. Stings are text. Letters, words, phrases, sentences, and paragraphs are examples of strings. You've printed them and added them to one another. Now are going to take a deeper look into how you can work with strings in Python.
 
-Although strings are easy to think of as just text, technically a string is a sequence of bytes. Each byte represents a unicode character. Unicode is the standard for representing in code the letters, numbers, and other characters in human languages. It's okay to think of it as text.
+Although strings are easy to think of as just text, technically a string is an immutable sequence of bytes. Each byte represents a unicode character. Unicode is the standard for representing in code the letters, numbers, and other characters in human languages. Immutable means that you can't directly alter the string object in memory. It's okay to think of it as text.
 
 Write strings in your code by wrapping text with either double `""` or single `''` quotes. A string can have from zero to an unlimited number of characters (so long as the memory allows). Characters include letters, numbers, symbols, emojis, and more. For instance, `"Female Pants"`, `'Pants'`, `"0"`, and `u'\u2713'` (represents a checkmark `✓`) are valid strings.
 
@@ -202,7 +202,7 @@ print(str.__doc__)
 
 ## [Convert into a string using join](#convert-into-a-string-using-join)
 
-Convert other data types (except for numbers and Booleans) into a string using Python's built-in `join()` function. Use the `join()` method on a list, tuple, string, dictionary or set. The result is different than converting those to a string using `str()`. Using `str()`, the result that data type inside quotes. For instance, a list inside of quotes with square brackets and commas `'['pants', 'shirts', 'hats']'`. In contrast, the result of using `join()` is more like string concatenation of all the items in the object. You choose which value to separate them with. 
+Convert other data types (except for numbers and Booleans) into a string using an instance method for strings named `join()`. Use the `join()` method on a list, tuple, string, dictionary or set. The result is different than converting those to a string using `str()`. Using `str()`, the result that data type inside quotes. For instance, a list inside of quotes with square brackets and commas `'['pants', 'shirts', 'hats']'`. In contrast, the result of using `join()` is more like string concatenation of all the items in the object. You choose which value to separate them with. 
 
 The syntax is as follows: a string for the value you want to use as the separator, then add `.join(the_object)` to it, where `the_object` is the Python object (e.g., list, tuple, set, etc.) containing the items you want to join. Common separator values are a space `' '` or comma + space `', '`. Empty quotes as a separator `''` results in no separation between items. Here are examples using a list.
 
@@ -262,6 +262,76 @@ print(''.join.__doc__)
 The output explains that the `join()` method concatenates any number of strings. Explore what other data types you can use this method for!
 
 ## [Convert a string into a list](#convert-a-string-into-a-list)
+
+Convert a string into a list using an instance method for strings named `split()`. Using `split()`, you separate a string into an array of characters where each item in the array is one or more characters in the string. 
+
+The syntax is as follows: a string for the value you want to use as the separator, then add `.split(the_object)` to it, where `the_object` is the string you want to split. The separator value . . . For instance, set no separator value and Python will use whitespaces as a separator by default and also will remove leading, trailing, and consecutive whitespace.
+
+```python
+# define string
+string = "male  pants and shirt  female  pants and shirts"
+
+# split string into list using different separators
+string_list_none = string.split()
+string_list_space = string.split(' ')
+
+print(string_list_none)
+print(string_list_space)
+
+
+>>> '['male', 'pants', 'and', 'shirt', 'female', 'pants', 'and', 'shirts']'
+>>> '['male', '', 'pants', 'and', 'shirt', '', 'female', '', 'pants', 'and', 'shirts']'
+```
+
+The example above defines a string named `string`. Its value has text with a few extra white spaces. You split the string twice. First using no separator and then using a space `' '` as a separator. You print the results of each and, respectively, get `['male', 'pants', 'and', 'shirt', 'female', 'pants', 'and', 'shirts']` and `['male', '', 'pants', 'and', 'shirt', '', 'female', '', 'pants', 'and', 'shirts']`. Using no separator returns just the words with no extra whitespace, whereas using a space `' '` as a separator includes in the list the extra spaces because it uses as the separator the first `' '` in a series of them, and then includes the rest in the list.
+
+Print the docstring for `split()` to learn more about using it. Like for `join()` and other instance methods, you have to chain `.split.__doc__` to a Python string object. You can use `''`. 
+
+```python
+# print docstring for split string instance method
+print(''.split.__doc__)
+
+>>> 'Return a list of the words in the string, using sep as the delimiter string.'
+>>> 
+>>>   'sep'
+>>>     'The delimiter according which to split the string.'
+>>>     'None (the default value) means split according to any whitespace,'
+>>>     'and discard empty strings from the result.'
+>>>   'maxsplit'
+>>>     'Maximum number of splits to do.'
+>>>     '-1 (the default value) means no limit.'
+ ```
+ 
+The docstring says the function returns a list of the words in a string and uses sep as the delimiter string (the place where the splits happen). The default sep value is `None`, which splits any whitespace and discards emptry strings. 
+ 
+In addition to using a separator, use the optional `maxsplit` value. Its default value of `-1` means split at every occurrence of the separator value. If, however, you set the `maxsplit` value, the split will happen only that number of times -- the `maxsplit` number of times.
+
+```python
+# define string
+string = "pants and shirts, hats, coats, and gloves"
+
+# split string with separator and maxsplit
+string_list = string.split('and')
+
+print(string_list)
+
+>>> '['pants ', ' shirts, hats, coats, ', ' gloves']'
+
+
+# define string
+string = "pants and shirts, hats, coats, and gloves"
+
+# split string with separator and maxsplit
+string_list = string.split('and', maxsplit=1)
+
+print(string_list)
+
+>>>  '['pants ', ' shirts, hats, coats, and gloves']'
+```
+ 
+The examples above are identical except the first doesn't declare a `maxsplit` value and the second one declares a `maxsplit` value of `1`. Both examples define a variable `string` of text with the word `and` appearing twice. First, you split `string` using `and` as the separator with no `maxsplit`. It prints `['pants ', ' shirts, hats, coats, ', ' gloves']`. Both appearances of `and` are gone.
+
+In the second example, you split `string` using `and` but this time you set a `maxsplit` value of `1`. It prints `['pants ', ' shirts, hats, coats, and gloves']`. Only the first `and` is gone. 
 
 ## [Access character in string using index position](#access-character-in-string-using-index-position)
 
