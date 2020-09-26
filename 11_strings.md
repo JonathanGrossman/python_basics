@@ -481,6 +481,25 @@ print(text_string.format(message, varieties))
 
 The example above defines two variables at the start `message` and `varieties`. For their values, `message` is a string and `varieties` is a number.  You have a third variable `text_string` set equal to a string using string formatting. The string contains two placeholders `{}`. The next line prints the formatted string with `message` and `varieties` as the arguments in `format()` -- `text_string.format(message, varieties)`. Python maps the arguments `message` and `varieties` to the placeholders in the order listed from left to right.
 
+To make your code easier to read and more precise, use index numbers (e.g., {0}) that correspond to the position of the arguments within `.format()`
+
+```python
+# define variables
+message = 'we sell pants and shirts'
+varieties = 100
+
+# string formatting example using a string and number
+text_string = "Hi world, {1}. We have over {0} varieties in stock."
+
+print(text_string.format(message, varieties))
+
+>>> 'Hi world, 100. We have over we sell pants and shirts varieties in stock.'
+```
+
+The example above is the same as the one before it, except it has an index position of `1` in the first placeholder `{}` and `0` in the second. You reversed the order. It prints `'Hi world, 100. We have over we sell pants and shirts varieties in stock.'`.
+
+String formatting works with many data types, including sets and lists.
+
 ```python
 # define variables
 message = {'we', 'sell', 'pants', 'and', 'shirts'}
@@ -492,7 +511,7 @@ print(text_string.format(message, varieties))
 
 >>> 'Hi world, {'shirts', 'pants', 'we', 'and', 'sell'}. We have over [100, 101] varieties in stock.'
 ```
-The example above is the same as the one before it except the `message` value is a set and the `varieties` value is a list. It works. Looks goofy, but it works.
+The example above is the same as the one before it, except the index positions in the placeholders are gone and the `message` value is a set and the `varieties` value is a list. It works `'Hi world, {'shirts', 'pants', 'we', 'and', 'sell'}. We have over [100, 101] varieties in stock.'`. Looks goofy, but it works.
 
 The number of items in `format` must match the number of placeholders `{}` in the string. If not, you get an error.
 
@@ -503,14 +522,13 @@ varieties = [100, 101]
 # string formatting example using a set and list
 text_string = "Hi world, {}. We have over {} varieties in stock."
 print(text_string.format(message))
+
+>>> 'IndexError: tuple index out of range'
 ```
 
-The example above is the same as the one before it except is has only one argument inside the `format()` call despite there being two placeholders `[]` in the string formatting. You get an error `IndexError: tuple index out of range`, which means you have a mismatch between placeholders `{}` and arguments.
+The example above is the same as the one before it, except it has only one argument inside the `format()` call despite there being two placeholders `{}` in the string formatting. You get an error `IndexError: tuple index out of range`, which means you have a mismatch between placeholders `{}` and arguments.
 
 Some people say string formatting is the "old way" because f-strings is a new way to do the same thing. String formatting is still very important to know because you will see it in other people's code all the time. 
-
-
-to make your code easier to read and more precise, use index numbers (e.g., {0}) that correspond to the position of the arguments within .format()
 
 
 ## [Fstrings to combine string with other types](#fstrings-to-combine-string-with-other-types)
