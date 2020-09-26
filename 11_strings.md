@@ -76,9 +76,75 @@ The example above defines three variables `pants_female`, `pants_male`, and `pan
 
 ## [Combine multiple strings using string concatenation](#combine-multiple-strings-using-string-concatenation)
 
+Combine multiple strings using string concatentation, which is to combine strings using the `+` operator. For instance, declare three variables and set each equal to a string. Create a fourth variable whose value is equal to the sum of the first three variables.
+
+```python
+# define variables
+intro = 'We sell'
+space = ' '
+items = 'pants and shirts.'
+
+
+# example of string concatenation
+message = intro + space + items
+
+print(message)
+
+>>> 'We sell pants and shirts.'
+```
+
+The example above defines three variables `intro`, `space`, and `items` and sets them equal to the srings `'We sell'`, `' '`, and `'pants and shirts'`, respectively. You then save the sum of the variables to the variable `message` and print it. The result is `'We sell pants and shirts.'`
+
+The string `' '` represents a space. Although its value is not a letter, it is still a string. It's a string length of `1`.
+
+```python
+# print length of space
+print(len(' '))
+
+>>> 1
+```
+
+String concatenation works only when combining two or more strings. It does not work when try to add a string to some other data type.
+
+```python
+#define variables
+intro = "We sell"
+space = " "
+number = 100
+items = "pants and shirts."
+
+
+# example of string concatenation
+message = intro + space + number + items
+
+print(message)
+
+>>> 'TypeError: can only concatenate str (not "int") to str'
+```
+The example above is the same as the one before it, except this example has an additional variable named `number` having an integer value of `100`. Including number in the string concatenation causes an error `'TypeError: can only concatenate str (not "int") to str'`. The error says that you cannot add a string to an integer.
+
+The same is true for other data types. Here is an example of trying to include a list in string concatenation.
+
+```python
+#define variables
+intro = "We sell"
+space = " "
+items = ['pants', 'shirts']
+
+# example of string concatenation
+message = intro + space + items
+
+print(message)
+
+>>> 'TypeError: can only concatenate str (not "list") to str'
+```
+
+The example above is the same as the one before it, except this one removed the `number` variable and changed the items variable to be a list having two items inside `['pants', 'shirts']`. Including the list in the string concatenation causes an error `'TypeError: can only concatenate str (not "list") to str'`. The error says that you cannot add a string to a list.
+
 ## [Convert other data types into strings](#convert-other-data-types-into-strings)
 
 use str() to convert other data types into strings
+use join() to convert list
 
 ## [Access character in string using index position](#access-character-in-string-using-index-position)
 
