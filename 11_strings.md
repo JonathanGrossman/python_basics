@@ -335,7 +335,9 @@ In the second example, you split `string` using `and` but this time you set a `m
 
 ## [Access character in string using index position](#access-character-in-string-using-index-position)
 
-Access a specific character in a string using its index position. Every character in a string has an index position. From left to right, the first index position is `0` and the last index position is the string length minus one `len(a) - 1`. 
+Access a specific character in a string using its index position. Every character in a string has a positive index position. From left to right, the first index position is `0` and the last index position is the string length minus one `len(a) - 1`. 
+
+Every character in a string also has a negative index position. Negative indexing allows you to access characters using the end of the string as the reference point. From right to left, the last character in the string has a negative index position of `-1` and moving left the index decreases by `1` (e.g., `-2`, `-3`, `-4`,  . . .). 
 
 To use the index position, first save the string to a variable. Then append to the variable square brackets wrapping the index position of the character you want to access `pants_male[1]`.
 
@@ -344,25 +346,29 @@ To use the index position, first save the string to a variable. Then append to t
 pants_male = 'Male Pants'
 
 print(pants_male[1])
+print(pants_male[-3])
 
->>> a
+>>> 'a'
+>>> 'n'
 ```
 
-In the example above, you declare a variable named `pants_male` and set it equal to `'Male Pants'`. Then you print the character in index position `1` in the line `print(pants_male[1])`. The character with an index position of `1` in the `pants_male` value of `'Male Pants'` is `'a'`. Here is a list of the index positions for each character.
+In the example above, you declare a variable named `pants_male` and set it equal to `'Male Pants'`. Then you print the character in index position `1` in the line `print(pants_male[1])`. The character with an index position of `1` in the `pants_male` value of `'Male Pants'` is `'a'`. You also print the character in index position `-3` in the line `print(pants_male[-3])`. The character with an index position of `-3` in the `pants_male` value of `'Male Pants'` is `'n'`.
+
+Here is a list of the index positions for each character.
 
 ```python
-Character     Index
+Character     Index           Negative Index
 
-'M'             0
-'a'             1
-'l'             2
-'e'             3
-' '             4
-'P'             5
-'a'             6
-'n'             7
-'t'             8
-'s'             9
+'M'             0             -10           
+'a'             1             -9
+'l'             2             -8
+'e'             3             -7
+' '             4             -6
+'P'             5             -5
+'a'             6             -4
+'n'             7             -3
+'t'             8             -2
+'s'             9             -1
 ```
 
 # [Check for substring](#check-for-substring)
@@ -443,12 +449,19 @@ print(inventory[3:6:2])
 
 The example above is the same as the one before it, except this one has a stepper of `2` when slicing `inventory[3:6:2]`. It's the same range as before, which returned `'got'`. This time, however, the output is `'gt'` because the stepper is `2`, so it skips every other character in the range of `3 - 6`.
 
+Negative slicing allows you to access characters using the end of the string as the reference point. As mentioned above, strings have a negative index position. The last character in the string is index position `-1` and as you move left across the string, the index position decreases by `1` (e.g., . . ., `-2`, `-3`, `-4`, `-5` . . . beginning of string).
 
+```python
+# define string
+inventory = 'we got pants'
 
-Negative slicing allows you to access characters using the end of the string as the reference point. While strings have positive index positions corresponding to each element in the string, each element in the string also has a negative index position. The last character in the string is index position -1 and as you move left across the string, the index position decreases by 1 (e.g., . . ., -2, -3, -4, -5 . . . beginning of string).
+# example of slicing with stepper
+print(inventory[-9:-2])
 
-In strings.py, see comment:
-# negative slicing allows you to access characters using the end of the string as the reference point
+>>> 'got pan'
+```
+
+The example above is the same as the one before it, except this one has a slicing range of index positions `-9` to `-2` and no stepper `inventory[-9:-2]` This time the output is `'got pan'`. The character at index position `-9` is `g` and at index position `-3` is `n`. Remember the ending value of `-2` for slicing is not included, so the value at index position `-3` is the last value in the sliced string.
 
 ## [String formatting to combine string with other data types](#string-formatting-to-combine-string-with-other-data-types) 
 combine strings with non-strings, like variables and numbers. string formatting is the "old way" but still very important to know. f-strings is the "new way" and also important to know.
