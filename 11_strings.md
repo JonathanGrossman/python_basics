@@ -74,7 +74,7 @@ check_string(pants)
 
 The example above defines three variables `pants_female`, `pants_male`, and `pants`. It then defines a function `check_string` that has one parameter `input`. The function checks the length of `input`. If greater than `15` the function prints `'Too long.'` If less than `5`, it prints `'Too short.'`. Otherwise, it prints `'Nice.'` You call the function three times, each time with one of the three variables in the order of `pants_female`, `pants_male`, and `pants`. The outcome in the terminal is `'Too long.'`, `'Too short.'`, and `'Nice.'`
 
-## [Combine multiple strings using string concatenation](#combine-multiple-strings-using-string-concatenation)
+## [Combine strings using string concatenation](#combine-strings-using-string-concatenation)
 
 Combine multiple strings using string concatentation, which is to combine strings using the `+` operator. For instance, declare three variables and set each equal to a string. Create a fourth variable whose value is equal to the sum of the first three variables.
 
