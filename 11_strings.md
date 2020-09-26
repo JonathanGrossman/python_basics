@@ -115,12 +115,13 @@ items = "pants and shirts."
 
 
 # example of string concatenation
-message = intro + space + number + items
+message = intro + space + number + space + items
 
 print(message)
 
 >>> 'TypeError: can only concatenate str (not "int") to str'
 ```
+
 The example above is the same as the one before it, except this example has an additional variable named `number` having an integer value of `100`. Including number in the string concatenation causes an error `'TypeError: can only concatenate str (not "int") to str'`. The error says that you cannot add a string to an integer.
 
 The same is true for other data types. Here is an example of trying to include a list in string concatenation.
@@ -143,7 +144,62 @@ The example above is the same as the one before it, except this one removed the 
 
 ## [Convert other data types into strings](#convert-other-data-types-into-strings)
 
-use str() to convert other data types into strings
+Convert other data types into strings using Python's built-in functions. Two of those functions are `str()` and `join()`. 
+
+The `str()` function accepts one argument -- an object of any data type.
+
+```python
+# example of converting an int to a string
+print(type(9), 9, type(str(9)), str('9'))
+
+>>> '<class 'int'> 9 <class 'str'> 9'
+
+# example of converting a list to a string
+print(type(['pants', 'shirts']), ['pants', 'shirts'], type(str(['pants', 'shirts'])), str(['pants', 'shirts']))
+
+>>> '<class 'list'> ['pants', 'shirts'] <class 'str'> ['pants', 'shirts']'
+```
+
+The examples above use `str()` to convert an integer to a string and a list to a string. The first example prints the type of `9`, `9`, type of `str(9)`, and `str(9)`. The result is `'<class 'int'> 9 <class 'str'> 9'`, an integer to a string. The second example prints the type of `['pants', 'shirts']`, `['pants', 'shirts']`, type of `str(['pants', 'shirts'])`, and `str(['pants', 'shirts'])`. The result is `'<class 'list'> ['pants', 'shirts'] <class 'str'> ['pants', 'shirts']'`, a list to a string.
+
+A few examples above, you tried to use string concatentation to add a number to a string but encountered an error. You can overcome that error by using in the string concatentation `str()` with the number as the argument.
+
+```python
+#define variables
+intro = "We sell"
+space = " "
+number = 100
+items = "pants and shirts."
+
+
+# example of string concatenation
+message = intro + space + str(number) + space + items
+
+print(message)
+
+>>> 'We sell 100 pants and shirts.'
+```
+
+This example is the same as before except now instead of `number` in the string concatenation, it contains `str(number)`. The new expression is `message = intro + space + str(number) + space + items`. Instead of an error, the result is `'We sell 100 pants and shirts.'`.
+
+Print `str.__doc__` to get the docstring and learn more. The line `Create a new string object from the given object.` is the most important for now. The rest you can probably ignore.
+
+```python
+# print docstring for str()
+print(str.__doc__)
+
+>>> 'str(object='') -> str'
+>>> 'str(bytes_or_buffer[, encoding[, errors]]) -> str'
+
+>>> 'Create a new string object from the given object. If encoding or'
+>>> 'errors is specified, then the object must expose a data buffer'
+>>> 'that will be decoded using the given encoding and error handler.'
+>>> 'Otherwise, returns the result of object.__str__() (if defined)'
+>>> 'or repr(object).'
+>>> 'encoding defaults to sys.getd'
+>>> 'errors defaults to 'strict'.'
+```
+
 use join() to convert list
 
 ## [Convert a string into a list](#convert-a-string-into-a-list)
