@@ -146,6 +146,8 @@ The example above is the same as the one before it, except this one removed the 
 use str() to convert other data types into strings
 use join() to convert list
 
+## [Convert a string into a list](#convert-a-string-into-a-list)
+
 ## [Access character in string using index position](#access-character-in-string-using-index-position)
 
 Access a specific character in a string using its index position. Every character in a string has an index position. From left to right, the first index position is `0` and the last index position is the string length minus one `len(a) - 1`. 
@@ -241,19 +243,15 @@ Negative slicing allows you to access characters using the end of the string as 
 In strings.py, see comment:
 # negative slicing allows you to access characters using the end of the string as the reference point
 
-## [Combine strings with non-strings](combine-strings-with-non-strings)
-
-
+## [String formatting to combine string with other data types](#string-formatting-to-combine-string-with-other-data-types) 
 combine strings with non-strings, like variables and numbers. string formatting is the "old way" but still very important to know. f-strings is the "new way" and also important to know.
-
-## [String formatting](#string-formatting) 
 
 In strings.py, see comments:
 by placing {} within your string and using the .format() method, you can fill in the {} with the arguments within the () of .format()
 to make your code easier to read and more precise, use index numbers (e.g., {0}) that correspond to the position of the arguments within .format()
 
 
-## [f-strings](#f-strings)
+## [Fstrings to combine string with other data types](#fstrings-to-combine-string-with-other-data-types)
 
 f-string is the "new way" to format strings; the concept is the same as for the old way; however, the syntax is new
 simpler syntax
