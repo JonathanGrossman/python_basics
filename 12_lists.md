@@ -30,7 +30,7 @@ print(dir([]))
 
 ## [Get length of list](#get-length-of-list)
 
-You can get the length of a list, which tells you how many items are in the list. You can also get the minimum and maximum values of a list.
+You can get the length of a list, which tells you how many items are in the list.
 
 You can get the length of a list, which tells you how many items are in the list. A list can be empty `[]` or have one or more items. Regardless, you can get its length using Python's built-in `len()` function. By printing `len.__doc__`, you can see in the terminal the description of this function
 
@@ -85,6 +85,70 @@ check_string(inventory_three)
 ```
 
 The example above defines three variables `inventory_one`, `inventory_two`, and `inventory_three`. It then defines a function `check_length` that has one parameter `input`. The function checks the length of `input`. If greater than `5` the function prints `'Too long.'` If less than `3`, it prints `'Too short.'`. Otherwise, it prints `'Nice.'` You call the function three times, each time with one of the three variables in the order of `inventory_one`, `inventory_two`, and `inventory_three`. The outcome in the terminal is `'Too long.'`, `'Too short.'`, and `'Nice.'`
+
+## [Get list min and max](#get-list-min-and-max)
+
+You can get the minimum and maximum values of a list. Use Python's built-in functions `min()` and `max()` methods. The `min()` method returns the smallest item in the list. The `max()` method returns the largest item in the list. When using `min()` and `max()`, you need to compare values of the same type or else you get an error. The smallest string appear earliest in the alphabet and the largest appears latest in the alphabet.
+
+```python
+# example min and max on list of strings
+alpha_list = ['A', 'C', 'B', 'E', 'D']
+print(min(alpha_list))
+print(max(alpha_list))
+
+>>> A
+>>> E
+
+# example min and max on list of numbers
+number_list = [1, 3, 2, 5, 4, 6, 7, 9, 8]
+print(min(number_list))
+print(max(number_list))
+
+>>> 1
+>>> 9
+
+# example min and max on mixed list
+mixed_list = [1, 3, 2, 5, 4, 6, 7, 9, 8, 'A', 'C', 'B', 'E', 'D']
+print(min(mixed_list))
+print(max(mixed_list))
+
+>>> 'TypeError: '<' not supported between instances of 'str' and 'int''
+```
+
+The examples above each declare a list and print the `min()` and `max()` of the list. The first is a list of strings `['A', 'C', 'B', 'E', 'D']`. The `min()` is `'A'` because it appears earliest in the alphabet (the smallest) and the `max()` is `'E'` because it appears latest (the largest).
+
+The second example is a list of integers `number_list = [1, 3, 2, 5, 4, 6, 7, 9, 8]`. The `min()` is `1` because it is the smallest and the `max()` is `9` because it is the largest.
+
+The third exmple is a list of integers and strings. It returns an error `'TypeError: '<' not supported between instances of 'str' and 'int''`. The `min()` and `max()` methods cannot operate on mixed lists.
+
+Print the docstring `__doc__` attribute for `min()` and `max()` to learn more.
+
+```python
+# print min docstring
+print(min.__doc__)
+
+
+>>> 'min(iterable, *[, default=obj, key=func]) -> value'
+>>> 'min(arg1, arg2, *args, *[, key=func]) -> value'
+>>> 
+>>> 'With a single iterable argument, return its smallest item. The'
+>>> 'default keyword-only argument specifies an object to return if'
+>>> 'the provided iterable is empty.'
+>>> 'With two or more arguments, return the smallest argument.'
+
+
+# print max docstring
+print(max.__doc__)
+
+
+>>> 'max(iterable, *[, default=obj, key=func]) -> value'
+>>> 'max(arg1, arg2, *args, *[, key=func]) -> value'
+>>> 
+>>> 'With a single iterable argument, return its biggest item. The'
+>>> 'default keyword-only argument specifies an object to return if'
+>>> 'the provided iterable is empty.'
+>>> 'With two or more arguments, return the largest argument.'
+```
 
 ## [Compare lists](#compare-lists)
 
