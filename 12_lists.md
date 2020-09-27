@@ -290,44 +290,41 @@ Lists are dynamic, meaning that grow and shrink as modified.
 
 ## [Use list methods](#use-list-methods)
 
-# examples of list common functions
 Python has many built-in methods that modify lists (e.g., .append(), .extend(), .insert(), .remove(), .pop()).
 
 # modify single list value
 # modify multiple list values
 # methods that modify lists
 
+Method: `.append()`
+What it does: adds one item to end of list
 
- Method
-What it does
-.append()
-adds one item to end of list
-.extend()
-adds one or more items from one list to end of other list
-.insert()
-adds one item to list in specified index position
-.clear()
-removes all items from list
-.pop()
-removes one item from list in specified index position; 
-removes last item if no position specified
-can save the removed item in a variable
-.remove()
-removes first item from list that is of the specified value 
-throws error if not in list
-does not return removed item (can’t save it in variable)
+Method: `.extend()`
+What it does:adds one or more items from one list to end of other list
 
+Method: `.insert()`
+What it does:adds one item to list in specified index position
 
- Method
-What it does
-.index()
-returns the index of the specified value
-can specify index followed by starting index position
-.count()
-returns number of times specified value appears in list
-.reverse()
-reverses elements of list (does not create new list)
-.sort()
-sorts items in list (default is ascending order, does not create new list) 
-.join()
-converts lists to string (separates elements with what is to the left of method)
+Method: `.clear()`
+What it does:removes all items from list
+
+Method: `.pop()`
+What it does:removes one item from list in specified index position; removes last item if no position specified; can save the removed item in a variable
+
+Method: `.remove()`
+What it does: removes first item from list that is of the specified value, throws error if not in list; does not return removed item (can’t save it in variable)
+
+Method: `.index()`
+What it does: returns the index of the specified value; can specify index followed by starting index position
+
+Method: `.count()`
+What it does: returns number of times specified value appears in list
+
+Method: `.reverse()`
+What it does: reverses elements of list (does not create new list)
+
+Method: `.sort()`
+What it does: sorts items in list (default is ascending order, does not create new list) 
+
+Method: `.join()`
+What it does: converts lists to string (separates elements with what is to the left of method)
