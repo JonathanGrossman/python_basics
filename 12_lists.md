@@ -298,34 +298,46 @@ Python has many built-in methods that modify lists (e.g., .append(), .extend(), 
 
 Method: `.append()`  
 Docstring: Append object to the end of the list.  
-Dir: `['__call__', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__name__', '__ne__', '__new__', '__qualname__', '__reduce__', '__reduce_ex__', '__repr__', '__self__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__text_signature__']`
-
-Method: `.extend()`  
-What it does: adds one or more items from one list to end of other list  
-
-Method: `.insert()`  
-What it does: adds one item to list in specified index position  
+What it does: Adds one item to end of the list.
 
 Method: `.clear()`  
-What it does: removes all items from list  
+Docstring: Remove all items from list.  
+What it does: Self-explanatory. Removes all items from list  
 
-Method: `.pop()`  
-What it does: removes one item from list in specified index position; removes last item if no position specified; can save the removed item in a variable  
-
-Method: `.remove()`  
-What it does: removes first item from list that is of the specified value, throws error if not in list; does not return removed item (can’t save it in variable)  
-
-Method: `.index()`  
-What it does: returns the index of the specified value; can specify index followed by starting index position  
+Method: `.copy()`  
+Docstring: Return a shallow copy of the list.  
+What it does: Copies the list into a new list containing the same values  
 
 Method: `.count()`  
-What it does: returns number of times specified value appears in list  
+Docstring: Return number of occurrences of value.  
+What it does: Returns number of times specified value appears in list  
+
+Method: `.extend()`  
+Docstring: Extend list by appending elements from the iterable.  
+What it does: Adds one or more items from one list to end of other list  
+
+Method: `.index()`  
+Docstring: Return first index of value. Raises ValueError if the value is not present.  
+What it does: Returns the index of the specified value; can specify index followed by starting index position
+
+Method: `.insert()`  
+Docstring: Insert object before index.  
+What it does: Adds one item to list in specified index position  
+
+Method: `.pop()`  
+Docstring: Remove and return item at index (default last). Raises IndexError if list is empty or index is out of range.  
+What it does: Removes one item from list in specified index position; removes last item if no position specified; can save the removed item in a variable  
+
+Method: `.remove()`  
+Docstring: Remove first occurrence of value. Raises ValueError if the value is not present.  
+What it does: Removes first item from list that is of the specified value, throws error if not in list; does not return removed item (can’t save it in variable)  
 
 Method: `.reverse()`  
-What it does: reverses elements of list (does not create new list)  
+Docstring: Reverse *IN PLACE*.  
+What it does: Reverses elements of list (does not create new list)  
 
 Method: `.sort()`  
-What it does: sorts items in list (default is ascending order, does not create new list)  
+Docstring: Stable sort *IN PLACE*.  
+What it does: Sorts items in list (default is ascending order, does not create new list)  
 
-Method: `.join()`  
-What it does: converts lists to string (separates elements with what is to the left of method)  
+
