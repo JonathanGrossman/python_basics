@@ -30,7 +30,61 @@ print(dir([]))
 
 ## [Get length of list](#get-length-of-list)
 
-you can use built-in functions to get the length, min, and max
+You can get the length of a list, which tells you how many items are in the list. You can also get the minimum and maximum values of a list.
+
+You can get the length of a list, which tells you how many items are in the list. A list can be empty `[]` or have one or more items. Regardless, you can get its length using Python's built-in `len()` function. By printing `len.__doc__`, you can see in the terminal the description of this function
+
+```python
+# print string message for len() built-in function
+print(len.__doc__)
+
+>>> 'Return the number of items in a container.'
+```
+
+Same as what you saw in the strings chapter. The `len()` function returns the number of items in a container. The container is the list. The number of items is the number of items in the list. The `len()` function accepts one argument and returns an integer.
+
+```python
+# define variable
+inventory_list = ['pants', 'shirts', 'hats']
+
+# print length of list
+print(len(inventory_list))
+
+>>> 3
+```
+
+The example above prints the length of `inventory_list`, which is `3`. As explained in the strings chapter, the type returned by `len()` is an integer `<class 'int'>` and `len()` takes exactly one argument.
+
+Use `len()` with other code to help dictate flow. For instance, here is an example of using `len()` in an `if / elif / else` block.
+
+```python
+# define variables
+inventory_one = ['we', 'have', 'female', 'pants', 'in', 'our', 'store']
+inventory_two = ['pants']
+inventory_three = ['we', 'have', 'pants']
+
+
+# define function that checks list length
+def check_length(input):
+    if len(input) > 5:
+        print('Too long.')
+    elif len(input) < 3: 
+        print('Too short.')
+    else:
+        print('Nice.')
+
+
+# call functions once for each variable as argument
+check_string(inventory_one)
+check_string(inventory_two)
+check_string(inventory_three)
+
+>>> 'Too long.'
+>>> 'Too short.'
+>>> 'Nice.'
+```
+
+The example above defines three variables `inventory_one`, `inventory_two`, and `inventory_three`. It then defines a function `check_length` that has one parameter `input`. The function checks the length of `input`. If greater than `5` the function prints `'Too long.'` If less than `3`, it prints `'Too short.'`. Otherwise, it prints `'Nice.'` You call the function three times, each time with one of the three variables in the order of `inventory_one`, `inventory_two`, and `inventory_three`. The outcome in the terminal is `'Too long.'`, `'Too short.'`, and `'Nice.'`
 
 ## [Compare lists](#compare-lists)
 
