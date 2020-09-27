@@ -296,20 +296,20 @@ Python has many built-in methods that modify lists (e.g., .append(), .extend(), 
 # modify multiple list values
 # methods that modify lists
 
-**Method**: `.append()`  
-**What it does**: adds one item to end of list  
+Method: `.append()`  
+What it does: adds one item to end of list  
 
-**Method**: `.extend()`  
-**What it does**: adds one or more items from one list to end of other list  
+Method: `.extend()`  
+What it does: adds one or more items from one list to end of other list  
 
 Method: `.insert()`  
-What it does:adds one item to list in specified index position  
+What it does: adds one item to list in specified index position  
 
 Method: `.clear()`  
-What it does:removes all items from list  
+What it does: removes all items from list  
 
 Method: `.pop()`  
-What it does:removes one item from list in specified index position; removes last item if no position specified; can save the removed item in a variable  
+What it does: removes one item from list in specified index position; removes last item if no position specified; can save the removed item in a variable  
 
 Method: `.remove()`  
 What it does: removes first item from list that is of the specified value, throws error if not in list; does not return removed item (can’t save it in variable)  
