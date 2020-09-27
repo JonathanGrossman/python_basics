@@ -1,12 +1,12 @@
 # Lists
 
-A list is an ordered collection of objects denoted by square brackets and commas separating the objects. You can add and remove items in a list, plus you can sort and manipulate the list in other ways. The order in which you specify the elements in a list is a characteristic of the list that is stored in memory. Lists that have the same elements but in a different order are not equal to one another 
+A list is an ordered collection of objects denoted by square brackets and commas separating the objects `pants_list = ['jeans', 'khakis', 'athletic']`. A list can contain a variety of object types. For instance, one list can have numbers, strings, objects, and even other lists. A list can contain as many items as the memory allows and uniquesness is not required (a value in a list can repeat itself). 
 
 ```python
 # examples of lists order matters
 ```
 
-A list can contain a variety of object types. For instance, one list can have numbers, strings, objects, and even other lists. A list can contain as many items as the memory allows and uniquesness is not required (a value in a list can repeat itself).
+
 
 ```python
 # examples of lists arbitrary objects
@@ -14,6 +14,28 @@ A list can contain a variety of object types. For instance, one list can have nu
 # example of nesting lists inside one another
 
 ```
+
+You can work with lists in many ways. Some of those ways are discussed in this chapter.
+
+# insert list of h2 headings
+
+A list is a Python object and has many attributes that belong to it, many of which are methods that allow you to work with lists in powerful ways. You will read about some in this chapter. To see the attributes available for lists, `print(dir([]))`.
+
+```python
+# printing list attributes
+print(dir([]))
+
+>>> '['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']'
+```
+
+## [Compare lists](#compare-lists)
+
+The order in which you specify the elements in a list is a characteristic of the list that is stored in memory. Lists that have the same elements but in a different order are not equal to one another 
+
+```python
+# examples of comparing lists
+```
+
 ## [Get length of list](#get-length-of-list)
 
 you can use built-in functions to get the length, min, and max
