@@ -31,7 +31,7 @@ Read below to learn more about working with strings in Python.
 
 ## [Get the length of a string](#get-the-length-of-a-string)
 
-A string can be empty `""` or have one or more characters. Regardless, you can get its length using Python's built-in `len()` function. By printing `len.__doc__`, you can see in the terminal the description of this function
+You can get the length of a string, which tells you how many characters are in the string. A string can be empty `""` or have one or more characters. Regardless, you can get its length using Python's built-in `len()` function. By printing `len.__doc__`, you can see in the terminal the description of this function
 
 ```python
 # print string message for len() built-in function
