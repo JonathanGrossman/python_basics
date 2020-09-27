@@ -297,7 +297,7 @@ Python has many built-in methods that modify lists (e.g., .append(), .extend(), 
 # methods that modify lists
 
 Method: `.append()`  
-Docstring: Append object to the end of the list.
+Docstring: Append object to the end of the list.  
 Dir: `['__call__', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__name__', '__ne__', '__new__', '__qualname__', '__reduce__', '__reduce_ex__', '__repr__', '__self__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__text_signature__']`
 
 Method: `.extend()`  
