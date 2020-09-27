@@ -464,6 +464,7 @@ print(inventory[-9:-2])
 The example above is the same as the one before it, except this one has a slicing range of index positions `-9` to `-2` and no stepper `inventory[-9:-2]` This time the output is `'got pan'`. The character at index position `-9` is `g` and at index position `-3` is `n`. Remember the ending value of `-2` for slicing is not included, so the value at index position `-3` is the last value in the sliced string.
 
 ## [String formatting to combine string with other types](#string-formatting-to-combine-string-with-other-types) 
+
 Use string formatting to combine strings with non-strings, like variables and numbers. With string formatting, you use placeholders `{}` in your string for the non-string data types. At then end of the string, you chain `.format()` and declare inside the parenthesis the data types that belong in the placeholders.
 
 ```python
@@ -533,11 +534,55 @@ Some people say string formatting is the "old way" because f-strings is a new wa
 
 ## [Fstrings to combine string with other types](#fstrings-to-combine-string-with-other-types)
 
-f-string is the "new way" to format strings; the concept is the same as for the old way; however, the syntax is new
-simpler syntax
-evaluated at runtime, which allows you to insert you can pass anything into f-strings, including functions, methods, expressions, numbers, variables, and objects
+Use f-strings to combine strings with non-strings. It's similar to string formatting. Instead of using placeholders `{}` and the format instance method `format()`, you begin with `f` followed immediately by the string. Inside the string, wrap the non-string in curly braces `{9}`.
 
-In strings.py, see comment:
-using f-strings to format strings
+```python
+# define variables
+message = 'we sell pants and shirts'
+varieties = 100
 
-To learn more about the nitty gritty details: https://realpython.com/python-f-strings/
+# example of f-string
+print(f'Hi world, {message}. We have {varieties} varieties.')
+
+>>> 'Hi world, we sell pants and shirts. We have 100 varieties.'
+```
+
+The example above is the same as the ones before it, except this example uses an f-string to add the variables to the string. The variable `message` is a string and the variable `varieties` is a number. The f-string starts with "f" and has the variables wrapped in curly braces `f'Hi world, {message}. We have {varieties} varieties.'` Printing the f-string results in `'Hi world, we sell pants and shirts. We have 100 varieties.'`.
+
+You can pass anything into f-strings, including functions, methods, expressions, numbers, variables, and objects. Here is an example that passes a function as an argument into an f-string and one using a multiplation operation.
+
+```python
+# define variables
+message = 'we sell pants and shirts'
+varieties = 100
+
+# f-string using variables
+main_message = f'Hi world, {message}. We have {varieties} varieties.'
+
+# define function to return parameter
+def return_message(input):
+    return input
+    
+# example of f-string with function argument
+print(f'{return_message(main_message)} Buy in store and online.')
+
+>>> 'Hi world, we sell pants and shirts. We have 100 varieties. Buy in store and online.'
+```
+
+The example above is the same as the previous example, except it saves the f-string to a variable `main_message`. You then define a function named `return_message` with one parameter `input`. All the function does is `return input`. Next, you print an f-string that takes in one argument, it's the function call of `return_message` with `main_message` as the argument. The remainder of the f-string is ` 'Buy in store and online.'`. The result of printing this f-string is the return value of the function plus the rest of the f-string ``Hi world, we sell pants and shirts. We have 100 varieties. Buy in store and online.'`
+
+The next example is an operation as the argument.
+
+```python
+#define variable
+multiplier = 2
+
+# example of f-string with operation argument
+print(f'We will have {multiplier * 100} varieties of pants next month.')
+
+>>> 'We will have 200 varieties of pants next month.'
+```
+
+The example above defines a variable `multiplier` and set it equal to the integer `2`. You then print an f-string with an expression as argument. The expression multiplies `multiplier` times `100` -- `multiplier * 100`. Printing the f-string `f'We will have {multiplier * 100} varieties of pants next month.'` results in `'We will have 200 varieties of pants next month.'`.
+
+f-strings are relatively new .The concept is the similar to string formatting; however, the syntax is new and is perhaps simpler.
