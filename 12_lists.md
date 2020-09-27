@@ -189,7 +189,7 @@ To check the `sorted` lists only if the list lengths are equal, chain the length
 
 If the lists have the same length, by comparing equality for the `sorted` lists, you know whether they have the same items and now in the same order `sorted(list_one) == sorted(list_two)`. Here it's `True`.
 
-## [Combine lists using list concatenation and replication](#combine-lists-using-list-concatenation-and-replication)
+## [Combine lists concatenation and replication](#combine-lists-concatenation-and-replication)
 
 You can concatenate `+` and replicate `*` lists. Combine multiple lists, whether the same list or different lists, using list concatenation `+`. Combine the same list to itself using replication `*`. List concatentation is combining lists using the `+` operator. For instance, declare three variables and set each equal to a list. Create a fourth variable whose value is equal to the sum of the first three variables.
 
@@ -223,17 +223,31 @@ print(message_list)
 ```
 The example above is the same as the one before it, except it adds the integer `3` in the list concatenation. You get an error `TypeError: can only concatenate list (not "int") to list`. You can't add a list to a non-list.
 
-List replication is replicating a list by multplying it by an integer using the `*` operator. For instance, declare a variable and set it equal to a list. Multiply the variable by an integer.
+List replication is replicating a list by multplying it by an integer using the `*` operator. For instance, declare a variable and set it equal to a list. Multiply the variable by an integer. It returns a new list with the values from the original list appearing three times in the new list.
 
 ```python
 # example of list replication
+pants_list = ['jeans', 'khakis', 'athletic pants']
+
+print(pants_list * 3)
+
+>>> '['jeans', 'khakis', 'athletic pants', 'jeans', 'khakis', 'athletic pants', 'jeans', 'khakis', 'athletic pants']'
 ```
+
+The above example defines the variable `pants_list` and sets it equal to a list with three items `['jeans', 'khakis', 'athletic pants']`. Multiplying `pants_list` by the integer `3` returns a new list with the items from the original list appearing three times each.
 
 If you multiply the list by a non-integer, you get an error.
 
 ```python
 # example of list replication error
+pants_list = ['jeans', 'khakis', 'athletic pants']
+
+print(pants_list * pants_list)
+
+>>> 'TypeError: can't multiply sequence by non-int of type 'list''
 ```
+
+The above example is the same as the one before it, except this one multiplies `pant_list` by `pant_list`. You get an error `TypeError: can't multiply sequence by non-int of type 'list'` because you can't multiply a list by a non-integer, and `pant_list` is a list, not an integer.
 
 ## [Access list item using index position](#access-list-item-using-index-position)
 
