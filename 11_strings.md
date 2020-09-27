@@ -384,7 +384,7 @@ Character     Index           Negative Index
 's'             9             -1
 ```
 
-# [Check for substring](#check-for-substring)
+## [Check for substring](#check-for-substring)
 
 Check whether a substring is `in` or `not in` a string. For instance, check whether a message contains the word "pants" `"pants" in message`.
 
