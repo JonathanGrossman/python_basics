@@ -3,12 +3,6 @@
 A list is an ordered collection of objects denoted by square brackets and commas separating the objects `pants_list = ['jeans', 'khakis', 'athletic']`. A list can contain a variety of object types. For instance, one list can have numbers, strings, objects, and even other lists. A list can contain as many items as the memory allows and uniquesness is not required (a value in a list can repeat itself). 
 
 ```python
-# examples of lists order matters
-```
-
-
-
-```python
 # examples of lists arbitrary objects
 
 # example of nesting lists inside one another
@@ -195,12 +189,50 @@ To check the `sorted` lists only if the list lengths are equal, chain the length
 
 If the lists have the same length, by comparing equality for the `sorted` lists, you know whether they have the same items and now in the same order `sorted(list_one) == sorted(list_two)`. Here it's `True`.
 
-## [Combine lists using list concatenation](#combine-lists-using-list-concatenation)
+## [Combine lists using list concatenation and replication](#combine-lists-using-list-concatenation-and-replication)
 
-you can concatenate (`+`) and replicate (`*`) lists
+You can concatenate `+` and replicate `*` lists. Combine multiple lists, whether the same list or different lists, using list concatenation `+`. Combine the same list to itself using replication `*`. List concatentation is combining lists using the `+` operator. For instance, declare three variables and set each equal to a list. Create a fourth variable whose value is equal to the sum of the first three variables.
 
 ```python
-# examples of list concatenation and replication
+# example of list concatenation 
+# examples of list concatenation
+intro_list = ['we', 'sell']
+pants_list = ['jeans', 'khakis', 'athletic pants']
+shirts_list = ['casual shirts', 'dress shirts']
+
+message_list = intro_list + pants_list + shirts_list
+print(message_list)
+
+>>> '['we', 'sell', 'jeans', 'khakis', 'athletic pants', 'casual shirts', 'dress shirts']'
+```
+
+The example above defines three variables `intro_list`, `pants_list`, and `shirts_list` and set them each equal to lists of different values. The fourth variable `message_list` is the sum of the first three variables `message_list = intro_list + pants_list + shirts_list + 3`. The result of the list concatentation, which is `'['we', 'sell', 'jeans', 'khakis', 'athletic pants', 'casual shirts', 'dress shirts']'`.
+
+List concatenation works only when combining two or more lists. It does not work when try to add a list to some other data type.
+
+```python
+# example of list list concatenation error
+intro_list = ['we', 'sell']
+pants_list = ['jeans', 'khakis', 'athletic pants']
+shirts_list = ['casual shirts', 'dress shirts']
+
+message_list = intro_list + pants_list + shirts_list + 3
+print(message_list)
+
+>>> 'TypeError: can only concatenate list (not "int") to list'
+```
+The example above is the same as the one before it, except it adds the integer `3` in the list concatenation. You get an error `TypeError: can only concatenate list (not "int") to list`. You can't add a list to a non-list.
+
+List replication is replicating a list by multplying it by an integer using the `*` operator. For instance, declare a variable and set it equal to a list. Multiply the variable by an integer.
+
+```python
+# example of list replication
+```
+
+If you multiply the list by a non-integer, you get an error.
+
+```python
+# example of list replication error
 ```
 
 ## [Access list item using index position](#access-list-item-using-index-position)
