@@ -7,13 +7,26 @@ Although strings are easy to think of as just text, technically a string is an i
 Write strings in your code by wrapping text with either double `""` or single `''` quotes. A string can have from zero to an unlimited number of characters (so long as the memory allows). Characters include letters, numbers, symbols, emojis, and more. For instance, `"Female Pants"`, `'Pants'`, `"0"`, and `u'\u2713'` (represents a checkmark `✓`) are valid strings.
 
 You can do many things with strings in Python, such as 
+ 
+- Get the length of a string
+- Combine strings using string concatenation
+- Convert other data types into strings using str
+- Convert into a string using join
+- Convert a string into a list
+- Access character in string using index position
+- Check for substring
+- Access range of characters in string with slicing
+- String formatting to combine string with other types
+- Fstrings to combine string with other types
 
-- get the length of a string 
-- access a specific character in a string using index position.   
-- check for substring   
-- combine multiple strings using string concatenation   
-- convert other data types into strings  
+A string is a Python object and has many attributes that belong to it, many of which are methods that allow you to work with strings in powerful ways. You will read about some in this chapter. To see a list of the attributes available for strings, `print(dir(''))`
 
+```python
+# printing string attributes
+print(dir(""))
+
+>>> '['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']'
+```
 Read below to learn more about working with strings in Python. 
 
 ## [Get the length of a string](#get-the-length-of-a-string)
