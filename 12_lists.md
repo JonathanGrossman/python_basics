@@ -1,47 +1,75 @@
 # Lists
 
-# a list is an ordered collection of objects denoted by square brackets and commas separating the objects
-# to a list you can add and remove items, plus you can sort and manipulate the list in other ways
-# the order in which you specify the elements in a list is a characteristic of the list that is stored in memory
-# lists that have the same elements but in a different order are not equal to one another 
-In lists.py, see comments:
+A list is an ordered collection of objects denoted by square brackets and commas separating the objects. You can add and remove items in a list, plus you can sort and manipulate the list in other ways. The order in which you specify the elements in a list is a characteristic of the list that is stored in memory. Lists that have the same elements but in a different order are not equal to one another 
+
+```python
 # examples of lists order matters
+```
 
+A list can contain a variety of object types. For instance, one list can have numbers, strings, objects, and even other lists. A list can contain as many items as the memory allows and uniquesness is not required (a value in a list can repeat itself).
 
-# a single list can contain one or more types of Python object
-# for instance, one list can contain a number, string, function, and built-in method
-# a list can contain as many elements as the memory allows
-# a value in a list can repeat itself (uniqueness not required)
-In lists.py, see comments:
+```python
 # examples of lists arbitrary objects
 
+# example of nesting lists inside one another
 
-# like strings, lists allow for accessing elements by index and are iterable
-# lists use zero-based indexing, meaning the first item in the list has an index position of zero
-# lists can be sliced using positive and negative index values
-In lists.py, see comments:
-# examples of lists indexing
-# slicing a list by index and negative index
-# slicing a list using a stride
-# slicing a list without specifying a start or end
-# slicing a list to reverse it
+```
+## [Get length of list](#get-length-of-list)
 
+you can use built-in functions to get the length, min, and max
 
-# you can use in and not in to determine whether a list contains a value
-# you can concatenate (+) and replicate (*) lists
-# you can use built-in functions to get the length, min, and max
-# you can nest lists inside one another
-In lists.py, see comments:
-# examples of lists using in and not in
+## [Combine lists using list concatenation](#combine-lists-using-list-concatenation)
+
+you can concatenate (`+`) and replicate (`*`) lists
+
+```python
 # examples of list concatenation and replication
+```
+
+## [Access list item using index position](#access-list-item-using-index-position)
+
+Like strings, you access elements in a list using index position. Also like strings,  lists use zero-based indexing. The first item in the list has an index position of zero.
+
+```python
+# examples of lists indexing
+```
+
+## [Check for item in list](#check-for-item-in-list)
+
+you can use in and not in to determine whether a list contains a value
+
+```python
+# examples of lists using in and not in
+```
+
+## [Access range of list items using slice](#access-range-of-list-items-using-slice)
+
+slicing a list by index and negative index
+slicing a list using a stride
+slicing a list without specifying a start or end
+slicing a list to reverse it
+
+lists can be sliced using positive and negative index values
+
+## [Lists are mutable and dynamic](#lists-are-mutable-and-dynamic)
+
+Lists are mutable, meaning you can add elements, delete elements, and move them around.
+
+```python
+# examples of mutable lists
+```
+
+Lists are dynamic, meaning that grow and shrink as modified.
+
+```python
+# examples of dynamic lists
+```
+
+## [Examples of list methods](#examples-of-list-methods)
+
 # examples of list common functions
-# examples of lists nesting
+Python has many built-in methods that modify lists (e.g., .append(), .extend(), .insert(), .remove(), .pop()).
 
-
-# lists are mutable, meaning you can add elements, delete elements, and move them around
-# lists are dynamic, meaning that grow and shrink as modified
-# Python has many built-in methods that modify lists (e.g., .append(), .extend(), .insert(), .remove(), .pop())
-In lists.py, see comments:
 # modify single list value
 # modify multiple list values
 # methods that modify lists
