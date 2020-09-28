@@ -280,6 +280,16 @@ Character           Index           Negative Index
 'athletic pants'        2             -1
 ```
 
+Trying to print an index position that doesn't exist results in an error. 
+
+```python
+pants_list = ['jeans', 'khakis', 'athletic pants']
+
+print(pants_list[10])
+```
+
+The example above defines the same `pants_list` variable as before having a list as its value `['jeans', 'khakis', 'athletic pants']`. The list has a length of `3`, which means its items occupy index position `0`, `1`, and `2`. After defining the variable, you print the `pants_list` item in index position `10`. You get an error `IndexError: list index out of range` because `pants_list` doesn't have an index position `10`.
+
 ## [Check for item in list](#check-for-item-in-list)
 
 you can use in and not in to determine whether a list contains a value
