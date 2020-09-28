@@ -251,10 +251,33 @@ The above example is the same as the one before it, except this one multiplies `
 
 ## [Access list item using index position](#access-list-item-using-index-position)
 
-Like strings, you access elements in a list using index position. Also like strings,  lists use zero-based indexing. The first item in the list has an index position of zero.
+Access a specific item in a list using its index position. Every item in a list has a positive index position. From left to right, the first index position is `0` and the last index position is the list length minus one `len(a) - 1`. 
+
+Every item in a list also has a negative index position. Negative indexing allows you to access items using the end of the list as the reference point. From right to left, the last item in the list has a negative index position of `-1` and moving left the index decreases by `1` (e.g., `-2`, `-3`, `-4`,  . . .). 
+
+To use the index position, first save the list to a variable. Then append to the variable square brackets wrapping the index position of the item you want to access `pants_male[1]`.
 
 ```python
-# examples of lists indexing
+# example of using index position with string
+pants_list = ['jeans', 'khakis', 'athletic pants']
+
+print(pants_list[1])
+print(pants_list[-3])
+
+>>> 'khakis'
+>>> 'jeans'
+```
+
+In the example above, you declare a variable named `pants_list` and set it equal to a list `['jeans', 'khakis', 'athletic pants']`. Then you print the item in index position `1` in the line `print(pants_list[1])`. The item with an index position of `1` in `pants_list` is `'khakis'`. You also print the item in index position `-3` in the line `print(pants_list[-3])`. The item with an index position of `-3` in `pants_list` list is `'jeans'`.
+
+Here is a list of the index positions for each character.
+
+```python
+Character           Index           Negative Index
+
+'jeans'                 0             -3           
+'khakis'                1             -2
+'athletic pants'        2             -1
 ```
 
 ## [Check for item in list](#check-for-item-in-list)
