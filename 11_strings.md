@@ -448,9 +448,11 @@ Next you call the function twice. First, passing `item_pants` as the argument an
 
 The terminal prints `'We sell pants'` and `'We do not sell socks'`. For the first function call, item equals `pants` so the condition is `True` because `'pants'` is in the `company_message` value of `'We sell pants'`. The function returns `'We sell pants'` and therefore printing `pants_message` results in `'We sell pants'`. For the second function call, item equals `socks` so the condition is `False` because `'socks'` is not in the `company_message` value of `'We sell pants'`. The function returns `'We do not sell socks'` and therefore printing `socks_message` results in `'We do not sell socks'`.
 
-## [Access range of characters in string with slicing](#access-range-of-characters-in-string-with-slicing)
+## [Access range of string characters with slice](#access-range-of-string-characterswith-slice)
 
-Slicing allows you to access a range of characters in a string using index positions. To slice a variable named `inventory` having a value of `'we got pants'`, you declare the starting and ending values of the range, with the ending value being not included. So choose a number one more than what you want included. You declare these at the end of the string within square brackets `[]` separated by a colon `:`. You also can specify the stepper, which is the value by which the slicing increments within in your range. The default value for the stepper is `1` (every character within the range). Declare it using a colon `:` after the ending number and then the stepper.
+Slicing allows you to access a range of characters in a string using index positions. To slice a variable named `inventory` having a value of `'we got pants'`, you declare the starting and ending values of the range you want to access. You declare these at the end of the string within square brackets `[]` separated by a colon `:`, with the ending value being not included. So choose a number one more than what you want included. 
+
+You also can specify the stepper, which is the value by which the slicing increments within in your range. The default value for the stepper is `1` (every character within the range). Declare it using a colon `:` after the ending number and then the stepper.
 
 ```python
 # define string
