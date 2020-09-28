@@ -384,6 +384,20 @@ Character     Index           Negative Index
 's'             9             -1
 ```
 
+Trying to print an index position that doesn't exist results in an error. 
+
+```python
+# define variable
+pants_male = 'Male Pants'
+
+# try to print index position out of range
+print(pants_male[20])
+
+>>> 'IndexError: string index out of range'
+```
+
+The example above defines the same `pants_male` variable as before having a string as its value `'Male Pants`. The string has a length of `10`, which means its characters occupy index position `0` through `9`. After defining the variable, you print the `pants_male` character in index position `20`. You get an error `IndexError: string index out of range` because `pants_male` doesn't have an index position `20`.
+
 ## [Check for substring](#check-for-substring)
 
 Check whether a substring is `in` or `not in` a string. For instance, check whether a message contains the word "pants" `"pants" in message`.
