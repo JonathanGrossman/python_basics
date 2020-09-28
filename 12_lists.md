@@ -296,11 +296,45 @@ The example above defines the same `pants_list` variable as before having a list
 
 ## [Check for item in list](#check-for-item-in-list)
 
-you can use in and not in to determine whether a list contains a value
+Check whether an item is in a list using the `in` and `not in` operators. Expressions using `in` and `not in` return a Boolean `True` or `False`. Using `in`, if an item is in the list, the expression returns `True`. If the item is not in the list, the expression returns `False`. Using `not in`, if an item is in the list, the expression returns `False`. If the item is not in the list, the expression returns `True`.
 
 ```python
 # examples of lists using in and not in
+pants_list = ['jeans', 'khakis', 'athletic pants']
+
+print('jeans' in pants_list)
+print('jeans' not in pants_list)
+print('shirt' in pants_list)
+
+>>> True
+>>> False
+>>> False
 ```
+
+The example above defines the same `pants_list` variable as in the other examples set equal to the list `['jeans', 'khakis', 'athletic pants']`. You then print the outcome of three expressions. The first checks whether `'jeans'` is `in` the `pants_list`. It returns `True`. The second checks whether `'jeans'` is `not in` the `pants_list`. It returns `False`. The third checks whether `'shirt'` is `in` the `pants_list`. It returns `False`.
+
+Use the `in` and `not in` operators in combination with functions and `if / elif /else` blocks to control the flow.
+
+```python
+# define variables
+pants_list = ['jeans', 'khakis', 'athletic pants']
+
+# check if item is in the list
+def check_item(input):
+    if input in pants_list:
+        return input + ' ' + 'is in the pants list'
+    else:
+        return 'The pants list does not contain' + ' ' + input
+
+
+print(check_item('jeans'))
+print(check_item('shirt'))
+
+>>> 'jeans is in the pants list'
+>>> 'The pants list does not contain shirt'
+```
+
+The exmple above defines the `pants_list` variable equal to `['jeans', 'khakis', 'athletic pants']`. Then you define a variable named `check_item`. It has one parameter named `input`. The function checks if `input` is `in` the `pants_list`. If so, it returns a message saying the input is in the pants list. If not, it returns a message saying the pants list does not contain the input. Here you call the function twice, first with `'jeans'` as the input and then with `'shirt'`. The terminal prints first `'jeans is in the pants list'` and then `'The pants list does not contain shirt'`.
 
 ## [Access range of list items using slice](#access-range-of-list-items-using-slice)
 
