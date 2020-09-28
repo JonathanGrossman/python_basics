@@ -466,19 +466,7 @@ print(inventory[3:6])
 
 The example above prints index positions `3 - 5` (`6` not included), which corresponds to `got`. No stepper declared. If, however, you declare a separator greater than `1`, then the output changes.
 
-```python
-# define string
-inventory = 'we got pants'
-
-# example of slicing with stepper
-print(inventory[3:6:2])
-
->> 'gt`
-```
-
-The example above is the same as the one before it, except this one has a stepper of `2` when slicing `inventory[3:6:2]`. It's the same range as before, which returned `'got'`. This time, however, the output is `'gt'` because the stepper is `2`, so it skips every other character in the range of `3 - 6`.
-
-Negative slicing allows you to access characters using the end of the string as the reference point. As mentioned above, strings have a negative index position. The last character in the string is index position `-1` and as you move left across the string, the index position decreases by `1` (e.g., . . ., `-2`, `-3`, `-4`, `-5` . . . beginning of string).
+Negative slicing allows you to access characters using the end of the string as the reference point. As mentioned above, each character in a string has a negative index position. The last character in the string is index position `-1` and as you move left across the string, the index position decreases by `1` (e.g., . . ., `-2`, `-3`, `-4`, `-5` . . . beginning of string).
 
 ```python
 # define string
@@ -491,6 +479,95 @@ print(inventory[-9:-2])
 ```
 
 The example above is the same as the one before it, except this one has a slicing range of index positions `-9` to `-2` and no stepper `inventory[-9:-2]` This time the output is `'got pan'`. The character at index position `-9` is `g` and at index position `-3` is `n`. Remember the ending value of `-2` for slicing is not included, so the value at index position `-3` is the last value in the sliced string.
+
+You can slice a string without declaring starting and ending position. If you want the slicing to start at the first character, don't declare a starting position. If you want the slicing to include the last character, don't declare an ending position. 
+
+To omit the starting position, in the square brackets write a colon followed by the ending position `inventory[:5]`. To omit the ending position, in the square brackets write a colon followed by the ending position `inventory[3:]`.
+
+```python
+# define string
+inventory = 'we got pants'
+
+
+# slicing a string without specifying a start
+print(inventory[:5])
+
+>>> 'we go'
+
+
+# slicing a list without specifying an end
+print(inventory[3:])
+
+>>> 'got pants'
+```
+
+In the examples above, first you print from the beginning of the string to index position `5` (not included) in the list `inventory[:5]`. This returns `'we go'`. Next you print from index position `3` until the end of the string `inventory[3:]`. This returns a different string `'got pants'`. 
+
+In addition to declaring a starting and ending position, you can also declare a stepper. A stepper the integer value that the slicing uses to increment through your string. For instance, a stepper value of `3` gets every third character in the range.
+
+```python
+# define string
+inventory = 'we got pants'
+
+# example of slicing with stepper
+print(inventory[3:6:2])
+
+>> 'gt`
+```
+
+The example above is the same as the one before it, except this one has a stepper of `2` when slicing `inventory[3:6:2]`. It's the same range as before, which returned `'got'`. This time, however, the output is `'gt'` because the stepper is `2`, so it skips every other character in the range of `3 - 6`.
+
+Instead of declaring a positive stepper, you can declare a negative stepper. When you declare a negative stepper, the starting index position must be greater than the ending index position or else you receive an empty string.
+
+```python
+# define string
+inventory = 'we got pants'
+
+# example of slicing with stepper
+print(inventory[1:5:-2])
+
+>>> ''
+
+
+# example of slicing negative stepper correct starting / ending order
+print(inventory[5:1:-2])
+
+>>> 'tg'
+```
+
+In the examples above, the first one has a starting index position of `1`, an ending index position of `5`, and a stepper of `-2` when slicing `inventory[1:5:-2]`. This time the output is an empty string '' because the stepper counts down from `1` but the ending position is up at `5`.
+
+The second example is the same as the first, except it swaps the starting and ending positions. It has a starting index position of `5`, an ending index position of `1`, and a stepper of `-2` when slicing `inventoryt[5:1:-2]`. This time the output is not an empty string `'tg` because the stepper counts down from `5` to `1` skipping every other one in the range.
+
+To omit the ending position and also use a stepper, in the square brackets write a colon followed by the starting position, two colons, and the stepper value `inventory[3::2]`. To omit the starting position, you write it like normal.
+
+```python
+# define variable
+inventory = 'we got pants'
+
+
+# slicing without specifying an end but with stepper
+print(inventory[3::2])
+
+>>> 'gtpns'
+```
+
+The example above defines a string `inventory` and prints from index position `3` until the end of the string every other item `inventory[3::2]`. This returns another different string `'gtpns'`.
+
+You can use slicing to reverse the order of a string. In the square brackets, declare only a stepper of `-1`. Don't include a starting or ending position.
+
+```python
+# define variable
+inventory = 'we got pants'
+
+
+# example of reversing a string
+print(inventory[::-1])
+
+>>> 'stnap tog ew'
+```
+
+The example above reverses the order of the string by starting at the last character, ending at the first character, and counting backwards by `1` `inventory[::-1]`. This returns the string in reverse order `'stnap tog ew'`. For those of you wondering what 'we got pants' is backwards, now you know.
 
 ## [String formatting to combine string with other types](#string-formatting-to-combine-string-with-other-types) 
 
