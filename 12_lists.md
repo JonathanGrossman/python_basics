@@ -354,19 +354,7 @@ print(inventory_list[3:6])
 
 The example above prints index positions `3 - 5` (`6` not included) of `inventory_list`, which corresponds to `['shirts', 'hats', 'jackets']`. No stepper declared. If, however, you declare a separator greater than `1`, then the output changes.
 
-```python
-# define string
-inventory_list = ['jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']
-
-# example of slicing
-print(inventory_list[1:6:2])
-
->> '['khakis', 'shirts', 'jackets']'
-```
-
-The example above is the same as the one before it, except this one has a starting index position of `1` and a stepper of `2` when slicing `inventory_list[1:6:2]`. This time the output is `['khakis', 'shirts', 'jackets']` because the stepper is `2`, so it skips every other character in the range of `1 - 6`.
-
-Negative slicing allows you to access characters using the end of the list as the reference point. As mentioned above, each item in a list has a negative index position. The last item in the list is index position `-1` and as you move left across the list, the index position decreases by `1` (e.g., . . ., `-2`, `-3`, `-4`, `-5` . . . beginning of list).
+Negative slicing allows you to access items using the end of the list as the reference point. As mentioned above, each item in a list has a negative index position. The last item in the list is index position `-1` and as you move left across the list, the index position decreases by `1` (e.g., . . ., `-2`, `-3`, `-4`, `-5` . . . beginning of list).
 
 ```python
 # define string
@@ -378,26 +366,97 @@ print(inventory_list[-7:-2])
 >>> '['athletic pants', 'shirts', 'hats', 'jackets', 'gloves']'
 ```
 
-The example above is the same as the one before it, except this one has a slicing range of index positions `-7` to `-2` and no stepper `inventory[-7:-2]`. This time the output is `['athletic pants', 'shirts', 'hats', 'jackets', 'gloves']`. The item at index position `-7` is `'athletic pants'` and at index position `-3` is `'gloves'`. Remember the ending value of `-2` for slicing is not included, so the value at index position `-3` is the last value in the sliced list.
+The example above is the same as the one before it, except this one has a slicing range of index positions `-7` to `-2`. This time the output is `['athletic pants', 'shirts', 'hats', 'jackets', 'gloves']`. The item at index position `-7` is `'athletic pants'` and at index position `-3` is `'gloves'`. Remember the ending value of `-2` for slicing is not included, so the value at index position `-3` is the last value in the sliced list.
+
+You can slice a list without declaring starting and ending position. If you want the slicing to start at the first item, don't declare a starting position. If you want the slicing to include the last item, don't declare an ending position. 
+
+To omit the starting position, in the square brackets write a colon followed by the ending position `inventory_list[:5]`. To omit the ending position, in the square brackets write a colon followed by the ending position `inventory_list[3:]`.
 
 ```python
-# slicing a list using a stride
-# stride_list = sample_list[1:4:2]
-# print(stride_list)
-# neg_stride_list = sample_list[4:1:-2]
-# print(neg_stride_list)
+# define variable
+inventory_list = ['jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']
 
 
-# slicing a list without specifying a start or end
-# no_start = sample_list[:4]
-# print(no_start)
-# no_end = sample_list[2:]
-# print(no_end)
+# slicing a list without specifying a start
+print(inventory_list[:5])
+
+>>> '['jeans', 'khakis', 'athletic pants', 'shirts', 'hats']'
 
 
-# slicing a list to reverse it
-# print(sample_list[::-1])
+# slicing a list without specifying an end
+print(inventory_list[3:])
+
+>>> '['shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']'
 ```
+
+In the examples above, first you print from the beginning of the list to item `5` in the list `inventory_list[:5]`. This returns `['jeans', 'khakis', 'athletic pants', 'shirts', 'hats']`. Next you print from index position `3` until the end of the list `inventory_list[3:]`. This returns a different list `['shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']`. 
+
+In addition to declaring a starting and ending position, you can also declare a stepper. A stepper the integer value that the slicing uses to increment through your list. For instance, a stepper value of `3` gets every third item in the range.
+
+```python
+# define variable
+inventory_list = ['jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']
+
+# example of slicing
+print(inventory_list[1:6:2])
+
+>> '['khakis', 'shirts', 'jackets']'
+```
+
+The example above is the same as the one before it, except this one has a starting index position of `1`, and ending index position of `6`, and a stepper of `2` when slicing `inventory_list[1:6:2]`. This time the output is `['khakis', 'shirts', 'jackets']` because the stepper is `2`, so it skips every other character in the range of `1 - 6`.
+
+Instead of declaring a positive stepper, you can declare a negative stepper. When you declare a negative stepper, the starting index position must be greater than the ending index position or else you receive an empty list.
+
+```python
+# define variable
+inventory_list = ['jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']
+
+
+# example of slicing negative stepper wrong starting / ending order
+print(inventory_list[1:6:-2])
+
+>>> '[]'
+
+
+# example of slicing negative stepper correct starting / ending order
+print(inventory_list[6:1:-2])
+
+>>> '['gloves', 'hats', 'athletic pants']'
+```
+
+In the examples above, the first one is the same as the one before it, except this one has a starting stepper of `-2`. It has a starting index position of `1`, an ending index position of `6`, and a stepper of `-2` when slicing `inventory_list[1:6:-2]`. This time the output is an empty list`[]` because the stepper counts down from `1` but the ending position is up at `6`.
+
+The second example is the same as the first, except it swaps the starting and ending positions. It has a starting index position of `6`, an ending index position of `1`, and a stepper of `-2` when slicing `inventory_list[6:1:-2]`. This time the output is not an empty list `['gloves', 'hats', 'athletic pants']` because the stepper counts down from `6` to `1`.
+
+To omit the ending position and also use a stepper, in the square brackets write a colon followed by the starting position, two colons, and the stepper value `inventory_list[3::2]`. To omit the starting position, you write it like normal.
+
+```python
+# define variable
+inventory_list = ['jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']
+
+
+# slicing a list without specifying an end but with stepper
+print(inventory_list[3::2])
+
+>>> '['shirts', 'jackets', 'dresses']'
+```
+
+The example above defines a list `inventory_list` and prints from the list index position `3` until the end of the list every other item `inventory_list[3::2]`. This returns another different list `['shirts', 'jackets', 'dresses']`.
+
+You can use slicing to reverse the order of a list. In the square brackets, declare only a stepper of `-1`. Don't include a starting or ending position.
+
+```python
+
+# define variable
+inventory_list = ['jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']
+
+# example of reversing a list
+print(inventory_list[::-1])
+
+>>> '['skirts', 'dresses', 'gloves', 'jackets', 'hats', 'shirts', 'athletic pants', 'khakis', 'jeans']'
+```
+
+The example above reverses the order of the list by starting at the last item, ending at the first item, and counting backwards by 1 `inventory_list[::-1]`. This returns the list in reverse order `['skirts', 'dresses', 'gloves', 'jackets', 'hats', 'shirts', 'athletic pants', 'khakis', 'jeans']`.
 
 ## [Mutate and modify lists](#mutate-and-modify-lists)
 
