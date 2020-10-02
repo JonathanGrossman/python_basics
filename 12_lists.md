@@ -460,16 +460,59 @@ The example above reverses the order of the list by starting at the last item, e
 
 ## [Mutate and modify lists](#mutate-and-modify-lists)
 
-Lists are mutable, meaning you can add elements, delete elements, and move them around.
+Lists are mutable and dynamic, meaning you can add elements, delete elements, and move them around.
+
+The `.append()` method appends an object to the end of a list. If you `print([].append.__doc__)`, the terminnal prints the docstring for `.append()` and it it `Append object to the end of the list.`.
 
 ```python
-# examples of mutable lists
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+
+# appending item to a list
+sample_list.append('Sixth')
+print(sample_list)
+
+>>> '['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth']'
 ```
 
-Lists are dynamic, meaning that grow and shrink as modified.
+The `.extend()` method appends mulitple objects to the end of a list. If you `print([].extend.__doc__)`, the terminnal prints the docstring for `.extend()` and it it `Extend list by appending elements from the iterable.`.
+
 
 ```python
-# examples of dynamic lists
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# extend list with multiple items
+sample_list.extend(['Sixth', 'Seventh'])
+print(sample_list)
+
+>>> ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh']
+```
+
+Use the `del` keyword to delete one or more items from a list. Use the `del` keyword with index positions to declare which item or items to delete. To delete a single item, specify only one index position.
+
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# delete list value
+del sample_list[2]
+print(sample_list)
+>>> ['First', 'Second', 'Fourth', 'Fifth']
+```
+
+To delete multiple consecutive items, specify a range of index positions.
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+# delete list value
+del sample_list[1:4]
+print(sample_list)
+
+>>> '['First', 'Fifth']'
 ```
 
 ## [Use list methods](#use-list-methods)
