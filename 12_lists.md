@@ -462,7 +462,7 @@ The example above reverses the order of the list by starting at the last item, e
 
 Lists are mutable and dynamic, meaning you can add elements, delete elements, and move them around.
 
-The `.append()` method appends an object to the end of a list. If you `print([].append.__doc__)`, the terminnal prints the docstring for `.append()` and it it `Append object to the end of the list.`.
+The `.append()` method appends an object to the end of a list. If you `print([].append.__doc__)`, the terminnal prints the docstring for `.append()`, and it is `Append object to the end of the list.`.
 
 ```python
 # define variable
@@ -476,7 +476,7 @@ print(sample_list)
 >>> '['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth']'
 ```
 
-The `.extend()` method appends mulitple objects to the end of a list. If you `print([].extend.__doc__)`, the terminnal prints the docstring for `.extend()` and it it `Extend list by appending elements from the iterable.`.
+The `.extend()` method appends mulitple objects to the end of a list. If you `print([].extend.__doc__)`, the terminnal prints the docstring for `.extend()`, and it is `Extend list by appending elements from the iterable.`.
 
 
 ```python
@@ -508,6 +508,7 @@ To delete multiple consecutive items, specify a range of index positions.
 ```python
 # define variable
 sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
 # delete list value
 del sample_list[1:4]
 print(sample_list)
@@ -515,13 +516,91 @@ print(sample_list)
 >>> '['First', 'Fifth']'
 ```
 
-## [Use list methods](#use-list-methods)
+To clear the contents of a list, use the `.clear()` method. If you `print([].clear.__doc__)`, the terminnal prints the docstring for `.clear()`, and it is `Remove all items from list.`.
 
-Python has many built-in methods that modify lists (e.g., .append(), .extend(), .insert(), .remove(), .pop()).
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# clear a list
+print(sample_list.clear())
+
+>>> None
+```
+
+To modify a single item in a list, use the index position of the item and set the value equal to a new value.
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
 
 # modify single list value
+sample_list[2] = 3
+print(sample_list)
+
+>>> '['First', 'Second', 3, 'Fourth', 'Fifth']'
+```
+
+To modify multiple items in a list, use the index positions of the item and set the value equal to the new values.
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
 # modify multiple list values
-# methods that modify lists
+# replaces exact number of elements
+sample_list[1:4] = (2, 3, 4)
+print(sample_list)
+
+>>> '['First', 2, 3, 4, 'Fifth']'
+```
+
+To replace and add multiple values, use the index positions of the item and set the value equal to the new values.
+
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# replaces and adds more
+sample_list[3:6] = [4, 5, 6, 7]
+print(sample_list)
+
+>>> '['First', 'Second', 'Third', 4, 5, 6, 7]'
+```
+
+To insert a list as an item, use the index position of an item in the list and set the value equal to a list. This is a similar but different syntax compared to adding multiple values to a list. Here, you specify a single index position to be replaced, and then set it equal to a list. In constrast, when adding multiple values, you declare a range of index positions to replace or add and then set it equal to a list with the same number of values as in the range of index positions.
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+
+# inserts a list
+sample_list[1] = [2.1, 2.2, 2.3]
+print(sample_list)
+
+>>> '['First', [2.1, 2.2, 2.3], 'Third', 'Fourth', 'Fifth']'
+```
+
+To insert a list as individual elements in a specific location in the list use a range of index positions that start and end at the same index position.
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# inserts a list as individual elements
+sample_list[1:1] = [2.1, 2.2, 2.3]
+print(sample_list)
+
+>>> '['First', 2.1, 2.2, 2.3, 'Second', 'Third', 'Fourth', 'Fifth']'
+```
+
+
+
+## [Use list methods](#use-list-methods)
+
+Python has many built-in methods that modify lists (e.g., .append(), .extend(), .insert(), .remove(), .pop()). Here is a list.
 
 Method: `.append()`  
 Docstring: Append object to the end of the list.  
