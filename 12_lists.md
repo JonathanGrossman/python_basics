@@ -799,6 +799,8 @@ print("sample list:", sample_list)
 >>> 'TypeError: sort() takes no positional arguments'
 ```
 
+To insert an item into a list, use the `.insert()` instance method for lists. It takes one argument, an index position. The item is inserted right before the index position. Entering in your terminal `print([].insert.__doc__)` prints the docstring for `.insert()`, which is `Insert object before index.`
+
 
 ## [Use list methods](#use-list-methods)
 
