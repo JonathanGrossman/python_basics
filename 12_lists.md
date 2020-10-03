@@ -4,9 +4,19 @@ A list is an ordered collection of objects denoted by square brackets and commas
 
 ```python
 # examples of lists arbitrary objects
+def my_function():
+    print("My function")
+
+arbitrary_list = [10, "Welcome", my_function, 10, "Welcome"]
+print(arbitrary_list)
+
+>>> '[10, 'Welcome', <function my_function at 0x10c1638c0>, 10, 'Welcome']'
 
 # example of nesting lists inside one another
+nested_sample_list = ["First", "Second", "Third", "Fourth", "Last", ["Nested First", "Nested Second", "Nested Third", "Nested Fourth", "Nested Last"]]
+print(nested_sample_list)
 
+>>> '['First', 'Second', 'Third', 'Fourth', 'Last', ['Nested First', 'Nested Second', 'Nested Third', 'Nested Fourth', 'Nested Last']]'
 ```
 
 You can work with lists in many ways. Some of those ways are discussed in this chapter.
