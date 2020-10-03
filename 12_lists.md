@@ -583,7 +583,7 @@ print(sample_list)
 >>> '['First', [2.1, 2.2, 2.3], 'Third', 'Fourth', 'Fifth']'
 ```
 
-To insert a list as individual elements in a specific location in the list use a range of index positions that start and end at the same index position.
+To insert a list as individual elements in a specific location in the list, use a range of index positions that start and end at the same index position.
 
 ```python
 # define variable
@@ -596,6 +596,63 @@ print(sample_list)
 >>> '['First', 2.1, 2.2, 2.3, 'Second', 'Third', 'Fourth', 'Fifth']'
 ```
 
+To remove an item from a list, use the `.pop()` instance method for lists. This method removes an item, and you can save that item to a variable so that it's saved in memory for use later in your script. Entering in your terminal `print([].pop.__doc__)` prints the docstring for `.pop()`, which is `Remove and return item at index (default last). Raises IndexError if list is empty or index is out of range.`
+
+To remove the last item in a list, do not pass any argument into `.pop()`. The default is the item in the last index position.
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# remove and save last item from list
+removed_item = sample_list.pop()
+print("removed item:", removed_item)
+print("sample list:", sample_list)
+
+>>> 'removed item: Fifth'
+>>> 'sample list: ['First', 'Second', 'Third', 'Fourth']'
+```
+
+To remove something other than the last item in a list, pass as an argument into `.pop()` the index position of the item you want to remove. 
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# remove and save item at index 2 from list
+removed_item = sample_list.pop(2)
+print("removed item:", removed_item)
+print("sample list:", sample_list)
+
+>>> 'removed item: Third'
+>>> 'sample list: ['First', 'Second', 'Fourth', 'Fifth']'
+```
+
+You can pass only one argument, which must be an integer, into `.pop()` or else it returns an error.
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# remove and save item at index 2 from list
+removed_item = sample_list.pop(2, 3)
+print("removed item:", removed_item)
+print("sample list:", sample_list)
+
+>>> 'TypeError: pop() takes at most 1 argument (2 given)'
+```
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# remove and save item at index 2 from list
+removed_item = sample_list.pop([2, 3])
+print("removed item:", removed_item)
+print("sample list:", sample_list)
+
+TypeError: 'list' object cannot be interpreted as an integer
+```
 
 
 ## [Use list methods](#use-list-methods)
