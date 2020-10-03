@@ -2,27 +2,34 @@
 
 A tuple is an immutable ordered collection of objects denoted by parenthesis and commas separating the objects `pants_tuple = ('jeans', 'khakis', 'athletic')`. Aside from being immutable, tuples are identical to lists and you can do all the same things regarding indexing, slicing, and nesting. 
 
-Oftentimes, it doesn't matter whether you use a tuple or a list. However, some some situations may be better suited for a tuple. For large collections of objects, your program will execute faster using a tuple instead of a list. For data that you don't want modified, using a tuple prevent the application from modifying the collection. For when you use a dictionary (which you learn in an upcoming chapter) require a value that is immutable. Accordingly, tuples are a good use for this.
+Oftentimes, it doesn't matter whether you use a tuple or a list. However, some situations may be better suited for a tuple. For large collections of objects, your program will execute faster using a tuple instead of a list. For data that you don't want modified, using a tuple prevents modifying the collection (it's immutable). For when you use a dictionary (which you learn about in an upcoming chapter), it requires a value that is immutable. Accordingly, tuples are a good use for this.
 
+A tuple can contain a variety of object types. For instance, one tuple can have numbers, strings, objects, and even other tuples. A tuple can contain as many items as the memory allows and uniquesness is not required (a value in a tuple can repeat itself).
 
 ```python
-# examples of lists arbitrary objects
+# examples of tuples arbitrary objects
+def my_function():
+    print("My function")
 
-# example of nesting lists inside one another
+arbitrary_list = (10, "Welcome", my_function, 10, "Welcome")
+print(arbitrary_list)
 
+# example of nesting tuples inside one another
+nested_sample_list = ("First", "Second", "Third", "Fourth", "Last", ("Nested First", "Nested Second", "Nested Third", "Nested Fourth", "Nested Last"))
+print(nested_sample_list)
 ```
 
-You can work with lists in many ways. Some of those ways are discussed in this chapter.
+You can work with tuples in many ways. Some of those ways are discussed in this chapter.
 
 # insert list of h2 headings
 
-A list is a Python object and has many attributes that belong to it, many of which are methods that allow you to work with lists in powerful ways. You will read about some in this chapter. To see the attributes available for lists, `print(dir([]))`.
+A tuple is a Python object and has many attributes that belong to it, many of which are methods that allow you to work with lists in powerful ways. You will read about some in this chapter. To see the attributes available for lists, `print(dir(()))`.
 
 ```python
 # printing list attributes
 print(dir([]))
 
->>> '['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']'
+>>> '['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'count', 'index']'
 ```
 
 ## [Get-list-length](#get-list-length)
