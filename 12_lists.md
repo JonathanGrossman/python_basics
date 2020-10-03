@@ -740,7 +740,63 @@ sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
 # example of count
 number_of_thirds = sample_list.count("three", "four")
 print(number_of_thirds)
->>> TypeError: count() takes exactly one argument (2 given)
+>>> 'TypeError: count() takes exactly one argument (2 given)'
+```
+
+To reverse the order of items in a list, use the `.reverse()` instance method for lists. It takes `0` arguments. This does not create a new list. It changes the order of the list itself. Saving it to a variable does not work. Entering in your terminal `print([].reverse.__doc__)` prints the docstring for `.reverse()`, which is `Reverse *IN PLACE*.`
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# example of reverse
+reversed_list = sample_list.reverse()
+print("sample list:", sample_list)
+print("reversed list:", reversed_list)
+
+>>> 'sample list: ['Fifth', 'Fourth', 'Third', 'Second', 'First']'
+>>> 'reversed list: None'
+
+# reverse in place; saving to variable results in None for variable
+sample_list.reverse(0)
+print("sample list:", sample_list)
+
+>>> 'TypeError: reverse() takes no arguments (1 given)'
+```
+
+To sort the order of items in a list, use the `.sort()` instance method for lists. It takes `0` positional arguments. It does, however, take the arguments `reverse` or `key`. Setting `reverse` to `True` sorts the list in reverse (descending) order. Otherwise, the list is sorted in ascending order. The `key` argument lets you set a value by which to sort by and is beyond the scope of this chapter. 
+
+The `.sort()` method does not create a new list. Rather, it changes the order of the list itself. Saving it to a variable does not work. 
+
+Entering in your terminal `print([].reverse.__doc__)` prints the docstring for `.reverse()`, which is `Reverse *IN PLACE*.`
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# example of reverse
+sample_list.sort()
+print("sample list:", sample_list)
+
+>>> 'sample list: ['Fifth', 'First', 'Fourth', 'Second', 'Third']'
+
+# reverse sort
+sample_list.sort(reverse=True)
+print("reversed list:", sample_list)
+
+>>> 'reversed list: ['Third', 'Second', 'Fourth', 'First', 'Fifth']'
+
+# sorted in place; saving to variable results in None for variable
+sorted_list = sample_list.sort()
+print("sorted list:", sorted_list)
+
+>>> 'sorted list: None'
+
+# sort takes no positional arguments
+sample_list.reverse(0)
+print("sample list:", sample_list)
+
+>>> 'TypeError: sort() takes no positional arguments'
 ```
 
 
