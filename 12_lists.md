@@ -294,6 +294,7 @@ print(pants_list[10])
 
 The example above defines the same `pants_list` variable as before having a list as its value `['jeans', 'khakis', 'athletic pants']`. The list has a length of `3`, which means its items occupy index position `0`, `1`, and `2`. After defining the variable, you print the `pants_list` item in index position `10`. You get an error `IndexError: list index out of range` because `pants_list` doesn't have an index position `10`.
 
+
 ## [Check for item in list](#check-for-item-in-list)
 
 Check whether an item is in a list using the `in` and `not in` operators. Expressions using `in` and `not in` return a Boolean `True` or `False`. Using `in`, if an item is in the list, the expression returns `True`. If the item is not in the list, the expression returns `False`. Using `not in`, if an item is in the list, the expression returns `False`. If the item is not in the list, the expression returns `True`.
@@ -628,7 +629,7 @@ print("sample list:", sample_list)
 >>> 'sample list: ['First', 'Second', 'Fourth', 'Fifth']'
 ```
 
-You can pass only one argument, which must be an integer, into `.pop()` or else it returns an error.
+You can pass only one argument into `.pop()` or else it returns an error.
 
 ```python
 # define variable
@@ -642,6 +643,8 @@ print("sample list:", sample_list)
 >>> 'TypeError: pop() takes at most 1 argument (2 given)'
 ```
 
+The argument you pass into `.pop()` must be an integer or else it returns an error.
+
 ```python
 # define variable
 sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
@@ -651,7 +654,93 @@ removed_item = sample_list.pop([2, 3])
 print("removed item:", removed_item)
 print("sample list:", sample_list)
 
-TypeError: 'list' object cannot be interpreted as an integer
+>>> 'TypeError: 'list' object cannot be interpreted as an integer'
+```
+
+To get the index position of an item in a list, use the `.index()` instance method for lists. Entering in your terminal `print([].index.__doc__)` prints the docstring for `.index()`, which is `Return first index of value. Raises ValueError if the value is not present.`
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# example of index
+index_of_second = sample_list.index("Second")
+print(index_of_second)
+
+>>> 1
+```
+
+The `.index()` instance method returns an error if the argument passed into `.index()` is not in the list.
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# example of index
+index_of_second = sample_list.index("1")
+print(index_of_second)
+
+>>> 'ValueError: '1' is not in list'
+```
+
+The `.index()` instance method accepts one argument or else it returns an error.
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# example of index
+index_of_second = sample_list.index("Second", "Third")
+print(index_of_second)
+
+>>> 'TypeError: slice indices must be integers or have an __index__ method'
+```
+
+To count the number of times a value appears in a list, use the `.count()` instance method for lists. Entering in your terminal `print([].count.__doc__)` prints the docstring for `.count()`, which is `Return number of occurrences of value.`
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# example of count
+number_of_thirds = sample_list.count("Third")
+print(number_of_thirds)
+sample_list.append("Third")
+number_of_thirds = sample_list.count("Third")
+print(number_of_thirds)
+
+>>> 1
+>>> 2
+```
+
+The `.count()` instance method returns `0` if the argument passed into `.count()` is not in the list.
+
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# example of count
+number_of_thirds = sample_list.count("three")
+print(number_of_thirds)
+sample_list.append("three")
+number_of_thirds = sample_list.count("three")
+print(number_of_thirds)
+
+>>> 0
+>>> 1
+```
+
+The `.count()` instance method accepts one argument or else it returns an error.
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+# example of count
+number_of_thirds = sample_list.count("three", "four")
+print(number_of_thirds)
+>>> TypeError: count() takes exactly one argument (2 given)
 ```
 
 
