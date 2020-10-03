@@ -799,12 +799,28 @@ print("sample list:", sample_list)
 >>> 'TypeError: sort() takes no positional arguments'
 ```
 
-To insert an item into a list, use the `.insert()` instance method for lists. It takes one argument, an index position. The item is inserted right before the index position. Entering in your terminal `print([].insert.__doc__)` prints the docstring for `.insert()`, which is `Insert object before index.`
+To insert an item into a list, use the `.insert()` instance method for lists. It takes two arguments, an index position followed by the item. The item is inserted right before the index position. Entering in your terminal `print([].index.__doc__)` prints the docstring for `.index()`, which is `Insert object before index.`
+
+```python
+# define variable
+sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+
+sample_list.insert(0, "Zero")
+print(sample_list)
+
+>>> '['Zero', 'First', 'Second', 'Third', 'Fourth', 'Fifth']'
+
+# example takes two arguments
+sample_list.insert(0)
+print(sample_list)
+
+>>> 'TypeError: insert() takes exactly 2 arguments (1 given)'
+```
 
 
 ## [Use list methods](#use-list-methods)
 
-Python has many built-in methods that modify lists (e.g., .append(), .extend(), .insert(), .remove(), .pop()). Here is a list.
+Python has many built-in methods that modify lists (e.g., .append(), .extend(), .insert(), .remove(), .pop()). Here is a list of methods, their docstrings, and a few notes about each.
 
 Method: `.append()`  
 Docstring: Append object to the end of the list.  
