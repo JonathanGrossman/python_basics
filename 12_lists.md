@@ -79,9 +79,9 @@ def check_length(input):
 
 
 # call functions once for each variable as argument
-check_string(inventory_one)
-check_string(inventory_two)
-check_string(inventory_three)
+check_length(inventory_one)
+check_length(inventory_two)
+check_length(inventory_three)
 
 >>> 'Too long.'
 >>> 'Too short.'
