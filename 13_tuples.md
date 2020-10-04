@@ -86,40 +86,40 @@ The example above defines three variables `inventory_pants`, `inventory_shirts`,
 
 You call the function twice. First with the input being `inventory_pants`, which has a length of `3`, and then `inventory_shirts`, which has a length of `5`. The outcome in the terminal for the first function is `'Alert admin'` and for the second function is `'No alert required'`.
 
-## [Get list min and max](#get-list-min-and-max)
+## [Get tuple min and max](#get-list-min-and-max)
 
 You can get the minimum and maximum values of a list. Use Python's built-in functions `min()` and `max()` methods. The `min()` method returns the smallest item in the list. The `max()` method returns the largest item in the list. When using `min()` and `max()`, you need to compare values of the same type or else you get an error. The smallest string appear earliest in the alphabet and the largest appears latest in the alphabet.
 
 ```python
-# example min and max on list of strings
-alpha_list = ['A', 'C', 'B', 'E', 'D']
-print(min(alpha_list))
-print(max(alpha_list))
+# example min and max on tuple of strings
+alpha_tuple = ('A', 'C', 'B', 'E', 'D')
+print(min(alpha_tuple))
+print(max(alpha_tuple))
 
 >>> A
 >>> E
 
-# example min and max on list of numbers
-number_list = [1, 3, 2, 5, 4, 6, 7, 9, 8]
-print(min(number_list))
-print(max(number_list))
+# example min and max on tuple of numbers
+number_tuple = (1, 3, 2, 5, 4, 6, 7, 9, 8)
+print(min(number_tuple))
+print(max(number_tuple))
 
 >>> 1
 >>> 9
 
-# example min and max on mixed list
-mixed_list = [1, 3, 2, 5, 4, 6, 7, 9, 8, 'A', 'C', 'B', 'E', 'D']
-print(min(mixed_list))
-print(max(mixed_list))
+# example min and max on mixed tuple
+mixed_tuple = (1, 3, 2, 5, 4, 6, 7, 9, 8, 'A', 'C', 'B', 'E', 'D')
+print(min(mixed_tuple))
+print(max(mixed_tuple))
 
 >>> 'TypeError: '<' not supported between instances of 'str' and 'int''
 ```
 
-The examples above each declare a list and print the `min()` and `max()` of the list. The first is a list of strings `['A', 'C', 'B', 'E', 'D']`. The `min()` is `'A'` because it appears earliest in the alphabet (the smallest) and the `max()` is `'E'` because it appears latest (the largest).
+The examples above each declare a tuple and print the `min()` and `max()` of the tuple. The first is a tuple of strings `['A', 'C', 'B', 'E', 'D']`. The `min()` is `'A'` because it appears earliest in the alphabet (the smallest) and the `max()` is `'E'` because it appears latest (the largest).
 
-The second example is a list of integers `number_list = [1, 3, 2, 5, 4, 6, 7, 9, 8]`. The `min()` is `1` because it is the smallest and the `max()` is `9` because it is the largest.
+The second example is a tuple of integers `number_tuple = [1, 3, 2, 5, 4, 6, 7, 9, 8]`. The `min()` is `1` because it is the smallest and the `max()` is `9` because it is the largest.
 
-The third exmple is a list of integers and strings. It returns an error `'TypeError: '<' not supported between instances of 'str' and 'int''`. The `min()` and `max()` methods cannot operate on mixed lists.
+The third exmple is a tuple of integers and strings. It returns an error `'TypeError: '<' not supported between instances of 'str' and 'int''`. The `min()` and `max()` methods cannot operate on mixed tuples.
 
 Print the docstring `__doc__` attribute for `min()` and `max()` to learn more.
 
@@ -150,50 +150,50 @@ print(max.__doc__)
 >>> 'With two or more arguments, return the largest argument.'
 ```
 
-## [Compare lists](#compare-lists)
+## [Compare tuples](#compare-tuples)
 
-You can compare lists to see if they are equal `==` to one another. When you compare the equality of two lists, you are comparing whether they have the same items listed in the same order. In contrast, you can compare lists to see whether they contain the same items regardless of their order. 
+You can compare tuples to see if they are equal `==` to one another. When you compare the equality of two tuples, you are comparing whether they have the same items listed in the same order. In contrast, you can compare tuples to see whether they contain the same items regardless of their order. 
 
-Check whether two lists are equal using the equal to operator `==`. The `==` operator checks whether two lists have the same items in the same order. The order in which you specify the elements in a list is a characteristic of the list that is stored in memory. Lists that have the same elements in the same order are equal to one another. Lists that have the same elements but in a different order are not equal to one another.
+Check whether two tuples are equal using the equal to operator `==`. The `==` operator checks whether two tuples have the same items in the same order. The order in which you specify the elements in a tuple is a characteristic of the tuple that is stored in memory. Tuples that have the same elements in the same order are equal to one another. Tuples that have the same elements but in a different order are not equal to one another.
 
 ```python
-# examples of comparing lists
-list_one = ['we', 'sell', 'pants', 'and', 'shirts']
-list_one_copy = ['we', 'sell', 'pants', 'and', 'shirts']
-list_two = ['sell', 'we', 'pants', 'shirts', 'and']
-list_three = ['shirts', 'and', 'pants', 'we', 'sell']
+# examples of comparing tuples
+tuple_one = ('we', 'sell', 'pants', 'and', 'shirts')
+tuple_one_copy = ('we', 'sell', 'pants', 'and', 'shirts')
+tuple_two = ('sell', 'we', 'pants', 'shirts', 'and')
+tuple_three = ('shirts', 'and', 'pants', 'we', 'sell')
 
-print(list_one == list_one_copy)
-print(list_one == list_two)
-print(list_two == list_three)
+print(tuple_one == tuple_one_copy)
+print(tuple_one == tuple_two)
+print(tuple_two == tuple_three)
 
 >>> True
 >>> False
 >>> False
 ```
 
-The example above defines four variables all of which are set equal to lists containing identical values. Two of the lists have the items listed in the same order `list_one` and `list_one_copy`. The other two lists have the items ordered in a unique way `list_two` and `list_three`. Comparing `list_one` to `list_one_copy` using the equal to operator `==` returns `True`. Comparing `list_one` to each of `list_two` and `list_three` using the equal to operator `==` returns `False`. Although `list_one` has the same items as `list_two` and `list_three`, the items are listed in a different order.
+The example above defines four variables all of which are set equal to tuples containing identical values. Two of the tuples have the items listed in the same order `tuple_one` and `tuple_one_copy`. The other two tuples have the items ordered in a unique way `tuple_two` and `tuple_three`. Comparing `tuple_one` to `tuple_one_copy` using the equal to operator `==` returns `True`. Comparing `tuple_one` to each of `tuple_two` and `tuple_three` using the equal to operator `==` returns `False`. Although `tuple_one` has the same items as `tuple_two` and `tuple_three`, the items are listed in a different order.
 
-Check whether two lists have the same items regardless of the order they are listed. Although two lists may not be equal to one another, the still may have all the same items. You may want to check for that. Multiple ways may exist for this. One way is to first check the length of each list. Only ff the lengths are equal, then sort each list using Python's `sorted()` method and compare the sorted lists. 
+Check whether two tuples have the same items regardless of the order they are listed. Although two tuples may not be equal to one another, they still may have all the same items. You may want to check for that. Multiple ways may exist for this. One way is to first check the length of each tuple. Only if the lengths are equal, then sort each list using Python's `sorted()` method and compare the sorted lists. 
 
 ```python
-# find whether two lists contain same items even if in different order
-list_one = ['we', 'sell', 'pants', 'and', 'shirts']
-list_two = ['sell', 'we', 'pants', 'shirts', 'and']
+# find whether two tuples contain same items even if in different order
+tuple_one = ('we', 'sell', 'pants', 'and', 'shirts')
+tuple_two = ('sell', 'we', 'pants', 'shirts', 'and')
 
-if list_one != list_two:
-    print(len(list_one) == len(list_two) and sorted(list_one) == sorted(list_two))
+if tuple_one != tuple_two:
+    print(len(tuple_one) == len(tuple_two) and sorted(tuple_one) == sorted(tuple_two))
 
 >>> True
 ```
 
-In the example above, the variables `list_one` and `list_two` have the same items listed in a different order. You first check whether `list_one` is not equal to `list_two`. If that's `True`, you compare the length of the two lists. 
+In the example above, the variables `tuple_one` and `tuple_two` have the same items listed in a different order. You first check whether `tuple_one` is not equal to `tuple_two`. If that's `True`, you compare the length of the two tuples. 
 
-By comparing the length of those two lists, you can quickly determine whether they might be the same `len(list_one) == len(list_two)`. If they have different lengths, then they can't have the same items listed in a different order and you don't have to run the more resource-intensive `sorted()` method. If the lists have the same length, it's possible they have the same items but in a different order (you know they're not in the same order because `list_one != list_two`). 
+By comparing the length of those two tuples, you can quickly determine whether they might be the same `len(tuple_one) == len(tuple_two)`. If they have different lengths, then they can't have the same items listed in a different order and you don't have to run the more resource-intensive `sorted()` method. If the tuples have the same length, it's possible they have the same items but in a different order (you know they're not in the same order because `tuple_one != tuple_two`). 
 
-To check the `sorted` lists only if the list lengths are equal, chain the length comparison expression to the sorted list comparison expression using `and`-- `len(list_one) == len(list_two) and sorted(list_one) == sorted(list_two)`. If the length comparison is `False` (they don't have the same number of items), then the Python interpreter doesn't read the expression after the `and` because both expressions are not `True`. If the length comparison is `True` then Python reads the `and` part of the expression. 
+To check the `sorted` tuples only if the tuple lengths are equal, chain the length comparison expression to the sorted tuple comparison expression using `and`-- `len(tuple_one) == len(tuple_two) and sorted(tuple_one) == sorted(tuple_two)`. If the length comparison is `False` (they don't have the same number of items), then the Python interpreter doesn't read the expression after the `and` because both expressions are not `True`. If the length comparison is `True` then Python reads the `and` part of the expression. 
 
-If the lists have the same length, by comparing equality for the `sorted` lists, you know whether they have the same items and now in the same order `sorted(list_one) == sorted(list_two)`. Here it's `True`.
+If the tuples have the same length, by comparing equality for the `sorted` tuples, you know whether they have the same items and now in the same order `sorted(tuple_one) == sorted(tuple_two)`. Here it's `True`.
 
 ## [Combine lists concatenation and replication](#combine-lists-concatenation-and-replication)
 
