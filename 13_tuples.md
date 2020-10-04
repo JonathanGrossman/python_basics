@@ -23,7 +23,7 @@ You can work with tuples in many ways. Some of those ways are discussed in this 
 
 # insert list of h2 headings
 
-A tuple is a Python object and has many attributes that belong to it, many of which are methods that allow you to work with lists in powerful ways. You will read about some in this chapter. To see the attributes available for lists, `print(dir(()))`.
+A tuple is a Python object and has several attributes that belong to it. Although tuples doesn't have nearly as many methods as lists, tuples do have some methods that help you to work with tuples. You will read about some in this chapter. To see the attributes available for tuples, `print(dir(()))`.
 
 ```python
 # printing list attributes
@@ -32,11 +32,9 @@ print(dir([]))
 >>> '['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'count', 'index']'
 ```
 
-## [Get-list-length](#get-list-length)
+## [Get-tuple-length](#get-tuple-length)
 
-You can get the length of a list, which tells you how many items are in the list.
-
-You can get the length of a list, which tells you how many items are in the list. A list can be empty `[]` or have one or more items. Regardless, you can get its length using Python's built-in `len()` function. By printing `len.__doc__`, you can see in the terminal the description of this function
+You can get the length of a tuple, which tells you how many items are in the tuple. A tuple can be empty `()` or have one or more items. Regardless, you can get its length using Python's built-in `len()` function. By printing `len.__doc__`, you can see in the terminal the description of this function
 
 ```python
 # print string message for len() built-in function
@@ -45,50 +43,48 @@ print(len.__doc__)
 >>> 'Return the number of items in a container.'
 ```
 
-Same as what you saw in the strings chapter. The `len()` function returns the number of items in a container. The container is the list. The number of items is the number of items in the list. The `len()` function accepts one argument and returns an integer.
+Same as what you saw in the strings and list chapters. The `len()` function returns the number of items in a container. The container is the tuple. The number of items is the number of items in the tuple. The `len()` function accepts one argument and returns an integer.
 
 ```python
 # define variable
-inventory_list = ['pants', 'shirts', 'hats']
+inventory_tuple = ('pants', 'shirts', 'hats')
 
-# print length of list
-print(len(inventory_list))
+# print length of tuple
+print(len(inventory_tuple))
 
 >>> 3
 ```
 
-The example above prints the length of `inventory_list`, which is `3`. As explained in the strings chapter, the type returned by `len()` is an integer `<class 'int'>` and `len()` takes exactly one argument.
+The example above prints the length of `inventory_tuple`, which is `3`. As explained in the strings and lists chapters, the type returned by `len()` is an integer `<class 'int'>` and `len()` takes exactly one argument.
 
-Use `len()` with other code to help dictate flow. For instance, here is an example of using `len()` in an `if / elif / else` block.
+Use `len()` with other code to help dictate flow. In the lists chapter, the example was using `len()` in an `if / elif / else` block. Here is an example of using `len()` with `in`.
 
 ```python
 # define variables
-inventory_one = ['we', 'have', 'female', 'pants', 'in', 'our', 'store']
-inventory_two = ['pants']
-inventory_three = ['we', 'have', 'pants']
+inventory_pants = ('jeans', 'khakis', 'athletic')
+inventory_shirts = ('long sleeves', 'short sleeve', 'collar', 'button up', 't-shirt')
+inventory_counts = (3, 6, 9)
 
 
-# define function that checks list length
+# define function that checks tuple length
 def check_length(input):
-    if len(input) > 5:
-        print('Too long.')
-    elif len(input) < 3: 
-        print('Too short.')
+    if len(input) in inventory_counts:
+        print('Alert admin')
     else:
-        print('Nice.')
+        print('No alert required')
 
 
 # call functions once for each variable as argument
-check_string(inventory_one)
-check_string(inventory_two)
-check_string(inventory_three)
+check_length(inventory_pants)
+check_length(inventory_shirts)
 
->>> 'Too long.'
->>> 'Too short.'
->>> 'Nice.'
+>>> 'Alert admin'
+>>> 'No alert required'
 ```
 
-The example above defines three variables `inventory_one`, `inventory_two`, and `inventory_three`. It then defines a function `check_length` that has one parameter `input`. The function checks the length of `input`. If greater than `5` the function prints `'Too long.'` If less than `3`, it prints `'Too short.'`. Otherwise, it prints `'Nice.'` You call the function three times, each time with one of the three variables in the order of `inventory_one`, `inventory_two`, and `inventory_three`. The outcome in the terminal is `'Too long.'`, `'Too short.'`, and `'Nice.'`
+The example above defines three variables `inventory_pants`, `inventory_shirts`, and `inventory_counts`. The tuple `inventory_pants` has three items and the tuple `inventory_shirts` has five items. The tuple `inventory_counts` has three items `(3, 6, 9)`. You then define a function `check_length` that has one parameter `input`. The function checks the length of `input`. If the input length is in the tuple `inventory_counts`, then the function prints `'Alert admin'`. Otherwise, the function prints `'No alert requiredd'`. 
+
+You call the function twice. First with the input being `inventory_pants`, which has a length of `3`, and then `inventory_shirts`, which has a length of `5`. The outcome in the terminal for the first function is `'Alert admin'` and for the second function is `'No alert required'`.
 
 ## [Get list min and max](#get-list-min-and-max)
 
