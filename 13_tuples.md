@@ -32,7 +32,7 @@ print(dir([]))
 >>> '['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'count', 'index']'
 ```
 
-## [Get-tuple-length](#get-tuple-length)
+## [Get tuple length](#get-tuple-length)
 
 You can get the length of a tuple, which tells you how many items are in the tuple. A tuple can be empty `()` or have one or more items. Regardless, you can get its length using Python's built-in `len()` function. By printing `len.__doc__`, you can see in the terminal the description of this function
 
@@ -195,65 +195,66 @@ To check the `sorted` tuples only if the tuple lengths are equal, chain the leng
 
 If the tuples have the same length, by comparing equality for the `sorted` tuples, you know whether they have the same items and now in the same order `sorted(tuple_one) == sorted(tuple_two)`. Here it's `True`.
 
-## [Combine lists concatenation and replication](#combine-lists-concatenation-and-replication)
+## [Combine tuples concatenation and replication](#combine-tuples-concatenation-and-replication)
 
-You can concatenate `+` and replicate `*` lists. Combine multiple lists, whether the same list or different lists, using list concatenation `+`. Combine the same list to itself using replication `*`. List concatentation is combining lists using the `+` operator. For instance, declare three variables and set each equal to a list. Create a fourth variable whose value is equal to the sum of the first three variables.
+You can concatenate `+` and replicate `*` tuples. Combine multiple tuples, whether the same tuple or different tuples, using tuple concatenation `+`. Combine the same tuple to itself using replication `*`. 
+
+Tuple concatentation is combining tuples using the `+` operator. For instance, declare three variables and set each equal to a tuple. Create a fourth variable whose value is equal to the sum of the first three variables.
 
 ```python
-# example of list concatenation 
-# examples of list concatenation
-intro_list = ['we', 'sell']
-pants_list = ['jeans', 'khakis', 'athletic pants']
+# example of tuple concatenation 
+intro_tuple = ('we', 'sell')
+pants_tuple = ('jeans', 'khakis', 'athletic pants')
+shirts_tuple = ('casual shirts', 'dress shirts')
+
+message_tuple = intro_tuple + pants_tuple + shirts_tuple
+print(message_tuple)
+
+>>> '('we', 'sell', 'jeans', 'khakis', 'athletic pants', 'casual shirts', 'dress shirts')'
+```
+
+The example above defines three variables `intro_tuple`, `pants_tuple`, and `shirts_tuple` and sets them each equal to tuples of different values. The fourth variable `message_tuple` is the sum of the first three variables `message_tuple = intro_tuple + pants_tuple + shirts_tuple`. The result of the tuple concatentation is `'('we', 'sell', 'jeans', 'khakis', 'athletic pants', 'casual shirts', 'dress shirts')'`.
+
+Tuple concatenation works only when combining two or more tuples. It does not work when trying to add a tuple to some other data type.
+
+```python
+# example of tuple concatenation error
+intro_tuple = ('we', 'sell')
+pants_tuple = ('jeans', 'khakis', 'athletic pants')
 shirts_list = ['casual shirts', 'dress shirts']
 
-message_list = intro_list + pants_list + shirts_list
-print(message_list)
+message_tuple = intro_tuple + pants_tuple + shirts_list
+print(message_tuple)
 
->>> '['we', 'sell', 'jeans', 'khakis', 'athletic pants', 'casual shirts', 'dress shirts']'
+>>> 'TypeError: can only concatenate tuple (not "list") to tuple'
 ```
+The example above is the same as the one before it, except it changed `shirts_tuple` to `shirts_list` whose value is a list. The tuple concatenation for `message_tuple` attempts to add a list to tuples `message_tuple = intro_tuple + pants_tuple + shirts_tuple`. You get an error `TypeError: can only concatenate tuple (not "list") to tuple`. You can't add a tuple to a non-tuple.
 
-The example above defines three variables `intro_list`, `pants_list`, and `shirts_list` and set them each equal to lists of different values. The fourth variable `message_list` is the sum of the first three variables `message_list = intro_list + pants_list + shirts_list + 3`. The result of the list concatentation, which is `'['we', 'sell', 'jeans', 'khakis', 'athletic pants', 'casual shirts', 'dress shirts']'`.
-
-List concatenation works only when combining two or more lists. It does not work when try to add a list to some other data type.
+Tuple replication is replicating a tuple by multplying it by an integer using the `*` operator. For instance, declare a variable and set it equal to a tuple. Multiply the variable by an integer of `5`. It returns a new tuple with the values from the original tuple appearing five times in the new list.
 
 ```python
-# example of list list concatenation error
-intro_list = ['we', 'sell']
-pants_list = ['jeans', 'khakis', 'athletic pants']
-shirts_list = ['casual shirts', 'dress shirts']
+# example of tuple replication
+pants_tuple = ('jeans', 'khakis', 'athletic pants')
 
-message_list = intro_list + pants_list + shirts_list + 3
-print(message_list)
+print(pants_tuple * 3)
 
->>> 'TypeError: can only concatenate list (not "int") to list'
+>>> '('jeans', 'khakis', 'athletic pants', 'jeans', 'khakis', 'athletic pants', 'jeans', 'khakis', 'athletic pants')'
 ```
-The example above is the same as the one before it, except it adds the integer `3` in the list concatenation. You get an error `TypeError: can only concatenate list (not "int") to list`. You can't add a list to a non-list.
 
-List replication is replicating a list by multplying it by an integer using the `*` operator. For instance, declare a variable and set it equal to a list. Multiply the variable by an integer. It returns a new list with the values from the original list appearing three times in the new list.
+The above example defines the variable `pants_tuple` and sets it equal to a tuple with three items `('jeans', 'khakis', 'athletic pants')`. Multiplying `pants_tuple` by the integer `3` returns a new tuple with the items from the original tuple appearing three times each `('jeans', 'khakis', 'athletic pants', 'jeans', 'khakis', 'athletic pants', 'jeans', 'khakis', 'athletic pants')`.
+
+If you multiply the tuple by a non-integer, you get an error.
 
 ```python
-# example of list replication
-pants_list = ['jeans', 'khakis', 'athletic pants']
+# example of tuple replication error
+pants_tuple = ('jeans', 'khakis', 'athletic pants')
 
-print(pants_list * 3)
+print(pants_tuple * pants_tuple)
 
->>> '['jeans', 'khakis', 'athletic pants', 'jeans', 'khakis', 'athletic pants', 'jeans', 'khakis', 'athletic pants']'
+>>> 'TypeError: can't multiply sequence by non-int of type 'tuple''
 ```
 
-The above example defines the variable `pants_list` and sets it equal to a list with three items `['jeans', 'khakis', 'athletic pants']`. Multiplying `pants_list` by the integer `3` returns a new list with the items from the original list appearing three times each.
-
-If you multiply the list by a non-integer, you get an error.
-
-```python
-# example of list replication error
-pants_list = ['jeans', 'khakis', 'athletic pants']
-
-print(pants_list * pants_list)
-
->>> 'TypeError: can't multiply sequence by non-int of type 'list''
-```
-
-The above example is the same as the one before it, except this one multiplies `pant_list` by `pant_list`. You get an error `TypeError: can't multiply sequence by non-int of type 'list'` because you can't multiply a list by a non-integer, and `pant_list` is a list, not an integer.
+The above example is the same as the one before it, except this one multiplies `pant_tuple` by `pant_tuple`. You get an error `TypeError: can't multiply sequence by non-int of type 'tuple'` because you can't multiply a tuple by a non-integer, and `pant_tuple` is a tuple, not an integer.
 
 ## [Access list item using index position](#access-list-item-using-index-position)
 
