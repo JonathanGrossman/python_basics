@@ -86,9 +86,9 @@ The example above defines three variables `inventory_pants`, `inventory_shirts`,
 
 You call the function twice. First with the input being `inventory_pants`, which has a length of `3`, and then `inventory_shirts`, which has a length of `5`. The outcome in the terminal for the first function is `'Alert admin'` and for the second function is `'No alert required'`.
 
-## [Get tuple min and max](#get-list-min-and-max)
+## [Get tuple min and max](#get-tuple-min-and-max)
 
-You can get the minimum and maximum values of a list. Use Python's built-in functions `min()` and `max()` methods. The `min()` method returns the smallest item in the list. The `max()` method returns the largest item in the list. When using `min()` and `max()`, you need to compare values of the same type or else you get an error. The smallest string appear earliest in the alphabet and the largest appears latest in the alphabet.
+You can get the minimum and maximum values of a tuple. Use Python's built-in functions `min()` and `max()` methods. The `min()` method returns the smallest item in the tuple. The `max()` method returns the largest item in the tuple. When using `min()` and `max()`, you need to compare values of the same type or else you get an error. The smallest string appears earliest in the alphabet and the largest appears latest in the alphabet.
 
 ```python
 # example min and max on tuple of strings
@@ -256,28 +256,28 @@ print(pants_tuple * pants_tuple)
 
 The above example is the same as the one before it, except this one multiplies `pant_tuple` by `pant_tuple`. You get an error `TypeError: can't multiply sequence by non-int of type 'tuple'` because you can't multiply a tuple by a non-integer, and `pant_tuple` is a tuple, not an integer.
 
-## [Access list item using index position](#access-list-item-using-index-position)
+## [Access tuple item using index position](#access-tuple-item-using-index-position)
 
-Access a specific item in a list using its index position. Every item in a list has a positive index position. From left to right, the first index position is `0` and the last index position is the list length minus one `len(a) - 1`. 
+Access a specific item in a tuple using its index position. Every item in a tuple has a positive index position. From left to right, the first index position is `0` and the last index position in the tuple is the tuple length minus one `len(a) - 1`. 
 
-Every item in a list also has a negative index position. Negative indexing allows you to access items using the end of the list as the reference point. From right to left, the last item in the list has a negative index position of `-1` and moving left the index decreases by `1` (e.g., `-2`, `-3`, `-4`,  . . .). 
+Every item in a tuple also has a negative index position. Negative indexing allows you to access items using the end of the tuple as the reference point. From right to left, the last item in the tuple has a negative index position of `-1` and moving left the index decreases by `1` (e.g., `-2`, `-3`, `-4`,  . . .). 
 
-To use the index position, first save the list to a variable. Then append to the variable square brackets wrapping the index position of the item you want to access `pants_male[1]`.
+To use the index position, first save the tuple to a variable. Then append to the variable square brackets wrapping the index position of the item you want to access `pants_male[1]`.
 
 ```python
-# example of using index position with string
-pants_list = ['jeans', 'khakis', 'athletic pants']
+# example of using index position with tuple
+pants_tuple = ('jeans', 'khakis', 'athletic pants')
 
-print(pants_list[1])
-print(pants_list[-3])
+print(pants_tuple[1])
+print(pants_tuple[-3])
 
 >>> 'khakis'
 >>> 'jeans'
 ```
 
-In the example above, you declare a variable named `pants_list` and set it equal to a list `['jeans', 'khakis', 'athletic pants']`. Then you print the item in index position `1` in the line `print(pants_list[1])`. The item with an index position of `1` in `pants_list` is `'khakis'`. You also print the item in index position `-3` in the line `print(pants_list[-3])`. The item with an index position of `-3` in `pants_list` list is `'jeans'`.
+In the example above, you declare a variable named `pants_tuple` and set it equal to a tuple `('jeans', 'khakis', 'athletic pants')`. Then you print the item in index position `1` in the line `print(pants_tuple[1])`. The item with an index position of `1` in `pants_tuple` is `'khakis'`. You also print the item in index position `-3` in the line `print(pants_tuple[-3])`. The item with an index position of `-3` in `pants_tuple` is `'jeans'`.
 
-Here is a list of the index positions for each character.
+Here are the index positions for each character.
 
 ```python
 Character           Index           Negative Index
@@ -291,15 +291,15 @@ Trying to print an index position that doesn't exist results in an error.
 
 ```python
 # define variable
-pants_list = ['jeans', 'khakis', 'athletic pants']
+pants_tuple = ('jeans', 'khakis', 'athletic pants')
 
 # try to print index position out of range
-print(pants_list[10])
+print(pants_tuple[10])
 
->>> 'IndexError: list index out of range'
+>>> 'IndexError: tuple index out of range'
 ```
 
-The example above defines the same `pants_list` variable as before having a list as its value `['jeans', 'khakis', 'athletic pants']`. The list has a length of `3`, which means its items occupy index position `0`, `1`, and `2`. After defining the variable, you print the `pants_list` item in index position `10`. You get an error `IndexError: list index out of range` because `pants_list` doesn't have an index position `10`.
+The example above defines the same `pants_tuple` variable as before having a tuple as its value `('jeans', 'khakis', 'athletic pants')`. The list has a length of `3`, which means its items occupy index position `0`, `1`, and `2`. After defining the variable, you print the `pants_tuple` item in index position `10`. You get an error `IndexError: tuple index out of range` because `pants_tuple` doesn't have an index position `10`.
 
 
 ## [Check for item in list](#check-for-item-in-list)
@@ -823,7 +823,6 @@ print(sample_list)
 
 >>> 'TypeError: insert() takes exactly 2 arguments (1 given)'
 ```
-
 
 ## [Use list methods](#use-list-methods)
 
