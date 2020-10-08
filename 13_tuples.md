@@ -302,169 +302,168 @@ print(pants_tuple[10])
 The example above defines the same `pants_tuple` variable as before having a tuple as its value `('jeans', 'khakis', 'athletic pants')`. The list has a length of `3`, which means its items occupy index position `0`, `1`, and `2`. After defining the variable, you print the `pants_tuple` item in index position `10`. You get an error `IndexError: tuple index out of range` because `pants_tuple` doesn't have an index position `10`.
 
 
-## [Check for item in list](#check-for-item-in-list)
+## [Check for item in tuple](#check-for-item-in-tuple)
 
-Check whether an item is in a list using the `in` and `not in` operators. Expressions using `in` and `not in` return a Boolean `True` or `False`. Using `in`, if an item is in the list, the expression returns `True`. If the item is not in the list, the expression returns `False`. Using `not in`, if an item is in the list, the expression returns `False`. If the item is not in the list, the expression returns `True`.
+Check whether an item is in a tuple using the `in` and `not in` operators. Expressions using `in` and `not in` return a Boolean `True` or `False`. Using `in`, if an item is in the tuple, the expression returns `True`. If the item is not in the tuple, the expression returns `False`. Using `not in`, if an item is in the tuple, the expression returns `False`. If the item is not in the tuple, the expression returns `True`.
 
 ```python
-# examples of lists using in and not in
-pants_list = ['jeans', 'khakis', 'athletic pants']
+# examples of tuples using in and not in
+pants_tuple = ('jeans', 'khakis', 'athletic pants')
 
-print('jeans' in pants_list)
-print('jeans' not in pants_list)
-print('shirt' in pants_list)
+print('jeans' in pants_tuple)
+print('jeans' not in pants_tuple)
+print('shirt' in pants_tuple)
 
 >>> True
 >>> False
 >>> False
 ```
 
-The example above defines the same `pants_list` variable as in the other examples set equal to the list `['jeans', 'khakis', 'athletic pants']`. You then print the outcome of three expressions. The first checks whether `'jeans'` is `in` the `pants_list`. It returns `True`. The second checks whether `'jeans'` is `not in` the `pants_list`. It returns `False`. The third checks whether `'shirt'` is `in` the `pants_list`. It returns `False`.
+The example above defines the same `pants_tuple` variable as in the other examples and sets it equal to the list `('jeans', 'khakis', 'athletic pants')`. You then print the outcome of three expressions. The first checks whether `'jeans'` is `in` the `pants_tuple`. It returns `True`. The second checks whether `'jeans'` is `not in` the `pants_tuple`. It returns `False`. The third checks whether `'shirt'` is `in` the `pants_tuple`. It returns `False`.
 
 Use the `in` and `not in` operators in combination with functions and `if / elif /else` blocks to control the flow.
 
 ```python
 # define variables
-pants_list = ['jeans', 'khakis', 'athletic pants']
+pants_tuple = ('jeans', 'khakis', 'athletic pants')
 
-# check if item is in the list
+# check if item is in the tuple
 def check_item(input):
-    if input in pants_list:
-        return input + ' ' + 'is in the pants list'
+    if input in pants_tuple:
+        return input + ' ' + 'is in the pants tuple'
     else:
-        return 'The pants list does not contain' + ' ' + input
+        return 'The pants tuple does not contain' + ' ' + input
 
 
 print(check_item('jeans'))
 print(check_item('shirt'))
 
->>> 'jeans is in the pants list'
->>> 'The pants list does not contain shirt'
+>>> 'jeans is in the pants tuple'
+>>> 'The pants tuple does not contain shirt'
 ```
 
-The exmple above defines the `pants_list` variable equal to `['jeans', 'khakis', 'athletic pants']`. Then you define a variable named `check_item`. It has one parameter named `input`. The function checks if `input` is `in` the `pants_list`. If so, it returns a message saying the input is in the pants list. If not, it returns a message saying the pants list does not contain the input. Here you call the function twice, first with `'jeans'` as the input and then with `'shirt'`. The terminal prints first `'jeans is in the pants list'` and then `'The pants list does not contain shirt'`.
+The exmple above defines the `pants_tuple` variable equal to `('jeans', 'khakis', 'athletic pants')`. Then you define a function named `check_item`. It has one parameter named `input`. The function checks if `input` is `in` the `pants_tuple`. If so, it returns a message saying the input is in the pants tuple. If not, it returns a message saying the pants tuple does not contain the input. Here you call the function twice, first with `'jeans'` as the input and then with `'shirt'`. The terminal prints first `'jeans is in the pants tuple'` and then `'The pants tuple does not contain shirt'`.
 
-## [Access range of list items using slice](#access-range-of-list-items-using-slice)
+## [Access range of tuple items using slice](#access-range-of-tuple-items-using-slice)
 
-Slicing allows you to access a range of items in a list using index positions. To slice a variable named `pants_list` having a value of `['jeans', 'khakis', 'athletic pants']`, you declare the starting and ending values of the range you want to access. You declare the starting and ending values at the end of the list within square brackets `[]` separated by a colon `:`, with the ending value being not included. So choose a number one more than what you want included. 
+Slicing allows you to access a range of items in a tuple using index positions. To slice a variable named `pants_tuple` having a value of `('jeans', 'khakis', 'athletic pants')`, you declare the starting and ending values of the range you want to access. You declare the starting and ending values at the end of the tuple within square brackets `[]` separated by a colon `:`, with the ending value being not included. So choose a number one more than what you want included. 
 
 You also can specify the stepper, which is the value by which the slicing increments within in your range. The default value for the stepper is `1` (every item within the range). Declare it using a colon `:` after the ending number and then the stepper.
 
 ```python
-# define string
-inventory_list = ['jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']
+# define tuple
+inventory_tuple = ('jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts')
 
-# example of slicing
-print(inventory_list[3:6])
+# example of slicing range
+print(inventory_tuple[3:6])
 
->>> '['shirts', 'hats', 'jackets']'
+>>> '('shirts', 'hats', 'jackets')'
 ```
 
-The example above prints index positions `3 - 5` (`6` not included) of `inventory_list`, which corresponds to `['shirts', 'hats', 'jackets']`. No stepper declared. If, however, you declare a separator greater than `1`, then the output changes.
+The example above prints index positions `3 - 5` (`6` not included) of `inventory_tuple`, which corresponds to `('shirts', 'hats', 'jackets')`. No stepper declared, so it includes all the items within the specified (other than the last item, `6`). If, however, you declare a separator greater than `1`, then the output changes.
 
-Negative slicing allows you to access items using the end of the list as the reference point. As mentioned above, each item in a list has a negative index position. The last item in the list is index position `-1` and as you move left across the list, the index position decreases by `1` (e.g., . . ., `-2`, `-3`, `-4`, `-5` . . . beginning of list).
+Negative slicing allows you to access items using the end of the tuple as the reference point. As mentioned above, each item in a tuple has a negative index position. The last item in the tuple is index position `-1` and as you move left across the list, the index position decreases by `1` (e.g., . . ., `-2`, `-3`, `-4`, `-5` . . . beginning of tuple).
 
 ```python
-# define string
-inventory_list = ['jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']
+# define tuple
+inventory_tuple = ('jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts')
 
-# example of slicing
-print(inventory_list[-7:-2])
+# example of negative slicing range
+print(inventory_tuple[-7:-2])
 
->>> '['athletic pants', 'shirts', 'hats', 'jackets', 'gloves']'
+>>> '('athletic pants', 'shirts', 'hats', 'jackets', 'gloves')'
 ```
 
-The example above is the same as the one before it, except this one has a slicing range of index positions `-7` to `-2`. This time the output is `['athletic pants', 'shirts', 'hats', 'jackets', 'gloves']`. The item at index position `-7` is `'athletic pants'` and at index position `-3` is `'gloves'`. Remember the ending value of `-2` for slicing is not included, so the value at index position `-3` is the last value in the sliced list.
+The example above is the same as the one before it, except this one has a slicing range of index positions `-7` to `-2`. This time the output is `('athletic pants', 'shirts', 'hats', 'jackets', 'gloves')`. The item at index position `-7` is `'athletic pants'` and at index position `-3` is `'gloves'`. Remember the ending value of `-2` for slicing is not included, so the value at index position `-3` is the last value in the sliced tuple.
 
-You can slice a list without declaring starting and ending position. If you want the slicing to start at the first item, don't declare a starting position. If you want the slicing to include the last item, don't declare an ending position. 
+You can slice a tuple without declaring starting and ending position. If you want the slicing to start at the first item, don't declare a starting position. If you want the slicing to include the last item, don't declare an ending position. 
 
-To omit the starting position, in the square brackets write a colon followed by the ending position `inventory_list[:5]`. To omit the ending position, in the square brackets write a colon followed by the ending position `inventory_list[3:]`.
-
-```python
-# define variable
-inventory_list = ['jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']
-
-
-# slicing a list without specifying a start
-print(inventory_list[:5])
-
->>> '['jeans', 'khakis', 'athletic pants', 'shirts', 'hats']'
-
-
-# slicing a list without specifying an end
-print(inventory_list[3:])
-
->>> '['shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']'
-```
-
-In the examples above, first you print from the beginning of the list to item `5` in the list `inventory_list[:5]`. This returns `['jeans', 'khakis', 'athletic pants', 'shirts', 'hats']`. Next you print from index position `3` until the end of the list `inventory_list[3:]`. This returns a different list `['shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']`. 
-
-In addition to declaring a starting and ending position, you can also declare a stepper. A stepper the integer value that the slicing uses to increment through your list. For instance, a stepper value of `3` gets every third item in the range.
+To omit the starting position, in the square brackets write a colon followed by the ending position `inventory_tuple[:5]`. To omit the ending position, in the square brackets write a colon followed by the ending position `inventory_tuple[3:]`.
 
 ```python
 # define variable
-inventory_list = ['jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']
+inventory_tuple = ('jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts')
 
-# example of slicing
-print(inventory_list[1:6:2])
 
->> '['khakis', 'shirts', 'jackets']'
+# slicing a tuple without specifying a start
+print(inventory_tuple[:5])
+
+>>> '('jeans', 'khakis', 'athletic pants', 'shirts', 'hats')'
+
+
+# slicing a tuple without specifying an end
+print(inventory_tuple[3:])
+
+>>> '('shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts')'
 ```
 
-The example above is the same as the one before it, except this one has a starting index position of `1`, and ending index position of `6`, and a stepper of `2` when slicing `inventory_list[1:6:2]`. This time the output is `['khakis', 'shirts', 'jackets']` because the stepper is `2`, so it skips every other character in the range of `1 - 6`.
+In the examples above, first you print from the beginning of the tuple to item `5` in the tuple `inventory_tuple[:5]`. This returns `('jeans', 'khakis', 'athletic pants', 'shirts', 'hats')`. Next you print from index position `3` until the end of the tuple `inventory_tuple[3:]`. This returns a different tuple `('shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts')`. 
 
-Instead of declaring a positive stepper, you can declare a negative stepper. When you declare a negative stepper, the starting index position must be greater than the ending index position or else you receive an empty list.
+In addition to declaring a starting and ending position, you can also declare a stepper. A stepper the integer value that the slicing uses to increment through your tuple. For instance, a stepper value of `3` gets every third item in the range.
 
 ```python
 # define variable
-inventory_list = ['jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']
+inventory_tuple = ('jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts')
+
+# example of slicing
+print(inventory_tuple[1:6:2])
+
+>> '('khakis', 'shirts', 'jackets')'
+```
+
+The example above is the same as the one before it, except this one has a starting index position of `1`, and ending index position of `6`, and a stepper of `2` when slicing `inventory_tuple[1:6:2]`. This time the output is `('khakis', 'shirts', 'jackets')` because the stepper is `2`, so it skips every other character in the range of `1 - 6`.
+
+Instead of declaring a positive stepper, you can declare a negative stepper. When you declare a negative stepper, the starting index position must be greater than the ending index position or else you receive an empty tuple.
+
+```python
+# define variable
+inventory_tuple = ('jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts')
 
 
 # example of slicing negative stepper wrong starting / ending order
-print(inventory_list[1:6:-2])
+print(inventory_tuple[1:6:-2])
 
->>> '[]'
+>>> '()'
 
 
 # example of slicing negative stepper correct starting / ending order
-print(inventory_list[6:1:-2])
+print(inventory_tuple[6:1:-2])
 
->>> '['gloves', 'hats', 'athletic pants']'
+>>> '('gloves', 'hats', 'athletic pants')'
 ```
 
-In the examples above, the first one is the same as the one before it, except this one has a starting stepper of `-2`. It has a starting index position of `1`, an ending index position of `6`, and a stepper of `-2` when slicing `inventory_list[1:6:-2]`. This time the output is an empty list`[]` because the stepper counts down from `1` but the ending position is up at `6`.
+In the examples above, the first one is the same as the one before it, except this one has a starting stepper of `-2`. It has a starting index position of `1`, an ending index position of `6`, and a stepper of `-2` when slicing `inventory_tuple[1:6:-2]`. This time the output is an empty tuple`()` because the stepper counts down from `1` but the ending position is up at `6`.
 
-The second example is the same as the first, except it swaps the starting and ending positions. It has a starting index position of `6`, an ending index position of `1`, and a stepper of `-2` when slicing `inventory_list[6:1:-2]`. This time the output is not an empty list `['gloves', 'hats', 'athletic pants']` because the stepper counts down from `6` to `1`.
+The second example is the same as the first, except it swaps the starting and ending positions. It has a starting index position of `6`, an ending index position of `1`, and a stepper of `-2` when slicing `inventory_tuple[6:1:-2]`. This time the output is not an empty tuple `('gloves', 'hats', 'athletic pants')` because the stepper counts down from `6` to `1`.
 
-To omit the ending position and also use a stepper, in the square brackets write a colon followed by the starting position, two colons, and the stepper value `inventory_list[3::2]`. To omit the starting position, you write it like normal.
+To omit the ending position and also use a stepper, in the square brackets write a colon followed by the starting position, two colons, and the stepper value `inventory_tuple[3::2]`. To omit the starting position, you write it like normal.
 
 ```python
 # define variable
-inventory_list = ['jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']
+inventory_tuple = ('jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts')
 
 
-# slicing a list without specifying an end but with stepper
-print(inventory_list[3::2])
+# slicing a tuple without specifying an end but with stepper
+print(inventory_tuple[3::2])
 
->>> '['shirts', 'jackets', 'dresses']'
+>>> '('shirts', 'jackets', 'dresses')'
 ```
 
-The example above defines a list `inventory_list` and prints from the list index position `3` until the end of the list every other item `inventory_list[3::2]`. This returns another different list `['shirts', 'jackets', 'dresses']`.
+The example above defines a tuple `inventory_tuple` and prints from the tuple index position `3` until the end of the tuple every other item `inventory_tuple[3::2]`. This returns another different tuple `('shirts', 'jackets', 'dresses')`.
 
-You can use slicing to reverse the order of a list. In the square brackets, declare only a stepper of `-1`. Don't include a starting or ending position.
+You can use slicing to reverse the order of a tuple. In the square brackets, declare only a stepper of `-1`. Don't include a starting or ending position.
 
 ```python
-
 # define variable
-inventory_list = ['jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts']
+inventory_tuple = ('jeans', 'khakis', 'athletic pants', 'shirts', 'hats', 'jackets', 'gloves', 'dresses', 'skirts')
 
-# example of reversing a list
-print(inventory_list[::-1])
+# example of reversing a tuple
+print(inventory_tuple[::-1])
 
->>> '['skirts', 'dresses', 'gloves', 'jackets', 'hats', 'shirts', 'athletic pants', 'khakis', 'jeans']'
+>>> '('skirts', 'dresses', 'gloves', 'jackets', 'hats', 'shirts', 'athletic pants', 'khakis', 'jeans')'
 ```
 
-The example above reverses the order of the list by starting at the last item, ending at the first item, and counting backwards by 1 `inventory_list[::-1]`. This returns the list in reverse order `['skirts', 'dresses', 'gloves', 'jackets', 'hats', 'shirts', 'athletic pants', 'khakis', 'jeans']`.
+The example above reverses the order of the tuple by starting at the last item, ending at the first item, and counting backwards by 1 `inventory_tuple[::-1]`. This returns the tuple in reverse order `('skirts', 'dresses', 'gloves', 'jackets', 'hats', 'shirts', 'athletic pants', 'khakis', 'jeans')`.
 
 ## [Mutate and modify lists](#mutate-and-modify-lists)
 
