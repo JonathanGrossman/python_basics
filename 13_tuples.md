@@ -465,410 +465,103 @@ print(inventory_tuple[::-1])
 
 The example above reverses the order of the tuple by starting at the last item, ending at the first item, and counting backwards by 1 `inventory_tuple[::-1]`. This returns the tuple in reverse order `('skirts', 'dresses', 'gloves', 'jackets', 'hats', 'shirts', 'athletic pants', 'khakis', 'jeans')`.
 
-## [Mutate and modify lists](#mutate-and-modify-lists)
+## [Mutate and modify tuples](#mutate-and-modify-tuples)
 
-Lists are mutable and dynamic, meaning you can add elements, delete elements, and move them around.
+Unlike lists, tuples are not mutable and dynamic. This means that you cannot add, delete, modify, and move them around. Therefore, you cannot `.append()`, `.extend()`, `del`, `.clear()`, modify values, `.pop()`, `.reverse()`, `.sort()`, and `.insert()` like you can with lists.
 
-The `.append()` method appends an object to the end of a list. If you `print([].append.__doc__)`, the terminnal prints the docstring for `.append()`, and it is `Append object to the end of the list.`.
+You can, however, get the index position of an item in a tuple and also get the count of the number of times an value appears in a tuple. 
 
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-
-# appending item to a list
-sample_list.append('Sixth')
-print(sample_list)
-
->>> '['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth']'
-```
-
-The `.extend()` method appends mulitple objects to the end of a list. If you `print([].extend.__doc__)`, the terminnal prints the docstring for `.extend()`, and it is `Extend list by appending elements from the iterable.`.
-
+To get the index position of an item in a tuple, use the `.index()` instance method for tuples. Entering in your terminal `print(().index.__doc__)` prints the docstring for `.index()`, which is `Return first index of value. Raises ValueError if the value is not present.`
 
 ```python
 # define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-# extend list with multiple items
-sample_list.extend(['Sixth', 'Seventh'])
-print(sample_list)
-
->>> ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh']
-```
-
-Use the `del` keyword to delete one or more items from a list. Use the `del` keyword with index positions to declare which item or items to delete. To delete a single item, specify only one index position.
-
-
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-# delete list value
-del sample_list[2]
-print(sample_list)
->>> ['First', 'Second', 'Fourth', 'Fifth']
-```
-
-To delete multiple consecutive items, specify a range of index positions.
-
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-# delete list value
-del sample_list[1:4]
-print(sample_list)
-
->>> '['First', 'Fifth']'
-```
-
-To clear the contents of a list, use the `.clear()` method. If you `print([].clear.__doc__)`, the terminnal prints the docstring for `.clear()`, and it is `Remove all items from list.`.
-
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-# clear a list
-print(sample_list.clear())
-
->>> None
-```
-
-To modify a single item in a list, use the index position of the item and set the value equal to a new value.
-
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-# modify single list value
-sample_list[2] = 3
-print(sample_list)
-
->>> '['First', 'Second', 3, 'Fourth', 'Fifth']'
-```
-
-To modify multiple items in a list, use the index positions of the item and set the value equal to the new values.
-
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-# modify multiple list values
-# replaces exact number of elements
-sample_list[1:4] = (2, 3, 4)
-print(sample_list)
-
->>> '['First', 2, 3, 4, 'Fifth']'
-```
-
-To replace and add multiple values, use the index positions of the item and set the value equal to the new values.
-
-
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-# replaces and adds more
-sample_list[3:6] = [4, 5, 6, 7]
-print(sample_list)
-
->>> '['First', 'Second', 'Third', 4, 5, 6, 7]'
-```
-
-To insert a list as an item, use the index position of an item in the list and set the value equal to a list. This is a similar but different syntax compared to adding multiple values to a list. Here, you specify a single index position to be replaced, and then set it equal to a list. In constrast, when adding multiple values, you declare a range of index positions to replace or add and then set it equal to a list with the same number of values as in the range of index positions.
-
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-
-# inserts a list
-sample_list[1] = [2.1, 2.2, 2.3]
-print(sample_list)
-
->>> '['First', [2.1, 2.2, 2.3], 'Third', 'Fourth', 'Fifth']'
-```
-
-To insert a list as individual elements in a specific location in the list, use a range of index positions that start and end at the same index position.
-
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-# inserts a list as individual elements
-sample_list[1:1] = [2.1, 2.2, 2.3]
-print(sample_list)
-
->>> '['First', 2.1, 2.2, 2.3, 'Second', 'Third', 'Fourth', 'Fifth']'
-```
-
-To remove an item from a list, use the `.pop()` instance method for lists. This method removes an item, and you can save that item to a variable so that it's saved in memory for use later in your script. Entering in your terminal `print([].pop.__doc__)` prints the docstring for `.pop()`, which is `Remove and return item at index (default last). Raises IndexError if list is empty or index is out of range.`
-
-To remove the last item in a list, do not pass any argument into `.pop()`. The default is the item in the last index position.
-
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-# remove and save last item from list
-removed_item = sample_list.pop()
-print("removed item:", removed_item)
-print("sample list:", sample_list)
-
->>> 'removed item: Fifth'
->>> 'sample list: ['First', 'Second', 'Third', 'Fourth']'
-```
-
-To remove something other than the last item in a list, pass as an argument into `.pop()` the index position of the item you want to remove. 
-
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-# remove and save item at index 2 from list
-removed_item = sample_list.pop(2)
-print("removed item:", removed_item)
-print("sample list:", sample_list)
-
->>> 'removed item: Third'
->>> 'sample list: ['First', 'Second', 'Fourth', 'Fifth']'
-```
-
-You can pass only one argument into `.pop()` or else it returns an error.
-
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-# remove and save item at index 2 from list
-removed_item = sample_list.pop(2, 3)
-print("removed item:", removed_item)
-print("sample list:", sample_list)
-
->>> 'TypeError: pop() takes at most 1 argument (2 given)'
-```
-
-The argument you pass into `.pop()` must be an integer or else it returns an error.
-
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-# remove and save item at index 2 from list
-removed_item = sample_list.pop([2, 3])
-print("removed item:", removed_item)
-print("sample list:", sample_list)
-
->>> 'TypeError: 'list' object cannot be interpreted as an integer'
-```
-
-To get the index position of an item in a list, use the `.index()` instance method for lists. Entering in your terminal `print([].index.__doc__)` prints the docstring for `.index()`, which is `Return first index of value. Raises ValueError if the value is not present.`
-
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+sample_tuple = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
 
 # example of index
-index_of_second = sample_list.index("Second")
+index_of_second = sample_tuple.index("Second")
 print(index_of_second)
 
 >>> 1
 ```
 
-The `.index()` instance method returns an error if the argument passed into `.index()` is not in the list.
+The `.index()` instance method returns an error if the argument passed into `.index()` is not in the tuple.
 
 ```python
 # define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+sample_tuple = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
 
 # example of index
-index_of_second = sample_list.index("1")
+index_of_second = sample_tuple.index("1")
 print(index_of_second)
 
->>> 'ValueError: '1' is not in list'
+>>> 'ValueError: tuple.index(x): x not in tuple'
 ```
 
 The `.index()` instance method accepts one argument or else it returns an error.
 
 ```python
 # define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+sample_tuple = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
 
 # example of index
-index_of_second = sample_list.index("Second", "Third")
+index_of_second = sample_tuple.index("Second", "Third")
 print(index_of_second)
 
 >>> 'TypeError: slice indices must be integers or have an __index__ method'
 ```
 
-To count the number of times a value appears in a list, use the `.count()` instance method for lists. Entering in your terminal `print([].count.__doc__)` prints the docstring for `.count()`, which is `Return number of occurrences of value.`
+To count the number of times a value appears in a tuple, use the `.count()` instance method for tuples. Entering in your terminal `print(().count.__doc__)` prints the docstring for `.count()`, which is `Return number of occurrences of value.`
 
 ```python
 # define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+sample_tuple = ('First', 'Second', 'Third', 'Fourth', 'Fifth')
 
 # example of count
-number_of_thirds = sample_list.count("Third")
-print(number_of_thirds)
-sample_list.append("Third")
-number_of_thirds = sample_list.count("Third")
+number_of_thirds = sample_tuple.count("Third")
 print(number_of_thirds)
 
 >>> 1
->>> 2
 ```
 
-The `.count()` instance method returns `0` if the argument passed into `.count()` is not in the list.
+The `.count()` instance method returns `0` if the argument passed into `.count()` is not in the tuple.
 
 
 ```python
 # define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+sample_tuple = ('First', 'Second', 'Third', 'Fourth', 'Fifth')
 
 # example of count
-number_of_thirds = sample_list.count("three")
-print(number_of_thirds)
-sample_list.append("three")
-number_of_thirds = sample_list.count("three")
+number_of_thirds = sample_tuple.count("8")
 print(number_of_thirds)
 
 >>> 0
->>> 1
 ```
 
 The `.count()` instance method accepts one argument or else it returns an error.
 
 ```python
 # define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+sample_tuple = ('First', 'Second', 'Third', 'Fourth', 'Fifth')
 
 # example of count
-number_of_thirds = sample_list.count("three", "four")
+number_of_thirds = sample_tuple.count("8", "9")
 print(number_of_thirds)
+
 >>> 'TypeError: count() takes exactly one argument (2 given)'
 ```
 
-To reverse the order of items in a list, use the `.reverse()` instance method for lists. It takes `0` arguments. This does not create a new list. It changes the order of the list itself. Saving it to a variable does not work. Entering in your terminal `print([].reverse.__doc__)` prints the docstring for `.reverse()`, which is `Reverse *IN PLACE*.`
+## [Use tuple methods](#use-tuple-methods)
 
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-# example of reverse
-reversed_list = sample_list.reverse()
-print("sample list:", sample_list)
-print("reversed list:", reversed_list)
-
->>> 'sample list: ['Fifth', 'Fourth', 'Third', 'Second', 'First']'
->>> 'reversed list: None'
-
-# reverse in place; saving to variable results in None for variable
-sample_list.reverse(0)
-print("sample list:", sample_list)
-
->>> 'TypeError: reverse() takes no arguments (1 given)'
-```
-
-To sort the order of items in a list, use the `.sort()` instance method for lists. It takes `0` positional arguments. It does, however, take the arguments `reverse` or `key`. Setting `reverse` to `True` sorts the list in reverse (descending) order. Otherwise, the list is sorted in ascending order. The `key` argument lets you set a value by which to sort by and is beyond the scope of this chapter. 
-
-The `.sort()` method does not create a new list. Rather, it changes the order of the list itself. Saving it to a variable does not work. 
-
-Entering in your terminal `print([].reverse.__doc__)` prints the docstring for `.reverse()`, which is `Reverse *IN PLACE*.`
-
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-# example of reverse
-sample_list.sort()
-print("sample list:", sample_list)
-
->>> 'sample list: ['Fifth', 'First', 'Fourth', 'Second', 'Third']'
-
-# reverse sort
-sample_list.sort(reverse=True)
-print("reversed list:", sample_list)
-
->>> 'reversed list: ['Third', 'Second', 'Fourth', 'First', 'Fifth']'
-
-# sorted in place; saving to variable results in None for variable
-sorted_list = sample_list.sort()
-print("sorted list:", sorted_list)
-
->>> 'sorted list: None'
-
-# sort takes no positional arguments
-sample_list.reverse(0)
-print("sample list:", sample_list)
-
->>> 'TypeError: sort() takes no positional arguments'
-```
-
-To insert an item into a list, use the `.insert()` instance method for lists. It takes two arguments, an index position followed by the item. The item is inserted right before the index position. Entering in your terminal `print([].index.__doc__)` prints the docstring for `.index()`, which is `Insert object before index.`
-
-```python
-# define variable
-sample_list = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
-
-sample_list.insert(0, "Zero")
-print(sample_list)
-
->>> '['Zero', 'First', 'Second', 'Third', 'Fourth', 'Fifth']'
-
-# example takes two arguments
-sample_list.insert(0)
-print(sample_list)
-
->>> 'TypeError: insert() takes exactly 2 arguments (1 given)'
-```
-
-## [Use list methods](#use-list-methods)
-
-Python has many built-in methods that modify lists (e.g., .append(), .extend(), .insert(), .remove(), .pop()). Here is a list of methods, their docstrings, and a few notes about each.
-
-Method: `.append()`  
-Docstring: Append object to the end of the list.  
-What it does: Adds one item to end of the list.
-
-Method: `.clear()`  
-Docstring: Remove all items from list.  
-What it does: Self-explanatory. Removes all items from list  
-
-Method: `.copy()`  
-Docstring: Return a shallow copy of the list.  
-What it does: Copies the list into a new list containing the same values  
+Python has only a few built-in methods for tuples (e.g., .index() and .count()).
 
 Method: `.count()`  
 Docstring: Return number of occurrences of value.  
-What it does: Returns number of times specified value appears in list  
+What it does: Returns number of times specified value appears in tuple  
 
-Method: `.extend()`  
-Docstring: Extend list by appending elements from the iterable.  
-What it does: Adds one or more items from one list to end of other list  
 
 Method: `.index()`  
 Docstring: Return first index of value. Raises ValueError if the value is not present.  
-What it does: Returns the index of the specified value; can specify index followed by starting index position
+What it does: Returns the index of the specified value
 
-Method: `.insert()`  
-Docstring: Insert object before index.  
-What it does: Adds one item to list in specified index position  
-
-Method: `.pop()`  
-Docstring: Remove and return item at index (default last). Raises IndexError if list is empty or index is out of range.  
-What it does: Removes one item from list in specified index position; removes last item if no position specified; can save the removed item in a variable  
-
-Method: `.remove()`  
-Docstring: Remove first occurrence of value. Raises ValueError if the value is not present.  
-What it does: Removes first item from list that is of the specified value, throws error if not in list; does not return removed item (can’t save it in variable)  
-
-Method: `.reverse()`  
-Docstring: Reverse *IN PLACE*.  
-What it does: Reverses elements of list (does not create new list)  
-
-Method: `.sort()`  
-Docstring: Stable sort *IN PLACE*.  
-What it does: Sorts items in list (default is ascending order, does not create new list)  
 
 
