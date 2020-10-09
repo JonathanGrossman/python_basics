@@ -779,7 +779,7 @@ To sort the order of items in a list, use the `.sort()` instance method for list
 
 The `.sort()` method does not create a new list. Rather, it changes the order of the list itself. Saving it to a variable does not work. 
 
-Entering in your terminal `print([].reverse.__doc__)` prints the docstring for `.reverse()`, which is `Reverse *IN PLACE*.`
+Entering in your terminal `print([].sort.__doc__)` prints the docstring for `.sort()`, which is `Stable sort *IN PLACE*.`
 
 ```python
 # define variable
