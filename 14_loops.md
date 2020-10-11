@@ -1,14 +1,42 @@
 # Loops
 
-# a loop is a block of code that executes itself repeatedly until a certain condition is met
-# you can only loop over data that is “iterable” (i.e., comprised of more than one piece of data)
-# strings, lists, tuples, sets, and dicts are iterable 
-# integers, floats, and functions are not
-# you can check whether a value is iterable
+A loop is a block of code that executes itself repeatedly until a certain condition is met. You will work with `for` loops and `while` loops. A `for` loop executes a block of code a definite number of times. Usually, your `for` loops cycle through an array, so the number of times it runs the code depends on the length of the array. A `while` loop executes a block of code an indefinite number of times until a predefined condition is met.
 
-In loops.py, see comment:
+You can only loop over data that is "iterable". Something is iterable if it is made up of a sequence of data. Strings, lists, tuples, sets, and dictionaries are iterable. Integers, floats, and functions are not.
+
+You can check whether a value is iterable using Python's built-in `iter()` function. This function converts Python object into an iterable collection. The Python object, however, must be a sequence or else have its own iterator. Review the docstring with `print(iter.__doc__)`.
+
+
+```python
+iter(collection) -> iterator
+iter(callable, sentinel) -> iterator
+
+Get an iterator from an object.  In the first form, the argument must
+supply its own iterator, or be a sequence.
+In the second form, the callable is called until it returns the sentinel.
+```
+
+One way to check whether a Python object is a sequence is to pass it in as an argument when calling `iter()`. If the object is a sequence, the terminal should print the iterator, which looks something like `<iterator object at 0x10bb0db90>`. If the object is not a sequence, the terminal returns an error.
+
+
+```python
+# define variables
+some_string = "We sell pants and shirts."
+some_number = 12
+
 # an example of an iterable object
+some_string_iterator = iter(some_string)
+print(some_string_iterator)
+
+>>> '<iterator object at 0x10bb0db90>'
+
 # an example of a non-iterable object
+# some_number_iterator = iter(some_number)  
+
+>>> 'TypeError: 'int' object is not iterable'
+```
+
+In the example above, `some_string` is a variable that has a string for its value and `some_number` is a variable the has an interger as its value. Using the `iter()` function to check whether `some_string` is a sequence (`iter(some_string)`) results in the terminal printing the iterator for the `some_string` object `<iterator object at 0x10bb0db90>`. In contrast, Using the `iter()` function to check whether `some_number` is a sequence (`iter(some_number)`) results in the terminal printing an error message `TypeError: 'int' object is not iterable`.
 
 
 # while loops execute the block of code so long as the condition set forth in the definition is True
