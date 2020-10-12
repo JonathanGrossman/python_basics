@@ -201,16 +201,74 @@ for item in range(9, 1, -1):
 
 The example above is a `for` loop using the `range()` function to count down within a range. Its starting value is `9`, ending value is `1`, and the stepper is `-1`. Therefore, the range of numbers is `9`, `8`, `7`, `6`, `5`, `4`, `3`, `2`. Each time the `for` loop cycles through the range, it prints the current number `print(item)`. Because the stepper is `-1`, the `range()` function subtracts one from the current number at the end of each cycle so that the function counts down by `1` from `9` . The output therefore is `9`, `8`, `7`, `6`, `5`, `4`, `3`, `2`.
 
-# break and continue are controlled ways to terminate a loop
-# break immediately ends a loop such that your program will move to the code that comes after the loop body
-# in contrast, continue immediately terminates only the current iteration (not the loop entirely) such that the loop’s controlling expression is re-evaluated to see if the loop will run again
-# you can conditionally terminate loops using these keywords
-In loops.py, see:
+## [Break a loop](#break-a-loop)
+
+Using the `break` keyword is a controlled way to terminate a loop in its entirety. The `break` keyword immediately ends a loop such that your program will move to the code that comes after the loop body. It is a way to terminate a loop without relying upon the condition specified in the loop definition.
+
+```python
+# define variable
+counter = 10
+
 # examples of break and continue
+while counter > 0:
+    print(counter)
+    if counter == 3:
+        break
+    counter -= 1
+print('done with the while loop because we break at 3')
+
+>>> '10'
+>>> '9'
+>>> '8'
+>>> '7'
+>>> '6'
+>>> '5'
+>>> '4'
+>>> '3'
+>>> 'done with the while loop because we break at 3'
+```
+
+The example above defines a variable named `counter` and sets it equal to the integer `10`. You then define a `while` loop that runs so long as `counter` is greater than `0`. The controlling statement is `while counter > 0:`. Each time through the loop, if `counter` is less than `10`, the body of the `while` loop prints the `counter` and then checks whether `counter` equals `3`. 
+
+If `counter` equals `3`, the `break` keyword ends the `while` loop. Otherwise, the `while` loop subtracts `1` from `counter` and continues running. Whenever the loop stops running, the code following the `while` loop prints `'done with the while loop because we break at 3'`. 
+
+The output is `10`, `9`, `8`, `7`, `6`, `5`, `4`, `3`, `'done with the while loop because we break at 3'`. It prints from `10` to `3` and then prints the message. It doesn't print integers less than `3` because the `break` keyword ended the `while` loop once `counter` reached `3`.
+
+## [Continue a loop](#continue-a-loop)
+
+Using the `continue` keyword is a controlled way to terminate the current iteration of a loop. In contrast to `break`, which ends the entire loop, `continue` immediately terminates only the current iteration. Rather than move on from the loop to the code below, the loop’s controlling expression is re-evaluated to see if the loop will run again.
+
+```python
+# define variable
+message = 'We sell pants.'
 
 
-# beware of infinite loops (those that have no termination condition or an impossible termination condition); use command / (on a Mac) or control / (on Windows) to end infinite
-# to learn more about Python loops:
-https://realpython.com/python-while-loop/
-https://realpython.com/python-for-loop/
+# example of using continue to end an iteration
+for i in message:
+    if i == " ":
+        continue
+    print(i)
+    
+    
+>>> 'W'
+>>> 'e'
+>>> 's'
+>>> 'e'
+>>> 'l'
+>>> 'l'
+>>> 'p'
+>>> 'a'
+>>> 'n'
+>>> 't'
+>>> 's'
+>>> '.'
+```
+
+The example above defines a variable named `message` and set it equal to a string `'We sell pants.'`. You then define a `for` loop that cycles through each character (`i`) in the `message` string `for i in message:`. In the loop, you first check whether `i` equals a space `if i == " ":`. If so, you end that iteration of the loop using `continue`. Otherwise, you print `i`. The output is that it prints all the letters in the string but none of the spaces.
+
+##[Infinite loops](#infinite-loops)
+
+Beware of infinite loops. An infinite loop is a loop that has no termination condition or an impossible termination condition. The results is that your loop will run endlessly. For instance, if your controlling statement is `while True:` and you don't have anything in the block that breaks or otherwise ends the loop, it will run endlessly.
+
+To end an infinite loop, use `command /` (on a Mac) or `control /` (on Windows).
 
