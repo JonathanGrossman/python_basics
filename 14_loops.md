@@ -42,7 +42,7 @@ In the example above, `some_string` is a variable that has a string for its valu
 
 A `while` loop executes a block of code so long as the condition set forth in the definition is `True`. `while` loops are indefinite, meaning that the number of times it will run the block of code is not explicitly stated in the loop definition (though can be deduced if you know enough information). 
 
-A `while` loop is easy to write. It consists of the word `while` followed by the condition and a colon `:`. On the following line, you need to indent the block of code that you want to run so long as the condition is `True.` 
+A `while` loop consists of the word `while` followed by the condition and a colon `:`. On the following line, you need to indent the block of code that you want to run so long as the condition is `True.` 
 
 Many ways of working with `while` loops exist. A few examples will help show the possibilities. 
 
@@ -85,12 +85,51 @@ The example above defines a varaible named `the_list`. It is set equal to a list
 By removing the item from the list, all the items shift one index position lower. For instance, after the first time through the loop, the item in index position `0` is gone, the item in index position `1` moves to `0` and the item in index position `2` moves to `1` so that the list looks like `['shirts', 'hats']`. After the second time through the loop, the item in index position `0` is gone and the item in index position `1` moves to `0` so that the list looks like `['hats']`. After the third time through the loop, the list no longer has any items and looks like `[]`, so the `while` loop stops. It doesn't print anything. That's because an empty list is falsy and a while loop stops when the condition is no longer truthy (or `True`).
 
 
+## [For loops](#for-loops)
 
+Like `while` loops, `for` loops execute a block of code repeatedly so long as a condition set for in the loop definition is `True`. In contrast to `while` loops, `for` loops are definite, meaning that the number of times it will run the block of code is explicitly stated in the loop definition.
 
-# like while loops, for loops execute the block of code based on a conditions set for in the loop definition
-# in contrast to while loops, for loops are definite, meaning that the number of times it will run the block of code is explicitly stated in the loop definition
-In loops.py, see comments:
-# examples of for loops
+A `for` loop consists of several parts. The first line of a `for` loop starts with the word `for` followed by a variable for the current item in the iteration (you can name this whatever you want), followed by the word `in`, followed by the name of the iterable, and ending with colon `:`. On the following line, you need to indent the block of code that you want to run each time the loop iterates through the iterable.
+
+```python
+# define variable
+message = 'We sell pants'
+
+# example of for loops with string
+for i in message:
+    print(i)
+
+>>> W
+>>> e
+>>> 
+>>> s
+>>> e
+>>> l
+>>> l
+>>>  
+>>> p
+>>> a
+>>> n
+>>> t
+>>> s
+```
+
+The example above defines a variable named `message` and sets it equal to a string `'We sell pants'`. Then you loop through `message`. The controlling statement in the `for` loops names the variable that represents each character `i`. Each time you loop through `message`, you print a character in the string `print(i)`. Because the `for` loop proceeds from left to right, it prints `'We sell pants'` one letter at a time from the `W` at index position `0` to the `s` in `pants` in the last index position.
+
+```python
+# define variable
+inventory_list = ['pants', 'shirts', 'hats']
+
+# example of for loops with list
+for item in inventory_list:
+    print(item)
+
+>>> pants
+>>> shirts
+>>> hats
+```
+
+The example above is the same as before except instead of defining a string variable, it defines a variable named `inventory_list` and sets it equal to a list `['pants', 'shirts', 'hats']`. Then you loop through `inventory_list`. The controlling statement in the `for` loops names the variable that represents each list item `item`. Each time you loop through `inventory_list`, you print a an item from `inventory_list`. Because the `for` loop proceeds from left to right, it prints one item at a time from index position `0`, which is `'pants'`, to the last index position, which is `hats`.
 
 
 # you can use Python’s built-in range function in a for loop to cycle through a sequence of numbers
