@@ -4,11 +4,11 @@ A dictionary is a collection of comma-separated key:value pairs wrapped in curly
 
 A dictionary wraps its content in curly braces `{}`. You can create a dictionary using `{}` or use the built-in `dict()` function. The `dict()` function accepts a sequence of tuples where each tuple contains a key:value pair. You can create dictionaries on the fly, for instance, by creating an empty dictionary saved to a variable, and adding to it as you go.
 
-Like lists, dictionaries are mutable (can be changed), dynamic (can grow and shrink in size), and can be nested (i.e., one inside another)
+Like lists, dictionaries are mutable and dynamic. This means that the keys and values can be edited and also you can add and remove keys:values from a dictionary. You also can nest a dictionary inside another dictionary. Do this by making one or more of the values a dictionary.
 
-## [Dictinary keys](#dictionary-keys)
+## [Dictionary keys](#dictionary-keys)
 
-Unlike lists, dictionaries are not accessed by index. Instead, you use keys to access the contents inside a dictonary. Although almost anything can be a key (e.g., integer, float, Boolean, string, etc.), keys need to be unique (no duplicates) and immutable. It is probably most common to use a string as key. If, however, you use numbers for your keys, it makes accessing a dictionary appear the same as accessing a list index.
+Unlike lists, dictionaries are not accessed by index. Instead, you use keys to access the contents inside a dictionary. Although almost anything can be a key (e.g., integer, float, Boolean, string, etc.), keys need to be unique (no duplicates) and immutable (can't be changed). It is probably most common to use a string as key. If, however, you use numbers for your keys, it makes accessing a dictionary appear the same as accessing a list index.
 
 You can store a dictionary in memory as a variable and then retrieve a `value` from a dictionary by calling the value's `key`. You call the `key` using square brackets (`[]`) at the end of the name of the variable.
 
@@ -17,7 +17,6 @@ Trying to access a non-existing key results in a Key Error.
 Adding and changing values is as simple as assigning a new key to a value or an existing key to a new value
 
 Delete a key and its corresponding value using the `del` keyword followed by accessing the key.
-
 
 Retrieve the value of a nested dictionary using the key of the outer dictionary that corresponds to a dictionary type, and also use the key of the inner dictionary corresponding to the value
 
