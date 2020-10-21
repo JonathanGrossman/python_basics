@@ -24,6 +24,20 @@ transaction_dict = {
     "date": "October 21, 2020"
 }
 ```
+  
+Unlike lists, dictionaries are not accessed by index. Instead, you use keys to access the contents inside a dictionary. Although almost anything can be a key (e.g., integer, float, Boolean, string, etc.), keys need to be unique (no duplicates) and immutable (can't be changed). It is probably most common to use a string as key. If, however, you use numbers for your keys, it makes accessing a dictionary appear the same as accessing a list index.
+
+You can store a dictionary in memory as a variable and then retrieve a `value` from a dictionary by calling the value's `key`. You call the `key` using square brackets (`[]`) at the end of the name of the variable.
+
+Trying to access a non-existing key results in a Key Error.
+
+Adding and changing values is as simple as assigning a new key to a value or an existing key to a new value
+
+Delete a key and its corresponding value using the `del` keyword followed by accessing the key.
+
+Retrieve the value of a nested dictionary using the key of the outer dictionary that corresponds to a dictionary type, and also use the key of the inner dictionary corresponding to the value
+
+Retrieve the value of a nested list using the dictionary key that corresponds to a list type, and also use the list index of the value
 
 ## [Creating a dictionary](#creating-a-dictionary)
 
@@ -77,25 +91,37 @@ print("same inventory -> ", same_inventory)
 
 In the examples above, you create the first dictionary using `{}` and the second using `dict()` and the same key:values as the first dictionary. Printing the results of each returns the same thing.
 
+## [Adding keys to a dictionary](#adding-keys-to-a-dictionary)
+
 You can create dictionaries on the fly, for instance, by creating an empty dictionary saved to a variable, and adding to it as you go.
+
+```python
+the_inventory = {}
+the_inventory['male_pants'] = ['khakis', 'jeans', 'athletic pants']
+print(the_inventory)
+
+the_inventory['male_shirts'] = []
+print(the_inventory)
+
+the_inventory['female_pants'] = ['khakis', 'jeans', 'athletic pants']
+the_inventory['female_shirts'] = ['tank-top', 'long-sleeve']
+print(the_inventory)
+```
+In the example above, first you create a variable named `the_inventory` and set it equal to an empty dictionary `{}`. Then you add a key of `'male_pants'` and set it equal to a list `['khakis', 'jeans', 'athletic pants']`. Next, you print `the_inventory`, which outputs the dictionary `{'male_pants': ['khakis', 'jeans', 'athletic pants']}`. The dictionary is no longer empty. 
+
+Then you add a key of `'male_shirts'` and set it equal to an empty list `[]`. Next, you print `the_inventory` again, which outputs `{'male_pants': ['khakis', 'jeans', 'athletic pants'], 'male_shirts': []}`. Appearing in the dictionary are both key:value pairs that you added.
+
+Finally, you add two more key:value pairs. First, a key of `'female_pants'` set equal to a list and a key of `'female_shirts'` also set equal to a list. Next, you print `the_inventory` again, which outputs `{'male_pants': ['khakis', 'jeans', 'athletic pants'], 'female_shirts': ['tank-top', 'long-sleeve'], 'male_shirts': [], 'female_pants': ['khakis', 'jeans', 'athletic pants']}`. Appearing in the dictionary are all four key:value pairs that you added.
 
 Like lists, dictionaries are mutable and dynamic. This means that the keys and values can be edited and also you can add and remove keys:values from a dictionary. You also can nest a dictionary inside another dictionary. Do this by making one or more of the values a dictionary.
 
-## [Dictionary keys](#dictionary-keys)
-  
-Unlike lists, dictionaries are not accessed by index. Instead, you use keys to access the contents inside a dictionary. Although almost anything can be a key (e.g., integer, float, Boolean, string, etc.), keys need to be unique (no duplicates) and immutable (can't be changed). It is probably most common to use a string as key. If, however, you use numbers for your keys, it makes accessing a dictionary appear the same as accessing a list index.
+## [Changing values in a dictionary](#changing-values-in-a-dictionary)
 
-You can store a dictionary in memory as a variable and then retrieve a `value` from a dictionary by calling the value's `key`. You call the `key` using square brackets (`[]`) at the end of the name of the variable.
+## [Accessing keys in a dictionary](#accessing-keys-in-a-dictionary)
 
-Trying to access a non-existing key results in a Key Error.
+## [Accessing values in a dictionary](#accessing-values-in-a-dictionary)
 
-Adding and changing values is as simple as assigning a new key to a value or an existing key to a new value
-
-Delete a key and its corresponding value using the `del` keyword followed by accessing the key.
-
-Retrieve the value of a nested dictionary using the key of the outer dictionary that corresponds to a dictionary type, and also use the key of the inner dictionary corresponding to the value
-
-Retrieve the value of a nested list using the dictionary key that corresponds to a list type, and also use the list index of the value
+## [Deleting keys from a dictionary](#deleting-keys-from-a-dictionary)
 
 ## [Dictionary Methods](#dictionary-methods)
 
