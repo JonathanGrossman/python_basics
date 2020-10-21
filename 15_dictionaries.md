@@ -1,4 +1,4 @@
-# Dictionaries
+# Dictionaries 
 
 A dictionary is a collection of comma-separated key:value pairs wrapped in curly braces `{}`. You can use a dictionary to store information. Oftentimes, a dictionary is used to store multiple properties for a single item. For instance, it is common to use a dictionary to store information about a user. A user dictionary might have keys for first name, last name, email, and other user information. Another example of using a dictionary is for a transaction. A transaction dictionary might have keys for seller, buyer, price, date purchase, and other transactional information. 
 
@@ -32,76 +32,79 @@ Dictionaries have built-in methods you can use that help you work with dictionar
 Here is a list of those methods, their docstring, and a short note from me.
  
 Method: .clear()  
-Docstring:
+Docstring: D.clear() -> None.  Remove all items from D.
 Notes: removes all key:value pairs from dictionary
 
 Method: .copy()  
-Docstring:
-Notes:
+Docstring: D.copy() -> a shallow copy of D
+Notes: copies the dictionary
 
 Method: .fromkeys(<k>, <v>)  
-Docstring:
-Notes: returns a dict (takes in 2 args - first = keys, second = vals)
+Docstring: dict.fromkeys(S[,v]) -> New dict with keys from S and values equal to v.
+v defaults to None.
+Notes: returns a dict (takes in 2 args - first = keys, second = values)
 
 Method: .get(<key>)  
-Docstring:
+Docstring: D.get(k[,d]) -> D[k] if k in D, else d.  d defaults to None.
 Notes: gets value for specified key; returns None if no such key
 
 Method: .has_key()  
-Docstring:
-Notes:
+Docstring: D.has_key(k) -> True if D has a key k, else False
+Notes: checks if dictionary has key; returns a Boolean
 
 Method: .items()  
-Docstring:
+Docstring: D.items() -> list of D's (key, value) pairs, as 2-tuples
 Notes: returns a list of tuples containing the key-value pairs
 
 Method: .iteritems()  
-Docstring:
-Notes:
+Docstring: D.iteritems() -> an iterator over the (key, value) items of D
+Notes: returns an iterator over the dictionary's keys and values
 
 Method: .iterkeys()  
-Docstring:
-Notes:
+Docstring: D.iterkeys() -> an iterator over the keys of D
+Notes: returns an iterator over the dictionary's keys
 
 Method: .itervalues()  
-Docstring:
-Notes:
+Docstring: D.itervalues() -> an iterator over the values of D
+Notes: returns an iterator over the dictionary's values
 
 Method: .keys()  
-Docstring:
+Docstring: D.keys() -> list of D's keys
 Notes: returns a list of keys
 
 Method: .pop(<key>, default)  
-Docstring:
+Docstring: D.pop(k[,d]) -> v, remove specified key and return the corresponding value.
+If key is not found, d is returned if given, otherwise KeyError is raised
 Notes: removes key and returns value/default; error if no such key
 
 Method: .popitem()  
-Docstring:
+Docstring: D.popitem() -> (k, v), remove and return some (key, value) pair as a
+2-tuple; but raise KeyError if D is empty.
 Notes: removes last key:value pair and returns it as tuple
 
 Method: .setdefault()  
-Docstring:
-Notes:
+Docstring: D.setdefault(k[,d]) -> D.get(k,d), also set D[k]=d if k not in D
+Notes: sets the default to be returned if a key doesn't exist when trying to access that key
 
 Method: .update(<obj>)  
-Docstring:
+Docstring: D.update([E, ]**F) -> None. Update D from dict/iterable E and F. If E present and has a .keys() method, does: for k in E: D[k] = E[k] If E present and lacks .keys() method, does: for (k, v) in E: D[k] = v. In either case, this is followed by: for k in F: D[k] = F[k]
 Notes: merges dictionaries or dict with sequence of key:value pairs
 
 Method: .values()  
-Docstring:
+Docstring: D.values() -> list of D's values
 Notes: returns a list of values
 
 Method: .viewitems()  
-Docstring:
-Notes:
+Docstring: D.viewitems() -> a set-like object providing a view on D's items
+Notes: returns list of tuples where each tuple contains a key:value pair
 
 Method: .viewkeys()  
-Docstring:
-Notes:
+Docstring: D.viewkeys() -> a set-like object providing a view on D's keys
+Notes: returns a list of keys
 
 Method: .viewvalues()  
-Docstring:
-Notes:
+Docstring: D.viewvalues() -> an object providing a view on D's values
+Notes: returns a list of values
 
 
 ## [Dictionary and for loop](#dictionary-and-for-loop)
