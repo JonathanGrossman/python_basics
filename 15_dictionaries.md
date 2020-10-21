@@ -25,7 +25,59 @@ transaction_dict = {
 }
 ```
 
-You can create a dictionary using `{}` or use the built-in `dict()` function. The `dict()` function accepts a sequence of tuples where each tuple contains a key:value pair. You can create dictionaries on the fly, for instance, by creating an empty dictionary saved to a variable, and adding to it as you go.
+## [Creating a dictionary](#creating-a-dictionary)
+
+You can create a dictionary using `{}` or use the built-in `dict()` function. The user and transction examples above create the dictionary using `{}`. Here is one more example.
+
+```python
+# example of a dictionary using {}
+our_inventory = {
+    'male_pants' : ['khakis', 'jeans', 'athletic pants'],
+    'male_shirts' : [],
+    'female_pants' : ['khakis', 'jeans', 'athletic pants'],
+    'female_shirts' : ['tank-top', 'long-sleeve'],
+}
+```
+
+Instead of using `{}`, you can use the `dict()` function to create a dictionary. The `dict()` accepts a sequence of tuples where each tuple contains a key:value pair. The resulting dictionary will be wrapped in curly braces. 
+
+```python
+# example of a dictionary using dict()
+same_inventory = dict([
+    ('male_pants', ['khakis', 'jeans', 'athletic pants']),
+    ('male_shirts', []),
+    ('female_pants', ['khakis', 'jeans', 'athletic pants']),
+    ('female_shirts', ['tank-top', 'long-sleeve']),
+])
+```
+
+Regardless of which approach you take, the result is the same.
+
+```python
+our_inventory = {
+    'male_pants' : ['khakis', 'jeans', 'athletic pants'],
+    'male_shirts' : [],
+    'female_pants' : ['khakis', 'jeans', 'athletic pants'],
+    'female_shirts' : ['tank-top', 'long-sleeve'],
+}
+
+same_inventory = dict([
+    ('male_pants', ['khakis', 'jeans', 'athletic pants']),
+    ('male_shirts', []),
+    ('female_pants', ['khakis', 'jeans', 'athletic pants']),
+    ('female_shirts', ['tank-top', 'long-sleeve']),
+])
+
+print("our inventory -> ", our_inventory)
+print("same inventory -> ", same_inventory)
+
+>>> ('our inventory -> ', {'male_pants': ['khakis', 'jeans', 'athletic pants'], 'female_shirts': ['tank-top', 'long-sleeve'], 'male_shirts': [], 'female_pants': ['khakis', 'jeans', 'athletic pants']})
+>>> ('same inventory -> ', {'male_pants': ['khakis', 'jeans', 'athletic pants'], 'female_shirts': ['tank-top', 'long-sleeve'], 'male_shirts': [], 'female_pants': ['khakis', 'jeans', 'athletic pants']})
+```
+
+In the examples above, you create the first dictionary using `{}` and the second using `dict()` and the same key:values as the first dictionary. Printing the results of each returns the same thing.
+
+You can create dictionaries on the fly, for instance, by creating an empty dictionary saved to a variable, and adding to it as you go.
 
 Like lists, dictionaries are mutable and dynamic. This means that the keys and values can be edited and also you can add and remove keys:values from a dictionary. You also can nest a dictionary inside another dictionary. Do this by making one or more of the values a dictionary.
 
@@ -45,7 +97,7 @@ Retrieve the value of a nested dictionary using the key of the outer dictionary 
 
 Retrieve the value of a nested list using the dictionary key that corresponds to a list type, and also use the list index of the value
 
-## [Dictionary Methods](dictionary-methods)
+## [Dictionary Methods](#dictionary-methods)
 
 Dictionaries have built-in methods you can use that help you work with dictionaries. To see the available methods, enter the following in your terminal `print(dir({}))`. You should see the following output in the terminal. The items without `__` in their names are the methods for dictionaries.
 
