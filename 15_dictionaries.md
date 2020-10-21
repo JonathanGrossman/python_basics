@@ -72,7 +72,7 @@ Docstring: `D.keys() -> list of D's keys`
 Notes: returns a list of keys
 
 Method: .pop(key, default)  
-Docstring: `D.pop(k[,d]) -> v, remove specified key and return the corresponding value. If key is not found, d is returned if given, otherwise KeyError is raised` 
+Docstring: `D.pop(k[,d]) -> v, remove specified key and return the corresponding value. If key is not found, d is returned if given, otherwise KeyError is raised`  
 Notes: removes key and returns value/default; error if no such key
 
 Method: .popitem()  
@@ -101,7 +101,7 @@ Docstring: `D.viewkeys() -> a set-like object providing a view on D's keys`
 Notes: returns a list of keys
 
 Method: .viewvalues()  
-Docstring: `D.viewvalues() -> an object providing a view on D's values` 
+Docstring: `D.viewvalues() -> an object providing a view on D's values`  
 Notes: returns a list of values
 
 
