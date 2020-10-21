@@ -103,7 +103,7 @@ Docstring: D.viewkeys() -> a set-like object providing a view on D's keys
 Notes: returns a list of keys
 
 Method: .viewvalues()  
-Docstring: D.viewvalues() -> an object providing a view on D's values  
+Docstring: `D.viewvalues() -> an object providing a view on D's values` 
 Notes: returns a list of values
 
 
