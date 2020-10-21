@@ -1,8 +1,31 @@
 # Dictionaries 
 
-A dictionary is a collection of comma-separated key:value pairs wrapped in curly braces `{}`. You can use a dictionary to store information. Oftentimes, a dictionary is used to store multiple properties for a single item. For instance, it is common to use a dictionary to store information about a user. A user dictionary might have keys for first name, last name, email, and other user information. Another example of using a dictionary is for a transaction. A transaction dictionary might have keys for seller, buyer, price, date purchase, and other transactional information. 
+A dictionary is a collection of comma-separated key:value pairs wrapped in curly braces `{}`. You can use a dictionary to store information. 
 
-A dictionary wraps its content in curly braces `{}`. You can create a dictionary using `{}` or use the built-in `dict()` function. The `dict()` function accepts a sequence of tuples where each tuple contains a key:value pair. You can create dictionaries on the fly, for instance, by creating an empty dictionary saved to a variable, and adding to it as you go.
+Oftentimes, you use a dictionary to store multiple properties for a single item. For instance, it is common to use a dictionary to store information about a user. A user dictionary might have keys for first name, last name, email, and other user information. 
+
+```python
+# example of a dictionary for a user
+user_dict = {
+    "first_name": "Elka",
+    "last_name": "Cohen",
+    "email": "elka@gmail.com",
+}
+```
+
+Another example of using a dictionary is for a transaction. A transaction dictionary might have keys for seller, buyer, price, date purchase, and other transactional information. 
+
+```python
+# example of a dictionary for a transaction
+transaction_dict = {
+    "seller": "Sally",
+    "buyer": "Billy",
+    "price": "$15",
+    "date": "October 21, 2020"
+}
+```
+
+You can create a dictionary using `{}` or use the built-in `dict()` function. The `dict()` function accepts a sequence of tuples where each tuple contains a key:value pair. You can create dictionaries on the fly, for instance, by creating an empty dictionary saved to a variable, and adding to it as you go.
 
 Like lists, dictionaries are mutable and dynamic. This means that the keys and values can be edited and also you can add and remove keys:values from a dictionary. You also can nest a dictionary inside another dictionary. Do this by making one or more of the values a dictionary.
 
