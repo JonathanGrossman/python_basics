@@ -2,6 +2,40 @@
 
 ## [Installing Python](#installing-python)
 
+Before you can start writing Python code, you need to make sure you have Python installed on your computer. Some computers have Python pre-installed and others don't. Even if a computer has Python pre-installed, you want to make sure you know which version, as Python has versions 2 and 3 out in the wild. You can check whether you have Python installed and which versions by using the terminal. You should check for both Python 2 and Python 3. Open up a terminal session on your computer and enter `python --version` to check for Python 2 and `python3 --version` to check for Python3.
+
+```python
+python --version
+```
+
+```python
+python3 --version
+```
+
+If you have that Python version installed, the terminal will respond with the version number.
+
+```python
+Python 2.7.16
+```
+
+```python
+Python 3.7.7
+```
+
+If you don't have a Python version installed, you should install it. To download Python, visit the [Python downloads](https://www.python.org/downloads/) page. Find Check to make sure you're in the page for your operating sysmte (for instance, Mac, Windows, etc.). Choose the version you want to download and follow the installation instructions. 
+
+When installation is complete, check again whether Python is installed. Depending upon which version you installed, enter in the terminal `python --version` to check for Python 2 or `python3 --version` to check for Python3.
+
+```python
+python --version
+```
+
+```python
+python3 --version
+```
+
+If installation succeeded, the terminal will respond with the version number that you installed.
+
 ## [Installing Visual Studio Code](#installing-visual-studio-code)
 
 ## [Creating and activating virtual environment](#creating-and-activating-virtual-environment)
@@ -102,8 +136,5 @@ To deactivate your virtual environment, type in your terminal
 deactivate
 ```
 For now, do not deactivate your virtual environment. You should continue working in it for the remainder of the tutorial.
-
-
-
 
 ## [Writing and running a Python script](#writing-and-running-a-python-script)
