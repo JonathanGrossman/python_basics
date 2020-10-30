@@ -1,10 +1,10 @@
 # Getting Started
 
-In this chapter, you will setup you Python environment on your computer. Coding with Python not only requires knowing what code to write, it also requires knowing how to setup and maintain your Python programming environment. Doing so requires knowing how use the terminal, how to install and work with code other people wrote, how to setup and activate your virtual environment, and of course so much more. 
+Coding with Python requires not only that you know what code to write, it also requires knowing how to setup and maintain your Python programming environment. Doing so requires knowing how use the terminal, how to install and work with code other people wrote, how to setup and activate your virtual environment, and of course so much more. 
 
 This may sound intimidating at first, but it really isn't all that bad. It's actually a very fun part of programming because it helps you understand how the code you write comes to life when you run it. To me it's part of the "engineering" side of software engineering.
 
-This chapter focuses on working with the terminal and installing software in order to start writing code. Early in this chapter, you will already be writing Python code! At the end of this chapter, you will have your basic Python environment setup on your computer and will write a Python script that prints a message to your terminal.
+In this chapter, you will setup your Python environment on your computer. You will use the terminal, install software, and learn two ways to run your Python code. Early in this chapter, you will already be writing Python code! You will write code directly into the terminal. At the end of this chapter, you will have your basic Python environment setup on your computer and will begin writing code inside Python files. You will write a Python script in a .py file that prints a message to your terminal.
 
 ## [Installing Python](#installing-python)
 
