@@ -39,7 +39,7 @@ Variables:
 - **should** start with a double underscore to represent private variables (indicating to other developers to read but not set its value)
 
 
-## Examples of variables
+## [Examples of variables](#examples-of-variables)
 
 You must assign a variable a value before you can use the variable  
 ```python
@@ -113,7 +113,7 @@ print(k)
 >>> NameError: name 'k' is not defined
 ```
 
-## Casting
+## [Casting](#casting)
 
 You can set a variable's type using one of the built-in Python constructor functions. The Python data types each have their own constructor function. The constructor function you use will convert the value into the corresponding data type. For instance, using Python's built-in float constructor function `float()` will turn into a float whatever value you pass into it (assuming it's a valid value for that function).
 
@@ -155,7 +155,7 @@ set(("Python"))
 bytes(100)
 ```
 
-## None
+## [None](#none)
 
 At times you may want a variable to exist but to have an empty value. In those situations, you can assign a variable to be equal to `None`. That variable will represent an empty value. For those of you with JavaScript experience, `None` is equivalent to `null`. 
 
