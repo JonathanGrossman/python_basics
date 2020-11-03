@@ -8,7 +8,7 @@ When writing Python code, you oftentimes will use variables to represent the inf
 
 Let's look at each data type in more detail. By the way, this section is just an introduction to each data type. Later chapters go into more detail for each data type.
 
-## Numeric
+## [Numeric](#numeric)
 
 Python's numeric data type is split into three subtypes: integer, float, and complex. Integers and floats are the most common. It's likely you may never even use the complex number, which is used for advanced math calculations.  
 
@@ -40,7 +40,7 @@ Complex numbers have a real part and an imaginary part. The real part is an actu
 z = 10j  
  ```
  
-## String
+## [String](#string)
 
 A string is text. Examples of strings include a letter, word, phrase, and sentence. To declare data as a string, you need to put it in quotation marks. Single or double quotations marks work.
 
@@ -55,7 +55,7 @@ y = 'Single quotation marks also work.'
 z = '12'  
 ```
 
-## Boolean
+## [Boolean](#boolean)
 
 Booleans can have one of two values, `True` or `False`. Notice that both Boolean values start with a capital letter or else Python won't recognize it as a Boolean. Developers use Booleans to control the flow of their application and to compare values. Most values are inherently `True`. For instance, if `True` then do something. If `False`, do something else.
 
@@ -90,7 +90,7 @@ x = False
 7 < 3
 ```
 
-## Sequence
+## [Sequence](#sequence)
 
 The sequence data type splits into three main subtypes: list, tuple, and range. Lists and tuples are used to group data together. Range is used to return a sequence of numbers. 
 
@@ -136,7 +136,7 @@ for number in r:
 >>> 4
 ```
 
-## Mapping
+## [Mapping](#mapping)
 
 The mapping data type is known as a dictionary. Dictionaries contain key-value pairs that are unordered, changeable, and indexed by key. You declare that something is a dictionary by wrapping it in curly braces and separating the key-value pairs using commas.
 
@@ -148,7 +148,7 @@ x = {
     }  
 ```
 
-## Set
+## [Set](#set)
 
 A set is a collection of data that is unordered and unindexed. Each item in the set must be unique, meaning that the same value cannot appear twice in a single set. You declare that something is a set by wrapping it in curly braces and separating the values using commas. Note that a set resembles a dictionary in the sense that both are wrapped with curly braces. They differ, however, in that a dictionary is filled with key-value pairs, whereas a set is filled with values.
 
@@ -162,7 +162,7 @@ x = {"This", "is", "a", "set"}
 y = frozenset({"This", "is", "a", "frozenset"})
 ```
 
-## Binary
+## [Binary](#binary)
 
 Python's binary data types are not so commonly used by the everyday beginning Python developer. They are, however, nice to know of in case you encounter them. The binary types are bytes, bytearray, and memoryview. A byte represents a Python object as an immutable sequence of small integers between 0 and 256. A bytearray is the same as a byte except that it is mutable. A memoryview is used to access the internal byte-oriented data of a Python object.
 
@@ -177,18 +177,18 @@ y = bytearray(5)
 z = memoryview(bytes(5))
 ```
 
-## None
+## [None](#none)
 
 The `None` type in Python represents an empty value. Sometimes you'll want a variable to exist but you won't want it to have a value. For those situations, you can use Python's `None`. If you have experience with JavaScript, `None` is equivalent to `null`.
 
 
-# Using type() to debug
+## [Using type to debug](#using-type-to-debug)
 
 You can use Python's built-in `type()` method to find out a value's data type. To prevent errors, you may want to validate incoming data before trying certain operations on it.  For instance, before adding a number to a variable, you may want to make sure the variable is also a number. Another example. Before trying to loop through a variable, you may want to confirm it is iterable.
 
 In addition to preventing errors, using `type()` can help you find errors. When debugging or trying to understand your application's behavior, you may need to check what data type something is. Printing the type can help (`print(type(my_data))`). See below for more examples.
  
-## Examples of using type()  
+## [Examples of using type](#examples-of-using-type)  
 
 ```python  
 a = int(100)  
