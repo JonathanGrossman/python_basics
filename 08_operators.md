@@ -447,8 +447,14 @@ You can use logical operators to avoid exceptions (to prevent your program from 
 
 ```python
 # examples of logical operators for avoiding exceptions
-# print(pants_male / pants_female) == 3.0 # returns an error because diving by zero
-# print(int(pants_female) != 0 and (pants_male / pants_female == 3.0)) # returns False because y !=0, so expression returns first operand (and doesn't even read second operand)
+
+
+# returns an error because diving by zero
+print(pants_male / pants_female) == 3.0 
+
+
+# returns False because y !=0, so expression returns first operand (and doesn't even read second operand)
+print(int(pants_female) != 0 and (pants_male / pants_female == 3.0)) 
 ```
 The first example above returns an error because the expression is dividing by `0.0`. `pants_female` equals `0.0`. Diving by zero is impossible, so the Python interpreter raises an exception.
 
