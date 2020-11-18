@@ -94,7 +94,21 @@ To exit the Python session in your terminal, type `exit()` and hit `Enter`. The 
 
 ## [Installing Visual Studio Code](#installing-visual-studio-code)
 
+Writing Python code in your terminal is an okay way to practice writing Python code. Using and integrated development environment (IDE) is a better option. An IDE is software for building applications. They make it easy to write and test code. Plus, IDEs usually combine common developer tools into one interface.
 
+You have several IDEs available. One of the most popular is Microsoft's Visual Studio Code. It is a free code editor that can be used with Windows, Linux and macOS. VS Code has built-in tools to help you write code. For instance, it has tools that help with debugging, highlight syntax, provide intelligent code auto-completion, suggest code snippets, format your code, and embed Git. You can also install extensions that add additional functionality.
+
+[Install VS Code](#https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2019) by visiting the Microsoft. Follow the instructions for downloading the correct version to your operating system.
+
+Next, create an empty folder somewhere on your computer. Name it `python_practice`. Then, in VS Code, choose `File --> Open` and open the `python_practice` folder. On the lefthand side of your VS Code, you shoul see a pane that lists the `python_practice` folder. 
+
+In VS Code, right click on the `python_practice` and choose `New File`. Name the new file `app.py`. At the top of your `app.py` file, type `print("Python practice").`
+
+Next, in VS Code, choose `File --> Terminal`. This should open up a terminal session inside your VS Code. If you read the line that appears in the terminal when you open it, you should see that it is located within your `python_practice` project folder. If not, in the terminal, type `cd`, then spacebar, and then drag your `python_practice` folder to the terminal (which should result in a path to your `python_practice` folder). Then hit enter.
+
+Once your terminal is in your `python_practice` project folder, you can run your Python file. In the terminal, type `python3 app.py`. It should print to the terminal the message you put in the print statement in your app.py file --> `"Python practice"`.
+
+If that worked, then your project setup is correct!
 
 ## [Creating and activating virtual environment](#creating-and-activating-virtual-environment)
 
