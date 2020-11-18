@@ -1,6 +1,6 @@
 # Getting Started
 
-Coding with Python requires that you know what code to write. It also, however, requires knowing how to setup and maintain your Python programming environment. to do so, you should know how use the terminal, how to install and work with code other people wrote, how to setup and activate your virtual environment, and of course so much more. 
+Coding with Python is so much more than just knowing what code to write. It also requires knowing how to setup and maintain your Python programming environment. You should know how use the terminal, how to install and work with code other people wrote, how to setup and activate your virtual environment, and of course so much more. 
 
 This may sound intimidating at first, but it really isn't all that bad. It's actually a very fun part of programming because it helps you understand how the code you write comes to life when you run it. To me it's part of the "engineering" side of software engineering.
 
