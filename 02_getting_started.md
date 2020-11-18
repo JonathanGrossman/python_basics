@@ -1,6 +1,6 @@
 # Getting Started
 
-Coding with Python requires not only that you know what code to write, it also requires knowing how to setup and maintain your Python programming environment. Doing so requires knowing how use the terminal, how to install and work with code other people wrote, how to setup and activate your virtual environment, and of course so much more. 
+Coding with Python requires that you know what code to write. It also, however, requires knowing how to setup and maintain your Python programming environment. to do so, you should know how use the terminal, how to install and work with code other people wrote, how to setup and activate your virtual environment, and of course so much more. 
 
 This may sound intimidating at first, but it really isn't all that bad. It's actually a very fun part of programming because it helps you understand how the code you write comes to life when you run it. To me it's part of the "engineering" side of software engineering.
 
@@ -8,7 +8,9 @@ In this chapter, you will setup your Python environment on your computer. You wi
 
 ## [Installing Python](#installing-python)
 
-Before you can start writing Python code, you need to make sure you have Python installed on your computer. Some computers have Python pre-installed and others don't. Even if a computer has Python pre-installed, you want to make sure you know which version you have, as Python has versions 2 and 3. Check whether you have Python installed and which versions by using the terminal. You should check for both Python 2 and Python 3. Open up a terminal session on your computer and enter `python --version` to check for Python 2 and `python3 --version` to check for Python3.
+Before you can start writing Python code, you need to make sure you have Python installed on your computer. Some computers have Python pre-installed and others don't. Even if a computer has Python pre-installed, because Python has versions 2 and 3 available for use, you want to make sure you know which version you have. 
+
+Check whether you have Python installed and which versions by using the terminal. You should check for both Python 2 and Python 3. Open up a terminal session on your computer and enter `python --version` to check for Python 2 and `python3 --version` to check for Python3.
 
 ```python
 python --version
@@ -28,9 +30,9 @@ Python 2.7.16
 Python 3.7.7
 ```
 
-You don't need both versions installed. You will probably work with one or the other. As for which one you should use, it depends. If you're starting out learning Python or don't have any Python 2 projects, you should probably work with Python 3. However, if you have a specific need to use Python 2, then make sure you have it installed.
+You don't need both versions installed. You will probably work with one or the other. As for which one you should use, it depends. If you're starting out learning Python or don't have any Python 2 projects, you should probably work with Python 3. If, however, you have a specific need to use Python 2, then make sure you have it installed.
 
-If you don't have installed the Python version you want to work with, you should install it. To download Python, visit the [Python downloads](https://www.python.org/downloads/) page. Find Check to make sure you're in the page for your operating sysmte (for instance, Mac, Windows, etc.). Choose the version you want to download and follow the installation instructions. 
+If you don't have the Python version that you want to work with installed on your computer, you should install it. To download Python, visit the [Python downloads](https://www.python.org/downloads/) page. Check to make sure you're on the page for your operating system (for instance, Mac, Windows, etc.). Choose the version you want to download and follow the installation instructions. 
 
 When installation is complete, check again whether Python is installed. Depending upon which version you installed, enter in the terminal `python --version` to check for Python 2 or `python3 --version` to check for Python3.
 
@@ -55,7 +57,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 ```
 
-Start by getting Python to print something to the terminal. You'll learn later about data types, but for now know that if you want Python to print text to the terminal, you need to tell Python that the text is a string. To do that, wrap in single `' '` or double `" "` quotes what you type into the terminal, and Python will know that whay you typed is a string. The terminal should print what you typed.
+Start by getting Python to print something to the terminal. You'll learn later about data types, but for now know that if you want Python to print text to the terminal, you need to tell Python that the text is a string. To do that, wrap in single `' '` or double `" "` quotes what you type into the terminal, and Python will know that what you typed is a string. The terminal should print what you typed.
 
 In your terminal session, next to the `>>>`, type `'Coding with Python'` (be sure to include the quotes) and hit `Enter`. 
 
@@ -91,6 +93,8 @@ To exit the Python session in your terminal, type `exit()` and hit `Enter`. The 
 
 
 ## [Installing Visual Studio Code](#installing-visual-studio-code)
+
+
 
 ## [Creating and activating virtual environment](#creating-and-activating-virtual-environment)
 
