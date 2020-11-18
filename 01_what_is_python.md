@@ -1,10 +1,10 @@
 # What is Python
 
-Python is a popular progamming language used for many things. Among those things, people build web applications, robots, games, and machine learning solutions. Getting started learning Python is easy. With the right focus and documentation, you can learn the basics of Python online or at a Python bootcamp.  
+Python is a popular progamming language used for many things. People build, for instance, web applications, robots, games, and machine learning solutions. It is easy to start learning Python. With the right focus and documentation, you can learn the basics of Python online or at a Python bootcamp.  
 
-On a technical level, Python is an interpreted, object-oriented, high-level programming language. It's versatile and comfortable for developers to read and write. As you'll see below in the Python guiding principles, Python programming emphasizes readability, encourages simplicity, and allows for a lot of flexibility. 
+Python is an interpreted, object-oriented, high-level programming language. It's versatile and comfortable for developers to read and write. As you'll see below in the Python guiding principles, Python programming emphasizes readability, encourages simplicity, and allows for a lot of flexibility. 
 
-Python has guiding principles known as `The Zen of Python`. In a Python file or in your Python interpreter, run ```import this```. It should show the following in your terminal:
+Python has guiding principles known as `The Zen of Python`. In a Python file or in your Python interpreter, run `import this`. It should show the following in your terminal:
 
 ```
 The Zen of Python, by Tim Peters
@@ -30,7 +30,7 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 ```
 
-One reason Python is so popular is because it is easy to learn and oftentimes feels like a spoken language. Here is an example. If we want to find out whether a Python list named ```theList``` contains a value of ```79```, and if so, print ```True```, we can simply write the following:
+One reason Python is so popular is because it feels familiar even to non-programmers. This is because some of the syntax mimics spoken languages. Here is an example. If you want to know whether a Python list named `theList` contains a value of `79`, and if so, print `True`, you can simply write the following:
 
 ```python 
 theList = [59, 69, 79]
@@ -39,13 +39,13 @@ if 79 in theList:
     print(True)
 ```
 
-Before you know it, you can build real-world solutions that people rely upon in their daily liveas. To help jumpstart your imagination, here is some dicussion of what you can build with Python.
+Before you know it, you can build real-world solutions that people rely upon in their daily lives. To help jumpstart your imagination, here is some dicussion of what you can build with Python.
 
-# What you can build with Python
+## [What you can build with Python](#what-you-can-build-with-python)
 
-The possibilies are huge. You can use Python to build web applications, automate tasks on your computer, program robots, build games, analyze data, and process images. You can also build graphical user interfaces, applications that convert filenames and sizes, and projects that work with audio, video and text files. Originally known for rapid prototyping and connecting other applications, Python is maturing from its original reputation into a go-to solution in general. 
+The possibilies are huge. You can use Python to build web applications, automate tasks on your computer, program robots, build games, analyze data, process images, and so much more. You can also build graphical user interfaces, applications that convert filenames and sizes, and projects that work with audio, video and text files. Originally known for rapid prototyping and connecting other applications, Python is maturing from its original reputation into a go-to solution in general. 
 
-## Web Applications
+## [Web applications](#web-applications)
 
 Build Python web applications that users interact with online. For instance, many people use Python to build blogs, content management systems, and virtual classrooms. With Python web frameworks like Flask and Django, and with the countless libraries and packages to support Python web development, building a web application using Python is possible for beginners and experts alike. 
 
@@ -56,18 +56,16 @@ For a database, you can choose between SQL, no-SQL, and third-party services tha
 By building your web application using Python, your web application may more easily interact with other Python projects, like machine learning and robotics.
 
 
-
-## Social Media (Bots and Streaming)
+## [Social media](#social-media)
 
 Build Python applications that interact with users on social media. For instance, build a Twitter bot that tweets, retweets, likes messages, and follows users based on a pre-set schedule. This can be a great way to automate some of the ways you engage with your audience. It is not just Twitter you can automate. You can write Python bots for Instagram, Facebook, Discord, Telegram, and more. A real project I built is a weather station that Tweets the humidity and temperature readings from a Raspberry Pi and also provides the weather information on-demand from Telegram.
 
 You also can write Python projects that livestream video. For instance, livestream to Facebook, YouTube Live, Periscope, and Twitch. By creating a Python application that assists you with livestreaming your content, you can interact with your audience in more effective ways.
 
-To make a bot or to livestream, you write a Python script and connect it to the API for the social media platform of your choice. Plenty of third-party packages and tutorials are online for making Python bots and for livestreaming. You can even connect your Python script to a web application or automate it using crontab or some other scheduler.
+To make a bot or to livestream, write a Python script and connect it to the API for the social media platform of your choice. Plenty of third-party packages and tutorials are online for making Python bots and for livestreaming. You can even connect your Python script to a web application or automate it using crontab or some other scheduler.
 
 
-
-## Game Development
+## [Game development](#game-development)
 
 Build games using Python. For instance, build games that slide across the screen and serve hours of entertainment to its users. Build classic games like solitaire, pong, and tic-tac-toe. Or build educational games that engage students in exciting ways. Teach students how to read, do math, or write programs! Several Python packages are available for building games.
 
@@ -75,7 +73,7 @@ Two popular Python gaming packages ar named PyGame and PyArcade. You can build f
 
 
 
-## Internet of Things and Robotics
+## [Internet of things and robotics](#internet-of-things-and-robotics)
 
 Write software that controls hardware. Python is one of the most popular languages for writing software for the Raspberry Pi and other microcontrollers. Build robots, weather stations, and home automation hardware that run on Python software. For instance, build a miniature car that follows a line drawn on the floor. Build a weather station that monitors your garden. Build a motion-activated security camera that emails you when it detects movement.
 
@@ -83,12 +81,12 @@ Three of the most popular ways to write Python for IoT and robotics is using the
 
 
 
-## Data Science
+## [Data science](#data-science)
 
 Build data science Python projects. Data science covers a broad range of topics. Examples include machine learning, natural language processing, image recognition, deep learning, and data visualization. Many python packages exist for helping you build your Python data science projects. For instance, Pandas, NumPy, SciPy, Matplotlib, Seaborn, and Datashader help you analyze data. Other packages, such as Scikit-Learn, StatsModels, Keras, TensorFlow, and others, help you with machine learning. The OpenCV package is popular for working with images.
 
 Regardless of your data science project, you should strongly consider writing it in Python.
 
-## More
+## [More](#more)
 
 Python has built-in data structures and dynamic typing. As mentioned above, Python makes it easy to import code into a project in the form of modules and packages. Modules and packages are pre-written code (by you or others) that you can incorporate into your project. Using modules and packages saves you time and resources by providing functionality that you do not have to write the code for. You can find modules and packages using Python’s Package Index. You can manage packages for your projects using pip -- the recommended Python package manager. With pip, you can, among other things, instal, upgrade, and remove packages.
