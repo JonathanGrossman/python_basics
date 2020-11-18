@@ -98,7 +98,7 @@ Writing Python code in your terminal is an okay way to practice writing Python c
 
 You have several IDEs available. One of the most popular is Microsoft's Visual Studio Code. It is a free code editor that can be used with Windows, Linux and macOS. VS Code has built-in tools to help you write code. For instance, it has tools that help with debugging, highlight syntax, provide intelligent code auto-completion, suggest code snippets, format your code, and embed Git. You can also install extensions that add additional functionality.
 
-[Install VS Code](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2019) by visiting the Microsoft. Follow the instructions for downloading the correct version to your operating system.
+[Install VS Code](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2019) by visiting the Microsoft installation page. Follow the instructions for downloading the correct version to your operating system.
 
 Next, create an empty folder somewhere on your computer. Name it `python_practice`. Then, in VS Code, choose `File --> Open` and open the `python_practice` folder. On the lefthand side of your VS Code, you shoul see a pane that lists the `python_practice` folder. 
 
