@@ -208,5 +208,3 @@ To deactivate your virtual environment, type in your terminal
 deactivate
 ```
 For now, do not deactivate your virtual environment. You should continue working in it for the remainder of the tutorial.
-
-## [Writing and running a Python script](#writing-and-running-a-python-script)
